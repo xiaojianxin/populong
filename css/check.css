@@ -1,0 +1,100 @@
+#main{background:#c7e3d0;width: 100%;height: 6260px;float: left;;}
+
+
+#maincontainer1{background: yellow; width: 78%;height: 1240px;margin-left: 11%;display:;}
+
+#main_top{background:#eeeff3; width: 100%;height: 264px;}
+#main_top_top{background:#ffffff; width: 92%;height: 66px;margin: 0 4%; border-bottom: 2px solid #66cc66}
+#main_top img{float: left;width: 80%;height: 56px;margin:50px 10% 0 10%;}
+
+#maincontainer1 #main_bottom{background: #eeeff3; width: 100%;height: 1240px;float: left;}
+
+#left{ width: 12%;height:100% ;float: left;margin-left: 10%;}
+#left li{width: 100%;height: 48px;float: left;margin-top: 34px;}
+#left h1{font-size: 20px;width: 100%; height: 38px;text-align: center;float: left;padding: 10px 20px 0 0;}
+
+#center{ width: 50%;margin-right:2%;height:100%;float: left;}
+#center li{ width: 100%;height: 48px;float: left;margin-top: 34px;font-size: 18px;}
+#center input{width:60%;height: 50px;float: left;border: 1px solid #cfcfcf;font-size: 18px;}
+#center h1{width:4%;height: 40px;float: left;font-size: 18px;padding-top: 10px;}
+#center #centerLeft{width:30%;margin-right: 3%;height: 40px;font-size: 18px;float: left;}
+#center #centerLeft input{width:20%;;height: 40px;font-size: 18px;float: left;}
+#center #centerLeft h1{background:#6cc77f ; width:80%;height: 30px;font-size: 18px;float: left;padding-top: 10px;}
+#center #centerCenter{ width:30%;margin-right: 3%;height: 40px;font-size: 18px;float: left;}
+#center #centerCenter input{width:20%;;height: 40px;font-size: 18px;float: left;}
+#center #centerCenter h1{background:#6cc77f ; width:80%;height: 30px;font-size: 18px;float: left;padding-top: 10px;}
+#center #centerRight{width:30%;margin-right: 3%;height: 40px;font-size: 18px;float: left;}
+#center #centerRight input{width:20%;;height: 40px;font-size: 18px;float: left;}
+#center #centerRight h1{background:#6cc77f ; width:80%;height: 30px;font-size: 18px;float: left;padding-top: 10px;}
+#center #province{width: 16%;}
+#center h2{width:80%;height: 40px;float: left;font-size: 18px;padding-top: 10px;}
+#center #contentli{width: 100%;height: 360px;}
+#center #morecontent{width: 100%;height: 360px;}
+#center #checkagree{width:6%;height: 38px;float: left;border: 1px solid #cfcfcf;}
+#center a{font-size: 20px;width: 40%; height: 30px;background: #00adef;text-align: center;float: left;padding: 0;border: blue solid 1px;margin-left: 30%;}
+
+#right{width:24%;height: 100%;float: left;}
+
+#maincontainer2{background: green; width: 78%;height: 3458px;margin-left: 11%; float:left;left: 11%;}
+
+#maincontainer2 #main_top{background:#eeeff3; width: 100%;height: 164px;}
+#maincontainer2 #main_top_top{background:#eeeff3; width: 92%;height: 66px;margin: 0 4%; border-bottom: 2px solid #66cc66}
+#maincontainer2 #main_top img{float: left;width: 80%;height: 56px;margin:50px 10% 0 10%;}
+
+#maincontainer2 #main_bottom{background: #eeeff3; width: 100%;height: 3460px;float: left;}
+
+#maincontainer2 #main_bottom .return{width: 100%;height: 800px; margin-top: 50px;}
+#maincontainer2 #main_bottom .return_top{width: 100%;height: 30px; border-bottom: solid #ccd1d4 2px;}
+#maincontainer2 #main_bottom .return_top h1{width: 100%;height: 30px; font-size: 16px;font-weight: bolder;}
+
+#maincontainer2 #main_bottom  h1{width: 100%;height: 30px; font-size: 16px;font-weight: bolder;}
+
+#maincontainer2 #main_bottom .return_bottom{width: 100%;height: 770px;}
+#maincontainer2 #main_bottom .return_bottom li{ width: 100%;height: 50px; margin-top: 20px;}
+#maincontainer2 #main_bottom .return_bottom h1{width: 10%;height: 34px;float: left;margin-right: 0.8%;text-align: center;padding-top: 16px;font-size: 18px;}
+#maincontainer2 #main_bottom .return_bottom h2{ width: 40%;height: 34px;float: left;padding-top: 16px;font-size: 18px;}
+#maincontainer2 #main_bottom .return_bottom h3{ width: 8%;height: 34px;float: left;padding-top: 16px;font-size: 18px;}
+#maincontainer2 #main_bottom .return_bottom a{background: #a4aeb0; width: 8%;height: 34px; float: left;margin-right: 2%;text-align: center;padding-top: 16px;font-size: 18px;}
+#maincontainer2 #main_bottom .return_bottom h4{width: 10%;height: 34px; float: left;text-align: center;padding-top: 16px;font-size: 18px;}
+#maincontainer2 .return_bottom input{width: 30%;height: 50px; float: left;}
+#maincontainer2 .return_bottom .rewardcheck{width: 4%;height: 50px; float: left;margin-right: 0;}
+#maincontainer2 #main_bottom #profitLi{width: 100%;height: 260px; margin-top: 20px;}
+#maincontainer2 #main_bottom #profit{width: 50%;height: 260px; float: left;}
+#maincontainer2 #main_bottom #save{background: #6cc77f; width: 8%;height: 50px;margin-right: 2%;  float: right;}
+
+#maincontainer2 input{background: #6cc77f; width: 20%;height: 50px; float: left;margin:0 4% 0 0;float: left;}
+
+
+
+
+#maincontainer3{background: red; width: 78%;height: 458px;margin-left: 11%;float: left; display:block;}
+
+#maincontainer3 #main_top{background:#eeeff3; width: 100%;height: 164px;}
+#maincontainer3 #main_top_top{background:#eeeff3; width: 92%;height: 66px;margin: 0 4%; border-bottom: 2px solid #66cc66}
+#maincontainer3 #main_top img{float: left;width: 80%;height: 56px;margin:50px 10% 0 10%;}
+
+#maincontainer3 #main_bottom{background: #eeeff3; width: 100%;height: 460px;float: left;}
+
+#maincontainer3 #main_bottom .return{width: 90%;height: 400px; margin-top: 50px;}
+#maincontainer3 #main_bottom .return_top{width: 100%;height: 30px; border-bottom: solid #ccd1d4 2px;}
+#maincontainer3 #main_bottom .return_top h1{width: 100%;height: 30px; font-size: 16px;font-weight: bolder;}
+
+#maincontainer3 #main_bottom  h1{width: 100%;height: 30px; font-size: 16px;font-weight: bolder;}
+
+#maincontainer3 #main_bottom .return_bottom{width: 100%;height: 300px;}
+#maincontainer3 #main_bottom .return_bottom li{width: 100%;height: 50px; margin-top: 20px;}
+#maincontainer3 #main_bottom .return_bottom h1{ width: 10%;height: 34px;float: left;margin-right: 0.8%;text-align: center;padding-top: 16px;font-size: 18px;}
+#maincontainer3 #main_bottom .return_bottom h2{width: 2%;height: 34px;float: left;padding-top: 16px;font-size: 18px;}
+#maincontainer3 #main_bottom .return_bottom h3{ width: 75.6%;height: 34px;float: left;padding-top: 16px;font-size: 18px;}
+#maincontainer3 #main_bottom .return_bottom input{width: 2.8%;height: 30px; float: left;margin:14px 2% 0 0;}
+
+#maincontainer3 input{background: #6cc77f; width: 20%;height: 50px; float: left;margin:0 4% 0 0;float: left;}
+
+
+#maincontainer4{background: ;  width: 78%;height: 1088px;margin-left: 11%;float: left; display:block;}
+#maincontainer4 input{width: 50%;height: 260px; float: left;margin-right: 30%;float: left;}
+#maincontainer4 h1{ width: 10%;height: 34px;float: left;text-align: center;padding-top: 16px;font-size: 18px;}
+#maincontainer4 h2{width: 10%;height: 34px;float: left;text-align: center;padding-top: 16px;font-size: 18px;}
+#maincontainer4 h3{ width: 10%;height: 34px;float: left;text-align: center;padding-top: 16px;font-size: 18px;color: red;margin-right: 80%;}
+#maincontainer4 .passcheck{width: 4%;height: 30px; float: left;margin-right: 30%;float: left;margin: 12px 80% 12px 0;}
+#maincontainer4 #publish{width: 20%;height: 40px; float: left;margin:20px 40%;float: left;}

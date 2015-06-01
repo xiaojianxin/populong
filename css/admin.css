@@ -1,0 +1,112 @@
+
+
+/*正常显示部分*/
+#main {background: #eeeff3;width: 100%;height: 1436px;float: left;}
+
+#self_top{width: 78%;margin: 18px 11% 18px 11%;float: left;height: 40px;}
+#self_top a{background: #6cc77f;width: 12%;float:right;height: 30px;text-align: center;padding-top: 10px;font-size: 16px;color: #ffffff;}
+
+#self_left{background: #ffffff;width: 19.2%;margin: 0 2.2% 0 11%;float: left;height: 950px;}
+#self_left li{background: #6cc77f;width: 100%;float: left; height: 50px;font-size:16px;color: #ffffff;text-align: center;}
+#self_left a{width: 80%;float: left;margin-right: 20%; height: 40px;font-size:16px;color: #ffffff;text-align: center;padding-top: 10px;}
+#self_left .childA{width: 80%;float: left;margin-left: 20%;height: 40px;font-size:16px;color: #ffffff;text-align: center;padding-top: 10px;}
+
+#self_right{width: 56.6%;margin: 0 11% 0 0;float: left;height: 950px;}
+/*个人管理记录*/
+#selfRight1{background:#ffffff; width: 100%;height:100%;display:none;}
+
+.self_right_top{background: #b5e3bf; width: 100%;height: 188px;}
+.self_right_top img{width: 12%;height: 86px;margin: 24px 44% 0 44%;}
+.self_right_top h1{ width: 100%;height: 30px;font-size: 16px;text-align: center;color: #333333;}
+.self_right_top h2{ width: 30%;height: 30px;font-size: 16px;text-align: left;font-weight: bold;padding-left: 4%;}
+.self_right_top #topbottom{width: 60%;height: 42px; margin:0 20% 0 20%;float: left;}
+.self_right_top .prize{background: #ffffff;width: 25%;height: 32px;float: left;text-align: center;padding-top: 10px;font-size: 14px;color: #333333;}
+.self_right_top .prize:hover{background: #aaddac;width: 25%;height: 32px;float: left;text-align: center;padding-top: 10px;font-size: 14px;color: #333333;}
+
+
+#self_right_bottom1{background: #ffffff; width: 56.6%;height: 800px;position: absolute;top: 326px;right: 11%;display: block;}
+
+#selfRight1_top{width: 92%;height: 46px;margin: 0 4%;border-bottom: 2px solid #6cc77f;}
+#selfRight1_top h1{width: 76%;height: 20px;font-size: 18px;font-weight: bolder;padding: 12px 2%;float: left;}
+#selfRight1_top input{ width: 20%;height: 40px;font-size: 18px;font-weight: bolder;padding: 12px 2%;float: right;margin-top: 6px;}
+
+#selfRight1_bottom{background: #ffffff; width: 92%;height: 750px;margin: 0 4%;}
+#selfRight1_bottom #tradetype{ width:100%;height: 50px;}
+#selfRight1_bottom #tradetype li{ background: #ffffff;width: 16.6%;height:36px;float: left;font-size: 18px;font-weight: bolder;padding-top: 14px;}
+#selfRight1_bottom #manageType1{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display:block;}
+#selfRight1_bottom #manageType2{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display: none;}
+#selfRight1_bottom #manageType3{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display: none;}
+#selfRight1_bottom #manageType4{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display: none;}
+#selfRight1_bottom #manageType5{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display: none;}
+#selfRight1_bottom li{background: #dbdbdb; width: 100%;height:36px;float: left;font-size: 16px;font-weight: bolder;padding-top: 14px;text-align: center;}
+#selfRight1_bottom h1{width: 20%;height:36px;float: left;font-size: 14px;}
+#selfRight1_bottom h2{width: 20%;height:36px;float: left;}
+#selfRight1_bottom h3{width: 20%;height:36px;float: left;}
+#selfRight1_bottom h4{width: 20%;height:36px;float: left;color: #66cc66;}
+#selfRight1_bottom h5{width: 20%;height:36px;float: left;}
+#self_right_bottom2{background: #ffffff; width: 56.6%;height: 800px;position: absolute;top: 326px;right: 11%;display: none;}
+#selfRight1 #self_right_bottom3{background: #ffffff; width: 56.6%;height: 800px;position: absolute;top: 326px;right: 11%;display: none;}
+#selfRight1 #self_right_bottom4{background: #ffffff; width: 56.6%;height: 800px;position: absolute;top: 326px;right: 11%;display:none ;}
+
+
+/*我发起的项目*/
+#selfRight2{background:#ffffff; width: 100%;height:100%;display:none;}
+.selfRight2_top{width: 92%;height: 46px;margin: 0 4%;border-bottom: 2px solid #6cc77f;}
+.selfRight2_top h1{width: 14%;height: 20px;font-size: 18px;font-weight: bolder;padding: 12px 0 12px 2%;float: left;}
+.selfRight2_top .positive{background:#6cc77f;  width: 14%;height: 20px;font-size: 18px;font-weight: bolder;padding: 12px 2%;float: left;}
+
+.selfRight2_bottom{background: #ffffff; width: 92%;height: 900px;margin: 0 4%;}
+.selfRight2_bottom .tradetype{ width: 80%;height: 50px;margin-left: 20%;}
+.selfRight2_bottom .tradetype li{ background: #ffffff;width: 20%;height:36px;float: left;font-size: 18px;font-weight: bolder;padding-top: 14px;}
+.selfRight2_bottom li{background: #dbdbdb; width: 100%;height:72px;float: left;font-size: 16px;font-weight: bolder;padding-top: 14px;text-align: center;border-bottom: 2px solid #ffffff;}
+.selfRight2_bottom img{width: 18.8%;height:64px;float: left;font-size: 16px;font-weight: bolder;text-align: center;margin-left: 1.2%;}
+.selfRight2_bottom h1{width: 16%;height:36px;float: left;font-size: 14px;margin-top: 20px;}
+.selfRight2_bottom h2{width:16%;height:36px;float: left;margin-top: 20px;}
+.selfRight2_bottom h3{width:16%;height:36px;float: left;margin-top: 20px;}
+.selfRight2_bottom h4{width: 16%;height:36px;float: left;color: #66cc66;margin-top: 20px;}
+.selfRight2_bottom h5{width: 16%;height:36px;float: left;margin-top: 20px;}
+
+#selfRight3{background:#ffffff; width: 100%;height:100%;display:none;}
+/*接收投资*/
+#selfRight4{width: 100%;height:100%;display:none;}
+/*我的投资*/
+#selfRight5{width: 100%;height:100%;display:none;}
+/*二级市场*/
+#selfRight6{width: 100%;height:100%;display:none;}
+/*我发起的项目*/
+#selfRight7{background:#ffffff; width: 100%;height:100%;display:none;}
+
+/*我关注的项目*/
+#selfRight8{width: 100%;height:100%;display:none;}
+/*个人资料*/
+#selfRight9{background:#ffffff; width: 100%;height:100%;display:none;}
+
+
+
+
+/*封号*/
+#selfRight10{background:#ffffff; width: 100%;height:100%;display:block;}
+#selfRight10 .selfRight2_bottom .tradetype{background: #ffffff; width: 88.8%;height: 50px;margin-left: 11.2%;}
+#selfRight10 .selfRight2_bottom .tradetype li{ width: 20%;height:36px;float: left;font-size: 18px;font-weight: bolder;padding-top: 14px;}
+#selfRight10 .selfRight10_check{width: 20%;height:20px;margin-top: 20px;margin: 20px 0;float: left;}
+#selfRight10 .selfRight10_idcheck{margin-top: 10px;}
+#selfRight10 .selfRight2_bottom img{width: 10%;height:64px;float: left;font-size: 16px;font-weight: bolder;text-align: center;margin-left: 1.2%;}
+#selfRight10 .selfRight2_bottom h1{ width:17.6%;height:36px;float: left;margin-top: 20px;}
+#selfRight10 .selfRight2_bottom h2{ width:17.6%;height:36px;float: left;margin-top: 20px;}
+#selfRight10 .selfRight2_bottom h3{ width:17.6%;height:36px;float: left;margin-top: 20px;}
+/*消息*/
+#selfRight11{background:#ffffff; width: 100%;height:100%;display:none;}
+#selfRight11 img{width: 100%;height:100%;}
+
+/*平台排行*/
+#selfRight12{background:#ffffff; width: 100%;height:100%;display:none;}
+#selfRight12_top{width: 92%;height: 46px;margin: 0 4%;border-bottom: 2px solid #6cc77f;}
+#selfRight12_top h1{ width: 24%;height: 12px;font-size: 18px;font-weight: bolder;padding: 12px 0 0 2%;float: left;}
+#selfRight12 #selfRight12_investor{ width: 52.2%;height: 800px;position: absolute;top: 186px;right: 13.2%;}
+#selfRight12 #selfRight12_starter{ width: 52.2%;height: 800px;position: absolute;top: 186px;right: 13.2%;display: none;}
+#selfRight12 ul{background: #dbdbdb;width: 100%;height: 50px;margin: 10px 0 40px 0; }
+#selfRight12 ul li{width: 25%;height: 36px;float: left;text-align: center;padding-top: 14px;font-size: 16px;margin-top: 0;}
+#selfRight12 li{width: 100%;height: 60px;margin-top: 2px;}
+#selfRight12 li h1{width: 25%;height: 46px;float: left;text-align: center;padding-top: 14px;font-size: 16px;}
+#selfRight12 h2{width: 25%;height: 46px;float: left;text-align: center;padding-top: 14px;font-size: 16px;}
+#selfRight12 img{width: 9%;height: 60px;float: left;text-align: center;font-size: 16px;margin: 0 8%;}

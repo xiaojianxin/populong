@@ -1,0 +1,109 @@
+
+
+
+#main {background: red;width: 100%;height: 2128px;float: left;}
+
+#protop{background: green;width: 100%;height: 838px;float: left;}
+
+
+
+#protop{background:#eeeff3;float: left;width: 100%;height: 828px;}
+
+#protop_head{background:#eeeff3;float: left;width: 78%;height:112px;margin-left: 11%;}
+
+#protop_head h1{float: left;width: 100%;height:32px;margin-top: 40px;font-size: 24px;color: #333333;font-weight: bold;}
+#protop_head h2{float: left;width: 30%;height:24px;font-size:16px;margin-top: 8px; font-size: 16px;color: #666666;padding-top: 6px;}
+#protop_head h3{font-size:16px; margin-top: 8px;text-align: center;font-size:16px;color: #ffffff;}
+#protop_head img{float: left;width: 24px;height:24px;margin-left: 2px;margin-top: 8px;}
+#protop_head #right{background:#ff6666;float: right;width: 140px;height:40px;}
+
+#protop_middle{background:#aaddac;float: left;width: 78%;height:270px;margin-left: 11%;}
+
+#protop_middle .posiprize{background: #aaddac;width: 25%;height: 30px;float: left;text-align: center;font-size: 16px;color: #333333; padding-top: 14px;}
+#protop_middle .posiprize:hover{background: #aaddac;width: 25%;height: 30px;float: left;text-align: center;font-size: 16px;color: #333333;padding-top: 14px;}
+#protop_middle .prize{background: #ffffff;width: 25%;height: 30px;float: left;text-align: center;font-size: 16px;color: #333333;padding-top: 14px;}
+#protop_middle .prize:hover{background: #aaddac;width: 25%;height: 30px;float: left;text-align: center;font-size: 16px;color: #333333;padding-top: 14px;}
+
+#protop_middle  #ChooseOne {background: #f2f2f3;width: 74%;height: 188px;position:absolute;top:220px;left: 11%; margin: 16px 2%;display: none;}
+#protop_middle  #ChooseTwo {background: #f2f2f3;width: 74%;height: 188px;position:absolute;top:220px;left: 11%; margin: 16px 2%;display: none;}
+#protop_middle  #ChooseThree {background: #f2f2f3;width: 74%;height: 188px;position:absolute;top:220px;left: 11%; margin: 16px 2%;display: none;}
+#protop_middle  #ChooseFour {background: #f2f2f3;width: 74%;height: 188px;position:absolute;top:220px;left: 11%; margin: 16px 2%;display: block;}
+
+
+.procont .procontleft{background: #f2f2f3;width: 33%;height: 188px;float: left;margin-left: 1%;} 
+.procontleft img{width: 100%;height: 162px;float: left;margin-top: 12px;} 
+.procont   .procontcenter{background: #f2f2f3;width: 33%;height: 188px;float: left;}
+.procontcenter h1{font-weight: bold;font-size: 18px;color: #333333; margin-top: 12px;padding-left: 4px;} 
+.procontcenter h2{font-size: 16px;color:#333333; margin-top: 14px;padding-left: 4px; } 
+.procont   .procontright{background: #f2f2f3;width: 33%;height: 188px;float: left;} 
+.procontright h1{width: 30%;height: 26px;padding-top: 4px; margin-top: 40px;margin-left:36px;  float: left;font-size: 16px;color:#333333;}
+.procontright h2{width: 44%;height: 30px;margin-top: 40px;  float: left;font-size: 20px;font-weight: bold; color: #ff6666}
+.procontright img{width: 20px;height: 20px; margin-left:36px;margin-top: 15px; float: left;}
+.procontright h3{ width: 100px;height: 20px; float: left;font-size:13px;margin-top: 15px;}
+.procontright h4{width: 24px;height: 20px;float: left;margin-top: 11px;font-size: 20px;font-style: bolder; color: #ff6666}
+.procontright a{background:#66cc66;width: 60%;height: 36px;float: left;margin-top: 12px;margin-left: 36px; font-size: 18px;color: #ffffff;text-align: center;padding-top: 10px;}
+
+
+
+#protop_foot{background:#f2f2f3;float: left;width: 78%;height:464px;margin-left: 11%;}
+
+#protopfoot_left{float: left;width: 67.2%;height:426px;margin-top: 20px;}
+#protopfoot_left img{width: 100%;height: 100%;}
+#protopfoot_right{background:#ffffff;float: left;width: 31.2%;height:426px;margin-left: 1.6%;margin-top: 20px;}
+#protopfoot_right .man{width: 86px;height: 86px;float: left;margin-top:40px;margin-left: 10px; }
+#protopfoot_right div{width: 200px;height: 86px;margin-top:40px;float: left;}
+#protopfoot_right h1{width: 140px;height: 34px;float: left;margin-top:14px;margin-left: 14px;font-size: 16px; }
+#protopfoot_right .place{width: 20px;height: 20px;float: left;margin-top:28px;margin-left: 18px;}
+#protopfoot_right .progray{background: #c9c9c9;display: block;margin-left: 4%; float: left;margin-top: 8px;width: 88%;height: 10px;}
+#protopfoot_right .progreen{background: #6cc77f;width: 50%;height: 10px;margin-top: 0px;}
+#protopfoot_right #operation{margin-top: 28px;;width: 100px; }
+#protopfoot_right .email{background: #66cc66;width: 78px;height: 24px;padding-top:6px; float: left;margin-top:24px;margin-bottom: 16px; font-size: 13px;color: #ffffff; text-align: center;}
+#protopfoot_right h2{width: 60%;height: 30px;float: left;margin-left: 18%; margin-top: 20px; font-size: 16px;font-style: bold;text-align: center;}
+#protopfoot_right .txt1{margin-left: 18%;}
+#protopfoot_right h3{width: 30%;height: 30px;float: left;margin-top: 6px; font-size:35px;color: #333333; font-style: bold;text-align: center;}
+#protopfoot_right h4{width: 92%;font-size:14px;color: #666666;float: left;margin: 8px 0 0 8%;}
+#protopfoot_right h5{width: 92%;font-size:18px;color: #ff6666;float: left;margin: 8px 0 0 8%;font-weight: bold;}
+
+#probottom{background:#c7e3d0;width: 100%;height: 1300px;float: left;}
+
+#probottom_left{float: left;width: 52%;height:1178px;margin-left: 11%;}
+#probottom_leftheader{background:#c7e3d0;float: left;width: 100%;height:46px;}
+#probottom_leftheader li{background:#ffffff;float: left;width: 16.4%;height:28px;text-align: center;font-size: 16px;font-weight: bold;margin-top: 6px;border-left: 1px solid #c7e3d0;padding-top: 8px;}
+
+#probottom_left   #chooseContent{height: 1130px;width:52%;position: absolute;left: 11%;top:940px;display: block;}
+#probottom_left   #chooseContent img{width: 100%;height: 100%;}
+
+#chooseFollow #probottom_leftcenter{background:#c7e3d0;float: left;width: 100%;height:296px;}
+#chooseFollow #probottom_leftcenter .left{float: left;width: 49.6%;height:296px;}
+#chooseFollow #probottom_leftcenter .right{float: right;width: 49.6%;height:296px;}
+#probottom_leftfoot{background:#ffffff;float: left;width: 96%;height:810px;font-size: 16px;padding: 2%;}
+
+#probottom_left   #chooseComment{background: orange;height: 1130px;width:52%;position: absolute;left: 11%;top:940px;display: none;}
+#probottom_left   #chooseComment img{width: 100%;height: 100%;}
+#txt2{width: 100%;}
+#btn1{width: 200px;}
+#ul1 {background: red; width:400px; height:400px; border:1px solid black; margin:10px auto; overflow:hidden;}
+#ul1 li {background: pink; border-bottom:1px #999 dashed; padding:4px;overflow:hidden;font-size: 16px;}
+#probottom_left   #chooseInvestor{background: #ffffff;height: 1130px;width:52%;position: absolute;left: 11%;top:940px;display: none;}
+#chooseInvestor .investor{background: #f2f2f3;width: 30%;height: 264px;float: left;margin: 10px 1.6% 0 1.6%;}
+#probottom_left   #chooseIndustryMaster{height: 1130px;width:52%;position: absolute;left: 11%;top:940px;display: none;}
+#probottom_left   #chooseIndustryMaster img{width: 100%;height: 100%;}
+#probottom_left   #chooseInvestorMaster{height: 1130px;width:52%;position: absolute;left: 11%;top:940px;display: none;}
+#probottom_left   #chooseInvestorMaster img{width: 100%;height: 100%;}
+#probottom_left   #chooseFollow{height: 1130px;width:52%;position: absolute;left: 11%;top:940px;display: none;}
+#probottom_left   #chooseFollow img{width: 100%;height: 100%;}
+
+#probottom_right{background:#ffffff;float: right;width: 24.2%;height:1172px;margin-right: 11%;margin-top: 6px;}
+#probottom_right h1{ float: left;display: block; width: 100%;height: 200px;margin-top: 0;width: 140px;height: 34px;float: left;margin-top:14px;font-size: 16px;color: #333333;}
+.investor{background: #f2f2f3;width: 92%;height: 264px;float: left;margin-left: 4%;margin-top: 10px;}
+.investor .man{width: 32%;height: 32%;float: left;margin-top:40px;margin-left: 34%; text-align: center; }
+.investor h2{ font-weight: bold; width: 40%;height: 24px;float: left;margin-top:10px;margin-left: 30% ;font-size: 16px;color: #5e5b5b; text-align: center;}
+.investor h4{ width: 40%;height: 30px;float: left;margin-left: 30% ;font-size: 16px; color: #333333;text-align: center;}
+.investor h3{ width: 40%;height: 34px;float: left;margin-left: 30% ;font-size: 16px; text-align: center;color: #ff6666;}
+.investor .email{background: #74d074; width: 80%;height: 26px;float: left;margin-left: 10% ; text-align: center;font-size: 16px;color:#ffffff;font-weight: bold; padding-top: 6px;}
+
+
+
+#maintop_middle{background:;float: left;width: 78%;height:260px;margin-left: 11%;}
+#maintop_foot{background:yellow;float: left;width: 78%;height:430px;margin-left: 11%;}
+

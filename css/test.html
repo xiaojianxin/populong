@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+	<title>新建网页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="布尔教育 http://www.itbool.com" />
+	<link rel="stylesheet"  href="./css/reset.css"/>
+	<style>
+	#div1{background:red;width:1000px;height:600px;position:absolute;right:0;top:80px;margin-right:150px;display:block;z-index: 1;}
+	#div2{background:blue;width:1000px;height:600px;position:absolute;right:0;top:80px;margin-right:150px;display:block;z-index: 1;}
+	
+	</style>
+	<script>
+	window.onload=function invchoose(){
+		alert('abc');
+		var oDivp5=document.getElementById('div2');
+		// oDivp5.style.z-index=0;
+	} 
+	</script>
+</head>
+<body>
+	<div id="div1"class="test1"onclick=invchoose()>
+		<!-- <li>
+			<a href="">个人中心</a>
+		</li> -->
+	</div>
+	<div id="div2"class="test2"onclick=invchoose()>
+		<!-- <li>
+			<a href="">个人中心</a>
+		</li> -->
+	</div>
+</body>
+</html>

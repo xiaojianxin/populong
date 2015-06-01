@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+	<title>他人主界面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="布尔教育 http://www.itbool.com" />
+	<link rel="stylesheet"  href="./css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
+	<link rel="stylesheet" type="text/css" href="./css/others.css">
+	<script type="text/javascript" src="./js/others.js"></script>
+	<script type="text/javascript" src="./js/login.js"></script>
+	<body>
+		<div id="back"></div>
+		<div id="login">
+			<img src="./img/login_01.png" alt="" />
+			<h1>登陆</h1>
+			<input class="login_username" type="text" name=""value="邮箱/手机">
+			<input class="login_passwd" type="password" name="password"value="">
+			<input class="remember" type="checkbox">
+			<h2>记住用户名&nbsp;&nbsp;</h2>
+			<a id="tofind1"href="#">忘记密码/</a>
+			<a id="toregist"href="./regist_1.html">快速注册</a>
+			<a class="checklogin"href="./indexlogin.html">登陆</a>
+		</div>
+		<div id="find1">
+			<img src="./img/login_02.png" alt="" />
+			<h1>找回密码</h1>
+			<input class="login_username" type="text" name=""value="邮箱/手机">
+			<input class="login_passwd" type="text" name=""value="验证码">
+			<a class="checkcode"href="#">1234</a>
+			<a id="tofind2"href="#">下一步</a>
+		</div>
+		<div id="find2">
+			<img src="./img/login_02.png" alt="" />
+			<h1>找回密码</h1>
+			<h2>已向13311229866发送手机验证码</h2>
+			<input class="login_passwd" type="text" name=""value="验证码">
+			<input class="login_passwd" type="text" name=""value="60秒后再次发送">
+			<a id="tofind3"href="#">提交</a>
+		</div>
+		<div id="find3">
+			<img src="./img/login_02.png" alt="" />
+			<h1>找回密码</h1>
+			<h2>已将验证地址发送至您的邮箱，请查收！</h2>
+			<a id="toemail"href="http://mail.163.com/">提交</a>
+		</div>
+		<div id="back2"></div>
+		<div id="toSendEmail1">
+			<div id="underline">
+				<img src="./img/index_details5.png" alt="" />
+				<h1>发送私信</h1>
+			</div>
+			<h2>发件人：张三丰</h2>
+			<div id="toEdit"><input class="toEditIn" type="text" name=" ">
+			</div>
+			<input type="submit"value="取消"id="cancel">
+			<input type="submit"value="发送"id="send">
+		</div>
+		<div id="toSendEmail2">
+			<img src="./img/others_01.png" alt="" />
+			<h1 id="sendSuccess">发送成功</h1>
+		</div>
+		<div id="container">
+			<div id="header">
+				<img class="logo"src=""alt="logo">
+				<ul class="nav">
+					<li style="background:#6cc77f;"><a href="./index.html">首页热门</a></li>
+					<li><a href="./help.html">青年助梦</a></li>
+					<li><a href="./together.html">与你同行</a></li>
+					<li><a href="./ido.html">我做你投</a></li>
+				</ul>
+				<ul style="float:right;margin-right:11%;">
+					<li id="tlogin"><a href="#"onclick=login()>登陆</a></li>
+					<li style="float:right"><a href="./regist_1.html">注册</a></li>
+					
+				</ul>
+				<div class="search" style="float:right">
+					<form action="">
+						<input class="btn" type="submit" value=""/>
+						<input class="text" type="text1"/>
+					</form>
+				</div>
+			</div>
+			<div id="main">
+				<div id="otherstop">
+					<div id="otherstop_left">
+						<a href="./others.html">
+							<img class="man" src="./img/man1.png" alt="" />	
+						</a>
+						<h1>发起人：孙总</br>152****1110<br />积分：471</h1>
+						<img class="place"src="./img/index_details1.png" alt="" />
+						<h2 id="operation">北京&nbsp;&nbsp;操作：</h2>
+						<a id="toSendEmail" href="#">发私信</a>
+					</div>
+					<div id="otherstop_right">
+						<h1 class="txt1">80%</h1>
+						<h3>10天</br></h3>
+						<h2>已完成&nbsp;&nbsp;&nbsp;&nbsp;剩余天数</h2>
+						<div class="progray">
+							<div class="progreen"></div>
+						</div>
+						<h4>￥1000</h4>
+						<h5>已筹集资金</h5>
+						<a class="email" href="">关注</a>
+					</div>
+					<div id="otherstop_bottom">
+						<div id="toChooseOne"class="prize"onclick=invChoose()>支持的项目</div>
+						<div id="toChooseTwo"class="prize">发起的项目</div>
+						<div id="toChooseThree"class="prize">关注的项目</div>
+						<div id="toChooseFour"class="prize">项目转让</div>
+					</div>
+				</div>
+				<div id="othersbottom">
+					<div id="ChooseOne"class="procont">
+						<div id="otherchoose">
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_01.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_02.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+							</div>
+							<div class="main_two">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_03.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+						</div>
+						<div id="otherchoose">
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_01.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_02.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+							</div>
+							<div class="main_two">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_03.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+						</div>
+					</div>
+					<div id="ChooseTwo"class="procont">
+						<div id="otherchoose">
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_04.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_05.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+							</div>
+							<div class="main_two">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_06.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+						</div>
+						<div id="otherchoose">
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_04.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_05.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+							</div>
+							<div class="main_two">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_06.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+						</div>
+					</div>
+					<div id="ChooseThree"class="procont">
+						<div id="otherchoose">
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_07.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_08.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+							</div>
+							<div class="main_two">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_09.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+						</div>
+						<div id="otherchoose">
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_07.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_08.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+							</div>
+							<div class="main_two">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_09.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+						</div>
+					</div>
+					<div id="ChooseFour"class="procont">
+						<div id="otherchoose">
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_10.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_05.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+							</div>
+							<div class="main_two">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_07.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+						</div>
+						<div id="otherchoose">
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_10.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+							<div class="main_one">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_05.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+							</div>
+							<div class="main_two">
+								<a href="./pro.html">
+									<img class="project"src="./img/index_07.png" alt="2" />
+								</a>
+								<h2>泡泡隆投资平台</h2>
+								<a href="">
+									<h3>发起人:孙总</h3>
+								</a>
+								<h4 class="micro_content">最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
+								<h5 class="txt1">16%</h5>
+								<img class="place"src="./img/index_details1.png" alt="地点" />
+								<h6>北京</h6>
+								<div class="progray">
+									<div class="progreen"></div>
+								</div>
+								<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div> 
+			<div id="footer">
+				<h1> <a href="http://www.bolongruncheng.com/"> 北京伯隆润成投资有限公司</a></h1>
+				<h1>投资有风险，本平台投资行为责任用户自理，所有投资行为最终解释权归本公司所有</h1>
+			</div>
+		</div>
+	</body>
+	</html>	

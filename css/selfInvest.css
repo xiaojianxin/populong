@@ -1,0 +1,54 @@
+#main{background:#c7e3d0;width: 100%;height: 1480px;float: left;;}
+
+
+#maincontainer{background:#ffffff;width: 78%;height: 1230px;position:absolute;top:112px;left: 11%;display: block;}
+
+#main_top{ width: 100%;height: 192px;float: left;}
+.main_top_top{background: #ffffff; width: 92%;height: 62px;float: left;margin: 0 4% 0 4%;border-bottom: 2px solid #66cc66;}
+.main_top_top h1{ width:90%;height: 20px;float: left;font-size: 24px;font-style: bolder;padding: 20px;color:#66cc66; }
+#main_top_bottom{background: #ffffff; width: 92%;height: 130px;float: left;margin: 0 4% 0 4%;}
+#main_top_bottom a{width: 2%;height: 20px;float: left;margin: 30px 0 0 4%;}
+#main_top_bottom img{width: 100%;height: 100%;}
+#main_top_bottom h1{width: 82%;height: 30px;float: left;margin: 30px 4% 0 2%;font-size: 16px;}
+#main_top_bottom h2{width: 92%;height: 30px;float: left;margin: 0 4% 0 4%;font-size: 16px;color:#a3d0ff ;}
+
+#main_breast{width: 100%;height: 268px;float: left;}
+#main_breast_center{width: 92%;height: 40px;float: left;margin:20px 4% 0 4%; }
+#main_breast_center h1{width: 50%;height: 30px;float: left;margin:0;font-size: 16px;text-align: center;padding-top: 8px;border: 1px solid black; }
+#main_breast_center h2{width: 30%;height: 30px;float: left;margin:0;font-size: 16px;text-align: center; padding-top: 8px;border: 1px solid black;}
+#main_breast_center h3{width:19.2%;height: 30px;float: left;margin:0;font-size: 16px;text-align: center;padding-top: 8px;border: 1px solid black; }
+
+
+#main_breast_foot{width: 92%;height: 138px;float: left;margin:0 4% 0 4%; border: 1px solid black;}
+#main_breast_foot img{width: 24%;height: 138px;float: left;}
+#main_breast_foot h1{width: 25%;height: 118px;float: left;margin-left: 1%;padding-top: 20px;font-size: 16px;}
+#main_breast_foot h2{ width: 31%;height: 118px;float: left;text-align: center;padding-top: 20px;font-size: 16px;color:#ffbdbd; }
+#main_breast_foot h3{width: 19%;height: 118px;float: left;text-align: center;padding-top: 20px;font-size: 16px;}
+
+
+
+
+#main_center{ width: 100%;height: 344px;float: left;}
+#main_center_bottom input{width: 2%;height: 20px;float: left;margin: 10px 0 0 4%;}
+#main_center_bottom .investcheck{width: 2%;height: 20px;float: left;margin: 0 0 0 4%;}
+#main_center_bottom h1{width: 94%;height: 30px;float: left;margin: 10px 0 0 0;}
+#main_center_bottom h2{width: 94%;height: 30px;float: left;margin: 0 0 0 0;}
+#main_center_bottom .investcontent{width: 92%;height: 188px;float: left;margin: 0 0 0 4%;}
+
+
+#main_bottom{ width: 100%;height:300px;float: left;}
+#main_bottom #paycontent{ width: 92%;height: 208px;float: left;margin: 0 0 0 4%;}
+#paycontent h1{ width: 98%;height: 30px;float: left;margin: 10px 0 0 2%;}
+#paycontent input{width: 40%;height: 40px;float: left;margin: 10px 0 0 2%;}
+#paycontent h2{width: 20%;height: 40px;float: left;margin: 10px 0 0 0;}
+#paycontent h3{width: 18%;height: 40px;float: left;margin: 10px 0 0 0;font-size:14px;color:#fa6f57;  }
+#paycontent img{width: 30%;height: 40px;float: left;margin: 10px 0 0 2%;}
+
+#main_foot{background:#ffffff;width: 100%;height:200px;float: left;}
+#main_foot h1{width: 10%;height:30px;float: left;margin: 30px 0 0 76%;text-align: center;font-size: 18px;padding-top: 10px;}
+#main_foot h2{ width: 10%;height:30px;float: left;margin: 30px 4% 0 0;text-align: center;font-size: 18px;padding-top: 10px;color:#a3d0ff ; }
+#main_foot a{background: red; width: 20%;height:40px;float: left;margin: 10px 4% 0 76%;text-align: center;font-size: 18px;padding-top: 10px;}
+
+
+
+
