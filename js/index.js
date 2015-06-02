@@ -1,7 +1,7 @@
 // 加载后直接运行的函数
 window.onload=function(){
 	flash();
-	Progray(container,'progreen','txt1');
+	Progray(container,'progreen','percentage-text');
 }
 
 var oDiv2=document.getElementById('tofind1');
