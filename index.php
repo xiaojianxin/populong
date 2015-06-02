@@ -7,6 +7,10 @@
 	<link rel="stylesheet"  href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 	<script src="./js/jquery-1.10.1.js"></script>
 	<script type="text/javascript" src="./js/index.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
