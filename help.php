@@ -10,10 +10,15 @@ session_start();
 	<link rel="stylesheet"  href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/more.css">
 	<script type="text/javascript" src="./js/index.js"></script>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<script src="./js/jquery-1.10.1.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="container">
-		<div id="header">
+
+		 <?php require('./nav.php') ?>
+		<!-- <div id="header">
 			<img class="logo"src=""alt="logo">
 			<ul class="nav">
 				<li><a href="./index.php">首页热门</a></li>
@@ -107,7 +112,7 @@ session_start();
 					<input class="text" type="text1"/>
 				</form>
 			</div>
-		</div>
+		</div> -->
 		<div id="playimages" class="play">
 			<ul class="big_pic">
 

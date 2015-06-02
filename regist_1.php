@@ -6,42 +6,26 @@
 	<link rel="stylesheet"  href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/regist.css">
 	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
-	<script type="text/javascript" src="jquery-1.10.1.js"></script>
 	<script type="text/javascript" src="./js/regist.js"></script>
 	<script type="text/javascript" src="./js/regist_1.js"></script>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<script src="./js/jquery-1.10.1.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
 	
 </head>
 <body>
 	<div id="container">
-		<div id="header">
-			<img class="logo"src=""alt="logo">
-			<ul class="nav">
-				<li class="chooseli"><a href="./index.html">首页热门</a></li>
-				<li><a href="./help.html">青年助梦</a></li>
-				<li><a href="./together.html">与你同行</a></li>
-				<li><a href="./ido.html">我做你投</a></li>
-			</ul>
-			<ul style="float:right;margin-right:11%;">
-				<li><a href="./index.html">登陆</a></li>
-				<li><a href="./regist_1.html">注册</a></li>
-			</ul>
-			<div class="search" style="float:right">
-				<form action="">
-					<input class="btn" type="submit" value=""/>
-					<input class="text" type="text1"/>
-				</form>
-			</div>
-		</div>
+		 <?php require('./nav.php') ?>
 		<div id="main">
 			<form action="">
 				<div id="maincontainer1">
 				<div id="main_top">
 					<div id="main_top_top">
-						<h1>注册</h1>
-						<h2>已有账号？</h2>
-						<a href="./index.html">立即登陆</a>
+						<div class="title">注册</div>
+						<div class="title_right">已有账号?</div>
+						<a id="to_login" href="./index.html">立即登陆</a>
 					</div>
-					<img src="./img/regist_01.png" alt="" />
+					<img style="width:800px;" src="./img/regist_01.png" alt="" />
 				</div>
 				<div id="main_bottom">
 					<div id="left">

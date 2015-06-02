@@ -1,73 +1,53 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
-	<title>泡泡隆首页热门</title>
+	<title>与你同行</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="布尔教育 http://www.itbool.com" />
 	<link rel="stylesheet"  href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<script type="text/javascript" src="./js/index.js"></script>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<script src="./js/jquery-1.10.1.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="back"></div>
-	<form action="">
-		<div id="login">
-			<img src="./img/login_01.png" alt="" />
-			<h1>登陆</h1>
-			<input class="login_username" type="text" name=""value="邮箱/手机">
-			<input class="login_passwd" type="password" name="password"value="">
-			<input class="remember" type="checkbox">
-			<h2>记住用户名&nbsp;&nbsp;</h2>
-			<a id="tofind1"href="#">忘记密码/</a>
-			<a id="toregist"href="./regist_1.html">快速注册</a>
-			<input type="submit"value="登陆"/class="checklogin">
-		</div>
-	</form>
-	<form action="">
-		<div id="find1">
-			<img src="./img/login_02.png" alt="" />
-			<h1>找回密码</h1>
-			<input class="login_username" type="text" name=""value="邮箱/手机">
-			<input class="login_passwd" type="text" name=""value="验证码">
-			<a class="checkcode"href="#">1234</a>
-			<a id="tofind2"href="#">下一步</a>
-		</div>
-		<div id="find2">
-			<img src="./img/login_02.png" alt="" />
-			<h1>找回密码</h1>
-			<h2>已向13311229866发送手机验证码</h2>
-			<input class="login_passwd" type="text" name=""value="验证码">
-			<input class="login_passwd_button" type="button" name=""value="60秒后再次发送">
-			<input type="submit"value="提交"/ id="tofind3">
-		</div>
-		<div id="find3">
-			<img src="./img/login_02.png" alt="" />
-			<h1>找回密码</h1>
-			<h2>已将验证地址发送至您的邮箱，请查收！</h2>
-			<a id="toemail"href="http://mail.163.com/">查看邮箱</a>
-		</div>
-	</form>
-	
+	<div id="login">
+		<img src="./img/login_01.png" alt="" />
+		<h1>登陆</h1>
+		<input class="login_username" type="text" name=""value="邮箱/手机">
+		<input class="login_passwd" type="password" name="password"value="">
+		<input class="remember" type="checkbox">
+		<h2>记住用户名&nbsp;&nbsp;</h2>
+		<a id="tofind1"href="#">忘记密码/</a>
+		<a id="toregist"href="./regist_1.html">快速注册</a>
+		<a class="checklogin"href="./indexlogin.html">登陆</a>
+	</div>
+	<div id="find1">
+		<img src="./img/login_02.png" alt="" />
+		<h1>找回密码</h1>
+		<input class="login_username" type="text" name=""value="邮箱/手机">
+		<input class="login_passwd" type="text" name=""value="验证码">
+		<a class="checkcode"href="#">1234</a>
+		<a id="tofind2"href="#">下一步</a>
+	</div>
+	<div id="find2">
+		<img src="./img/login_02.png" alt="" />
+		<h1>找回密码</h1>
+		<h2>已向13311229866发送手机验证码</h2>
+		<input class="login_passwd" type="text" name=""value="验证码">
+		<input class="login_passwd" type="text" name=""value="60秒后再次发送">
+		<a id="tofind3"href="#">提交</a>
+	</div>
+	<div id="find3">
+		<img src="./img/login_02.png" alt="" />
+		<h1>找回密码</h1>
+		<h2>已将验证地址发送至您的邮箱，请查收！</h2>
+		<a id="toemail"href="http://mail.163.com/">提交</a>
+	</div>
 	<div id="container">
-		<div id="header">
-			<img class="logo"src=""alt="logo">
-			<ul class="nav">
-				<li class="chooseli"><a href="./index.html">首页热门</a></li>
-				<li><a href="./help.html">青年助梦</a></li>
-				<li><a href="./together.html">与你同行</a></li>
-				<li><a href="./ido.html">我做你投</a></li>
-			</ul>
-			<ul style="float:right;margin-right:11%;">
-				<li id="tlogin"><a href="#"onclick=login()>登陆</a></li>
-				<li style="float:right"><a href="./regist_1.html">注册</a></li>
-			</ul>
-			<div class="search" style="float:right">
-				<form action="">
-					<input class="btn" type="submit" value=""/>
-					<input class="text" type="text1"/>
-				</form>
-			</div>
-		</div>
+		<?php require('./nav.php') ?>
 		<div id="playimages" class="play">
 			<ul class="big_pic">
 
@@ -108,14 +88,13 @@
 			<div id="hotpro">
 				<div id="content_one">
 					<div class="contentone_top">
-						<h1>热门项目</h1>
-						<a href="./hotpro.html">查看更多>></a>
+						<h1>同行项目</h1>
 					</div>
 
 					<div class="contentone_bottom">
 						<div id="main_left">
 							<a href="./pro.html">
-								<img class="project"src="./img/index_01.png" alt="2" />
+								<img class="project"src="./img/index_03.png" alt="2" />
 							</a>
 						</div>
 						<div id="main_right">
@@ -147,7 +126,7 @@
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">10%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -165,7 +144,7 @@
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">12%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -183,7 +162,7 @@
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">14%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -199,19 +178,17 @@
 					<div id="hotinv">
 						<div class="content_two">
 							<div class="contentone_top">
-								<h1>热门投资</h1>
-								<a href="./hotinvest.html">查看更多>></a>
 							</div>
 							<div id="contentone_foot">
 								<div class="main_one">
 									<a href="./pro.html">
-										<img class="project"src="./img/index_05.png" alt="2" />
+										<img class="project"src="./img/index_06.png" alt="2" />
 									</a>
 									<h2>泡泡隆投资平台</h2>
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">16%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -223,13 +200,13 @@
 								</div>
 								<div class="main_one">
 									<a href="./pro.html">
-										<img class="project"src="./img/index_06.png" alt="2" />
+										<img class="project"src="./img/index_10.png" alt="2" />
 									</a>
 									<h2>泡泡隆投资平台</h2>
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">30%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -241,13 +218,13 @@
 								</div>
 								<div class="main_one" style="margin:0;">
 									<a href="./pro.html">
-										<img class="project"src="./img/index_07.png" alt="2" />
+										<img class="project"src="./img/index_05.png" alt="2" />
 									</a>
 									<h2>泡泡隆投资平台</h2>
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">18%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -263,19 +240,17 @@
 					<div id="hottime">
 						<div class="content_two">
 							<div class="contentone_top">
-								<h1>即将到期</h1>
-								<a href="./hottime.html">查看更多>></a>
 							</div>
 							<div id="contentone_foot">
 								<div class="main_one">
 									<a href="./pro.html">
-										<img class="project"src="./img/index_08.png" alt="2" />
+										<img class="project"src="./img/index_09.png" alt="2" />
 									</a>
 									<h2>泡泡隆投资平台</h2>
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">20%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -287,13 +262,13 @@
 								</div>
 								<div class="main_one">
 									<a href="./pro.html">
-										<img class="project"src="./img/index_09.png" alt="2" />
+										<img class="project"src="./img/index_07.png" alt="2" />
 									</a>
 									<h2>泡泡隆投资平台</h2>
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">22%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -305,13 +280,13 @@
 								</div>
 								<div class="main_one" style="margin:0;">
 									<a href="./pro.html">
-										<img class="project"src="./img/index_10.png" alt="2" />
+										<img class="project"src="./img/index_01.png" alt="2" />
 									</a>
 									<h2>泡泡隆投资平台</h2>
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">24%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -327,8 +302,6 @@
 					<div id="hotvid">
 						<div class="content_two">
 							<div class="contentone_top">
-								<h1>热门路演</h1>
-								<a href="./hotvideo.html">查看更多>></a>
 							</div>
 							<div id="contentone_foot">
 								<div class="main_one">
@@ -339,7 +312,7 @@
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">36%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -357,7 +330,7 @@
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">38%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>
@@ -375,7 +348,7 @@
 									<a href="">
 										<h3>发起人:孙总</h3>
 									</a>
-									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.</h4>
+									<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台.100%</h4>
 									<h5 class="txt1">70%</h5>
 									<img class="place"src="./img/index_details1.png" alt="地点" />
 									<h6>北京</h6>

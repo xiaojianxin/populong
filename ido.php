@@ -7,6 +7,9 @@
 	<link rel="stylesheet"  href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<script type="text/javascript" src="./js/index.js"></script>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<script src="./js/jquery-1.10.1.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="back"></div>
@@ -44,25 +47,7 @@
 		<a id="toemail"href="http://mail.163.com/">提交</a>
 	</div>
 	<div id="container">
-		<div id="header">
-			<img class="logo"src=""alt="logo">
-			<ul class="nav">
-				<li><a href="./index.html">首页热门</a></li>
-				<li><a href="./help.html">青年助梦</a></li>
-				<li><a href="./together.html">与你同行</a></li>
-				<li class="chooseli"><a href="./ido.html">我做你投</a></li>
-			</ul>
-			<ul style="float:right;margin-right:11%;">
-				<li id="tlogin"><a href="#"onclick=login()>登陆</a></li>
-				<li style="float:right"><a href="./regist_1.html">注册</a></li>
-			</ul>
-			<div class="search" style="float:right">
-				<form action="">
-					<input class="btn" type="submit" value=""/>
-					<input class="text" type="text1"/>
-				</form>
-			</div>
-		</div>
+		<?php require('./nav.php') ?>
 		<div id="playimages" class="play">
 			<ul class="big_pic">
 

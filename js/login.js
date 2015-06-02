@@ -12,13 +12,11 @@ function login()
 	var oDiv9=document.getElementById('find3');
 	var oDiv10=document.getElementById('back');
 
-
-	oDiv1.onclick=function ()
-	{
+	//oDiv1.onclick=function ()
+	//{
 		// 点击登陆显示登陆框
-		oDiv6.style.display='block';
-		oDiv10.style.display='block';
-	};
+		
+	//};
 	oDiv2.onclick=function ()
 	{
 		// 点击“忘记密码”进入密码寻找1
@@ -37,15 +35,15 @@ function login()
 		oDiv8.style.display='none';
 		oDiv9.style.display='block';
 	};
-	oDiv10.onclick=function ()
-	{
-		// 点击背景退出登录框
-		oDiv6.style.display='none';
-		oDiv7.style.display='none';
-		oDiv8.style.display='none';
-		oDiv9.style.display='none';
-		oDiv10.style.display='none';
-	};
+	// oDiv10.onclick=function ()
+	// {
+	// 	// 点击背景退出登录框
+	// 	oDiv6.style.display='none';
+	// 	oDiv7.style.display='none';
+	// 	oDiv8.style.display='none';
+	// 	oDiv9.style.display='none';
+	// 	oDiv10.style.display='none';
+	// };
 }
 
 

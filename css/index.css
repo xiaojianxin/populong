@@ -1,7 +1,7 @@
 /*点击弹出部分*/
 #back{background:black;width:100%;height:3200px;position:absolute;top:0;right:0;opacity:0.8;display:none;z-index: 1;}
 
-#login{background: #ffffff;width:33.6%;height: 280px;position: absolute;z-index: 1;top:200px;right: 33.2%;float: left;display:none;}
+#login{background: #ffffff;width:33.6%;height: 275px;width:426px;position: absolute;top:200px;left:33.2%;float: left;display:none;}
 #login img{width: 7.08%;height: 30px;margin: 28px 0 0 9.4%;float: left;}
 #login h1{width:60%;font-size: 16px;color: #6cc77f;height: 24px;float: left;margin: 34px 0 0 4%;}
 #login .login_username{background: #f2f2f3;width: 82.54%;height: 50px;margin: 20px 0 0 8%;font-size:14px; color: #c9c9c9;}
@@ -20,7 +20,7 @@
 
 
 
-#find1{background: #ffffff;width:33.6%;height: 280px;position: absolute;z-index: 1;top:200px;right: 33.2%;float: left;display: none;}
+#find1{background: #ffffff;width:33.6%;height: 350px;position: absolute;top:200px;left: 33.2%;float: left;display: none;}
 #find1 img{width: 7.08%;height: 30px;margin: 28px 0 0 40px;float: left;}
 #find1 h1{font-size: 16px;color: #6cc77f;width:60%;height: 24px;float: left;margin: 34px 0 0 10px;}
 #find1 .login_username{background: #f2f2f3;height: 50px;width: 82.54%;margin: 20px 0 0 30px;font-size:14px; color: #c9c9c9;}
@@ -29,7 +29,7 @@
 #find1 #tofind2{background:#6cc77f;  width: 90px;height: 30px;float: right;margin:10px 40px 0 0; font-size: 14px;color:#ffffff;padding-top: 16px;text-align: center;}
 
 
-#find2{background: #ffffff;width:33.6%;height: 280px;position: absolute;z-index: 1;top:200px;right: 33.2%;float: left;display:none;}
+#find2{background: #ffffff;width:33.6%;height: 280px;position: absolute;top:200px;left: 33.2%;float: left;display:none;}
 #find2 img{width: 30px;height: 30px;margin: 28px 0 0 40px;float: left;}
 #find2 h1{font-size: 16px;color: #6cc77f;width:140px;height: 24px;float: left;margin: 34px 0 0 10px;}
 #find2 h2{font-size: 14px;color: #333333;width:80%;height: 24px;float: left;margin:10px 0 0 30px;}

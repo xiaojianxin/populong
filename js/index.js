@@ -4,15 +4,20 @@ window.onload=function(){
 	Progray(container,'progreen','txt1');
 }
 
+var oDiv2=document.getElementById('tofind1');
 
-
-
+oDiv2.onclick=function ()
+	{
+		// 点击“忘记密码”进入密码寻找1
+		oDiv6.style.display='none';
+		oDiv7.style.display='block';
+	};
 
 // 点击登陆部分
 function login()
 {
 	var oDiv1=document.getElementById('tlogin');
-	var oDiv2=document.getElementById('tofind1');
+	
 	var oDiv3=document.getElementById('tofind2');
 	var oDiv4=document.getElementById('tofind3');
 	var oDiv6=document.getElementById('login');
@@ -26,15 +31,10 @@ function login()
 	oDiv1.onclick=function ()
 	{
 		// 点击登陆显示登陆框
-		oDiv6.style.display='block';
-		oDiv10.style.display='block';
+		oDiv6.style.display='shown';
+		oDiv10.style.display='shown';
 	};
-	oDiv2.onclick=function ()
-	{
-		// 点击“忘记密码”进入密码寻找1
-		oDiv6.style.display='none';
-		oDiv7.style.display='block';
-	};
+	
 	oDiv3.onclick=function ()
 	{
 		// 点击“下一步”进入密码寻找2
