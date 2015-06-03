@@ -1,23 +1,14 @@
 // 加载后直接运行的函数
 window.onload=function(){
 	flash();
-	Progray(container,'progreen','txt1');
+	Progray(container,'progreen','percentage-text');
 }
-
-var oDiv2=document.getElementById('tofind1');
-
-oDiv2.onclick=function ()
-	{
-		// 点击“忘记密码”进入密码寻找1
-		oDiv6.style.display='none';
-		oDiv7.style.display='block';
-	};
 
 // 点击登陆部分
 function login()
 {
 	var oDiv1=document.getElementById('tlogin');
-	
+
 	var oDiv3=document.getElementById('tofind2');
 	var oDiv4=document.getElementById('tofind3');
 	var oDiv6=document.getElementById('login');
@@ -28,13 +19,7 @@ function login()
 	var oDiv10=document.getElementById('back');
 
 
-	oDiv1.onclick=function ()
-	{
-		// 点击登陆显示登陆框
-		oDiv6.style.display='shown';
-		oDiv10.style.display='shown';
-	};
-	
+
 	oDiv3.onclick=function ()
 	{
 		// 点击“下一步”进入密码寻找2
@@ -221,7 +206,7 @@ function startMove(obj, attr, iTarget)
 	{
 		startMove(oBtnNext, 'opacity', 0);
 	};
-	
+
 	//大图切换
 	for(var i=0;i<aLiSmall.length;i++)
 	{
@@ -229,12 +214,12 @@ function startMove(obj, attr, iTarget)
 		aLiSmall[i].onclick=function ()
 		{
 			if(this.index==now)return;
-			
+
 			now=this.index;
-			
+
 			tab();
 		};
-		
+
 		aLiSmall[i].onmouseover=function ()
 		{
 			startMove(this, 'opacity', 100);
@@ -247,21 +232,21 @@ function startMove(obj, attr, iTarget)
 			}
 		};
 	}
-	
+
 	function tab()
 	{
 		aLiBig[now].style.zIndex=nowZIndex++;
-		
+
 		for(var i=0;i<aLiSmall.length;i++)
 		{
 			startMove(aLiSmall[i], 'opacity', 60);
 		}
-		
+
 		startMove(aLiSmall[now], 'opacity', 100);
-		
+
 		aLiBig[now].style.height=0;
 		startMove(aLiBig[now], 'height', 374);
-		
+
 		if(now==0)
 		{
 			startMove(oUlSmall, 'left', 0);
@@ -275,7 +260,7 @@ function startMove(obj, attr, iTarget)
 			startMove(oUlSmall, 'left', -(now-1)*aLiSmall[0].offsetWidth);
 		}
 	}
-	
+
 	oBtnPrev.onclick=function ()
 	{
 		now--;
@@ -283,10 +268,10 @@ function startMove(obj, attr, iTarget)
 		{
 			now=aLiSmall.length-1;
 		}
-		
+
 		tab();
 	};
-	
+
 	oBtnNext.onclick=function ()
 	{
 		now++;
@@ -294,12 +279,12 @@ function startMove(obj, attr, iTarget)
 		{
 			now=0;
 		}
-		
+
 		tab();
 	};
-	
+
 	var timer=setInterval(oBtnNext.onclick, 2000);
-	
+
 	oDiv.onmouseover=function ()
 	{
 		clearInterval(timer);
