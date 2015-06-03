@@ -51,7 +51,7 @@
                                 <div class="col-md-6" style="margin-top: 20px">
                                     <a id="tofind1"href="#">忘记密码</a>
                                     <span>&nbsp;|&nbsp;</span>
-                                    <a id="toregist"href="./regist_1.html">快速注册</a>
+                                    <a id="toregist"href="./regist_1.php">快速注册</a>
                                 </div>
                                 <div class="col-md-6 ">
                                     <button type="submit" class="btn checklogin pull-right">登陆</button>
