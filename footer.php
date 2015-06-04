@@ -1,7 +1,24 @@
-<div id="footer">
-    <div id="footercontainer" style="vertical-align: middle">
-        <h1> <a href="http://www.bolongruncheng.com/"> 京伯隆润成投资有限公司</a></h1>
-        <h1>投资有风险，本平台投资行为责任用户自理，所有投资行为最终解释权归本公司所有</h1>
+<div id="footer" style="margin-top:50px;" >
+    <div class="container">
+        <div class="row" style="margin-top:10px;">
+            <div class="col-sm-1 col-sm-offset-4">
+                <span>关于我们</span>
+                <span class="pull-right">|</span>
+            </div>
+            <div class="col-sm-1">
+                <span>联系我们</span>
+                <span class="pull-right">|</span>
+            </div>
+            <div class="col-sm-1">
+                <span>帮助中心</span>
+                <span class="pull-right">|</span>
+            </div>
+            <div class="col-sm-1">
+                <span>服务规范</span>
+            </div>
+        </div>
+        <div style="text-align:center">
+            <span>如有问题请联系400-000-000</span>
+        </div>
     </div>
-
 </div>

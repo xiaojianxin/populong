@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">泡泡龙</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         	<ul class="nav navbar-nav">
@@ -17,12 +17,14 @@
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
           <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#" data-toggle="modal" data-target="#login" href="#login" >登陆</a></li>
+                  <li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
                   <li><a href="./regist_1.php">注册</a></li>
           </ul>
           <form class='navbar-form navbar-right' action="">
-                <input class="btn" type="submit" value="search"/>
-                <input type="text" class="form-control" placeholder="Search...">
+                <div class="btn btn-inverse">
+                    <span class="glyphicon glyphicon-search" style="color: white"></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Search..." style="background-color: black;color: white">
           </form>
           	
          

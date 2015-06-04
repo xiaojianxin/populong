@@ -7,178 +7,387 @@
 	<link rel="stylesheet"  href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
 	<link rel="stylesheet" type="text/css" href="./css/self.css">
+    <link rel="stylesheet" type="text/css" href="./css/leftnav.css">
 	<script type="text/javascript" src="./js/self.js"></script>
 	<script type="text/javascript" src="./js/login.js"></script>
-	<body>
-		<div id="container">
-			<div id="header"onmouseover=dropdown();>
-				<img class="logo"src=""alt="logo">
-				<ul class="nav">
-					<li style="background:#6cc77f;"><a href="./index.html">首页热门</a></li>
-					<li><a href="./help.html">青年助梦</a></li>
-					<li><a href="./together.html">与你同行</a></li>
-					<li><a href="./ido.html">我做你投</a></li>
-				</ul>
-				<ul id="name">
-					<li id="div1" style="float:right;text-style:normal;"><a href="#" style="font-weight: lighter;">Lilith</a></li>
-				</ul>
+    <script type="text/javascript" src="./js/leftnav.js"></script>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<script src="./js/jquery-1.10.1.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
+	  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
 
-				<img id="head" src="./img/head.png" alt="head" style="float: right;margin-top: 15px;"/>
-				<div class="search" style="float:right">
-					<form action="">
-						<input class="btn" type="submit" value=""/>
-						<input class="text" type="text1"/>
-					</form>
-				</div>
-			</div>
+    <body>
+        <div id="topnav">
+            <?php require('./nav.php') ?>
+        </div>
 			<div id="main">
-				<div id="self_top">
-					<a href="start.html">发起项目</a>
-				</div>
-				<div id="self_left">
-					<li id="left1"><a href="#">个人首页</a></li>
-					<li><a href="">资金管理</a></li>
-					<li id="left2"><a href="#" class="childA">交易记录</a></li>
-					<li id="left3"><a href="#" class="childA">充值</a></li>
-					<li id="left4"><a href="#" class="childA">提现</a></li>
-					<li><a href="">投资管理</a></li>
-					<li id="left5"><a href="#" class="childA">我的投资</a></li>
-					<li id="left6"><a href="#" class="childA">转让市场</a></li>
-					<li><a href="">项目管理</a></li>
-					<li id="left7"><a href="#" class="childA">我发起的项目</a></li>
-					<li id="left8"><a href="#" class="childA">我关注的项目</a></li>
-					<li><a href="">账户管理</a></li>
-					<li id="left9"><a href="#" class="childA">个人资料</a></li>
-					<li id="left10"><a href="#" class="childA">安全认证</a></li>
-					<li><a href="#" class="childA">银行卡管理</a></li>
-					<li><a href="#">站内服务</a></li>
-					<li id="left11"><a href="#" class="childA">消息</a></li>
-					<li id="left12"><a href="#" class="childA">平台排行榜</a></li>
-					<li><a href="#" class="childA">热门路演推荐</a></li>
-				</div>
+
+				
+                <div class="container">
+                    <div id="self_top" >
+                        <a  class="btn btn-success" href="start.html">发起项目</a>
+                    </div>
+                    <div class="row">
+                         <?php require('./leftnav.php') ?>
+
+
+                        <div  class="col-xs-9">
+                            <div class="self_right_top">
+                                <div class='self_pic'>
+                                      <img src="./img/head_02.png" alt="" />
+                                      
+                                </div>
+                                <div class="self_explain">Lilith-泡泡隆设计师</div>
+                                <div class="container" id="self_nav">
+                                    <div id="topbottom" class="row">
+                                        <div id="toChooseOne"class="col-xs-3 content_nav"  onclick=invChoose()>发起的项目</div>
+                                        <div id="toChooseTwo"class="col-xs-3 content_nav" >关注的项目</div>
+                                        <div id="toChooseThree"class="col-xs-3 content_nav" >关注者110</div>
+                                        <div id="toChooseFour"class="col-xs-3 content_nav" >粉丝110万</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="self_fans">
+                            <div class="row">
+                                <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                 <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        </div>
+
+                        <div class="row">
+                                <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                 <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        </div>
+
+                        <div class="row">
+                                <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                 <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div class="col-xs-4 fans_card">
+                                    <div class="row">
+                                        <div class="col-xs-4 fans_pic">
+                                            <a href="./others.html" class="fans_pic">
+                                                <img class="fan" src="./img/fan_01.png" alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                        <div class="col-xs-6 fans_description">
+                                            <div class="fans_name">张三三</div>
+                                            <div class="fans_introduction">某公司老总</div>
+                                            <div class="fans_introduction">关注11|粉丝20万</div>
+                                            <a class="foucus" href="./others.html">关注</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        </div>
+
+
+
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>张三三</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>李四四</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>王五五</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>张三三</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>李四四</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>王五五</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>张三三</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>李四四</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>王五五</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>张三三</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>李四四</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                            <div class="fanone">
+                                <div class="fanoneleft">
+                                    <a href="./others.html">
+                                        <img class="fan" src="./img/fan_01.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="fanoneright">
+                                    <h2>王五五</h2>
+                                    <h4>某公司老总</h4>
+                                    <h3>关注11|粉丝20万</h3>
+                                    <a class="foucus" href="./others.html">关注</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+				    
+
 				<div id="self_right">
 					<div id="selfRight1">
-						<div class="self_right_top">
-							<img src="./img/head_02.png" alt="" />
-							<h1>Lilith-泡泡隆设计师</h1>
-							<div id="topbottom">
-								<div id="toChooseOne"class="prize"onclick=invChoose()>发起的项目</div>
-								<div id="toChooseTwo"id="toChooseOne"class="prize">关注的项目</div>
-								<div id="toChooseThree"class="prize">关注者110</div>
-								<div id="toChooseFour"class="prize">粉丝110万</div>
-							</div>
-						</div>
-						<div id="self_right_bottom1">
-							<div id="otherchoose">
-								<div class="main_one">
-									<a href="./pro.html">
-										<img class="project"src="./img/index_01.png" alt="2" />
-									</a>
-									<h2>泡泡隆投资平台</h2>
-									<a href="">
-										<h3>发起人:孙总</h3>
-									</a>
-									<h4>最大限度服务投资者，为投资者打造最优投资平台，为有梦想的项目发起者提供展示自我的最佳平台.100%</h4>
-									<h5 class="txt1">16%</h5>
-									<img class="place"src="./img/index_details1.png" alt="地点" />
-									<h6>北京</h6>
-									<div class="progray">
-										<div class="progreen"></div>
-									</div>
-									<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
-
-								</div>
-								<div class="main_one">
-									<a href="./pro.html">
-										<img class="project"src="./img/index_02.png" alt="2" />
-									</a>
-									<h2>泡泡隆投资平台</h2>
-									<a href="">
-										<h3>发起人:孙总</h3>
-									</a>
-									<h4>最大限度服务投资者，为投资者打造最优投资平台，为有梦想的项目发起者提供展示自我的最佳平台.100%</h4>
-									<h5 class="txt1">16%</h5>
-									<img class="place"src="./img/index_details1.png" alt="地点" />
-									<h6>北京</h6>
-									<div class="progray">
-										<div class="progreen"></div>
-									</div>
-									<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
-								</div>
-								<div class="main_two">
-									<a href="./pro.html">
-										<img class="project"src="./img/index_03.png" alt="2" />
-									</a>
-									<h2>泡泡隆投资平台</h2>
-									<a href="">
-										<h3>发起人:孙总</h3>
-									</a>
-									<h4>最大限度服务投资者，为投资者打造最优投资平台，为有梦想的项目发起者提供展示自我的最佳平台.100%</h4>
-									<h5 class="txt1">16%</h5>
-									<img class="place"src="./img/index_details1.png" alt="地点" />
-									<h6>北京</h6>
-									<div class="progray">
-										<div class="progreen"></div>
-									</div>
-									<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
-
-								</div>
-							</div>
-							<div id="otherchoose">
-								<div class="main_one">
-									<a href="./pro.html">
-										<img class="project"src="./img/index_01.png" alt="2" />
-									</a>
-									<h2>泡泡隆投资平台</h2>
-									<a href="">
-										<h3>发起人:孙总</h3>
-									</a>
-									<h4>最大限度服务投资者，为投资者打造最优投资平台，为有梦想的项目发起者提供展示自我的最佳平台.100%</h4>
-									<h5 class="txt1">16%</h5>
-									<img class="place"src="./img/index_details1.png" alt="地点" />
-									<h6>北京</h6>
-									<div class="progray">
-										<div class="progreen"></div>
-									</div>
-									<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
-
-								</div>
-								<div class="main_one">
-									<a href="./pro.html">
-										<img class="project"src="./img/index_02.png" alt="2" />
-									</a>
-									<h2>泡泡隆投资平台</h2>
-									<a href="">
-										<h3>发起人:孙总</h3>
-									</a>
-									<h4>最大限度服务投资者，为投资者打造最优投资平台，为有梦想的项目发起者提供展示自我的最佳平台.100%</h4>
-									<h5 class="txt1">16%</h5>
-									<img class="place"src="./img/index_details1.png" alt="地点" />
-									<h6>北京</h6>
-									<div class="progray">
-										<div class="progreen"></div>
-									</div>
-									<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
-								</div>
-								<div class="main_two">
-									<a href="./pro.html">
-										<img class="project"src="./img/index_03.png" alt="2" />
-									</a>
-									<h2>泡泡隆投资平台</h2>
-									<a href="">
-										<h3>发起人:孙总</h3>
-									</a>
-									<h4>最大限度服务投资者，为投资者打造最优投资平台，为有梦想的项目发起者提供展示自我的最佳平台.100%</h4>
-									<h5 class="txt1">16%</h5>
-									<img class="place"src="./img/index_details1.png" alt="地点" />
-									<h6>北京</h6>
-									<div class="progray">
-										<div class="progreen"></div>
-									</div>
-									<h4>￥1234567  90天</br>已筹金额  剩余天数</h4>
-								</div>
-							</div>
-						</div>
+						
+						
 						<div id="self_right_bottom2">
 							<div id="otherchoose">
 								<div class="main_one">
@@ -1808,5 +2017,15 @@
 				<h1>投资有风险，本平台投资行为责任用户自理，所有投资行为最终解释权归本公司所有</h1>
 			</div>
 		</div>
+		<script type="text/javascript">
+	$(function() {
+		$('.nav li').click(function(e) {
+			$('.nav li').removeClass('active');
+			//$(e.target).addClass('active');
+			$(this).addClass('active');
+		});
+	});
+
+	</script>
 	</body>
 	</html>	
