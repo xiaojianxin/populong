@@ -17,7 +17,9 @@
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
           <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#login" data-toggle="modal" data-target="#login" >登陆</a></li>
+
+                  <li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
+
                   <li><a href="./regist_1.php">注册</a></li>
           </ul>
           <form class='navbar-form navbar-right' action="">

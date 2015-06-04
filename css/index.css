@@ -28,6 +28,77 @@ a:focus{
     font-weight: bold;
 }
 
+#login,#forgetPW,#inputCode,#sendCode{
+
+    margin-top: 180px;
+}
+#login .login_username{
+    background-color: #f2f2f3;
+    height: 50px;
+}
+#login .login_passwd{
+    background-color: #f2f2f3;
+    height: 50px;
+}
+#forgetPW{
+    height: 100%;
+
+}
+#forgetPW h4{
+    color: #6cc77f;
+}
+#forgetPW h4 span{
+    color:#6cc77f ;
+}
+#inputCode{
+    height: 100%;
+}
+#inputCode h4{
+    color: #6cc77f;
+}
+#inputCode h4 span{
+    color:#6cc77f ;
+}
+#inputCode h2 {
+    color:#6cc77f ;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#sendCode h2 {
+    color:#6cc77f ;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#sendCode h4{
+    color: #6cc77f;
+}
+#sendCode h4 span{
+    color:#6cc77f ;
+}
+.findAccount,.checkCode,.checkEmail{
+    background-color: #f2f2f3;
+    height: 50px;
+}
+
+.nextStep{
+    background-color: #6cc77f;
+    color: #ffffff;
+
+}
+#submitFind{
+    margin-top: 20px;
+}
+.gotoEmail{
+    background-color: #6cc77f;
+    margin-bottom: 20px;
+
+}
+
+.btn a{
+    color: #ffffff;
+}
 
 .content-main{
 	background-color: white;
