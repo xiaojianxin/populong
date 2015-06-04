@@ -1,0 +1,150 @@
+
+#firstBig img{
+    width: 100%;
+    height: auto;
+}
+#secondText{
+    background-color: #1f1f1f;
+    height: 420px;
+}
+#secondText .headerText{
+    margin-top: 20px;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+#secondText .titleText{
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+
+}
+.center-block{
+    text-align: center;
+}
+.introduce_line div span img{
+    background: transparent;
+    margin-top: 30px;
+}
+.introduce-text p{
+    margin-top: 20px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+.pic-introduce{
+    margin-top: 50px;
+}
+.introduce button{
+    background-color: transparent;
+    border-color: #6cc77f;
+    color: #6cc77f;
+    margin-top: 30px;
+}
+.introduce button:hover{
+    background-color: transparent;
+    border-color: #6cc77f;
+    color: #ffffff;
+    margin-top: 30px;
+}
+.introduce-text button{
+    background-color: transparent;
+    border-color: #6cc77f;
+    color: #6cc77f;
+    margin-top: 30px;
+}
+.introduce-text button:hover{
+    background-color: transparent;
+    border-color: #6cc77f;
+    color: white;
+    margin-top: 30px;
+}
+#pic-list{
+    z-index: 0;
+}
+.one-pic {
+    float: left;
+    width: 25%;
+
+
+}
+.one-pic img{
+    width: 100%;
+
+}
+
+#fourIntroduce{
+    z-index: 1;
+    background-color: #ffffff;
+
+}
+#footer{
+    background-color: #000000;
+}
+#memberIntroduce .headerText{
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+    padding-top: 30px;
+}
+#memberIntroduce{
+    margin-top: 30px;
+}
+#memberPic button{
+    background-color: transparent;
+    border-color: #6cc77f;
+    color: #6cc77f;
+    margin-top: 30px;
+    margin-left: 15%;
+}
+#memberPic  button:hover{
+    background-color: transparent;
+    border-color: #6cc77f;
+    color: #ffffff;
+    margin-top: 30px;
+}
+#memberPic div p{
+    line-height:30px;
+    color: #000000;
+    font-size: 20px;
+    margin-top: 30px;
+}
+#secondBig{
+    margin-top: 30px;
+}
+#secondBig img{
+    width: 100%;
+}
+#superCar{
+background-color: #7dcc8d;
+    height: 450px;
+}
+#superCar .headerText{
+    margin-top: 20px;
+    font-size: 28px;
+    color: #000000;
+    font-weight: bold;
+}
+#superCar .titleText{
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+
+}
+#superCar .introduce-text p{
+    color: #000000;
+    font-weight: bold;
+}
+#superCar button{
+    background-color: transparent;
+    border-color: #ffffff;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#superCar button:hover{
+    background-color: transparent;
+    border-color: #f5f5f5;
+    color: #f5f5f5;
+    margin-top: 30px;
+}
