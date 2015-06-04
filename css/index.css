@@ -27,6 +27,7 @@ a:focus{
     font-size: 24px;
     font-weight: bold;
 }
+
 #login,#forgetPW,#inputCode,#sendCode{
 
     margin-top: 180px;

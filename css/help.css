@@ -1,0 +1,96 @@
+body{
+    background-color: #eeeff3;
+}
+.swiper-slide{
+    height: 400px;
+}
+#container{
+    margin-top: 80px;
+}
+.swiper-slide{
+    background-color: #ffffff;
+}
+.swiper-slide .bigpic img{
+    width: 100%;
+}
+.content-main h1{
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.content-main h2{
+    margin-top: 5px;
+
+}
+.content-main h2 a{
+    font-size: 22px;
+    color: #666668;
+}
+.content-main p{
+    margin-top: 20px;
+    font-size: 24px;
+}
+.content-main .percentage-text{
+    font-weight: bold;
+}
+
+#right_center span{
+    font-size: 18px;
+}
+#right_center .row{
+    line-height: 28px;
+}
+
+.progray{background: #c9c9c9;display: block;margin-left: 4%; float: left;margin-top: 8px;width: 88%;height: 10px;}
+.progreen{background: #6cc77f;width: 50%;height: 10px;}
+
+#selectBox{
+    margin-top: 50px;
+    background-color: white;
+
+    line-height: 50px;
+
+}
+#selectBox span{
+    font-weight: bold;
+
+}
+#selectBox .btn-group .dropdown-toggle{
+    margin-top: -2px;
+
+}
+
+#boxList{
+    margin-top: 50px;
+
+}
+.onebox{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+.onebox a img{
+    margin-top: 20px;
+    width: 100%;
+}
+.onebox h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+}
+.onebox a{
+    color: #666668;
+
+}
+.onebox h3{
+    font-size: 18px;
+}
+.onebox h4{
+    font-size: 16px;
+    color: #666668;
+    margin-top: 10px;
+}
+#footer{
+    background-color: #000000;
+}

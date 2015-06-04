@@ -23,6 +23,7 @@
 
 <?php require('./nav.php') ?>
 <div id="container">
+
 <div class="modal fade" id="login" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -232,7 +233,11 @@
         </div>
         <div class="col-sm-5">
             <h1>MICLE傲血顶级订制主机</h1>
+
+            <h2><a href="#">由Lilith发起</a></h2>
+
             <h2><a href="0">由Lilith发起</a></h2>
+
             <p>英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</p>
             <div style="height:20px;"></div>
             <div id="right_center">
@@ -1077,6 +1082,7 @@
     </div>
 </div>
 </div>
+
 <?php require('./footer.php')?>
 </div>
 <script type="text/javascript">
