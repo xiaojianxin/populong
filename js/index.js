@@ -1,6 +1,6 @@
 // 加载后直接运行的函数
 window.onload=function(){
-	flash();
+	//flash();
 	Progray(container,'progreen','percentage-text');
 }
 

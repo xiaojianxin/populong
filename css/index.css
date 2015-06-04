@@ -5,7 +5,29 @@
 	#login #toregist{font-size: 1px; }
 	#login .checklogin{font-size: 1px;}
 }
-#login{
+ a{
+ cursor:pointer;
+
+ text-decoration:none;
+
+ hide-focus: expression(this.hideFocus=true);
+
+outline:none;
+ }
+ a:link,a:visited,a:hover,a:active{
+
+          text-decoration:none;
+
+           }
+
+a:focus{
+             outline:0;
+ }
+.nav-brand{
+    font-size: 24px;
+    font-weight: bold;
+}
+#login,#forgetPW,#inputCode,#sendCode{
 
     margin-top: 180px;
 }
@@ -17,63 +39,65 @@
     background-color: #f2f2f3;
     height: 50px;
 }
+#forgetPW{
+    height: 100%;
 
-#find1{background: #ffffff;width:33.6%;height: 350px;position: absolute;top:200px;left: 33.2%;float: left;display: none;}
-#find1 img{width: 7.08%;height: 30px;margin: 28px 0 0 40px;float: left;}
-#find1 h1{font-size: 16px;color: #6cc77f;width:60%;height: 24px;float: left;margin: 34px 0 0 10px;}
-#find1 .login_username{background: #f2f2f3;height: 50px;width: 82.54%;margin: 20px 0 0 30px;font-size:14px; color: #c9c9c9;}
-#find1 .login_passwd{background: #f2f2f3;height: 50px;width: 52.54%;margin: 20px 0 0 30px;font-size:14px; color: #c9c9c9;float: left; }
-#find1 .checkcode{background:#6cc77f;  width: 20%;height: 36px;float: left;margin:20px 40px 0 20px; font-size: 14px;color:#333333;padding-top: 20px;text-align: center;}
-#find1 #tofind2{background:#6cc77f;  width: 90px;height: 30px;float: right;margin:10px 40px 0 0; font-size: 14px;color:#ffffff;padding-top: 16px;text-align: center;}
+}
+#forgetPW h4{
+    color: #6cc77f;
+}
+#forgetPW h4 span{
+    color:#6cc77f ;
+}
+#inputCode{
+    height: 100%;
+}
+#inputCode h4{
+    color: #6cc77f;
+}
+#inputCode h4 span{
+    color:#6cc77f ;
+}
+#inputCode h2 {
+    color:#6cc77f ;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#sendCode h2 {
+    color:#6cc77f ;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#sendCode h4{
+    color: #6cc77f;
+}
+#sendCode h4 span{
+    color:#6cc77f ;
+}
+.findAccount,.checkCode,.checkEmail{
+    background-color: #f2f2f3;
+    height: 50px;
+}
 
+.nextStep{
+    background-color: #6cc77f;
+    color: #ffffff;
 
-#find2{background: #ffffff;width:33.6%;height: 280px;position: absolute;top:200px;left: 33.2%;float: left;display:none;}
-#find2 img{width: 30px;height: 30px;margin: 28px 0 0 40px;float: left;}
-#find2 h1{font-size: 16px;color: #6cc77f;width:140px;height: 24px;float: left;margin: 34px 0 0 10px;}
-#find2 h2{font-size: 14px;color: #333333;width:80%;height: 24px;float: left;margin:10px 0 0 30px;}
-#find2 .login_passwd{background: #f2f2f3;height: 50px;width: 158px;margin: 30px 0 0 30px; font-size: 14px;color:#333333;float: left; }
-#find2 .login_passwd_button{background: #aaaaaa;height: 50px;width: 158px;margin: 30px 0 0 30px; font-size: 14px;color:#ffffff;float: left; }
-#find2 #tofind3{background:#6cc77f;  width: 90px;height: 40px;float: right;margin:10px 172px 0 0; font-size: 14px;color: #ffffff; text-align: center;}
+}
+#submitFind{
+    margin-top: 20px;
+}
+.gotoEmail{
+    background-color: #6cc77f;
+    margin-bottom: 20px;
 
+}
 
-#find3{background: #ffffff;width:33.6%;height: 280px;position: absolute;z-index: 1;top:200px;right: 33.2%;float: left;display:none;}
-#find3 img{width: 30px;height: 30px;margin: 28px 0 0 40px;float: left;}
-#find3 h1{font-size: 16px;color: #6cc77f;width:140px;height: 24px;float: left;margin: 34px 0 0 10px;}
-#find3 h2{font-size: 14px;color: #333333;width:80%;height: 24px;float: left;margin:30px 0 0 30px;color: black;}
-#find3 #toemail{background:#6cc77f;  width: 150px;height: 40px;float: right;margin:40px 140px 0 0; font-size: 14px;color: #ffffff;padding-top: 20px;text-align: center;}
-/*flash部分*/
-.play { width: 100%; height: 420px; margin: 0 auto 0; background: #999; font: 12px Arial;position: relative; z-index: 0;float: left;}
-
-.big_pic { width: 100%; height: 420px; overflow: hidden; border-bottom: 1px solid #ccc; background: #222; position: relative; }
-.big_pic li { width: 100%; height: 420px; overflow: hidden; position: absolute; top: 0; left: 0; z-index: 0;  }
-.big_pic img{width: 100%;height: 420px; } 
-
-.mark_left { width:50%; height: 420px; position: absolute; left: 0; top: 0; background: red; filter: alpha(opacity:0); opacity: 0; z-index:3000; }
-.mark_right { width: 50%; height: 420px; position: absolute; left: 50%; top: 0; background: green; filter: alpha(opacity:0); opacity: 0; z-index:3000; }
-
-.big_pic .prev { width: 60px; height: 60px; position: absolute; top: 130px; left: 10px; z-index: 3001; filter:alpha(opacity:0); opacity:0; cursor: pointer;}
-.big_pic .next { width: 60px; height: 60px; position: absolute; top: 120px; right: 10px; z-index: 3001; filter:alpha(opacity:0); opacity:0; cursor: pointer; background: blue;}
-.big_pic .prev img{width: 60px; height: 60px;  position: absolute;z-index: 4000;}
-.big_pic .next img{width: 60px; height: 60px;  position: absolute;z-index: 4000;}
-
-
-.big_pic .text { position: absolute; left: 10px; bottom: 4px; z-index: 3000; color: #ccc; }
-.big_pic .length { position: absolute; right: 10px; bottom: 4px; z-index: 3000; color: #ccc; }
-.big_pic .bg { width: 400px; height: 25px; background: ; filter: alpha(opacity=60); opacity: 0.6; position: absolute; z-index: 2999; bottom: 0; left: 0; }
-
-.small_pic { width: 380px; height: 94px; position: relative; top: 7px; left: 10px; overflow: hidden; display: none;}
-.small_pic ul { height: 94px; position: absolute; top: 0; left: 0; }
-.small_pic li { width: 120px; height: 94px; float: left; padding-right: 10px; background: url(images/loading.gif) no-repeat center center; cursor: pointer; filter: alpha(opacity=60); opacity: 0.6; }
-.small_pic img { width: 120px; height: 94px; }
-
-
-
-
-#footer{background:#1f1f1f ; width: 100%;height:70px;float: left;color: #ffffff;font-size: 14px;}
-#footer h1{text-align: center;color: #ffffff;}
-#footer a {color: #ffffff;}
-
-
+.btn a{
+    color: #ffffff;
+}
 
 .content-main{
 	background-color: white;
@@ -134,10 +158,12 @@ div,h1,span,h2,h3,h4,h5,h6,li{
 }
 .onebox{
 	padding-left: 5%;
+    padding-right: 5%;
 	margin-bottom: 20px;
 }
 .onebox a img{
 	margin-top: 20px;
+    width: 100%;
 }
 .onebox h2{
 	font-size: 20px;
@@ -161,7 +187,6 @@ div,h1,span,h2,h3,h4,h5,h6,li{
 
 }
 .progray{background: #c9c9c9;display: block;margin-left: 4%; float: left;margin-top: 8px;width: 88%;height: 10px;}
-
 .progreen{background: #6cc77f;width: 50%;height: 10px;}
 
 .modal-dialog{
@@ -182,8 +207,32 @@ div,h1,span,h2,h3,h4,h5,h6,li{
 .sideBox ul li img{
     width: 1000px;
     height: 300px;
+}
+.swiper-container {
+    width: 100%;
+    height:450px;
+    margin-top: 50px;
 
 }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
 
-.progreen{background: #6cc77f;width: 50%;height: 10px;}
-
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img{
+    width: 100%;
+}
