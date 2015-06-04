@@ -52,7 +52,7 @@
                             <div class="col-sm-6" style="margin-top: 20px">
                                 <a id="tofind1" href="#forgetPW" data-toggle="modal" data-target="#forgetPW">忘记密码</a>
                                 <span>&nbsp;|&nbsp;</span>
-                                <a id="toregist"href="./regist_1.html">快速注册</a>
+                                <a id="toregist"href="./regist_1.php">快速注册</a>
                             </div>
                             <div class="col-sm-6 ">
                                 <button type="submit" class="btn checklogin pull-right">登陆</button>
@@ -1077,30 +1077,7 @@
     </div>
 </div>
 </div>
-<div id="footer" >
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-1 col-sm-offset-4">
-                <span>关于我们</span>
-                <span class="pull-right">|</span>
-            </div>
-            <div class="col-sm-1">
-                <span>联系我们</span>
-                <span class="pull-right">|</span>
-            </div>
-            <div class="col-sm-1">
-                <span>帮助中心</span>
-                <span class="pull-right">|</span>
-            </div>
-            <div class="col-sm-1">
-                <span>服务规范</span>
-            </div>
-        </div>
-        <div style="text-align:center">
-            <span>如有问题请联系400-000-000</span>
-        </div>
-    </div>
-</div>
+<?php require('./footer.php')?>
 </div>
 <script type="text/javascript">
     var swiper = new Swiper('.swiper-container', {
