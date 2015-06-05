@@ -1,0 +1,220 @@
+
+/*******************************************热门项目*****************************************************/
+#container{
+    background-color: #eeeff3;
+}
+#hotproTitle{
+    margin-top: 70px;
+}
+#hotproTitle h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+}
+#hotproTitle .row {
+   margin-top: 10px;
+}
+#hotproTitle span{
+    font-size: 16px;
+
+}
+#hotproTitle .btn{
+    margin-bottom: -15px;
+
+}
+#hotproTitle .btn span{
+    font-weight: bold;
+}
+.titlemargin{
+    margin-left: 10%;
+}
+#tabPrice{
+    margin-top: 20px;
+}
+#tabPrice .tabbable ul li{
+    float: left;
+    width: 25%;
+}
+#tabPrice .tabbable ul li a{
+    text-align: center;
+}
+#tabPrice .tabbable .active{
+    background-color: #a9ddac;
+
+}
+#tabPrice .tabbable .active a{
+    background-color: #a9ddac;
+
+}
+.thumbnail{
+    background-color: #ffffff;
+    margin: 20px 20px 20px 20px;
+}
+#tabPrice .tab-content .hero-unit{
+    background-color: #ffffff;
+    width: 93%;
+
+}
+
+.box-introduce  img{
+    width: 100%;
+    vertical-align:middle;
+
+}
+.box-introduce h1{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.box-introduce p{
+
+    margin-top: 20px;
+    font-size: 18px;
+    color: #000000;
+}
+.text-red{
+    font-size: 24px;
+    font-weight: bold;
+    color: indianred;
+    margin-top: 5px;
+}
+.invest_button{
+    width: 80%;
+    background-color:#66cc66 ;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
+#videoPart{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.video-boss{
+    background-color: #ffffff;
+
+}
+.video-boss img{
+  width: 100%;
+    margin-top: 20px;
+
+}
+.video-boss h5{
+    margin-top: 20px;
+}
+.video-boss h6{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #959595;
+    margin-bottom: 20px;
+}
+
+.video-boss h3{
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
+}
+.detail-line span{
+    font-size: 16px;
+    margin-top: 8px;
+
+}
+.divider{
+    height:1px;
+    width:100%;
+    background:#d7d7d7;
+    overflow:hidden;
+    margin-top: 20px;
+}
+.num-detail span{
+    width: 100%;
+    text-align: center;
+}
+.num-text{
+    color: #333333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+#thirdPane{
+    background-color: #c7e3d0;
+}
+
+#L-third,#R-third{
+    height: 1200px;
+    background-color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+#tabs-2 ul li{
+    width: 16%;
+
+}
+#tabItem .tabbable ul li{
+    float: left;
+    width: 16.6%;
+}
+#tabItem  .tabbable ul li a{
+    text-align: center;
+}
+#tabItem  .tabbable .active{
+    background-color: #a9ddac;
+}
+#tabItem  .tabbable .active a{
+    background-color: #a9ddac;
+
+}
+.title{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-bottom: -14px;
+}
+
+.one-market{
+    margin: 20px 20px 20px 20px;
+    background-color: #f2f2f3;
+    height: 205px;
+}
+.one-market img{
+    margin-top: 20px;
+    width: 20%;
+    margin-left: 40%;
+    display: block;
+
+
+}
+.one-market h2{
+    line-height: 24px;
+    text-align: center;
+}
+.one-market h3{
+    line-height: 24px;
+    text-align: center;
+
+}
+.accept-btn{
+    width: 60%;
+    background-color:#66cc66 ;
+    margin-left: 20%;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+frame{
+    overflow-x: hidden;
+
+}
+/*******************************************项目详情*****************************************************/
+#prodetail .row p{
+     font-size: 16px;
+     line-height: 30px;
+
+ }
+#prodetail .row img{
+    width: 100%;
+}
+.content-area{
+    margin: 20px 20px 20px 20px;
+}

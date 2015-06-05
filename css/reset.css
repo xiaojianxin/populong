@@ -10,6 +10,9 @@ ol,ul,li { list-style:none; }
 input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
 table { border-collapse:collapse; }
 html {overflow-y: scroll;}
+.container{
+    min-width: 1080px;
+}
 a{
     cursor:pointer;
 
@@ -105,3 +108,5 @@ a:focus{
     background-color: #6cc77f;
     color: #ffffff;
 }
+.progray{background: #c9c9c9;display: block;margin-left: 4%; float: left;margin-top: 8px;width: 88%;height: 10px;}
+.progreen{background: #6cc77f;width: 50%;height: 10px;}

@@ -2,22 +2,22 @@
  <div class="col-xs-3" id="leftnav">
       <ul class="nav nav-list bs-docs-sidenav affix-top">
             <li class="active">
-                  <a href="#overview"><i class="icon-chevron-right"></i> 概览</a>
+                  <a href="#overview"><i class="icon-chevron-right"></i> 个人首页</a>
             </li>
             <li class="">
-                  <a href="#transitions"><i class="icon-chevron-right"></i> 过渡效果</a>
+                  <a href="#transitions"><i class="icon-chevron-right"></i> 资金管理</a>
             </li>
             <li class="">
-                  <a href="#modals"><i class="icon-chevron-right"></i> 模态对话框</a>
+                  <a href="#modals"><i class="icon-chevron-right"></i> 投资管理</a>
             </li>
             <li class="">
-                  <a href="#dropdowns"><i class="icon-chevron-right"></i> 下拉菜单</a>
+                  <a href="#dropdowns"><i class="icon-chevron-right"></i> 项目管理</a>
             </li>
             <li>
-                  <a href="#scrollspy"><i class="icon-chevron-right"></i> 滚动监听</a>
+                  <a href="#scrollspy"><i class="icon-chevron-right"></i> 账户管理</a>
             </li>
             <li class="">
-                  <a href="#tabs"><i class="icon-chevron-right"></i> 标签页</a>
+                  <a href="#tabs"><i class="icon-chevron-right"></i> 站内服务</a>
             </li>
             <li class="">
                   <a href="#tooltips"><i class="icon-chevron-right"></i> 工具提示</a>
