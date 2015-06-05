@@ -13,6 +13,8 @@ session_start();
     <link rel="stylesheet" href="./css/help.css"/>
     <link rel="stylesheet" href="./css/animate.css"/>
     <link rel="stylesheet" href="./css/jPages.css"/>
+    <link rel="stylesheet" href="./css/footer.css"/>
+
     <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
@@ -820,31 +822,8 @@ session_start();
             <a>10</a>
             <a class="jp-next">→</a>
         </div>
-		<div id="footer">
-            <div class="container">
-                <div class="row" style="margin-top: 20px;">
-                    <div class="col-sm-1 col-sm-offset-4">
-                        <span>关于我们</span>
-                        <span class="pull-right">|</span>
-                    </div>
-                    <div class="col-sm-1">
-                        <span>联系我们</span>
-                        <span class="pull-right">|</span>
-                    </div>
-                    <div class="col-sm-1">
-                        <span>帮助中心</span>
-                        <span class="pull-right">|</span>
-                    </div>
-                    <div class="col-sm-1">
-                        <span>服务规范</span>
-                    </div>
-                </div>
-                <div style="text-align:center;padding-bottom: 30px;">
-                    <span>如有问题请联系400-000-000</span>
-                </div>
-            </div>
-		</div>
 	</div>
+            <?php require('./footer.php')?>
     <script type="text/javascript">
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',

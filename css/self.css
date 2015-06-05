@@ -8,6 +8,11 @@
 	
 
 }
+#leftnav{
+    margin-top: 53px;
+    margin-right: 32px;
+    width: 260px;
+}
 .self_right_top{
 	height: 190px;
 	margin-left:-30px; 
@@ -62,8 +67,13 @@ div.col-xs-4.fans_card{
 	
 }
 .fans_pic{
-	margin-top: 30px;
+	margin-top: 20px;
 	margin-left: 10px;
+    height: 90px;
+    border-right:1px solid #d2d2d2 ;
+}
+.fans_pic img{
+    margin-top: 20px;
 }
 .fans_name{
 	font-family: "微软雅黑";
@@ -78,7 +88,9 @@ div.col-xs-4.fans_card{
 .fans_description{
 	margin-top: 20px;
 }
-
+.foucus{
+    margin-left: 10px;
+}
 
 
 

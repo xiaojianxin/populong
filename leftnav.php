@@ -1,47 +1,69 @@
- 
- <div class="col-xs-3" id="leftnav">
-      <ul class="nav nav-list bs-docs-sidenav affix-top">
-            <li class="active">
-                  <a href="#overview"><i class="icon-chevron-right"></i> 概览</a>
-            </li>
-            <li class="">
-                  <a href="#transitions"><i class="icon-chevron-right"></i> 过渡效果</a>
-            </li>
-            <li class="">
-                  <a href="#modals"><i class="icon-chevron-right"></i> 模态对话框</a>
-            </li>
-            <li class="">
-                  <a href="#dropdowns"><i class="icon-chevron-right"></i> 下拉菜单</a>
-            </li>
-            <li>
-                  <a href="#scrollspy"><i class="icon-chevron-right"></i> 滚动监听</a>
-            </li>
-            <li class="">
-                  <a href="#tabs"><i class="icon-chevron-right"></i> 标签页</a>
-            </li>
-            <li class="">
-                  <a href="#tooltips"><i class="icon-chevron-right"></i> 工具提示</a>
-            </li>
-            <li class="">
-                  <a href="#popovers"><i class="icon-chevron-right"></i> 弹出提示</a>
-            </li>
-            <li class="">
-                  <a href="#alerts"><i class="icon-chevron-right"></i> 警告框</a>
-            </li>
-            <li class="">
-                  <a href="#buttons"><i class="icon-chevron-right"></i> 按钮</a>
-            </li>
-            <li class="">
-                  <a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a>
-            </li>
-            <li class="">
-                  <a href="#carousel"><i class="icon-chevron-right"></i> 轮播</a>
-            </li>
-            <li class="">
-                  <a href="#typeahead"><i class="icon-chevron-right"></i> 输入提示</a>
-            </li>
-            <li class="">
-                  <a href="#affix"><i class="icon-chevron-right"></i> 附加导航</a>
-            </li>
-      </ul>
+
+<div class="col-xs-3" id="leftnav">
+<ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
+    <li>
+        <a href="#">
+            <i class="glyphicon"></i>
+            个人首页
+        </a>
+    </li>
+    <li>
+        <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
+            <i class="glyphicon"></i>
+            系统管理
+
+            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+        </a>
+        <ul id="systemSetting" class="nav nav-list secondmenu collapse" style="height: 0px;">
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;用户管理</a></li>
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;菜单管理</a></li>
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;角色管理</a></li>
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;修改密码</a></li>
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;日志查看</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#configSetting" class="nav-header collapsed" data-toggle="collapse">
+            <i class="glyphicon "></i>
+            配置管理
+            <span class="pull-right glyphicon  glyphicon-chevron-toggle"></span>
+        </a>
+        <ul id="configSetting" class="nav nav-list secondmenu collapse in">
+            <li class="active"><a href="#"><i class="glyphicon "></i>&nbsp;全局缺省配置</a></li>
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;未开通用户配置</a></li>
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;退订用户配置</a></li>
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;试用用户配置</a></li>
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;开通用户配置</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#disSetting" class="nav-header collapsed" data-toggle="collapse">
+            <i class="glyphicon "></i>
+            分发配置
+            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+        </a>
+        <ul id="disSetting" class="nav nav-list secondmenu collapse">
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;分发包配置</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#dicSetting" class="nav-header collapsed" data-toggle="collapse">
+            <i class="glyphicon"></i>
+            字典配置
+            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+        </a>
+        <ul id="dicSetting" class="nav nav-list secondmenu collapse">
+            <li><a href="#"><i class="glyphicon "></i>&nbsp;关键字配置</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">
+            <i class="glyphicon"></i>
+            关于系统
+        </a>
+    </li>
+
+</ul>
 </div>

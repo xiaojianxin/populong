@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <script src="./js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="./js/swiper3.07.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
@@ -1085,6 +1086,7 @@
 
 <?php require('./footer.php')?>
 </div>
+
 <script type="text/javascript">
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
