@@ -1,37 +1,86 @@
-.bs-docs-sidenav.affix {
-        top: 40px;
-    }
+.main-nav {
+    margin-left: 1px;
+}
 
-    /*  >表示第一个子元素  */
-    .bs-docs-sidenav > li:first-child > a {
-        -webkit-border-radius: 6px 6px 0 0;
-        -moz-border-radius: 6px 6px 0 0;
-        border-radius: 6px 6px 0 0;
-    }
-    .bs-docs-sidenav > li > a {
-        display: block;
-        width: 190px \9;
-        margin: 0 0 -1px;
-        padding: 8px 14px;
-        border: 1px solid #e5e5e5;
-    }
+.main-nav.nav-tabs.nav-stacked > li {
+}
 
-    .bs-docs-sidenav {
-        width: 228px;
-        margin: 50px 0 0;
-        padding: 0;
-        background-color: #fff;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-        -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-        box-shadow: 0 1px 4px rgba(0,0,0,.065);
-    }
+.main-nav.nav-tabs.nav-stacked > li > a {
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: #4A515B;
+    background: #E9E9E9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
+}
 
-    .bs-docs-sidenav .icon-chevron-right {
-        float: right;
-        margin-top: 2px;
-        margin-right: -6px;
-        opacity: .25;
-    }
+.main-nav.nav-tabs.nav-stacked > li > a > span {
+    color: #4A515B;
+}
+
+.main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover {
+    color: #FFF;
+    background: #3C4049;
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049')";
+    border-color: #2B2E33;
+}
+
+#main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover > span {
+    color: #FFF;
+}
+
+.main-nav.nav-tabs.nav-stacked > li {
+    margin-bottom: 4px;
+}
+
+.nav-header.collapsed > span.glyphicon-chevron-toggle:before {
+    content: "\e114";
+}
+
+.nav-header > span.glyphicon-chevron-toggle:before {
+    content: "\e113";
+}
+
+
+
+/*********************************************自定义部分*********************************************/
+.secondmenu a {
+    font-size: 12px;
+    color: #4A515B;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.secondmenu > li > a:hover {
+    background-color: #6f7782;
+    border-color: #428bca;
+    color: #fff;
+}
+
+.secondmenu li.active {
+    background-color: #6f7782;
+    border-color: #428bca;
+    border-radius: 4px;
+}
+
+.secondmenu li.active > a {
+    color: #ffffff;
+}
+
+.navbar-static-top {
+    background-color: #212121;
+    margin-bottom: 5px;
+}
+
+
+.collapse.glyphicon-chevron-toggle, .glyphicon-chevron-toggle:before {
+    content: "\e113";
+}
+
+.collapsed.glyphicon-chevron-toggle:before {
+    content: "\e114";
+}

@@ -267,30 +267,7 @@ session_start();
             <a>10</a>
             <a class="jp-next">next →</a>
         </div>
-        <div id="footer">
-            <div class="container">
-                <div class="row" style="margin-top: 20px;">
-                    <div class="col-sm-1 col-sm-offset-4">
-                        <span>关于我们</span>
-                        <span class="pull-right">|</span>
-                    </div>
-                    <div class="col-sm-1">
-                        <span>联系我们</span>
-                        <span class="pull-right">|</span>
-                    </div>
-                    <div class="col-sm-1">
-                        <span>帮助中心</span>
-                        <span class="pull-right">|</span>
-                    </div>
-                    <div class="col-sm-1">
-                        <span>服务规范</span>
-                    </div>
-                </div>
-                <div style="text-align:center;padding-bottom: 30px;">
-                    <span>如有问题请联系400-000-000</span>
-                </div>
-            </div>
-        </div>
+        <?php require('./footer.php')?>
     </div>
 <script type="text/javascript">
     $(function(){
