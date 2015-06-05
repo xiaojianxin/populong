@@ -11,6 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
 	<script type="text/javascript" src="./js/regist.js"></script>
 	<script type="text/javascript" src="./js/regist_1.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
    
@@ -27,9 +31,9 @@
                     <div class="main_top_bottom"><img style="width:800px;" src="./img/regist_01.png" alt="" /></div>
 
 				</div>
-				<div id="main_body">
-                    <div class="container signup_form">
-                        <form class="form" action="./1.php" method="post">
+				<div id="main_body" class="container">
+                    <div class="signup_form">
+                        <form class="form" action='' method="post">
                             <input type="text" name="choice1" id="checkbox1" style="display:none" value=''/>
                             <input type="text" name="choice2" id="checkbox2" style="display:none" value=''/>
 
