@@ -13,8 +13,8 @@ body{
 }
 #leftnav{
     margin-top: 53px;
-    margin-right: 32px;
-    width: 260px;
+    margin-right: 20px;
+
 }
 .self_right_top{
 	height: 190px;
@@ -30,14 +30,15 @@ body{
 .self_explain{
 	font-family: "微软雅黑";
 	font-size: 15px;
+    font-weight: bold;
 	width: 135px;
 	margin: 0 auto;
 	padding-top: 5px;
 }
 #topbottom{
-	width: 435px;
+	width: 410px;
 	margin: 0 auto;
-	padding-top: 8px
+	padding-top: 9px;
 }
 #self_nav{
 	width: 850px;
@@ -59,16 +60,18 @@ body{
 /*个人中心 粉丝页面css*/
 
 #self_fans{
-	width: 1000px;
-	margin-left: -25px;
+	width: 879px;
+	margin-left: -30px;
+    background-color: #ffffff;
 }
 div.col-xs-4.fans_card{
-	margin: 10px;
-	width: 280px;
+	margin:9px;
+	width: 275px;
 	height: 140px;
 	background-color: #eeeff3;
 	
 }
+
 .fans_pic{
 	margin-top: 20px;
 	margin-left: 10px;
@@ -80,14 +83,14 @@ div.col-xs-4.fans_card{
 }
 .fans_name{
 	font-family: "微软雅黑";
-	font-size: 20px;
+	font-size: 15px;
 	font-weight:bold;
 	text-align: center;
 }
 .fans_introduction{
 	text-align: center;
 	font-family: "微软雅黑";
-    margin-top: 10px;
+    margin-top: 3px;
 }
 
 .fans_description{
@@ -101,9 +104,6 @@ div.col-xs-4.fans_card{
     margin-top: 10px;
 }
 
-#fourtab ul .startpro {
-    margin-left: 30%;
-}
 .fans_card{
     background-color: #eeeff3;
     width: 90%;
@@ -115,11 +115,12 @@ div.col-xs-4.fans_card{
 #startpro,#followpro,#follows,#fans{
     background-color: #ffffff;
 }
-
-.seemore a{
-    margin-left: 50%;
-    margin-top: 30px;
-margin-bottom: 30px;}
+.seemore{
+    width: 60px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 /********************************************交易中心**************************************************/
 #recordbox{
     background-color: #ffffff;
