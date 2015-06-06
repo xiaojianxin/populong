@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
 	<link rel="stylesheet" type="text/css" href="./css/self.css">
     <link rel="stylesheet" type="text/css" href="./css/leftnav.css">
+    <link rel="stylesheet" type="text/css" href="./css/jPages.css"/>
 	<script src="./js/jquery-1.10.1.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/leftnav.js"></script>
@@ -47,7 +48,9 @@
                     <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
 
                 </div>
-                </div>
+            </div>
+        </div>
+    </div>
 
             <?php require('./footer.php')?>
 <script>
@@ -79,7 +82,7 @@
         $("#fans").attr('class',"tab-pane");
     });
 
-    $('a').click(function(e){
+    $('#leftnav a').click(function(e){
         //$('.nav li').removeClass('active');
         var judge = $(this).attr('class');
         if(judge=="accordion-toggle"){
