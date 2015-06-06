@@ -1,6 +1,3 @@
-body{
-    background-color: #eeeff3;
-}
 #topnav{
  height: 50px;
 }
@@ -8,7 +5,7 @@ body{
 	margin-top: 5px;
 	height: 50px;
 	float: right;
-
+	
 
 }
 #leftnav{
@@ -18,7 +15,7 @@ body{
 }
 .self_right_top{
 	height: 190px;
-	margin-left:-30px;
+	margin-left:-30px; 
 	background-color: #b5e3bf;
 	border-bottom: 1px solid #6cc77f;
 }
@@ -47,7 +44,7 @@ body{
 	text-align: center;
 	vertical-align:middle;
 	font-family: '微软雅黑';
-	line-height:40px;
+	line-height:40px; 
 	width: 100px;
 	height: 40px;
 	background-color: #ffffff;
@@ -87,313 +84,14 @@ div.col-xs-4.fans_card{
 .fans_introduction{
 	text-align: center;
 	font-family: "微软雅黑";
-    margin-top: 10px;
 }
-
 .fans_description{
 	margin-top: 20px;
 }
 .foucus{
     margin-left: 10px;
-    background-color: transparent;
-    border-color: #6cc77f;
-    color: #6cc77f;
-    margin-top: 10px;
 }
 
-#fourtab ul .startpro a{
-    margin-left: 72%;
-}
-.fans_card{
-    background-color: #eeeff3;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 160px;
-}
-#startpro,#followpro,#follows,#fans{
-    background-color: #ffffff;
-}
-
-.seemore a{
-    margin-left: 50%;
-    margin-top: 30px;
-margin-bottom: 30px;}
-/********************************************交易中心**************************************************/
-#recordbox{
-    background-color: #ffffff;
-}
-.title{
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-.record img{
-    width: 100%;
-}
-.dealtype span{
-    margin-left: 10px;
-
-}
-.dealtype .active{
-    background-color: #65cc63;
-    color: white;
-}
-#deal-list table{
-    margin-top: 20px;
-}
-#deal-list table tr td{
-    line-height: 50px;
-}
-#deal-list thead tr th{
-    background-color:#dbdbdb ;
-}
-#deal-list{
-    min-height: 700px;
-    background-color: white;
-}
-/********************************************充值**************************************************/
-#depositBox{
-    background-color: #ffffff;
-}
-#depositForm{
-    margin:  20px 20px 20px 20px;
-    background-color: #d1f0d1;
-}
-.red-mark{
-    color: red;
-}
-#depositForm .row{
-    margin-top: 30px;
-}
-#depositForm .row .col-xs-5 span{
-    font-size: 18px;
-}
-
-.chargeTitle{
-    font-weight: bold;
-    color: white;
-    background-color: #6cc87f;
-    font-size: 24px;
-    line-height: 40px;
 
 
-}
-#chargeArea{
-    margin:  20px 20px 20px 20px;
-}
-#chargePart{
-    height: 150px;
-}
-#chargebutton{
-    width: 30%;
-    margin-left: 35%;
 
-    margin-top: 20px;
-    font-size: 24px;
-}
-#chargeDes{
-    margin-top: 30px;
-    margin-left: 30px;
-}
-#chargeDes h1{
-    line-height: 40px;
-}
-/********************************************提现**************************************************/
-#withdrawbutton{
-    width: 30%;
-    margin-left: 35%;
-
-    margin-top: 20px;
-    font-size: 24px;
-}
-#withdrawDes{
-    margin-top: 30px;
-    margin-left: 30px;
-}
-#withdrawDes h1{
-    line-height: 40px;
-}
-#withdrawForm span{
-    line-height: 50px;
-}
-#withdrawForm .row .col-xs-2 span{
-    float: right;
-    margin-top: -2px;
-}
-#withdrawForm .row .btn{
-    margin-top: 4px;
-}
-/*******************************************我的投资**************************************************/
-#allPro table{
-    margin-top: 20px;
-}
-#allPro table tr td{
-    line-height: 50px;
-}
-#allPro thead tr th{
-    background-color:#dbdbdb ;
-}
-#allPro,#unfinishedPro,#finishedPro{
-    min-height: 700px;
-    background-color: white;
-}
-#unfinishedPro table{
-    margin-top: 20px;
-}
-#unfinishedPro table tr td{
-    line-height: 50px;
-}
-#unfinishedPro thead tr th{
-    background-color:#dbdbdb ;
-}
-#finishedPro table{
-    margin-top: 20px;
-}
-#finishedPro table tr td{
-    line-height: 50px;
-}
-#finishedPro thead tr th{
-    background-color:#dbdbdb ;
-}
-.prostate h1{
-    text-align: center;
-
-}
-#investProList #threetab ul  .active a{
-    color: #000000;
-    font-weight: bold;
-
-}
-/*******************************************转让市场**************************************************/
-#buyin table{
-    margin-top: 20px;
-}
-#buyin table tr td{
-    line-height: 50px;
-}
-#buyin thead tr th{
-    background-color:#dbdbdb ;
-}
-#sellout table{
-    margin-top: 20px;
-}
-#sellout table tr td{
-    line-height: 50px;
-}
-#sellout thead tr th{
-    background-color:#dbdbdb ;
-}
-#buyin,#sellout{
-    min-height: 700px;
-    background-color: white;
-}
-#transMarket #twotab ul  .active a{
-    color: #000000;
-    font-weight: bold;
-
-}
-/*******************************************我发起的项目**************************************************/
-#allList table{
-    margin-top: 20px;
-}
-#allList table tr td{
-    line-height: 50px;
-}
-#allList thead tr th{
-    background-color:#dbdbdb ;
-}
-#financingList table{
-    margin-top: 20px;
-}
-#financingList table tr td{
-    line-height: 50px;
-}
-#financingList thead tr th{
-    background-color:#dbdbdb ;
-}
-#succeedList table{
-    margin-top: 20px;
-}
-#succeedList table tr td{
-    line-height: 50px;
-}
-#succeedList thead tr th{
-    background-color:#dbdbdb ;
-}
-#unsucceedList thead tr th{
-    background-color:#dbdbdb ;
-}
-#unsucceedList table{
-    margin-top: 20px;
-}
-#unsucceedList table tr td{
-    line-height: 50px;
-}
-#allList,#financingList,#succeedList,#unsucceedList{
-    min-height: 700px;
-    background-color: white;
-}
-#startPro #fourtab ul  .active a{
-    color: #000000;
-    font-weight: bold;
-
-}
-/*******************************************我关注的项目**************************************************/
-
-.onebox{
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-bottom: 20px;
-    background-color: #eeeff3;
-}
-.onebox a img{
-    margin-top: 20px;
-    width: 100%;
-}
-.onebox h2{
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 22px;
-}
-.onebox a{
-    color: #666668;
-
-}
-.onebox h3{
-    font-size: 18px;
-}
-.onebox h4{
-    font-size: 16px;
-    color: #666668;
-    margin-top: 10px;
-}
-#focusPro #twotab ul  .active a{
-    color: #000000;
-    font-weight: bold;
-
-}
-/*******************************************个人资料**************************************************/
-#informationBox{
-    margin-top: 20px;
-}
-.text-green{
-    color:green;
-
-}
-
-.green-tip img{
-    width: 25%;
-
-}
-.user-information .row .col-xs-3 span{
-    float: right;
-}
-
-.user-information .user-name,.user-borntime,.user-phone,.user-email,.user-identity,.user-sex{
-    font-size: 18px;
-}
-/*******************************************消息页面**************************************************/
