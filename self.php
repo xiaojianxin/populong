@@ -74,7 +74,7 @@
         $(this).css('border-right','1px solid #6cc77f');
         $(this).css('border-bottom','1px solid #ffffff');
 
-        
+
         $('#toChoosefans').css('border','1px solid #d2d2d2');
 
         $("#concern").attr('class',"tab-pane active");

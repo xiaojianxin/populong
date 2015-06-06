@@ -104,10 +104,6 @@ div.col-xs-4.fans_card{
     margin-top: 10px;
 }
 
-.nav-tabs{
-    width: 150px;
-    margin: 0 auto;
-}
 .fans_card{
     background-color: #eeeff3;
     width: 90%;
@@ -406,4 +402,83 @@ div.col-xs-4.fans_card{
     color: #000000;
     font-weight: bold;
 
+}
+
+#message{
+    background-color: white;
+}
+.one-receive,.one-send,.one-private{
+    margin-top: 20px;
+}
+.one-receive img{
+    width: 80%;
+    float: right;
+}
+ .comment-time{
+    margin-top: 10px;
+}
+.comment-content{
+    line-height: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+.one-receive .comment-reply{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.one-receive .comment-reply span{
+    margin-right: 30px;
+}
+.replycomment{
+    margin-top: 50px;
+}
+.replycomment input{
+    width: 80%;
+}
+.replybutton{
+    float: right;
+    margin-top: 10px;
+    margin-right: 140px;
+}
+.comment-reply .reply-btn{
+    cursor: pointer;
+}
+.text-orange{
+    color: orangered;
+}
+.one-send img{
+    width: 80%;
+    float: right;
+}
+.one-receive .comment-reply span{
+    margin-right: 30px;
+}
+.one-send .comment-reply span{
+    margin-right: 30px;
+    float: right;
+}
+.one-private img{
+    width: 80%;
+    float: right;
+}
+.one-private .comment-reply span{
+    margin-right: 30px;
+    float: right;
+}
+/*******************************************平台排行榜**************************************************/
+#platrank #twotab ul  .active a{
+    color: #000000;
+    font-weight: bold;
+
+}
+.rank-pic{
+    width: 80px;
+}
+#investRank table thead .active th{
+    background-color: #dbdbdb;
+}
+#startRank table thead .active th{
+    background-color: #dbdbdb;
 }
