@@ -39,7 +39,7 @@
                                 <li class="active allpro">
                                     <a href="#receiveComment" data-toggle="tab">收到的评论</a>
                                 </li>
-                                <li>
+                                <li class="">
                                     <a href="#sendComment" data-toggle="tab">发出的评论</a>
                                 </li>
                                 <li class="">
@@ -151,7 +151,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane active" id="privateMsg">
+                                <div class="tab-pane" id="privateMsg">
                                     <div id="private-list">
                                         <div class="one-private">
                                             <div class="row">
