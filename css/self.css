@@ -54,6 +54,12 @@ body{
 	background-color: #ffffff;
 	border: 1px solid #d2d2d2;
 }
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
 
 
 
