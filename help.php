@@ -837,7 +837,7 @@ session_start();
         });
         $(function(){
             $("div.holder").jPages({
-                containerID : "itemContainer"
+                containerID : "boxList"
             });
         });
     </script>

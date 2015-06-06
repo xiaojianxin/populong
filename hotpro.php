@@ -312,22 +312,22 @@
                                </ul>
                                <div class="tab-content">
                                    <div class="tab-pane active" id="box-1">
-                                       <iframe src="prodetail.html" class="mainframe" name="mainiframe" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="prodetail.html" class="mainframe" name="mainiframe1" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-2">
-                                       <img src="./img/prochoose_02.jpg" style="width: 100%;">
+                                       <iframe src="comment.html" class="mainframe" name="mainiframe2" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-3">
-                                       <img src="./img/prochoose_03.jpg" style="width: 100%;">
+                                       <iframe src="processPro.html" class="mainframe" name="mainiframe3" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-4">
-                                       <img src="./img/prochoose_04.jpg" style="width: 100%;">
+                                       <iframe src="investers.html" class="mainframe" name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-5">
-                                       <img src="./img/prochoose_05.jpg" style="width: 100%;">
+                                       <iframe src="subbusiness.html" class="mainframe" name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-6">
-                                       <img src="./img/prochoose_03.jpg" style="width: 100%;">
+                                       <iframe src="subinvest.html" class="mainframe" name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
 
                                </div>
@@ -411,6 +411,7 @@
             $(this).width(width);
         });
     });
+
 </script>
 </body>
 </html>

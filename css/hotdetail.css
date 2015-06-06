@@ -217,4 +217,82 @@ frame{
 }
 .content-area{
     margin: 20px 20px 20px 20px;
+
+}
+/*******************************************评论*****************************************************/
+
+.one-comment .user-pic{
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 20%;
+}
+.one-comment .user-name{
+    color: #66cc66;
+    font-size: 22px;
+}
+.one-comment .user-time{
+    color: #cacaca;
+    margin-left: 10px;
+}
+.one-comment p{
+    line-height: 26px;
+    margin-top: 5px;
+}
+.showReply,.showZan{
+    color: #ff6666;
+}
+.showReply{
+    cursor: pointer;
+}
+.replys .thumbnail{
+    width: 450px;
+    background-color: #d3eed8;
+}
+.replys .thumbnail .reply-name{
+    font-weight: bold;
+}
+.reply .reply-form {
+    margin-bottom: -20px;
+}
+.reply .btn{
+   color: #ffffff;
+    font-weight: bold;
+
+}
+/*******************************************项目进度*****************************************************/
+
+#proprocess .row p{
+    font-size: 16px;
+    line-height: 30px;
+
+}
+/*******************************************行业顾问*****************************************************/
+
+#subbusiness .btn{
+    font-weight: bold;
+    color: #ffffff;
+    width: 40%;
+    margin-left: 30%;
+}
+.sub-tip {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+/*******************************************投资顾问*****************************************************/
+
+#subinvest .btn{
+    font-weight: bold;
+    color: #ffffff;
+    width: 40%;
+    margin-left: 30%;
+}
+/*******************************************投资者*****************************************************/
+#followModal{
+    margin-top: 200px;
+    width: 60%;
+    margin-left: 20%;
+
+
 }
