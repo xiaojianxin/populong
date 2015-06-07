@@ -69,7 +69,15 @@ img.signup_star{
 .pic-password{
 	height: 35px;
 }
-
+div .detail-close{
+	width: 100px;
+	margin-left: 42%;
+	margin-bottom:10px; 
+}
+#detail{
+	width: 800px;
+	margin: 0 auto;
+}
 
 
 

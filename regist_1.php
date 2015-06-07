@@ -22,6 +22,25 @@
          <?php require('./nav.php') ?>
 
             <div class="container">
+                <div class="modal fade" id="detail"  aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                  <h4 class="modal-title" id="myModalLabel">
+                                      《泡泡龙网站服务协议》
+                                  </h4>
+                              </div>
+                              <div class="modal-body">
+                              </div>
+                              <div class="model-footer">
+                                    <div class="btn btn-success  detail-close"  data-dismiss="modal" aria-hidden="true">关闭</div>
+                              </div>
+                          </div>
+
+                      </div>
+
+                  </div>
 				<div class="container-top main_top"  >
 					<div  class="row main_top_middle">
 						<div class="col-xs-2 title_left">注册</div>
@@ -148,7 +167,7 @@
                             <div class=" row checkbox">
                                          <div class="col-xs-3"></div>
                                         <label>
-                                            <input type="checkbox" required="required"> 我已阅读并同意<a>《泡泡龙网站服务协议》</a>
+                                            <input type="checkbox" required="required"> 我已阅读并同意<a href="#detail" data-toggle="modal" data-target="#detail">《泡泡龙网站服务协议》</a>
                                         </label>
                                     </div>
                             <div class="row signup_content">
@@ -158,13 +177,9 @@
                             </div>
                         </form>
                     </div>
-					</div>
 				</div>
 			</div>
-			
-		</div>
-
-	</div>
+	
    <?php require('./footer.php')?>
 <script type="text/javascript">
    $('#choice1').click(function(){

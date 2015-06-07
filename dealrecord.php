@@ -2,9 +2,8 @@
                 <div id="recordbox">
                     <div class="record-title">
                         <div class="title">交易记录</div>
-                        <img src="./img/line.jpg">
                     </div>
-                </div>
+               
                 <div class="row dealtype">
                     <span>&nbsp;&nbsp;交易类型:&nbsp;</span>
                     <span class="active">&nbsp;全部&nbsp;</span>
@@ -96,6 +95,7 @@
                         <a class="jp-next">→</a>
                     </div>
                 </div>
+            </div>
 
 <script type="text/javascript">
     $(function(){
