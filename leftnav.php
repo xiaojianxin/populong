@@ -92,7 +92,7 @@
                           <a href="message.php"> 消息</a>
                       </div>
                       <div class="accordion-inner">
-                          <a href="#transitions"> 平台排行榜</a>
+                          <a href="platrank.php"> 平台排行榜</a>
                       </div>
                       <div class="accordion-inner">
                           <a href="#transitions"> 热门路演推荐</a>
