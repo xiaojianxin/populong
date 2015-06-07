@@ -5,7 +5,7 @@
 
                     </div>
                     <div class="self_explain">Lilith-泡泡隆设计师</div>
-                    <div class="container" id="self_nav">
+                    <div class="container-fluid" id="self_nav">
                         <div id="topbottom" class="row">
                             <div id="toChooseone" class="col-xs-3 content_nav" ><a>关注者110</div>
                             <div id="toChoosefans" class="col-xs-3 content_nav" >粉丝110万</div>
