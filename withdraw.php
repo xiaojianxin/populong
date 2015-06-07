@@ -3,16 +3,14 @@
                     <div id="withdrawTitle">
                         <div class="record-title">
                             <div class="title">提现</div>
-                            <img src="./img/line.jpg">
                         </div>
                     </div>
                     <div id="withdrawForm">
                         <div style="height: 40px;"></div>
                         <div class="row">
-                            <div class="col-xs-2"></div>
-                            <div class="col-xs-2">
-
-                                <span class="title">充值金额</span>
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-2">                            
+                                <span>充值金额</span>
                                 <span class="red-mark">*</span>
                             </div>
                             <div class="col-xs-6">
@@ -21,47 +19,47 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-2"></div>
+                            <div class="col-xs-1"></div>
                             <div class="col-xs-2">
 
-                                <span class="title">可用金额</span>
+                                <span>可用金额</span>
                             </div>
                             <div class="col-xs-6">
                                 <span class="red-mark">0.00</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-2"></div>
+                            <div class="col-xs-1"></div>
                             <div class="col-xs-2">
-                                <span class="title">提现费用</span>
+                                <span>提现费用</span>
+                            </div>
+                            <div class="col-xs-6">
+                                <span >0.00</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-2">
+                                <span >实际扣除金额</span>
                             </div>
                             <div class="col-xs-6">
                                 <span class="red-mark">0.00</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-2"></div>
+                            <div class="col-xs-1"></div>
                             <div class="col-xs-2">
-                                <span class="title">实际扣除金额</span>
-                            </div>
-                            <div class="col-xs-6">
-                                <span class="red-mark">0.00</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-2"></div>
-                            <div class="col-xs-2">
-                                <span class="title">预计到款时间</span>
+                                <span >预计到款时间</span>
                             </div>
                             <div class="col-xs-6">
                                 <span >2015-03-10   1-2个工作日（双休日和法定节假日除外）之内到账</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-2"></div>
+                            <div class="col-xs-1"></div>
                             <div class="col-xs-2">
 
-                                <span class="title">手机号码</span>
+                                <span>手机号码</span>
                                 <span class="red-mark">*</span>
                             </div>
                             <div class="col-xs-6">
@@ -70,10 +68,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-2"></div>
+                            <div class="col-xs-1"></div>
                             <div class="col-xs-2">
 
-                                <span class="title">验证码</span>
+                                <span>验证码</span>
                                 <span class="red-mark">*</span>
                             </div>
                             <div class="col-xs-3">
@@ -89,7 +87,6 @@
                     <div id="chargeBox">
                         <div class="record-title">
                             <div class="title">提现</div>
-                            <img src="./img/line.jpg" style="width: 100%;">
                         </div>
 
                         <div id="withdrawArea">

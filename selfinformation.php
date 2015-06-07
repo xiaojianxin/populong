@@ -1,12 +1,12 @@
-
+            <div id="informationBox">
                 <div class="record-title">
-                    <div class="title">提现</div>
-                    <img src="./img/line.jpg" style="width: 100%;">
+                    <div class="title">个人资料</div>
                 </div>
-                <div class="btn btn-success btn-lg pull-right" id="editInformation">
-                    <span class="glyphicon glyphicon-edit">修改信息</span></div>
-                <div id="informationBox">
-
+                <div class="btn btn-success pull-right edit-info" id="editInformation">
+                    <span class="glyphicon glyphicon-edit">修改信息</span>
+                </div>
+                
+                <div class="container self-info">
                     <div class="row">
                         <div class="col-xs-3">
                             <img src="./img/self_03.png" style="width: 100%;">
@@ -15,51 +15,42 @@
                         <div class="col-xs-9 user-information">
                              <div class="row">
                                  <div class="col-xs-3">
-
-                                     <span class="title">昵称:</span>
+                                     <span >昵称:</span>
                                      <span class="red-mark">*</span>
 
                                  </div>
                                  <div class="col-xs-6">
-                                     <div style="height: 5px;"></div>
                                      <span class="user-name">小美丽</span>
                                  </div>
                                  <div class="col-xs-2">
-                                     <div style="height: 8px;"></div>
                                      <span class="green-tip"><img src="./img/others_01.png"> </span>
                                      <span class="text-green">已认证</span>
                                  </div>
                              </div>
                             <div class="row">
                                 <div class="col-xs-3">
-
-                                    <span class="title">真实姓名:</span>
+                                    <span >真实姓名:</span>
                                     <span class="red-mark">*</span>
 
                                 </div>
                                 <div class="col-xs-6">
-                                    <div style="height: 5px;"></div>
                                     <span class="user-name">*研</span>
                                 </div>
                                 <div class="col-xs-2">
-                                    <div style="height: 8px;"></div>
                                     <span class="green-tip"><img src="./img/others_01.png"> </span>
                                     <span class="text-green">已认证</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3">
-
-                                    <span class="title">身份证号码:</span>
+                                    <span >身份证号码:</span>
                                     <span class="red-mark">*</span>
 
                                 </div>
                                 <div class="col-xs-6">
-                                    <div style="height: 5px;"></div>
                                     <span class="user-identity">139***************</span>
                                 </div>
                                 <div class="col-xs-2">
-                                    <div style="height: 8px;"></div>
                                     <span class="green-tip"><img src="./img/others_01.png"> </span>
                                     <span class="text-green">已认证</span>
                                 </div>
@@ -67,16 +58,14 @@
                             <div class="row">
                                 <div class="col-xs-3">
 
-                                    <span class="title">手机号码:</span>
+                                    <span>手机号码:</span>
                                     <span class="red-mark">*</span>
 
                                 </div>
                                 <div class="col-xs-6">
-                                    <div style="height: 5px;"></div>
                                     <span class="user-phone">139***************</span>
                                 </div>
                                 <div class="col-xs-2">
-                                    <div style="height: 8px;"></div>
                                     <span class="green-tip"><img src="./img/others_01.png"> </span>
                                     <span class="text-green">已认证</span>
                                 </div>
@@ -84,16 +73,14 @@
                             <div class="row">
                                 <div class="col-xs-3">
 
-                                    <span class="title">邮箱地址:</span>
+                                    <span>邮箱地址:</span>
                                     <span class="red-mark">*</span>
 
                                 </div>
                                 <div class="col-xs-6">
-                                    <div style="height: 5px;"></div>
                                     <span class="user-email">139***************</span>
                                 </div>
                                 <div class="col-xs-2">
-                                    <div style="height: 8px;"></div>
                                     <span class="green-tip"><img src="./img/others_01.png"> </span>
                                     <span class="text-green">已认证</span>
                                 </div>
@@ -101,12 +88,11 @@
                             <div class="row">
                                 <div class="col-xs-3">
 
-                                    <span class="title">性别：</span>
+                                    <span>性别：</span>
 
 
                                 </div>
                                 <div class="col-xs-6">
-                                    <div style="height: 5px;"></div>
                                     <span class="user-sex">女</span>
                                 </div>
 
@@ -114,51 +100,51 @@
                             <div class="row">
                                 <div class="col-xs-3">
 
-                                    <span class="title">出生日期：</span>
+                                    <span>出生日期：</span>
 
 
                                 </div>
                                 <div class="col-xs-6">
-                                    <div style="height: 5px;"></div>
                                     <span class="user-borntime">20141111</span>
                                 </div>
 
                             </div>
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <span class="title">最高学历：</span>
+                                    <span>最高学历：</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <span class="title">毕业院校：</span>
+                                    <span>毕业院校：</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <span class="title">居住地区：</span>
+                                    <span>居住地区：</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <span class="title">公司行业：</span>
+                                    <span>公司行业：</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <span class="title">公司规模：</span>
+                                    <span>公司规模：</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <span class="title">职位：</span>
+                                    <span>职位：</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <span class="title">月收入：</span>
+                                    <span>月收入：</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>

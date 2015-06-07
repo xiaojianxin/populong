@@ -93,7 +93,6 @@
                       </div>
                       <div class="accordion-inner">
                           <a href="platrank.php"> 平台排行榜</a>
-
                       </div>
                       <div class="accordion-inner">
                           <a id="transitions"> 热门路演推荐</a>

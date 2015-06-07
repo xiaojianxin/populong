@@ -3,19 +3,19 @@
                     <div id="depositTitle">
                         <div class="record-title">
                             <div class="title">充值</div>
-                            <img src="./img/line.jpg">
                         </div>
                     </div>
                     <div id="depositForm">
                         <div style="height: 40px;"></div>
                         <div class="row">
                             <div class="col-xs-2 col-xs-offset-2">
+                                <div class="deposit-title">
                                 <span class="red-mark">*</span>
-                                <span class="title">充值金额</span>
+                                <span>充值金额</span>
+                                </div>
 
                             </div>
                             <div class="col-xs-5">
-
                                 <input class="form-control" /><br/>
                                 <span>当前可用金额为：</span>
                                 <span class="red-mark">100</span>
@@ -30,14 +30,10 @@
                     <div id="chargeBox">
                         <div class="record-title">
                             <div class="title">充值</div>
-                            <img src="./img/line.jpg" style="width: 100%;">
                         </div>
 
                         <div id="chargeArea">
-
-                            <span class="chargeTitle">&nbsp;&nbsp;支付平台&nbsp;&nbsp;</span>
-                            <div class="divider"></div>
-                                <div style="height: 20px;"></div>
+                            <div class="chargeTitle">&nbsp;&nbsp;支付平台&nbsp;&nbsp;</div>
                                 <div class="charge-content" id="chargePart">
 
                                         <div class="row">
@@ -47,11 +43,10 @@
                                         </div>
 
                                 </div>
-                                <div class="divider"></div>
+                        </div>
                                 <div class="btn btn-success" id="chargebutton">
                                     充值
                                 </div>
-                            </div>
                             <div id="chargeDes">
                                 <h1>温馨提示:</h1>
                                 <h1>   1.为了您的账户安全,请在充值前进行身份认证、手机绑定以及提现密码设 置。</h1>
