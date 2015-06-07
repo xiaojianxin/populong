@@ -286,7 +286,7 @@
     <div id="thirdPane">
        <div class="container">
            <div class="row">
-               <div class="col-sm-8">
+               <div class="col-xs-8">
                    <div id="L-third">
                        <div id="tabItem">
                            <div class="tabbable" id="tabs-2">
@@ -335,7 +335,7 @@
                        </div>
                    </div>
                </div>
-               <div class="col-sm-4">
+               <div class="col-xs-4">
                    <div id="R-third">
                        <div style="height: 12px"></div>
                         <div class="title">

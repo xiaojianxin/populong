@@ -9,8 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
 	<link rel="stylesheet" type="text/css" href="./css/self.css">
     <link rel="stylesheet" type="text/css" href="./css/leftnav.css">
+    <link rel="stylesheet" type="text/css" href="./css/jPages.css"/>
 	<script src="./js/jquery-1.10.1.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/leftnav.js"></script>
 	<!--[if lt IE 9]>
 	  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
 	  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -31,30 +33,29 @@
                     <?php require('./leftnav.php') ?>
                 </div>
                 <div  class="col-xs-9">
-                <div class="self_right_top">
-                    <div class='self_pic'>
-                        <img src="./img/head_02.png" alt="" />
+                    <div id="dealrecord" class="hidden"><?php require('./dealrecord.php')?></div>
+                    <div id="selfindex" class="show"><?php require('./selfindex.php')?></div>
+                    <div id="deposit" class="hidden"><?php require('./deposit.php')?></div>
+                    <div id="withdraw" class="hidden"><?php require('./withdraw.php')?></div>
+                    <div id="myinvest" class="hidden"><?php require('./myinvest.php')?></div>
+                    <div id="transmarket" class="hidden"><?php require('./transmarket.php')?></div>
+                    <div id="startpro" class="hidden"><?php require('./startpro.php')?></div>
+                    <div id="focuspro" class="hidden"><?php require('./focuspro.php')?></div>
+                    <div id="selfinformation" class="hidden"><?php require('./selfinformation.php')?></div>
+                    <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
+                    <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
+                    <div id="message" class="hidden"><?php require('./message.php')?></div>
+                    <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
 
-                    </div>
-                    <div class="self_explain">Lilith-泡泡隆设计师</div>
-                    <div class="container" id="self_nav">
-                        <div id="topbottom" class="row">
-                            <div id="toChooseone" class="col-xs-3 content_nav" ><a>关注者110</div>
-                            <div id="toChoosefans" class="col-xs-3 content_nav" >粉丝110万</div>
-                        </div>
-                    </div>
                 </div>
-
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="fans"><?php require('./fans.php') ?></div>
-                        <div class="tab-pane" id="concern"><?php require('./concern.php') ?></div>
-                    </div>
-
-
-
+            </div>
         </div>
     </div>
+
+            <?php require('./footer.php')?>
 <script>
+
+
     $('#toChoosefans').click(function(e) {
 
         $(this).css('border-top','1px solid #6cc77f');
@@ -79,7 +80,35 @@
 
         $("#concern").attr('class',"tab-pane active");
         $("#fans").attr('class',"tab-pane");
-    })
-</script>>
+    });
+
+    $('#leftnav a').click(function(e){
+        //$('.nav li').removeClass('active');
+        var judge = $(this).attr('class');
+        if(judge=="accordion-toggle"){
+            $('ul .active').removeClass('active');
+            $(this).parent().addClass('active');
+        }
+        else{
+            var id = $(this).attr('id');
+            if(typeof (id) == "undefined")
+            {
+                $('ul .active').removeClass('active');
+                $(this).parent().addClass('active');
+                $('div .col-xs-9 .show').attr('class','hidden');
+                $('div #selfindex').attr('class','show');
+            }else{
+                $(".accordion-inner a").css('color','#333333');
+                $(this).css('color','#6cc77f');
+                //$(e.target).addClass('active');
+                //$(this).addClass('active');
+                $('div .col-xs-9 .show').attr('class','hidden');
+                $("div #"+id).attr('class','show');
+            }
+        }
+
+
+    });
+</script>
 	</body>
 	</html>	
