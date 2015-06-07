@@ -6,7 +6,7 @@
     <script src="./js/jquery-1.10.1.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet"  href="./css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/regist.css">
 	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
 	<script type="text/javascript" src="./js/regist.js"></script>
@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="modal fade" id="detail"  aria-labelledby="myModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
-                          <div class="modal-content">
+                          <div class="modal-content detail-content">
                               <div class="modal-header">
                                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                   <h4 class="modal-title" id="myModalLabel">

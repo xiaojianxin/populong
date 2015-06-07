@@ -26,7 +26,7 @@
     <div id="main">
         <div class="container">
             <div id="self_top" >
-                <a  class="btn btn-success" href="start.html">发起项目</a>
+                <a  class="btn btn-success" href="start.php">发起项目</a>
             </div>
             <div class="row">
                 <div class="col-xs-3">
