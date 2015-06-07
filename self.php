@@ -13,6 +13,7 @@
 	<script src="./js/jquery-1.10.1.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/leftnav.js"></script>
+    <script src="./js/self.js"></script>
 	<!--[if lt IE 9]>
 	  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
 	  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -43,7 +44,7 @@
                     <div id="focuspro" class="hidden"><?php require('./focuspro.php')?></div>
                     <div id="selfinformation" class="hidden"><?php require('./selfinformation.php')?></div>
                     <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
-                    <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
+                    <div id="platrank" class="hidden"><?php require('./platrank.php')?></div>
                     <div id="message" class="hidden"><?php require('./message.php')?></div>
                     <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
 
@@ -53,62 +54,6 @@
     </div>
 
             <?php require('./footer.php')?>
-<script>
 
-
-    $('#toChoosefans').click(function(e) {
-
-        $(this).css('border-top','1px solid #6cc77f');
-        $(this).css('border-left','1px solid #6cc77f');
-        $(this).css('border-right','1px solid #6cc77f');
-        $(this).css('border-bottom','1px solid #ffffff');
-
-        $('#toChooseone').css('border','1px solid #d2d2d2');
-
-        $("#fans").attr('class',"tab-pane active");
-        $("#concern").attr('class',"tab-pane");
-    })
-    $('#toChooseone').click(function(e) {
-
-        $(this).css('border-top','1px solid #6cc77f');
-        $(this).css('border-left','1px solid #6cc77f');
-        $(this).css('border-right','1px solid #6cc77f');
-        $(this).css('border-bottom','1px solid #ffffff');
-
-
-        $('#toChoosefans').css('border','1px solid #d2d2d2');
-
-        $("#concern").attr('class',"tab-pane active");
-        $("#fans").attr('class',"tab-pane");
-    });
-
-    $('#leftnav a').click(function(e){
-        //$('.nav li').removeClass('active');
-        var judge = $(this).attr('class');
-        if(judge=="accordion-toggle"){
-            $('ul .active').removeClass('active');
-            $(this).parent().addClass('active');
-        }
-        else{
-            var id = $(this).attr('id');
-            if(typeof (id) == "undefined")
-            {
-                $('ul .active').removeClass('active');
-                $(this).parent().addClass('active');
-                $('div .col-xs-9 .show').attr('class','hidden');
-                $('div #selfindex').attr('class','show');
-            }else{
-                $(".accordion-inner a").css('color','#333333');
-                $(this).css('color','#6cc77f');
-                //$(e.target).addClass('active');
-                //$(this).addClass('active');
-                $('div .col-xs-9 .show').attr('class','hidden');
-                $("div #"+id).attr('class','show');
-            }
-        }
-
-
-    });
-</script>
 	</body>
 	</html>	
