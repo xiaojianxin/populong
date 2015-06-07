@@ -16,6 +16,7 @@
     float: left;
     margin-bottom: 20px;
     margin-top: 5px;
+    height: 40px;
 }
 
 #inputarea .row .two-input input{
@@ -56,6 +57,7 @@
     width: 10%;
     margin-left: 20%;
     margin-top: 0px;
+    height: 20px;
 }
 #inputarea .row .col-xs-9 .text-left{
     margin-top: 20px;
@@ -95,7 +97,7 @@
 }
 #input2area .row .col-xs-9  input{
 
-    line-height: 40px;
+    height: 40px;
     width: 60%;
     float: left;
     margin-bottom: 20px;
@@ -170,7 +172,7 @@
 }
 #input3area .row .col-xs-9  input{
 
-    line-height: 40px;
+   height: 40px;
     width: 60%;
     float: left;
     margin-bottom: 20px;
