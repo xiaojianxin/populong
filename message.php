@@ -152,6 +152,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="privateMsg">
+
                                     <div id="private-list">
                                         <div class="one-private">
                                             <div class="row">

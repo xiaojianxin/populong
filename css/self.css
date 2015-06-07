@@ -10,8 +10,8 @@
 }
 #leftnav{
     margin-top: 53px;
-    margin-right: 32px;
-    width: 260px;
+    margin-right: 20px;
+
 }
 .self_right_top{
 	height: 190px;
@@ -27,14 +27,15 @@
 .self_explain{
 	font-family: "微软雅黑";
 	font-size: 15px;
+    font-weight: bold;
 	width: 135px;
 	margin: 0 auto;
 	padding-top: 5px;
 }
 #topbottom{
-	width: 435px;
+	width: 410px;
 	margin: 0 auto;
-	padding-top: 8px
+	padding-top: 9px;
 }
 #self_nav{
 	width: 850px;
@@ -50,22 +51,30 @@
 	background-color: #ffffff;
 	border: 1px solid #d2d2d2;
 }
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
 
 
 
 /*个人中心 粉丝页面css*/
 
 #self_fans{
-	width: 1000px;
-	margin-left: -25px;
+	width: 879px;
+	margin-left: -30px;
+    background-color: #ffffff;
 }
 div.col-xs-4.fans_card{
-	margin: 10px;
-	width: 280px;
+	margin:9px;
+	width: 275px;
 	height: 140px;
 	background-color: #eeeff3;
 	
 }
+
 .fans_pic{
 	margin-top: 20px;
 	margin-left: 10px;
@@ -77,21 +86,319 @@ div.col-xs-4.fans_card{
 }
 .fans_name{
 	font-family: "微软雅黑";
-	font-size: 20px;
+	font-size: 15px;
 	font-weight:bold;
 	text-align: center;
 }
 .fans_introduction{
 	text-align: center;
 	font-family: "微软雅黑";
+    margin-top: 3px;
 }
 .fans_description{
 	margin-top: 20px;
 }
 .foucus{
     margin-left: 10px;
+
+    background-color: transparent;
+    border-color: #6cc77f;
+    color: #6cc77f;
+    margin-top: 10px;
+}
+
+.fans_card{
+    background-color: #eeeff3;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 160px;
+}
+#startpro,#followpro,#follows,#fans{
+    background-color: #ffffff;
+}
+.seemore{
+    width: 60px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/********************************************交易中心**************************************************/
+#recordbox{
+    background-color: #ffffff;
+}
+.title{
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.record img{
+    width: 100%;
+}
+.dealtype span{
+    margin-left: 10px;
+
+}
+.dealtype .active{
+    background-color: #65cc63;
+    color: white;
+}
+#deal-list table{
+    margin-top: 20px;
+}
+#deal-list table tr td{
+    line-height: 50px;
+}
+#deal-list thead tr th{
+    background-color:#dbdbdb ;
+}
+#deal-list{
+    min-height: 700px;
+    background-color: white;
+}
+/********************************************充值**************************************************/
+#depositBox{
+    background-color: #ffffff;
+}
+#depositForm{
+    margin:  20px 20px 20px 20px;
+    background-color: #d1f0d1;
+}
+.red-mark{
+    color: red;
+}
+#depositForm .row{
+    margin-top: 30px;
+}
+#depositForm .row .col-xs-5 span{
+    font-size: 18px;
 }
 
 
 
 
+<<<<<<< HEAD
+=======
+}
+#investProList #threetab ul  .active a{
+    color: #000000;
+    font-weight: bold;
+
+}
+/*******************************************转让市场**************************************************/
+#buyin table{
+    margin-top: 20px;
+}
+#buyin table tr td{
+    line-height: 50px;
+}
+#buyin thead tr th{
+    background-color:#dbdbdb ;
+}
+#sellout table{
+    margin-top: 20px;
+}
+#sellout table tr td{
+    line-height: 50px;
+}
+#sellout thead tr th{
+    background-color:#dbdbdb ;
+}
+#buyin,#sellout{
+    min-height: 700px;
+    background-color: white;
+}
+#transMarket #twotab ul  .active a{
+    color: #000000;
+    font-weight: bold;
+
+}
+/*******************************************我发起的项目**************************************************/
+#allList table{
+    margin-top: 20px;
+}
+#allList table tr td{
+    line-height: 50px;
+}
+#allList thead tr th{
+    background-color:#dbdbdb ;
+}
+#financingList table{
+    margin-top: 20px;
+}
+#financingList table tr td{
+    line-height: 50px;
+}
+#financingList thead tr th{
+    background-color:#dbdbdb ;
+}
+#succeedList table{
+    margin-top: 20px;
+}
+#succeedList table tr td{
+    line-height: 50px;
+}
+#succeedList thead tr th{
+    background-color:#dbdbdb ;
+}
+#unsucceedList thead tr th{
+    background-color:#dbdbdb ;
+}
+#unsucceedList table{
+    margin-top: 20px;
+}
+#unsucceedList table tr td{
+    line-height: 50px;
+}
+#allList,#financingList,#succeedList,#unsucceedList{
+    min-height: 700px;
+    background-color: white;
+}
+#startPro #fourtab ul  .active a{
+    color: #000000;
+    font-weight: bold;
+
+}
+/*******************************************我关注的项目**************************************************/
+
+.onebox{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 20px;
+    background-color: #eeeff3;
+}
+.onebox a img{
+    margin-top: 20px;
+    width: 100%;
+}
+.onebox h2{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+}
+.onebox a{
+    color: #666668;
+
+}
+.onebox h3{
+    font-size: 18px;
+}
+.onebox h4{
+    font-size: 16px;
+    color: #666668;
+    margin-top: 10px;
+}
+#focusPro #twotab ul  .active a{
+    color: #000000;
+    font-weight: bold;
+
+}
+/*******************************************个人资料**************************************************/
+#informationBox{
+    margin-top: 20px;
+}
+.text-green{
+    color:green;
+
+}
+
+.green-tip img{
+    width: 25%;
+
+}
+.user-information .row .col-xs-3 span{
+    float: right;
+}
+
+.user-information .user-name,.user-borntime,.user-phone,.user-email,.user-identity,.user-sex{
+    font-size: 18px;
+}
+/*******************************************消息页面**************************************************/
+#message #threetab ul  .active a{
+    color: #000000;
+    font-weight: bold;
+
+}
+
+#message{
+    background-color: white;
+}
+.one-receive,.one-send,.one-private{
+    margin-top: 20px;
+}
+.one-receive img{
+    width: 80%;
+    float: right;
+}
+ .comment-time{
+    margin-top: 10px;
+}
+.comment-content{
+    line-height: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+.one-receive .comment-reply{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.one-receive .comment-reply span{
+    margin-right: 30px;
+}
+.replycomment{
+    margin-top: 50px;
+}
+.replycomment input{
+    width: 80%;
+}
+.replybutton{
+    float: right;
+    margin-top: 10px;
+    margin-right: 140px;
+}
+.comment-reply .reply-btn{
+    cursor: pointer;
+}
+.text-orange{
+    color: orangered;
+}
+.one-send img{
+    width: 80%;
+    float: right;
+}
+.one-receive .comment-reply span{
+    margin-right: 30px;
+}
+.one-send .comment-reply span{
+    margin-right: 30px;
+    float: right;
+}
+.one-private img{
+    width: 80%;
+    float: right;
+}
+.one-private .comment-reply span{
+    margin-right: 30px;
+    float: right;
+}
+/*******************************************平台排行榜**************************************************/
+#platrank #twotab ul  .active a{
+    color: #000000;
+    font-weight: bold;
+
+}
+.rank-pic{
+    width: 80px;
+}
+#investRank table thead .active th{
+    background-color: #dbdbdb;
+}
+#startRank table thead .active th{
+    background-color: #dbdbdb;
+}
+>>>>>>> 1c0e98c3b262c7b7e5fc3cbc425428acec87e715
