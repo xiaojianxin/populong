@@ -172,7 +172,7 @@
                                     </div>
                             <div class="row signup_content">
                                     <div class="col-xs-4"></div>
-                                    <input type="submit" id="11" class="btn btn-success btn-lg submit-button" value="立即注册">
+                                    <input type="submit" id="regist" class="btn btn-success btn-lg submit-button" value="立即注册">
                     
                             </div>
                         </form>
@@ -208,9 +208,20 @@
          }
        
    });
+   $('.submit-button').click(function(){
+    alert($('.form').serialize());
+      $.ajax({
+        type:"post",  //默认值: "GET")。请求方式 ("POST" 或 "GET")， 默认为 "GET"。
+        url:"1.php",  //当前页地址。发送请求的地址。
+        data:$('.form').serialize(), //发送到服务器的数据。将自动转换为请求字符串格式。
+        dataType:"json",//预期服务器返回的数据类型。如果不指定，jQuery 将自动根据 HTTP 包 MIME 信息来智能判断
+        success:function(data){//请求成功后的回调函数。
+          alert('111');
+         }
+      });
 
-
-
+  alert('111');
+    });
 </script>
 </body>
 </html>

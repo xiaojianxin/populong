@@ -251,7 +251,7 @@ session_start();
           $("#inputCode").modal('hide');
       });
 
-       $('.login_passwd').click(function(){
+       $('.checklogin').click(function(){
           if(!$('.login_username').val().match(/^[1][358]\d{9}/)){
                $('.login_username').attr('type','email');
                $('.login_username').removeAttr('pattern');
