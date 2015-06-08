@@ -182,13 +182,31 @@
 	
    <?php require('./footer.php')?>
 <script type="text/javascript">
+    var judge = '0';
    $('#choice1').click(function(){
-        $("#choice1").css('border','1px solid #0066cc');
-        $('#checkbox1').attr("value",'11');
+       if (judge == '0') {
+           $("#choice1").css('border','1px solid #0066cc');
+           $('#checkbox1').attr("value",'22');
+           judge = '1';
+       }else{
+           $("#choice1").css('border','1px solid #d4d4d4');
+           $('#checkbox1').attr("value",'');
+           judge = '0';
+       }
    });
+
    $('#choice2').click(function(){
-       $("#choice2").css('border','1px solid #0066cc');
-       $('#checkbox2').attr("value",'22');
+
+         if (judge == '0') {
+            $("#choice2").css('border','1px solid #0066cc');
+            $('#checkbox2').attr("value",'22');
+            judge = '1';
+        }else{
+            $("#choice2").css('border','1px solid #d4d4d4');
+            $('#checkbox2').attr("value",'');
+            judge = '0';
+         }
+       
    });
 
 

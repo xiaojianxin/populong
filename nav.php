@@ -1,3 +1,7 @@
+<?PHP
+session_start();
+
+?> 
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -17,15 +21,19 @@
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
           <ul class="nav navbar-nav navbar-right">
-            <?php //if(empty($_SESSION)){
-            //    echo '<li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
-            //    <li><a href="./regist_1.php">注册</a></li>';
-            // } 
-            // else{
-               echo '
+            <?php if(empty($_SESSION["token"])){
+            ?>
+                 
+				<li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
+                <li><a href="./regist_1.php">注册</a></li>
+                
+             <?PHP 
+             } 
+             else{
+             ?>
                <li><img style=" margin-top:5px;height:40px;" src="./img/head_02.png" alt="" /></li>
                <li>
-                        <a class="dropdown-toggle operator-name" data-toggle="dropdown">lisisi</a>
+                        <a class="dropdown-toggle operator-name" data-toggle="dropdown"><?PHP echo $_SESSION["nickName"] ?></a>
                           <ul class="dropdown-menu self-menu">
                             <li>
                               <a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
@@ -40,12 +48,13 @@
                               <a href="#"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
                             </li>
                             <li>
-                              <a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
+                              <a href="./action/do_logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
                             </li>
 
                         </ul>
-               </li>';
-            //}
+               </li>
+            <?PHP
+            }
             ?>
                  
 
@@ -72,13 +81,13 @@
                   </h4>
               </div>
               <div class="modal-body">
-                  <form action="">
+                  <form action="./action/do_login.php" method="post">
 
                       <div class="form-group">
-                          <input type="email" class="form-control login_username" placeholder="邮箱/手机">
+                          <input type="text" name="inputEmail" class="form-control login_username" placeholder="邮箱/手机" pattern="[1][358]\d{9}">
                       </div>
                       <div class="form-group">
-                          <input type="password" class="form-control login_passwd" placeholder="密码">
+                          <input type="password" name="inputPassword" class="form-control login_passwd" placeholder="密码">
                       </div>
                       <div class="checkbox">
                           <label>
@@ -240,6 +249,13 @@
       });
       $("#submitFind").click(function(){
           $("#inputCode").modal('hide');
-      })
+      });
+
+       $('.login_passwd').click(function(){
+          if(!$('.login_username').val().match(/^[1][358]\d{9}/)){
+               $('.login_username').attr('type','email');
+               $('.login_username').removeAttr('pattern');
+          }
+      });
 
   </script>
