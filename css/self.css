@@ -58,7 +58,7 @@
     display: block;
 }
 .tab-content{
-    width: 880px;
+    width: 100%;
     margin-left: -30px;
 }
 
@@ -67,7 +67,7 @@
 /*个人中心 粉丝页面css*/
 
 #self_fans{
-	width: 879px;
+	width: 104%;
     background-color: #ffffff;
 }
 
@@ -105,10 +105,10 @@
 
 .fans_card{
     background-color: #eeeff3;
-    margin: 9px;
-    margin-top: 10px;
+    margin-right: 2%;
+    margin-top: 1%;
     margin-bottom: 10px;
-    width: 275px;
+    width: 31%;
     height: 140px;
     float: right;
 }

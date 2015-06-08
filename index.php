@@ -3,12 +3,14 @@
 <head>
     <title>泡泡隆首页热门</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="description" content="布尔教育 http://www.itbool.com" />
     <link rel="stylesheet"  href="./css/reset.css"/>
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
     <script src="./js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="./js/swiper3.07.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
@@ -59,7 +61,7 @@
 <div class="content-main">
     <div class="row">
         <div class="col-sm-7">
-            <a href="./pro.html">
+            <a href="./pro.php">
                 <img class="project"src="./img/index_01.png" alt="2" style="width:100%" />
             </a>
         </div>
@@ -142,7 +144,7 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="onebox">
-                <a href="./pro.html">
+                <a href="./pro.php">
                     <img class="project"src="./img/index_02.png" alt="2" />
                 </a>
                 <h2>泡泡隆投资平台</h2>
@@ -201,7 +203,7 @@
         </div>
         <div class="col-sm-4">
             <div class="onebox">
-                <a href="./pro.html">
+                <a href="./pro.php">
                     <img class="project"src="./img/index_03.png" alt="2" />
                 </a>
                 <h2>泡泡隆投资平台</h2>
@@ -260,7 +262,7 @@
         </div>
         <div class="col-sm-4">
             <div class="onebox">
-                <a href="./pro.html">
+                <a href="./pro.php">
                     <img class="project"src="./img/index_04.png" alt="2" />
                 </a>
                 <h2>泡泡隆投资平台</h2>
@@ -330,7 +332,7 @@
                 </div>
                 <div class="col-sm-4 col-sm-offset-4">
                     <div style="height:20px;"></div>
-                    <a href="./hotinvest.html" class="pull-right">查看更多>></a>
+                    <a href="./hotinv.php" class="pull-right">查看更多>></a>
                 </div>
             </div>
         </div>
@@ -338,7 +340,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="onebox">
-                        <a href="./pro.html">
+                        <a href="./pro.php">
                             <img class="project"src="./img/index_05.png" alt="2" />
                         </a>
                         <h2>泡泡隆投资平台</h2>
@@ -397,7 +399,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="onebox">
-                        <a href="./pro.html">
+                        <a href="./pro.php">
                             <img class="project"src="./img/index_06.png" alt="2" />
                         </a>
                         <h2>泡泡隆投资平台</h2>
@@ -456,7 +458,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="onebox">
-                        <a href="./pro.html">
+                        <a href="./pro.php">
                             <img class="project"src="./img/index_07.png" alt="2" />
                         </a>
                         <h2>泡泡隆投资平台</h2>
@@ -526,7 +528,7 @@
                 </div>
                 <div class="col-sm-4 col-sm-offset-4">
                     <div style="height:20px;"></div>
-                    <a href="./hotinvest.html" class="pull-right">查看更多>></a>
+                    <a href="./hottime.php" class="pull-right">查看更多>></a>
                 </div>
             </div>
         </div>
@@ -722,7 +724,7 @@
                 </div>
                 <div class="col-sm-4 col-sm-offset-4">
                     <div style="height:20px;"></div>
-                    <a href="./hotinvest.html" class="pull-right">查看更多>></a>
+                    <a href="./hotvid.php" class="pull-right">查看更多>></a>
                 </div>
             </div>
         </div>
@@ -730,7 +732,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="onebox">
-                        <a href="./pro.html">
+                        <a href="./pro.php">
                             <img class="project"src="./img/index_03.png" alt="2" />
                         </a>
                         <h2>泡泡隆投资平台</h2>
@@ -789,7 +791,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="onebox">
-                        <a href="./pro.html">
+                        <a href="./pro.php">
                             <img class="project"src="./img/index_06.png" alt="2" />
                         </a>
                         <h2>泡泡隆投资平台</h2>
@@ -848,7 +850,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="onebox">
-                        <a href="./pro.html">
+                        <a href="./pro.php">
                             <img class="project"src="./img/index_09.png" alt="2" />
                         </a>
                         <h2>泡泡隆投资平台</h2>

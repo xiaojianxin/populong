@@ -17,10 +17,38 @@
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
           <ul class="nav navbar-nav navbar-right">
+            <?php //if(empty($_SESSION)){
+            //    echo '<li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
+            //    <li><a href="./regist_1.php">注册</a></li>';
+            // } 
+            // else{
+               echo '
+               <li><img style=" margin-top:5px;height:40px;" src="./img/head_02.png" alt="" /></li>
+               <li>
+                        <a class="dropdown-toggle operator-name" data-toggle="dropdown">lisisi</a>
+                          <ul class="dropdown-menu self-menu">
+                            <li>
+                              <a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
+                            </li>
+                            <li>
+                              <a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
+                            </li>
+                            <li>
+                              <a href="#"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
+                            </li>
+                            <li>
+                              <a href="#"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
+                            </li>
+                            <li>
+                              <a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
+                            </li>
 
-                  <li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
+                        </ul>
+               </li>';
+            //}
+            ?>
+                 
 
-                  <li><a href="./regist_1.php">注册</a></li>
           </ul>
           <form class='navbar-form navbar-right' action="">
                 <div class="btn btn-inverse">
@@ -213,4 +241,5 @@
       $("#submitFind").click(function(){
           $("#inputCode").modal('hide');
       })
+
   </script>
