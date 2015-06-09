@@ -1,96 +1,222 @@
-#main{background:#c7e3d0;width: 100%;height: 3660px;float: left;;}
+.startpic{
+    margin-top: 80px;
+}
+#inputarea{
+    margin-top: 30px;
+}
+#inputarea .row .col-xs-3 span{
+    float: right;
+    font-size: 20px;
+    line-height: 40px;
+}
+#inputarea .row .col-xs-9  input{
 
+    line-height: 40px;
+    width: 80%;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    height: 40px;
+}
 
-#maincontainer1{width: 78%;height: 1504px;position:absolute;top:62px;left: 11%;display:;}
+#inputarea .row .two-input input{
+    width: 20%;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+#inputarea .row .two-input span{
 
-#main_top{background:#eeeff3; width: 100%;height: 264px;}
-#main_top_top{background:#ffffff; width: 92%;height: 66px;margin: 0 4%; border-bottom: 2px solid #66cc66}
-#main_top img{float: left;width: 80%;height: 56px;margin:50px 10% 0 10%;}
+    float: left;
+    margin-left: 10px;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+#inputarea .row .text{
+    margin-top: 10px;
+    margin-left: 10px;
+    line-height: 40px;
+}
+#inputarea .row .col-xs-4 .btn{
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
 
-#maincontainer1 #main_bottom{background: #eeeff3; width: 100%;height: 1240px;float: left;}
+}
+#inputarea .thumbnail{
+    width: 80%;
+    margin-left: 10%;
+}
+#inputarea .thumbnail img{
+    width: 100%;
+}
+#inputarea textarea{
+    min-height: 400px;
+}
+#inputarea .row .col-xs-9 .text-left input{
+    width: 10%;
+    margin-left: 20%;
+    margin-top: 0px;
+    height: 20px;
+}
+#inputarea .row .col-xs-9 .text-left{
+    margin-top: 20px;
+}
+#inputarea .row .col-xs-9 #nextstep{
+    margin-bottom: 80px;
+    margin-top: 20px;
+    width: 40%;
+}
+/*********************************发起项目2***********************************************************8*/
+#input2area .btn-group{
+    float: left;
+    margin-top: 30px;
+    margin-left: 6%;
 
-#left{ width: 12%;height:100% ;float: left;margin-left: 10%;}
-#left li{width: 100%;height: 48px;float: left;margin-top: 34px;}
-#left h1{font-size: 20px;width: 100%; height: 38px;text-align: center;float: left;padding: 10px 20px 0 0;}
+}
+#input2area .btn-group .btn{
 
-#center{ width: 50%;margin-right:2%;height:100%;float: left;}
-#center li{ width: 100%;height: 48px;float: left;margin-top: 34px;font-size: 18px;}
-#center input{width:60%;height: 50px;float: left;border: 1px solid #cfcfcf;font-size: 18px;}
-#center h1{width:4%;height: 40px;float: left;font-size: 18px;padding-top: 10px;}
-#center #centerLeft{background:#6cc77f ; width:18%;margin-right: 3%;height: 40px;padding-top:10px;font-size: 18px;float: left;}
-#center #centerCenter{background:#6cc77f ; width:18%;margin-right: 3%;height: 40px;padding-top:10px;font-size: 18px;float: left;}
-#center #centerRight{background:#6cc77f ; width:18%;margin-right: 3%;height: 40px;padding-top:10px;font-size: 18px;float: left;}
-#center #province{width: 16%;}
-#center h2{width:80%;height: 40px;float: left;font-size: 18px;padding-top: 10px;}
-#center #contentli{width: 100%;height: 360px;}
-#center #morecontent{width: 100%;height: 360px;}
-#center #checkagree{width:6%;height: 38px;float: left;border: 1px solid #cfcfcf;}
-#center a{font-size: 20px;width: 40%; height: 30px;background: #00adef;text-align: center;float: left;padding: 0;border: blue solid 1px;margin-left: 30%;}
+    height: 40px;
 
-#right{width:24%;height: 100%;float: left;}
+    margin-left: 20px;
+}
+#input2area .row .col-xs-3 span{
+    float: right;
+    font-size: 18px;
+    line-height: 40px;
+}
+#input2area .text-title{
+    font-weight: bold;
+    margin-bottom: -15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size:18px ;
+}
+#input2area .divider{
+    margin-bottom: 20px;
+}
+#input2area .row .col-xs-9  input{
 
-#maincontainer2{width: 78%;height: 3588px;position:absolute;top:62px;left: 11%;display:none;}
+    height: 40px;
+    width: 60%;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
 
-#maincontainer2 #main_top{background:#eeeff3; width: 100%;height: 164px;}
-#maincontainer2 #main_top_top{background:#eeeff3; width: 92%;height: 66px;margin: 0 4%; border-bottom: 2px solid #66cc66}
-#maincontainer2 #main_top img{float: left;width: 80%;height: 56px;margin:50px 10% 0 10%;}
+#input2area .row .two-input input{
+    width: 20%;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+#input2area .row .two-input span{
 
-#maincontainer2 #main_bottom{background: #eeeff3; width: 100%;height: 3460px;float: left;}
+    float: left;
+    margin-left: 10px;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+#input2area .row .text{
+    margin-top: 10px;
+    margin-left: 10px;
+    line-height: 40px;
+}
+#input2area .row .col-xs-4 .btn{
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
 
-#maincontainer2 #main_bottom .return{width: 100%;height: 800px; margin-top: 50px;}
-#maincontainer2 #main_bottom .return_top{width: 100%;height: 30px; border-bottom: solid #ccd1d4 2px;}
-#maincontainer2 #main_bottom .return_top h1{width: 100%;height: 30px; font-size: 16px;font-weight: bolder;}
+}
+#input2area textarea{
+    margin-top: 20px;
+    min-height: 200px;
+    width: 100%;
+}
+#input2area .thumbnail{
+    width: 80%;
+    margin-left: 10%;
+}
+#input2area .thumbnail img{
+    width: 100%;
+}
+#input2area .row .col-xs-3 .btn{
+    width: 40%;
 
-#maincontainer2 #main_bottom  h1{width: 100%;height: 30px; font-size: 16px;font-weight: bolder;}
+    line-height: 30px;
+    margin-top: 40px;
 
-#maincontainer2 #main_bottom .return_bottom{width: 100%;height: 770px;}
-#maincontainer2 #main_bottom .return_bottom li{width: 100%;height: 50px; margin-top: 20px;}
-#maincontainer2 #main_bottom .return_bottom h1{ width: 10%;height: 34px;float: left;margin-right: 0.8%;text-align: center;padding-top: 16px;font-size: 18px;}
-#maincontainer2 #main_bottom .return_bottom h2{ width: 40%;height: 34px;float: left;padding-top: 16px;font-size: 18px;}
-#maincontainer2 #main_bottom .return_bottom h3{ width: 8%;height: 34px;float: left;padding-top: 16px;font-size: 18px;}
-#maincontainer2 #main_bottom .return_bottom a{background: #a4aeb0; width: 8%;height: 34px; float: left;margin-right: 2%;text-align: center;padding-top: 16px;font-size: 18px;}
-#maincontainer2 #main_bottom .return_bottom input{width: 30%;height: 50px; float: left;}
-#maincontainer2 #main_bottom #profitLi{width: 100%;height: 260px; margin-top: 20px;}
-#maincontainer2 #main_bottom #profit{width: 50%;height: 260px; float: left;}
-#maincontainer2 #main_bottom #save{background: #6cc77f; width: 8%;height: 50px;margin-right: 2%;  float: right;}
+}
+#input2area .row .actionbutton .btn{
+    width:30%;
 
-#maincontainer2 input{background: #6cc77f; width: 20%;height: 50px; float: left;margin:0 4% 0 0;float: left;}
+    line-height: 30px;
+    margin-top: 40px;
 
+}
+#input2area #previousStep{
+    margin-left: 15%;
+}
+/*********************************发起项目3***********************************************************8*/
+#input3area .row .col-xs-3 span{
+    float: right;
+    font-size: 18px;
+    line-height: 40px;
+}
+#input3area .text-title{
+    font-weight: bold;
+    margin-bottom: -15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size:18px ;
+}
+#input3area .row .col-xs-9  input{
 
+   height: 40px;
+    width: 60%;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+#input3area .divider{
+    margin-bottom: 20px;
+}
+#input3area .save{
+    width: 30%;
+    float: right;
+    font-size: 20px;
+}
+#input3area .col-xs-3 .radio-inline{
+    margin-top: 10px;
+}
+#input3area .row .actionbutton .btn{
+    width:30%;
 
+    line-height: 30px;
+    margin-top: 40px;
+    margin-bottom: 200px;
 
-#maincontainer3{width: 78%;height: 3588px;position:absolute;top:62px;left: 11%;display:none;}
+}
+#input3area #previousStep{
+    margin-left: 15%;
+}
+/*********************************发起项目4***********************************************************8*/
+.center-show h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 24px;
+}
+.center-show h2{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
 
-#maincontainer3 #main_top{background:#eeeff3; width: 100%;height: 164px;}
-#maincontainer3 #main_top_top{background:#eeeff3; width: 92%;height: 66px;margin: 0 4%; border-bottom: 2px solid #66cc66}
-#maincontainer3 #main_top img{float: left;width: 80%;height: 56px;margin:50px 10% 0 10%;}
-
-#maincontainer3 #main_bottom{background: #eeeff3; width: 100%;height: 3460px;float: left;}
-
-#maincontainer3 #main_bottom .return{width: 100%;height: 400px; margin-top: 50px;}
-#maincontainer3 #main_bottom .return_top{width: 100%;height: 30px; border-bottom: solid #ccd1d4 2px;}
-#maincontainer3 #main_bottom .return_top h1{width: 100%;height: 30px; font-size: 16px;font-weight: bolder;}
-
-#maincontainer3 #main_bottom  h1{width: 100%;height: 30px; font-size: 16px;font-weight: bolder;}
-
-#maincontainer3 #main_bottom .return_bottom{width: 100%;height: 300px;}
-#maincontainer3 #main_bottom .return_bottom li{width: 100%;height: 50px; margin-top: 20px;}
-#maincontainer3 #main_bottom .return_bottom h1{ width: 10%;height: 34px;float: left;margin-right: 0.8%;text-align: center;padding-top: 16px;font-size: 18px;}
-#maincontainer3 #main_bottom .return_bottom h2{width: 2%;height: 34px;float: left;padding-top: 16px;font-size: 18px;}
-#maincontainer3 #main_bottom .return_bottom h3{ width: 75.6%;height: 34px;float: left;padding-top: 16px;font-size: 18px;}
-#maincontainer3 #main_bottom .return_bottom input{width: 2.8%;height: 30px; float: left;margin:14px 2% 0 0;}
-
-#maincontainer3 input{background: #6cc77f; width: 20%;height: 50px; float: left;margin:0 4% 0 0;float: left;}
-
-
-#maincontainer4{width: 78%;height: 3588px;position:absolute;top:62px;left: 11%;display:block;}
-
-#maincontainer4 #main_top{background:#eeeff3; width: 100%;height: 164px;}
-#maincontainer4 #main_top_top{background:#eeeff3; width: 92%;height: 66px;margin: 0 4%; border-bottom: 2px solid #66cc66}
-#maincontainer4 #main_top img{float: left;width: 80%;height: 56px;margin:50px 10% 0 10%;}
-
-#maincontainer4 #main_bottom{background:#eeeff3; width: 100%;height: 3460px;float: left;}
-
-#maincontainer4 h1{ width: 40%;height: 40px; margin: 50px 30% 0 30%;text-align: center;font-size: 18px;font-weight: bold;float: left;}
-#maincontainer4 h2{width: 40%;height: 40px; margin: 20px 30% 0 30%;text-align: center;font-size: 16px;float: left;}
-#maincontainer4 a{background: #6cc77f;width: 20%;height: 30px; margin: 50px 40% 0 40%;text-align: center;font-size: 16px;float: left;padding-top: 10px;}
+}
+.center-show .btn{
+    width: 30%;
+    margin-left: 35%;
+    text-align: center;
+    margin-top: 40px;
+}

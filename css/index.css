@@ -27,6 +27,7 @@ a:focus{
     font-size: 24px;
     font-weight: bold;
 }
+
 #login,#forgetPW,#inputCode,#sendCode{
 
     margin-top: 180px;
@@ -120,9 +121,7 @@ a:focus{
 #hotvid{
 	background-color: #addab9;
 }
-#footer{
-	background-color: #1f1f1f;
-}
+
 div,h1,span,h2,h3,h4,h5,h6,li{
 	font-family: "微软雅黑";
 }
@@ -182,10 +181,7 @@ div,h1,span,h2,h3,h4,h5,h6,li{
 	color: #666668;
 	margin-top: 10px;
 }
-#footer .row{
-	margin-top: 20px;
 
-}
 .progray{background: #c9c9c9;display: block;margin-left: 4%; float: left;margin-top: 8px;width: 88%;height: 10px;}
 .progreen{background: #6cc77f;width: 50%;height: 10px;}
 

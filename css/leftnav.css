@@ -1,37 +1,56 @@
-.bs-docs-sidenav.affix {
-        top: 40px;
-    }
+a{
+    cursor:pointer;
 
-    /*  >表示第一个子元素  */
-    .bs-docs-sidenav > li:first-child > a {
-        -webkit-border-radius: 6px 6px 0 0;
-        -moz-border-radius: 6px 6px 0 0;
-        border-radius: 6px 6px 0 0;
-    }
-    .bs-docs-sidenav > li > a {
-        display: block;
-        width: 190px \9;
-        margin: 0 0 -1px;
-        padding: 8px 14px;
-        border: 1px solid #e5e5e5;
-    }
+    text-decoration:none;
 
-    .bs-docs-sidenav {
-        width: 228px;
-        margin: 50px 0 0;
-        padding: 0;
-        background-color: #fff;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-        -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-        box-shadow: 0 1px 4px rgba(0,0,0,.065);
-    }
+    hide-focus: expression(this.hideFocus=true);
 
-    .bs-docs-sidenav .icon-chevron-right {
-        float: right;
-        margin-top: 2px;
-        margin-right: -6px;
-        opacity: .25;
-    }
+    outline:none;
+}
+a:link,a:visited,a:hover,a:active{
+
+    text-decoration:none;
+
+}
+
+a:focus{
+    outline:0;
+}
+#leftnav{
+    background-color: #ffffff;
+    margin-top: 35px;
+}
+#leftnav ul .active{
+    background-color: #6cc87f;
+}
+#leftnav ul .active a{
+   color: white;
+}
+#leftnav .personalpage{
+    text-align: center;
+}
+#leftnav .personalpage a{
+    line-height: 50px;
+    color: #000000;
+    font-size: 18px;
+
+
+}
+.accordion-heading{
+    text-align: center;
+}
+.accordion-heading a{
+    line-height: 50px;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+}
+.accordion-inner a{
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 10%;
+}
+.accordion-inner {
+    text-align: center;
+}

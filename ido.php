@@ -1,251 +1,280 @@
+<?PHP
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
-	<title>我做你投</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="布尔教育 http://www.itbool.com" />
-	<link rel="stylesheet"  href="./css/reset.css"/>
-	<link rel="stylesheet" type="text/css" href="./css/index.css">
-	<script type="text/javascript" src="./js/index.js"></script>
-	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-	<script src="./js/jquery-1.10.1.js"></script>
-	<script src="./bootstrap/js/bootstrap.min.js"></script>
+    <title>我做你投</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="布尔教育 http://www.itbool.com" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/ido.css"/>
+    <link rel="stylesheet" href="./css/animate.css"/>
+    <link rel="stylesheet" href="./css/jPages.css"/>
+    <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jPages.min.js"></script>
 </head>
 <body>
-	<div id="back"></div>
-	<div id="login">
-		<img src="./img/login_01.png" alt="" />
-		<h1>登陆</h1>
-		<input class="login_username" type="text" name=""value="邮箱/手机">
-		<input class="login_passwd" type="password" name="password"value="">
-		<input class="remember" type="checkbox">
-		<h2>记住用户名&nbsp;&nbsp;</h2>
-		<a id="tofind1"href="#">忘记密码/</a>
-		<a id="toregist"href="./regist_1.html">快速注册</a>
-		<a class="checklogin"href="./indexlogin.html">登陆</a>
-	</div>
-	<div id="find1">
-		<img src="./img/login_02.png" alt="" />
-		<h1>找回密码</h1>
-		<input class="login_username" type="text" name=""value="邮箱/手机">
-		<input class="login_passwd" type="text" name=""value="验证码">
-		<a class="checkcode"href="#">1234</a>
-		<a id="tofind2"href="#">下一步</a>
-	</div>
-	<div id="find2">
-		<img src="./img/login_02.png" alt="" />
-		<h1>找回密码</h1>
-		<h2>已向13311229866发送手机验证码</h2>
-		<input class="login_passwd" type="text" name=""value="验证码">
-		<input class="login_passwd" type="text" name=""value="60秒后再次发送">
-		<a id="tofind3"href="#">提交</a>
-	</div>
-	<div id="find3">
-		<img src="./img/login_02.png" alt="" />
-		<h1>找回密码</h1>
-		<h2>已将验证地址发送至您的邮箱，请查收！</h2>
-		<a id="toemail"href="http://mail.163.com/">提交</a>
-	</div>
+<?php require('./nav.php') ?>
+
 	<div id="container">
-		<?php require('./nav.php') ?>
-		<div id="playimages" class="play">
-			<ul class="big_pic">
 
-				<div class="prev">
-					<img src="./img/prev.png" alt="" />
-				</div>
-				<div class="next">
-					<img src="./img/next.png" alt="" />
-				</div>
-
-				<div class="text">加载图片说明……</div>
-				<div class="length">计算图片数量……</div>
-
-				<a class="mark_left" href="javascript:;"></a>
-				<a class="mark_right" href="javascript:;"></a>
-
-				<div class="bg"></div>
-
-				<li style="z-index:1;"><img src="images/1.jpg" /></li>
-				<li><img src="images/2.jpg" /></li>
-				<li><img src="images/3.jpg" /></li>
-				<li><img src="images/4.jpg" /></li>
-				<li><img src="images/5.jpg" /></li>
-				<li><img src="images/6.jpg" /></li>
-			</ul>
-			<div class="small_pic">
-				<ul style="width:390px;">
-					<li style="filter: 100; opacity: 1;"><img src="images/1.jpg" /></li>
-					<li><img src="images/2.jpg" /></li>
-					<li><img src="images/3.jpg" /></li>
-					<li><img src="images/4.jpg" /></li>
-					<li><img src="images/5.jpg" /></li>
-					<li><img src="images/6.jpg" /></li>
-				</ul>
-			</div>
+		<div id="firstBig">
+            <img src="./images/ido1.jpg">
 		</div>
-		<div id="main">
-			<div id="hotpro">
-				<div id="content_one">
-					<div class="contentone_top">
-						<h1>你投项目</h1>
-						<a href="./hotpro.html">查看更多>></a>
-					</div>
+        <div id="secondText">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5">
+                    </div>
+                    <div class="col-xs-2 headerText">
+                        <span>光&nbsp;&nbsp;·&nbsp;&nbsp;影</span>
+                    </div>
+                    <div class="col-xs-5">
+                    </div>
+                </div>
+                <div class="row pic-introduce">
+                    <div class="col-xs-6">
+                        <div class="center-block">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                            <span class="titleText">成员介绍</span>
+                        </div>
+                           <div class="introduce">
+                               <div class="center-block">
+                                   <div class="row introduce_line">
+                                       <div class="col-xs-4">
+                                           <span><img src="./img/fan_01.png" class="img-circle"> </span>
+                                       </div>
+                                       <div class="col-xs-4">
+                                           <span><img src="./img/fan_02.png" class="img-circle"> </span>
+                                       </div>
+                                       <div class="col-xs-4">
+                                           <span><img src="./img/fan_03.png" class="img-circle"> </span>
+                                       </div>
+                                   </div>
+                                   <div class="row introduce_line">
+                                       <div class="col-xs-4">
+                                           <span><img src="./img/fan_04.png" class="img-circle"> </span>
+                                       </div>
+                                       <div class="col-xs-4">
+                                           <span><img src="./img/fan_05.png" class="img-circle"> </span>
+                                       </div>
+                                       <div class="col-xs-4">
+                                           <span><img src="./img/fan_06.png" class="img-circle"> </span>
+                                       </div>
+                                   </div>
+                               <button class="btn">了解他们</button>
 
-					<div class="contentone_bottom">
-						<div id="main_left">
-							<a href="./pro.html">
-								<img class="project"src="./img/index_01.png" alt="2" />
-							</a>
-						</div>
-						<div id="main_right">
-							<h1>MICLE傲血顶级订制主机</h1>
-							<h2><a href="0">由Lilith发起</a></h2>
-							<p style="margin-top:44px;">英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</br></br></br></p>
-							<div id="right_center"> 
-								<h3>已完成75%</h3>
-								<img class="place"src="./img/index_details1.png" alt="地点" />
-								<h4>北京</br></h4>
-							</div>
-							<img class="progress"src="./img/index_details2.png" alt="进度" />
-							<h5>￥1234567        90天</br>已筹金额            剩余天数</h5>
-							<img class="investor"src="./img/index_details3.png" alt="投资者" />
-							<div style="width:100%;height:24px;">
-								<h6>投资者：220</h6>
-								<img class="follower"src="./img/index_details4.png" alt="关注者" />
-								<h6>关注者：1500</h7>
-							</div>
-						</div>
-						<div class="contentone_bottom" style="margin-top:50px;float:left;">
-						<div id="main_left">
-							<a href="./pro.html">
-								<img class="project"src="./img/index_02.png" alt="2" />
-							</a>
-						</div>
-						<div id="main_right">
-							<h1>MICLE傲血顶级订制主机</h1>
-							<h2><a href="0">由Lilith发起</a></h2>
-							<p style="margin-top:44px;">英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</br></br></br></p>
-							<div id="right_center"> 
-								<h3>已完成75%</h3>
-								<img class="place"src="./img/index_details1.png" alt="地点" />
-								<h4>北京</br></h4>
-							</div>
-							<img class="progress"src="./img/index_details2.png" alt="进度" />
-							<h5>￥1234567        90天</br>已筹金额            剩余天数</h5>
-							<img class="investor"src="./img/index_details3.png" alt="投资者" />
-							<div style="width:100%;height:24px;">
-								<h6>投资者：220</h6>
-								<img class="follower"src="./img/index_details4.png" alt="关注者" />
-								<h6>关注者：1500</h7>
-							</div>
-						</div>
-						<div class="contentone_bottom" style="margin-top:50px;float:left;">
-						<div id="main_left">
-							<a href="./pro.html">
-								<img class="project"src="./img/index_03.png" alt="2" />
-							</a>
-						</div>
-						<div id="main_right">
-							<h1>MICLE傲血顶级订制主机</h1>
-							<h2><a href="0">由Lilith发起</a></h2>
-							<p style="margin-top:44px;">英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</br></br></br></p>
-							<div id="right_center"> 
-								<h3>已完成75%</h3>
-								<img class="place"src="./img/index_details1.png" alt="地点" />
-								<h4>北京</br></h4>
-							</div>
-							<img class="progress"src="./img/index_details2.png" alt="进度" />
-							<h5>￥1234567        90天</br>已筹金额            剩余天数</h5>
-							<img class="investor"src="./img/index_details3.png" alt="投资者" />
-							<div style="width:100%;height:24px;">
-								<h6>投资者：220</h6>
-								<img class="follower"src="./img/index_details4.png" alt="关注者" />
-								<h6>关注者：1500</h7>
-							</div>
-						</div>
-						<div class="contentone_bottom" style="margin-top:50px;float:left;">
-						<div id="main_left">
-							<a href="./pro.html">
-								<img class="project"src="./img/index_04.png" alt="2" />
-							</a>
-						</div>
-						<div id="main_right">
-							<h1>MICLE傲血顶级订制主机</h1>
-							<h2><a href="0">由Lilith发起</a></h2>
-							<p style="margin-top:44px;">英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</br></br></br></p>
-							<div id="right_center"> 
-								<h3>已完成75%</h3>
-								<img class="place"src="./img/index_details1.png" alt="地点" />
-								<h4>北京</br></h4>
-							</div>
-							<img class="progress"src="./img/index_details2.png" alt="进度" />
-							<h5>￥1234567        90天</br>已筹金额            剩余天数</h5>
-							<img class="investor"src="./img/index_details3.png" alt="投资者" />
-							<div style="width:100%;height:24px;">
-								<h6>投资者：220</h6>
-								<img class="follower"src="./img/index_details4.png" alt="关注者" />
-								<h6>关注者：1500</h7>
-							</div>
-						</div>
-						<div class="contentone_bottom" style="margin-top:50px;float:left;">
-						<div id="main_left">
-							<a href="./pro.html">
-								<img class="project"src="./img/index_05.png" alt="2" />
-							</a>
-						</div>
-						<div id="main_right">
-							<h1>MICLE傲血顶级订制主机</h1>
-							<h2><a href="0">由Lilith发起</a></h2>
-							<p style="margin-top:44px;">英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</br></br></br></p>
-							<div id="right_center"> 
-								<h3>已完成75%</h3>
-								<img class="place"src="./img/index_details1.png" alt="地点" />
-								<h4>北京</br></h4>
-							</div>
-							<img class="progress"src="./img/index_details2.png" alt="进度" />
-							<h5>￥1234567        90天</br>已筹金额            剩余天数</h5>
-							<img class="investor"src="./img/index_details3.png" alt="投资者" />
-							<div style="width:100%;height:24px;">
-								<h6>投资者：220</h6>
-								<img class="follower"src="./img/index_details4.png" alt="关注者" />
-								<h6>关注者：1500</h7>
-							</div>
-						</div>
-						<div class="contentone_bottom" style="margin-top:50px;float:left;">
-						<div id="main_left">
-							<a href="./pro.html">
-								<img class="project"src="./img/index_05.png" alt="2" />
-							</a>
-						</div>
-						<div id="main_right">
-							<h1>MICLE傲血顶级订制主机</h1>
-							<h2><a href="0">由Lilith发起</a></h2>
-							<p style="margin-top:44px;">英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</br></br></br></p>
-							<div id="right_center"> 
-								<h3>已完成75%</h3>
-								<img class="place"src="./img/index_details1.png" alt="地点" />
-								<h4>北京</br></h4>
-							</div>
-							<img class="progress"src="./img/index_details2.png" alt="进度" />
-							<h5>￥1234567        90天</br>已筹金额            剩余天数</h5>
-							<img class="investor"src="./img/index_details3.png" alt="投资者" />
-							<div style="width:100%;height:24px;">
-								<h6>投资者：220</h6>
-								<img class="follower"src="./img/index_details4.png" alt="关注者" />
-								<h6>关注者：1500</h7>
-							</div>
-						</div>
-						
-				
-				
-				
-				
-			</div>
-				<div id="footer">
-					<h1> <a href="http://www.bolongruncheng.com/"> 北京伯隆润成投资有限公司</a></h1>
-					<h1>投资有风险，本平台投资行为责任用户自理，所有投资行为最终解释权归本公司所有</h1>
-				</div>
-			</div>
-		</body>
-		</html>	
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="center-block">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                            <span class="titleText">项目简介</span>
+                        </div>
+                        <div class="row introduce-text">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <p>超现实体验<br/> 不仅仅只是图片上那么简单<br/> 我们致力于沉浸式虚拟现实的开发<br/>
+                                    让你在现实世界就能体会到 <br/>属于异世界的独特体验。 </p>
+                                <div class="center-block">
+                                    <button class="btn">项目详情</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pic-list">
+            <div class="one-pic">
+                <img src="./images/id2.jpg">
+            </div>
+            <div class="one-pic">
+                <img src="./images/ido3.jpg">
+            </div>
+            <div class="one-pic">
+                <img src="./images/ido4.jpg">
+            </div>
+            <div class="one-pic">
+                <img src="./images/ido5.jpg">
+            </div>
+
+
+        </div>
+
+        <div id="memberIntroduce">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5">
+                    </div>
+                    <div class="col-xs-2 headerText">
+                        <span">另类摄影</span>
+                    </div>
+                    <div class="col-xs-5">
+                    </div>
+                </div>
+             </div>
+            <div id="memberPic">
+                <div class="row introduce_line">
+                   <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <span><img src="./img/fan_01.png" class="img-circle"> </span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span><img src="./img/fan_02.png" class="img-circle"> </span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span><img src="./img/fan_03.png" class="img-circle"> </span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span><img src="./img/fan_03.png" class="img-circle"> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-5" >
+                    </div>
+                    <div class="col-xs-2 headerText">
+                        <button class="btn">了解他们</button>
+                    </div>
+                    <div class="col-xs-5">
+                    </div>
+                </div>
+               <div class="row">
+                   <div class="col-xs-4">
+
+                   </div>
+                   <div class="col-xs-4">
+                        <p><span class="glyphicon glyphicon-chevron-down"></span>给你不一样的摄影体验，
+                            不仅仅只是艺术摄影那么简单。
+                            无论是仙境还是地狱，无论是现实还是梦幻，我们都能实现。</p>
+                   </div>
+                   <div class="col-xs-4">
+
+                   </div>
+               </div>
+                <div class="row">
+                    <div class="col-xs-5" >
+                    </div>
+                    <div class="col-xs-2 headerText">
+                        <button class="btn">项目详情</button>
+                    </div>
+                    <div class="col-xs-5">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="secondBig">
+            <img src="./images/car.jpg">
+        </div>
+        <div id="superCar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5 ">
+
+                    </div>
+                    <div class="col-xs-2 headerText">
+                        <span>超级汽车</span>
+                    </div>
+                    <div class="col-xs-5">
+
+                    </div>
+                </div>
+                <div class="row pic-introduce">
+                    <div class="col-xs-6">
+                        <div class="center-block">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                            <span class="titleText">项目简介</span>
+                        </div>
+                        <div class="row introduce-text">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <p>新一代超级汽车<br/>
+                                    更快的速度<br/>
+                                    更炫酷的外型<br/>
+                                    速度与激情不仅仅是电影的特效<br/>
+                                    也是超级汽车能带给你的体验<br/>
+                                    加入我们吧。</p>
+                                <div class="center-block">
+                                    <button class="btn">项目详情</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="center-block">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                            <span class="titleText">成员介绍</span>
+                        </div>
+                        <div class="introduce">
+                            <div class="center-block">
+                                <div class="row introduce_line">
+                                    <div class="col-xs-4">
+                                        <span><img src="./img/fan_01.png" class="img-circle"> </span>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <span><img src="./img/fan_02.png" class="img-circle"> </span>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <span><img src="./img/fan_03.png" class="img-circle"> </span>
+                                    </div>
+                                </div>
+                                <div class="row introduce_line">
+                                    <div class="col-xs-4">
+                                        <span><img src="./img/fan_04.png" class="img-circle"> </span>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <span><img src="./img/fan_05.png" class="img-circle"> </span>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <span><img src="./img/fan_06.png" class="img-circle"> </span>
+                                    </div>
+                                </div>
+                                <div style="height: 25px"></div>
+                                <button class="btn">了解他们</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="holder" style="text-align: center;">
+            <a class="jp-previous jp-disabled">←</a>
+            <a class="jp-current">1</a>
+            <span class="jp-hidden">...</span>
+            <a>2</a>
+            <a>3</a>
+            <a>4</a>
+            <a>5</a>
+            <a class="jp-hidden">6</a>
+            <a class="jp-hidden">7</a>
+            <a class="jp-hidden">8</a>
+            <a class="jp-hidden">9</a>
+            <span>...</span>
+            <a>10</a>
+            <a class="jp-next">next →</a>
+        </div>
+        <?php require('./footer.php')?>
+    </div>
+<script type="text/javascript">
+    $(function(){
+        $("div.holder").jPages({
+            containerID : "itemContainer"
+        });
+    });
+</script>
+</body>
+</html>
