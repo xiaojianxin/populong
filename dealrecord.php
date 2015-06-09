@@ -98,9 +98,9 @@
             </div>
 
 <script type="text/javascript">
-    $(function(){
-        $("div.holder").jPages({
-            containerID : "deal-list"
-        });
-    });
+    // $(function(){
+    //     $("div.holder").jPages({
+    //         containerID : "deal-list"
+    //     });
+    // });
 </script>

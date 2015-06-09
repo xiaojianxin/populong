@@ -23,7 +23,7 @@ session_start();
                 <img src="./img/start_01.png">
             </div>
             <div class="row" id="inputarea">
-                <form action="">
+                <form action="" method='post' enctype="multipart/form-data">
                     <div class="col-xs-8">
                         <div class="row">
                             <div class="col-xs-3">
@@ -70,7 +70,8 @@ session_start();
                             <div class="col-xs-9">
                                 <div class="row">
                                     <div class="col-xs-4">
-                                        <div class="btn btn-default">上传图片</div>
+                                        <div class="btn btn-default file_up">上传图片</div>
+                                        <input type="file" name="file-pic" id="file-pic" style="display:none"/> 
                                     </div>
                                     <div class="col-xs-8">
                                         <span class="text">支持jpg,png格式图片，图片大小不超过2M</span>
@@ -124,7 +125,7 @@ session_start();
                         <div class="col-xs-9">
 
                             <div class="text-left"><input type="checkbox">我已阅读并同意《某某条款》</div>
-                           <a href="start2.php"> <div class="btn btn-success" id="nextstep"> 下一步</div></a>
+                           <a href="start2.php"> <div type='submit' class="btn btn-success" id="nextstep"> 下一步</div></a>
                         </div>
                      </div>
 
@@ -153,6 +154,9 @@ session_start();
         ],
         language:'zh_CN'
     });
+    $(".file_up").click(function () { 
+        return $("#file-pic").click(); 
+    }); 
 </script>
 
 </body>
