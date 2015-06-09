@@ -2,15 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
 	<title>注册界面填写账户信息</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="布尔教育 http://www.itbool.com" />
+    <link rel="stylesheet"  href="./css/reset.css"/>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./css/regist.css">
     <script src="./js/jquery-1.10.1.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
-	<link rel="stylesheet" type="text/css" href="./css/regist.css">
-	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
-	<script type="text/javascript" src="./js/regist.js"></script>
-	<script type="text/javascript" src="./js/regist_1.js"></script>
+    <script type="text/javascript" src="./js/regist.js"></script>
+    <script type="text/javascript" src="./js/regist_1.js"></script>
     <!--[if lt IE 9]>
     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -20,43 +24,55 @@
    
 		 
          <?php require('./nav.php') ?>
+              <?php require('./agreement.php')?>
 
-            <div class="container">
-                <div class="modal fade" id="detail"  aria-labelledby="myModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                          <div class="modal-content detail-content">
-                              <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                  <h4 class="modal-title" id="myModalLabel">
-                                      《泡泡龙网站服务协议》
-                                  </h4>
-                              </div>
-                              <div class="modal-body">
-                              </div>
-                              <div class="model-footer">
-                                    <div class="btn btn-success  detail-close"  data-dismiss="modal" aria-hidden="true">关闭</div>
-                              </div>
-                          </div>
-
-                      </div>
-
-                  </div>
-				<div class="container-top main_top"  >
-					<div  class="row main_top_middle">
-						<div class="col-xs-2 title_left">注册</div>
+            <div class="container main">
+                
+				        <div class="container-top main_top"  >
+					         <div  class="row main_top_middle">
+						          <div class="col-xs-2 title_left">注册</div>
                         <div class="col-xs-2 title_right">已有账号?<a id="to_login" href="./index.php">立即登陆</a></div>
 						
-					</div>
-                    <div class="main_top_bottom"><img style="width:800px;" src="./img/regist_01.png" alt="" /></div>
+					         </div>
+                        <div class="main_top_bottom">
+                        <img class='show' style="width:800px;" src="./img/regist_01.png" alt="" />
+                        <img class='hidden' style="width:800px;" src="./img/regist_08.png" alt="" />
+                        </div>
 
-				</div>
-				<div id="main_body" class="container">
+				        </div>
+				        <div id="main_body" class="container">
                     <div class="signup_form">
                         <form class="form" action='' method="post">
                             <input type="text" name="choice1" id="checkbox1" style="display:none" value=''/>
                             <input type="text" name="choice2" id="checkbox2" style="display:none" value=''/>
 
-                            <div class="row signup_content">
+                            <div class="row signup_content hidden">
+                                <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
+                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
+                                    <span>姓名 :</span>
+                                </label>
+
+                                
+                                    <img class="beforeinput" src="./img/regist_03.png" alt="" />
+                                <div class="input">
+                                    <input type="text" name="username" class="form-control signup_input"  placeholder="姓名">
+                                </div>
+                            </div>
+
+                            <div class="row signup_content hidden">
+                                <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
+                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
+                                    <span> 身份证号:</span>
+                                </label>
+
+                                       <img class="beforeinput" src="./img/regist_04.png" alt="" />
+                                <div class="input">
+                                    <input type="password" name="password" class="form-control signup_input"  placeholder="请输入身份证号码">
+                                </div>
+                            </div>
+
+
+                            <div class="row signup_content show">
                                
                                 <label for="inputEmail3" class="col-xs-4 control-label" >  
                                     <img class="signup_star" src="./img/regist_02.png" alt="" /> 
@@ -70,7 +86,7 @@
                             </div>
 
 
-                            <div class="row signup_content">
+                            <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
                                     <img class="signup_star" src="./img/regist_02.png" alt="" />
                                     <span>填写昵称 :</span>
@@ -83,7 +99,7 @@
                                 </div>
                             </div>
 
-                            <div class="row signup_content">
+                            <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
                                     <img class="signup_star" src="./img/regist_02.png" alt="" />
                                     <span>填写密码 :</span>
@@ -95,7 +111,7 @@
                                 </div>
                             </div>
 
-                            <div class="row signup_content">
+                            <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
                                     <img class="signup_star" src="./img/regist_02.png" alt="" />
                                     <span>确认密码 :</span>
@@ -109,7 +125,7 @@
 
 
                           
-                            <div class="row signup_content">
+                            <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
                                     &nbsp&nbsp
                                     <img class="signup_star" src="./img/regist_02.png" alt="" />
@@ -126,7 +142,7 @@
 
 
                           
-                            <div class="row signup_content">
+                            <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
                                     <img class="signup_star" src="./img/regist_02.png" alt="" />
                                     <span>绑定邮箱 :</span>
@@ -134,12 +150,12 @@
 
                                        <img class="beforeinput" src="./img/regist_05.png" alt="" />
                                 <div class="input">
-                                    <input type="email" name="email" class="form-control signup_input"  placeholder="请输入邮箱">
+                                    <input type="email" name="email" class="form-control signup_input email"  placeholder="请输入邮箱">
                                 </div>
                             </div>
 
                             
-                            <div class="row signup_content">
+                            <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
                                     <img class="signup_star" src="./img/regist_02.png" alt="" />
                                     <span>绑定手机 :</span>
@@ -151,7 +167,7 @@
                                 </div>
                             </div>
 
-                            <div class="row signup_content">
+                            <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-4 control-label" style="margin-top: 12px">
                                     <img class="signup_star" src="./img/regist_02.png" alt="" />
                                     <span>  手机验证码 :</span>
@@ -164,64 +180,78 @@
                                 <a class="col-xs-4 btn btn btn-success">点击获取手机验证码</a>
                             </div>
 
-                            <div class=" row checkbox">
+                            <div class=" row checkbox signup_content">
                                          <div class="col-xs-3"></div>
                                         <label>
                                             <input type="checkbox" required="required"> 我已阅读并同意<a href="#detail" data-toggle="modal" data-target="#detail">《泡泡龙网站服务协议》</a>
                                         </label>
                                     </div>
-                            <div class="row signup_content">
+                            <div class="row signup_content show">
                                     <div class="col-xs-4"></div>
-                                    <input type="submit" id="regist" class="btn btn-success btn-lg submit-button" value="立即注册">
+
+                                    <input id="regist-next" class="btn btn-success btn-lg submit-button" value="立即注册">
+                    
+                            </div>
+                            <div class="row signup_content hidden">
+                                    <div class="col-xs-4"></div>
+                                    <input type="submit" id="11" class="btn btn-success btn-lg submit-button" value="下一步">
                     
                             </div>
                         </form>
+
                     </div>
 				</div>
+
 			</div>
-	
+
+
    <?php require('./footer.php')?>
+	
 <script type="text/javascript">
-    var judge = '0';
+    var judge0 = '0';
+    var judge1 = '0';
    $('#choice1').click(function(){
-       if (judge == '0') {
+       if (judge0 == '0') {
            $("#choice1").css('border','1px solid #0066cc');
            $('#checkbox1').attr("value",'22');
-           judge = '1';
-       }else{
-           $("#choice1").css('border','1px solid #d4d4d4');
+           judge0 = '1';
+       }else if (judge0 == '1') {
+         $("#choice1").css('border','1px solid #d4d4d4');
            $('#checkbox1').attr("value",'');
-           judge = '0';
+           judge0 = '0';
        }
    });
 
    $('#choice2').click(function(){
 
-         if (judge == '0') {
+         if (judge1 == '0') {
             $("#choice2").css('border','1px solid #0066cc');
             $('#checkbox2').attr("value",'22');
-            judge = '1';
-        }else{
-            $("#choice2").css('border','1px solid #d4d4d4');
+            judge1 = '1';
+        }else if (judge1 == '1') {
+           $("#choice2").css('border','1px solid #d4d4d4');
             $('#checkbox2').attr("value",'');
-            judge = '0';
-         }
-       
+            judge1 = '0';
+        }
    });
-   $('.submit-button').click(function(){
-    alert($('.form').serialize());
-      $.ajax({
-        type:"post",  //默认值: "GET")。请求方式 ("POST" 或 "GET")， 默认为 "GET"。
-        url:"1.php",  //当前页地址。发送请求的地址。
-        data:$('.form').serialize(), //发送到服务器的数据。将自动转换为请求字符串格式。
-        dataType:"json",//预期服务器返回的数据类型。如果不指定，jQuery 将自动根据 HTTP 包 MIME 信息来智能判断
-        success:function(data){//请求成功后的回调函数。
-          alert('111');
-         }
-      });
+  
 
-  alert('111');
-    });
+   $('#regist-next').click(function(){
+    if(!$('.email').val().match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/ )){
+     
+          alert('请填写邮箱');
+
+    }else{
+       $('.hidden').removeClass('hidden');
+       $('.show').addClass('hidden');
+       $('.show').removeClass('show');
+    }
+     
+      
+   })
+
+
+
 </script>
 </body>
 </html>

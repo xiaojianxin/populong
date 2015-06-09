@@ -1,8 +1,8 @@
 ﻿
 <div id="leftnav">
       <ul class="nav-list">
-            <li class="active personalpage">
-                  <a><i class="icon-chevron-right" id="selfindex"></i> 个人首页</a>
+            <li class="personalpage">
+                  <a href="self.php"><i class="icon-chevron-right" ></i> 个人首页</a>
             </li>
             <li class="">
                 <div class="accordion-group">
@@ -11,13 +11,13 @@
                     </div>
                     <div id="money-manage" class="accordion-body in collapse">
                         <div class="accordion-inner">
-                            <a id="dealrecord">交易记录</a>
+                            <a id="0">交易记录</a>
                         </div>
                         <div class="accordion-inner">
-                            <a id="deposit"> 充值</a>
+                            <a id="2"> 充值</a>
                         </div>
                         <div class="accordion-inner">
-                            <a id="withdraw"> 提现</a>
+                            <a id="3"> 提现</a>
                         </div>
                     </div>
                 </div>
@@ -32,10 +32,10 @@
                   </div>
                   <div id="invest-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
-                          <a id="myinvest"> 我的投资</a>
+                          <a id="4"> 我的投资</a>
                       </div>
                       <div class="accordion-inner">
-                          <a id="transmarket"> 转让市场</a>
+                          <a id="5"> 转让市场</a>
                       </div>
 
                   </div>
@@ -50,10 +50,10 @@
                   </div>
                   <div id="project-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
-                          <a id="startpro"> 我发起的项目</a>
+                          <a id="6"> 我发起的项目</a>
                       </div>
                       <div class="accordion-inner">
-                          <a id="focuspro"> 我关注的项目</a>
+                          <a id="7"> 我关注的项目</a>
                       </div>
 
                   </div>
@@ -68,13 +68,13 @@
                   </div>
                   <div id="account-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
-                          <a id="selfinformation"> 个人资料</a>
+                          <a id="8"> 个人资料</a>
                       </div>
                       <div class="accordion-inner">
-                          <a id="transitions"> 充值</a>
+                          <a id="9"> 充值</a>
                       </div>
                       <div class="accordion-inner">
-                          <a href="transitions"> 银行卡管理</a>
+                          <a id="10"> 银行卡管理</a>
                       </div>
 
                   </div>
@@ -89,13 +89,13 @@
                   </div>
                   <div id="account-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
-                          <a id="message"> 消息</a>
+                          <a id="11"> 消息</a>
                       </div>
                       <div class="accordion-inner">
-                          <a id="platrank"> 平台排行榜</a>
+                          <a id="12"> 平台排行榜</a>
                       </div>
                       <div class="accordion-inner">
-                          <a id="transitions"> 热门路演推荐</a>
+                          <a id="13"> 热门路演推荐</a>
                       </div>
 
                   </div>

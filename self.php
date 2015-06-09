@@ -6,10 +6,10 @@
 	<meta name="description" content="布尔教育 http://www.itbool.com" />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet"  href="./css/reset.css"/>
-	<link rel="stylesheet" type="text/css" href="./css/headfoot.css">
 	<link rel="stylesheet" type="text/css" href="./css/self.css">
     <link rel="stylesheet" type="text/css" href="./css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="./css/jPages.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
 	<script src="./js/jquery-1.10.1.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/leftnav.js"></script>
@@ -34,19 +34,43 @@
                     <?php require('./leftnav.php') ?>
                 </div>
                 <div  class="col-xs-9">
-                    <div id="dealrecord" class="hidden"><?php require('./dealrecord.php')?></div>
-                    <div id="selfindex" class="show"><?php require('./selfindex.php')?></div>
-                    <div id="deposit" class="hidden"><?php require('./deposit.php')?></div>
-                    <div id="withdraw" class="hidden"><?php require('./withdraw.php')?></div>
-                    <div id="myinvest" class="hidden"><?php require('./myinvest.php')?></div>
-                    <div id="transmarket" class="hidden"><?php require('./transmarket.php')?></div>
-                    <div id="startpro" class="hidden"><?php require('./startpro.php')?></div>
-                    <div id="focuspro" class="hidden"><?php require('./focuspro.php')?></div>
-                    <div id="selfinformation" class="hidden"><?php require('./selfinformation.php')?></div>
-                    <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
-                    <div id="platrank" class="hidden"><?php require('./platrank.php')?></div>
-                    <div id="message" class="hidden"><?php require('./message.php')?></div>
-                    <div id="transitions" class="hidden"><?php require('./dealrecord.php')?></div>
+                    <?php 
+                    if(empty($_GET)){
+                        require('./selfindex.php');
+                    }else{
+                        $id = $_GET['id'];
+                        if ($id == '0') {
+                            require('./dealrecord.php');
+                        }else if($id == '2'){
+                            require('./deposit.php');
+                        }else if ($id == '3') {
+                            require('./withdraw.php');
+                        }else if ($id == '4'){
+                            require('./myinvest.php');
+                        }else if($id == '5'){
+                            require('./transmarket.php');
+                        }else if($id == '6'){
+                            require('./startpro.php');
+                        }else if($id == '7') {
+                            require('./focuspro.php');
+                        }else if($id == '8'){
+                            require('./selfinformation.php');
+                        }else if($id == '9'){
+                            require('./dealrecord.php');
+                        }else if ($id == '10') {
+                            require('./platrank.php');
+                        }else if($id == '11'){
+                            require('./message.php');
+                        }else if ($id == '12') {
+                            require('./dealrecord.php');
+                        }else if($id == '13'){
+                            require('./dealrecord.php');
+                        }
+                    }
+                    
+                    
+
+                    ?>
 
                 </div>
             </div>

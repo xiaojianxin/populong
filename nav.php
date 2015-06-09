@@ -31,21 +31,21 @@ session_start();
              } 
              else{
              ?>
-               <li><img style=" margin-top:5px;height:40px;" src="./img/head_02.png" alt="" /></li>
+               <li><img style=" margin-top:5px;height:40px;" src="./img/head.png" alt="" /></li>
                <li>
                         <a class="dropdown-toggle operator-name" data-toggle="dropdown"><?PHP echo $_SESSION["nickName"] ?></a>
                           <ul class="dropdown-menu self-menu">
                             <li>
-                              <a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
+                              <a href="#self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
                             </li>
                             <li>
-                              <a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
+                              <a href="#self.php"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
                             </li>
                             <li>
-                              <a href="#"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
+                              <a href="#self.php?id=4"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
                             </li>
                             <li>
-                              <a href="#"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
+                              <a href="#self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
                             </li>
                             <li>
                               <a href="./action/do_logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>

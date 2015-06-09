@@ -1,0 +1,15 @@
+.success{
+	width: 50%;
+	margin: 0 auto;
+}
+.success-pic{
+	width: 60%;
+	height:60%;
+	margin-left: 20%;
+}
+.success-text{
+	text-align: center;
+	font-size: 28px;
+	padding-top: 2%;
+	color:#99cc66;
+}
