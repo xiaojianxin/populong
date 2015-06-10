@@ -17,6 +17,13 @@
 		<div id="main" class='container'>
 				<div id="main_top">
 				<form action='./1.php' method='post'>
+                    <div class="main_top_top">
+                        <div class='title'>输入收货地址</div>
+                    </div>
+                    <div class="main_top_bottom row inputAddress">
+                        <input placeholder="输入地址" class="form-control"/>
+                        <div class="btn btn-success" id="saveAddress">保存地址</div>
+                    </div>
 					<div class="main_top_top">
 						<div class='title'>确认收货地址</div>
 					</div>
@@ -34,6 +41,47 @@
                 </div>
                 <div id="main_center_bottom ">
          			<div class="paydetail">
+                        <div class="thumbnail">
+                            <table class="table">
+                                <thead >
+                                <tr>
+                                    <th>项目名称</th>
+                                    <th>支持金额</th>
+                                    <th>支持后您将获得</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="proName">
+                                        <div class="row">
+                                            <div class="col-xs-5">
+                                                <img src="./img/index_01.png" style="width:100%;float: right;">
+                                            </div>
+                                            <div class="col-xs-7">
+                                                英特尔三十周年英特尔三十周年英特尔三十周年英特尔三十周年英特尔三十周年英特尔三十周年英特尔三十周年
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="proMoney">
+                                        <span class="text-red">￥1000</span>
+                                    </td>
+
+                                    <td class="proGain">
+                                        <div class="proGainText">
+                                            <h1>1.支持后您将获得</h1>
+                                            <h1>1.支持后您将获得</h1>
+                                            <h1>1.支持后您将获得</h1>
+                                            <h1>1.支持后您将获得</h1>
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
          			</div>
                 </div>
             </div>
@@ -43,14 +91,14 @@
                 </div>
                 <div id="main_center_bottom ">
                     <div class="checkbox">
-                        <input type="checkbox" style="display:none">
-                        <label for="checkboxInput"></label>
+                        <input type="checkbox" value="1" id="checkboxInput1" name="checkbox1" style="display: none;"/>
+                        <label for="checkboxInput1"></label>
                         <span class='check-content'>是否需要提供人员线下交流</span>
                     </div>
                     <div class='checkbox' >
-                        <input type="checkbox"style="display:none">
-                        <label for="checkboxInput"></label>
-                        <span class='check-content'>是否需要提供人员线下交流</span>
+                        <input type="checkbox"value="2" id="checkboxInput2" name="checkbox2" style="display: none;">
+                        <label for="checkboxInput2"></label>
+                        <span class='check-content'>是否需要安排与发起人线下交流</span>
                     </div>
                     <textarea placeholder="最多不超过50字"></textarea>
                 </div>
