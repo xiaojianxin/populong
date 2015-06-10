@@ -9,10 +9,12 @@ session_start();
 
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"  href="./css/reset.css"/>
+   <link rel="stylesheet"  href="./css/uploadify.css"/>
     <link rel="stylesheet" href="./css/start.css"/>
     <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
-    <script type="text/javascript" src="./js/start.js"></script>
+ <script type="text/javascript" src="./js/start.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
 
 </head>
 <body>
@@ -56,11 +58,8 @@ session_start();
                             <div class="col-xs-3">
                                 <span>项目地点：</span>
                             </div>
-                            <div class="col-xs-9 two-input">
-                                <input class="form-control" placeholder=""/>
-                                <span>省</span>
-                                <input class="form-control" placeholder=""/>
-                                <span>市</span>
+                            <div class="col-xs-9 two-input" id="selectCity">
+
                             </div>
                         </div>
                         <div class="row">
@@ -69,9 +68,9 @@ session_start();
                             </div>
                             <div class="col-xs-9">
                                 <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="btn btn-default file_up">上传图片</div>
-                                        <input type="file" name="file-pic" id="file-pic" style="display:none"/> 
+                                    <div class="col-xs-4 ">
+
+                                        <input type="file" name="file-pic" id="file_pic"/>
                                     </div>
                                     <div class="col-xs-8">
                                         <span class="text">支持jpg,png格式图片，图片大小不超过2M</span>
@@ -81,7 +80,7 @@ session_start();
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
-                                <span>项目封面：</span>
+                                <span>路演视频：</span>
                             </div>
                             <div class="col-xs-9">
                                 <div class="row">
@@ -109,14 +108,14 @@ session_start();
                                 <span>详细介绍：</span>
                             </div>
                             <div class="col-xs-9">
-                                <textarea></textarea>
+                                <textarea id="editor1"></textarea>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-xs-4">
                         <div class="thumbnail">
-                            <a href="#"><img src="./img/fan_06.png"></a>
+                            <a href="#"><img src="./img/fan_06.png" id="showUploadImg"></a>
                         </div>
                         <div class="text-center">预览</div>
                     </div>
@@ -153,10 +152,34 @@ session_start();
             {title: 'Test template 2', content: 'Test 2'}
         ],
         language:'zh_CN'
+//        content = tinymce.get('editor1').getContent({format: 'raw'});
     });
-    $(".file_up").click(function () { 
-        return $("#file-pic").click(); 
-    }); 
+
+    $(function() {
+        $('#file_pic').uploadify({
+
+            'uploader'  : './uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+            'script'    : './Upload.php',       //指定服务器端上传处理文件，默认‘upload.php’
+            'auto'      : true,               //选定文件后是否自动上传，默认false
+            'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
+            'multi'     : false,               //是否允许同时上传多文件，默认false
+            'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
+            fileSizeLimit:'2MB',
+            'onComplete': function(event,queueID,fileObj,response,data) {
+                $('#showUploadImg').attr("src","<%=basePath%>userphoto/"+response);//上传图片的服务器地址
+                $('#showUploadImg').show();
+                $('#photo').attr("value",response);
+            },
+            'onError'          : function(event, queueID, fileObj)
+            {
+                alert("文件:" + fileObj.name + " 上传失败");
+            }
+        });
+
+    });
+    var obj=document.getElementById("selectCity");
+    var city=new LightManAddressTree;
+    city.selectshow(obj,0);
 </script>
 
 </body>

@@ -26,11 +26,11 @@ session_start();
             <form action="">
                 <div class="row">
                     <div class="btn-group">
-                        <div class="btn btn-success">&nbsp;&nbsp;实物回报&nbsp;&nbsp;</div>
-                        <div class="btn btn-default">&nbsp;&nbsp;资金回报&nbsp;&nbsp;</div>
+                        <div class="btn btn-success active" id="repay1">&nbsp;&nbsp;实物回报&nbsp;&nbsp;</div>
+                        <div class="btn btn-default" id="repay2">&nbsp;&nbsp;资金回报&nbsp;&nbsp;</div>
                     </div>
                 </div>
-               <div class="row">
+               <div class="row" id="repayContent1">
                    <div class="col-xs-8">
                        <div class="row">
                            <div class="col-xs-3">
@@ -103,9 +103,9 @@ session_start();
                        <div class="text-center">预览</div>
                    </div>
                </div>
-                <div style="height: 40px;"></div>
+                <div style="height: 20px;"></div>
 
-                <div class="row">
+                <div class="row" id="repayContent2">
                     <div class="col-xs-8">
                         <div class="row">
                             <div class="col-xs-3">
@@ -171,8 +171,8 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div style="height: 40px;"></div>
-                        <div class="row">
+                    <div style="height: 20px;"></div>
+                        <div class="row" id="repayContent3">
                             <div class="col-xs-8">
                                 <div class="row">
                                     <div class="col-xs-3">
@@ -240,9 +240,9 @@ session_start();
                             </div>
 
 
-                            <div style="height: 40px;"></div>
+                            <div style="height: 20px;"></div>
 
-                                <div class="row">
+                                <div class="row" id="repayContent4">
                                     <div class="col-xs-8">
                                         <div class="row">
                                             <div class="col-xs-3">
@@ -288,8 +288,6 @@ session_start();
                                                 </div>
                                             </div>
                                         </div>
-
-
                                         <div class="row">
                                             <div class="col-xs-3">
                                                 <span>回报内容：</span>
@@ -310,26 +308,42 @@ session_start();
                                     </div>
 
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <span class="btn btn-success">保存</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-8 actionbutton">
-                                    <a href="start.php"><span class="btn btn-success" id="previousStep">上一步</span></a>
-                                    <a href="start3.php"><span class="btn btn-success" id="nextStep">下一步</span></a>
 
-
-                                </div>
                             </div>
                         </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <span class="btn btn-success" id="saveRepay">保存</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8 actionbutton">
+                        <a href="start.php"><span class="btn btn-success" id="previousStep">上一步</span></a>
+                        <a href="start3.php"><span class="btn btn-success" id="nextStep">下一步</span></a>
 
+
+                    </div>
+                </div>
             </form>
         <div style="height: 50px"></div>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $("#repay1").click(function(){
+        $("#repay1").addClass("active");
+        $("#repay2").removeClass("active");
+        $("#repayContent2").show();
+        $("#repayContent3").show();
+        $("#repayContent4").show();
+    });
+    $("#repay2").click(function(){
+        $("#repay2").addClass("active");
+        $("#repay1").removeClass("active");
+        $("#repayContent2").hide();
+        $("#repayContent3").hide();
+        $("#repayContent4").hide();
+    })
+</script>
 </body>
 </html>

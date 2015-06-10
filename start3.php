@@ -74,10 +74,10 @@ session_start();
                        </div>
                        <div class="col-xs-3">
                            <label class="radio-inline">
-                               <input type="radio" name="inlineRadioOptions" id="roadAct" value="option1"> 是
+                               <input type="radio" name="inlineRadioOptions1" id="roadAct" value="option1"> 是
                            </label>
                            <label class="radio-inline">
-                               <input type="radio" name="inlineRadioOptions" id="unRoadAct" value="option2"> 否
+                               <input type="radio" name="inlineRadioOptions1" id="unRoadAct" value="option2"> 否
                            </label>
 
                        </div>
@@ -91,10 +91,10 @@ session_start();
                        </div>
                        <div class="col-xs-3">
                            <label class="radio-inline">
-                               <input type="radio" name="inlineRadioOptions" id="hotSend" value="option1"> 是
+                               <input type="radio" name="inlineRadioOptions2" id="hotSend" value="option1"> 是
                            </label>
                            <label class="radio-inline">
-                               <input type="radio" name="inlineRadioOptions" id="unHotSend" value="option2"> 否
+                               <input type="radio" name="inlineRadioOptions2" id="unHotSend" value="option2"> 否
                            </label>
 
                        </div>
@@ -108,10 +108,10 @@ session_start();
                        </div>
                        <div class="col-xs-3">
                            <label class="radio-inline">
-                               <input type="radio" name="inlineRadioOptions" id="showTrade" value="option1"> 是
+                               <input type="radio" name="inlineRadioOptions3" id="showTrade" value="option1"> 是
                            </label>
                            <label class="radio-inline">
-                               <input type="radio" name="inlineRadioOptions" id="unShowTrade" value="option2"> 否
+                               <input type="radio" name="inlineRadioOptions3" id="unShowTrade" value="option2"> 否
                            </label>
 
                        </div>
@@ -125,10 +125,10 @@ session_start();
                        </div>
                        <div class="col-xs-3">
                            <label class="radio-inline">
-                               <input type="radio" name="inlineRadioOptions" id="showInvest" value="option1"> 是
+                               <input type="radio" name="inlineRadioOptions4" id="showInvest" value="option1"> 是
                            </label>
                            <label class="radio-inline">
-                               <input type="radio" name="inlineRadioOptions" id="unshowInvest" value="option2"> 否
+                               <input type="radio" name="inlineRadioOptions4" id="unshowInvest" value="option2"> 否
                            </label>
 
                        </div>

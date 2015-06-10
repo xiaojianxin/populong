@@ -43,6 +43,10 @@
     margin-top: 5px;
 
 }
+
+#file-pic{
+    width: 100%;
+}
 #inputarea .thumbnail{
     width: 80%;
     margin-left: 10%;
@@ -67,6 +71,10 @@
     margin-top: 20px;
     width: 40%;
 }
+#selectCity{
+    margin-top: 10px;
+}
+
 /*********************************发起项目2***********************************************************8*/
 #input2area .btn-group{
     float: left;
