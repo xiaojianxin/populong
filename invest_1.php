@@ -9,6 +9,7 @@
 	<link rel="stylesheet"  href="./css/footer.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/nav.css">	
 	<link rel="stylesheet" type="text/css" href="./css/invest.css">
+    <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
 	<script type="text/javascript" src="./js/invest.js"></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
                         <div class='title'>输入收货地址</div>
                     </div>
                     <div class="main_top_bottom row inputAddress">
-                        <input placeholder="输入地址" class="form-control"/>
+                        <input placeholder="输入地址" class="form-control" id="inputAddress"/>
                         <div class="btn btn-success" id="saveAddress">保存地址</div>
                     </div>
 					<div class="main_top_top">
@@ -29,7 +30,10 @@
 					</div>
 					<div class="main_top_bottom row">
 						<a class="col-xs-1 first-row" href=""><img class="img" src="./img/invest_01.png" alt="" /></a>
-						<div class="col-xs-11 first-row">北京市海淀区颐和园路5号北京大学芙蓉里小区  张小姐 11110002222（默认地址）</div>
+                        <div id="showAddress" class="col-xs-11">
+                            <div class="first-row">北京市海淀区颐和园路5号北京大学芙蓉里小区  张小姐 11110002222（默认地址）</div>
+                        </div>
+
 						<div class='second-row'> <a href="#">使用新地址</a></div>		
 					</div>
 				
@@ -129,5 +133,14 @@
 		
 	</div>
 	 <?php require('./footer.php')?>
+<script type="text/javascript">
+    $("#saveAddress").click(function(){
+        var address=$("#inputAddress").val();
+        var str="";
+        str+="<div class='first-row'>"+address+"</div>";
+        $("#showAddress").prepend(str);
+        alert("增加成功");
+    });
+</script>
 </body>
 </html>
