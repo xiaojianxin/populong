@@ -1,29 +1,10 @@
-<?PHP
-session_start();
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
-<head>
-    <title>发起项目</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"  href="./css/reset.css"/>
-    <link rel="stylesheet" href="./css/start.css"/>
-    <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
-    <script type="text/javascript" src="./js/start.js"></script>
-    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
-
-</head>
-<body>
-<?php require('./nav.php') ?>
 <div id="container" style="background-color: #eeeff3;">
     <div class="container">
         <div class="row startpic">
             <img src="./img/start_03.png">
         </div>
         <div class="row" id="input3area">
-            <form action="">
                <div class="col-xs-8">
 <!--                   <div class="row">-->
 <!--                       <div class="col-xs-3">-->
@@ -140,12 +121,10 @@ session_start();
                 <div style="height: 40px;"></div>
                 <div class="row">
                     <div class="col-xs-8 actionbutton">
-                        <a href="start2.php"><span class="btn btn-success" id="previousStep3">上一步</span></a>
-                        <a href="start4.php"><span class="btn btn-success" id="nextStep3">下一步</span></a>
+                        <span class="btn btn-success" id="previousStep3">上一步</span>
+                        <span type='submit' class="btn btn-success" id="nextStep3">下一步</span>
                     </div>
                 </div>
-            </form>
-
         </div>
     </div>
 

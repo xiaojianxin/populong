@@ -33,19 +33,19 @@
 					<div class="main_top_top">
 						<div class='title title_lg'>备注信息：（选填）</div>
 					</div>
-					<div id="main_center_bottom ">
-						 <div class="checkbox">
-						 <input type="checkbox" style="display:none">
-						 <label for="checkboxInput"></label>
-						 <span class='check-content'>是否需要提供人员线下交流</span>
-						 </div>
-						 <div class='checkbox' >
-						 <input type="checkbox"style="display:none">
-						 <label for="checkboxInput"></label>
-						 <span class='check-content'>是否需要提供人员线下交流</span>
-						 </div>
-						 <textarea placeholder="最多不超过50字"></textarea>
-					</div>
+					   <div id="main_center_bottom ">
+                    	<div class="checkbox">
+                        <input type="checkbox" value="1" id="checkboxInput1" name="checkbox1" style="display: none;"/>
+                        <label for="checkboxInput1"></label>
+                        <span class='check-content'>是否需要提供人员线下交流</span>
+                    </div>
+                    <div class='checkbox' >
+                        <input type="checkbox"value="2" id="checkboxInput2" name="checkbox2" style="display: none;">
+                        <label for="checkboxInput2"></label>
+                        <span class='check-content'>是否需要安排与发起人线下交流</span>
+                    </div>
+                    <textarea placeholder="最多不超过50字"></textarea>
+                </div>
 				</div>
 				<div id="main_top_bottom ">
 					<div class="main_top_top">

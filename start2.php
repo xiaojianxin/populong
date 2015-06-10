@@ -1,31 +1,10 @@
-<?PHP
-session_start();
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
-<head>
-    <title>发起项目</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"  href="./css/reset.css"/>
-    <link rel="stylesheet"  href="./css/uploadify.css"/>
-    <link rel="stylesheet" href="./css/start.css"/>
-    <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
-    <script type="text/javascript" src="./js/start.js"></script>
-    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
-
-</head>
-<body>
-<?php require('./nav.php') ?>
 <div id="container" style="background-color: #eeeff3;">
     <div class="container">
         <div class="row startpic">
             <img src="./img/start_02.png">
         </div>
         <div class="row" id="input2area">
-            <form action="">
                 <div class="row">
                     <div class="btn-group">
                         <div class="btn btn-success active" id="repay1">&nbsp;&nbsp;实物回报&nbsp;&nbsp;</div>
@@ -407,18 +386,14 @@ session_start();
                 </div>
                 <div class="row">
                     <div class="col-xs-8 actionbutton">
-                        <a href="start.php"><span class="btn btn-success" id="previousStep">上一步</span></a>
-                        <a href="start3.php"><span class="btn btn-success" id="nextStep">下一步</span></a>
+                        <a href="start.php"><span class="btn btn-success" id="previousStep_prev">上一步</span></a>
+                        <span class="btn btn-success" id="nextStep_next">下一步</span>
 
                     </div>
                 </div>
                 </div>
               </div>
-            </form>
-        <div style="height: 50px"></div>
-        </div>
-    </div>
-</div>
+            </div>
 <script type="text/javascript">
     $(function() {
 //        if($("#repay1").hasClass("active"))
@@ -552,5 +527,3 @@ session_start();
     });
 
 </script>
-</body>
-</html>
