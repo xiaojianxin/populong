@@ -31,10 +31,10 @@
 					<div class="main_top_bottom row">
 						<a class="col-xs-1 first-row" href=""><img class="img" src="./img/invest_01.png" alt="" /></a>
                         <div id="showAddress" class="col-xs-11">
-                            <div class="first-row">北京市海淀区颐和园路5号北京大学芙蓉里小区  张小姐 11110002222（默认地址）</div>
+
                         </div>
 
-						<div class='second-row'> <a href="#">使用新地址</a></div>		
+
 					</div>
 				
 				</div>
@@ -80,8 +80,6 @@
                                         </div>
 
                                     </td>
-
-
                                 </tr>
                                 </tbody>
                             </table>
@@ -136,6 +134,7 @@
 <script type="text/javascript">
     $("#saveAddress").click(function(){
         var address=$("#inputAddress").val();
+        $("#showAddress").html("");
         var str="";
         str+="<div class='first-row'>"+address+"</div>";
         $("#showAddress").prepend(str);
