@@ -25,42 +25,42 @@ session_start();
         <div class="row" id="input3area">
             <form action="">
                <div class="col-xs-8">
-                   <div class="row">
-                       <div class="col-xs-3">
-                           <span class="text-title">绑定银行卡:</span>
-                       </div>
-                   </div>
-
-                   <div class="divider"></div>
-                   <div class="row">
-                       <div class="col-xs-3">
-                           <span>真实姓名：</span>
-                       </div>
-                       <div class="col-xs-9">
-                           <input class="form-control" placeholder="真实姓名"/>
-
-                       </div>
-                   </div>
-                   <div class="row">
-                       <div class="col-xs-3">
-                           <span>身份证号：</span>
-                       </div>
-                       <div class="col-xs-9">
-                           <input class="form-control" placeholder="身份证号"/>
-
-                       </div>
-                   </div>
-                   <div class="row">
-                       <div class="col-xs-3">
-                           <span>银行卡号：</span>
-                       </div>
-                       <div class="col-xs-9">
-                           <input class="form-control" placeholder="银行卡号"/>
-
-                       </div>
-                   </div>
-                   <div class="save btn btn-success" id="save">保存</div>
-                   <div style="height: 40px;"></div>
+<!--                   <div class="row">-->
+<!--                       <div class="col-xs-3">-->
+<!--                           <span class="text-title">绑定银行卡:</span>-->
+<!--                       </div>-->
+<!--                   </div>-->
+<!---->
+<!--                   <div class="divider"></div>-->
+<!--                   <div class="row">-->
+<!--                       <div class="col-xs-3">-->
+<!--                           <span>真实姓名：</span>-->
+<!--                       </div>-->
+<!--                       <div class="col-xs-9">-->
+<!--                           <input class="form-control" placeholder="真实姓名"/>-->
+<!---->
+<!--                       </div>-->
+<!--                   </div>-->
+<!--                   <div class="row">-->
+<!--                       <div class="col-xs-3">-->
+<!--                           <span>身份证号：</span>-->
+<!--                       </div>-->
+<!--                       <div class="col-xs-9">-->
+<!--                           <input class="form-control" placeholder="身份证号"/>-->
+<!---->
+<!--                       </div>-->
+<!--                   </div>-->
+<!--                   <div class="row">-->
+<!--                       <div class="col-xs-3">-->
+<!--                           <span>银行卡号：</span>-->
+<!--                       </div>-->
+<!--                       <div class="col-xs-9">-->
+<!--                           <input class="form-control" placeholder="银行卡号"/>-->
+<!---->
+<!--                       </div>-->
+<!--                   </div>-->
+<!--                   <div class="save btn btn-success" id="save">保存</div>-->
+<!--                   <div style="height: 40px;"></div>-->
                    <div class="row">
                        <div class="col-xs-3">
                            <span class="text-title">增值服务:</span>
@@ -142,8 +142,6 @@ session_start();
                     <div class="col-xs-8 actionbutton">
                         <a href="start2.php"><span class="btn btn-success" id="previousStep3">上一步</span></a>
                         <a href="start4.php"><span class="btn btn-success" id="nextStep3">下一步</span></a>
-
-
                     </div>
                 </div>
             </form>

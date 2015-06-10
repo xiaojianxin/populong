@@ -40,7 +40,7 @@ session_start();
                                 <span>筹集资金：</span>
                             </div>
                             <div class="col-xs-9">
-                                <span><input class="form-control" placeholder="不少于10000"/></span>
+                                <span><input class="form-control" placeholder="不少于10000" id="gain_num"/></span>
 
                                 <span class="text">元</span>
                             </div>
@@ -181,6 +181,7 @@ session_start();
     var city=new LightManAddressTree;
     city.selectshow(obj,0);
 </script>
+
 
 </body>
 </html>

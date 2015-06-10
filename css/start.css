@@ -76,6 +76,12 @@
 }
 
 /*********************************发起项目2***********************************************************8*/
+
+/*#input-percentage .num-tip{*/
+    /*width: 10%;*/
+    /*float: right;*/
+    /*margin-left: 5%;*/
+/*}*/
 #input2area .btn-group{
     float: left;
     margin-top: 30px;
@@ -164,6 +170,9 @@
 }
 #input2area #previousStep{
     margin-left: 15%;
+}
+#input-percentage{
+    width: 30%!important;
 }
 /*********************************发起项目3***********************************************************8*/
 #input3area .row .col-xs-3 span{
