@@ -16,47 +16,66 @@
 	<div id="container">
 		<div id="main" class='container'>
 				<div id="main_top">
+				<form action='./1.php' method='post'>
 					<div class="main_top_top">
 						<div class='title'>确认收货地址</div>
 					</div>
-					<div id="main_top_bottom">
-						<a href=""><img src="./img/invest_01.png" alt="" /></a>
-						<h1>北京市海淀区颐和园路5号北京大学芙蓉里小区  张小姐 11110002222（默认地址）</h1>
-						<h2>使用新地址</h2>
+					<div class="main_top_bottom row">
+						<a class="col-xs-1 first-row" href=""><img class="img" src="./img/invest_01.png" alt="" /></a>
+						<div class="col-xs-11 first-row">北京市海淀区颐和园路5号北京大学芙蓉里小区  张小姐 11110002222（默认地址）</div>
+						<div class='second-row'> <a href="#">使用新地址</a></div>		
 					</div>
+				
 				</div>
+				
 				
 				<div id="main_center">
 					<div class="main_top_top">
+						<div class='title title_lg'>备注信息：（选填）</div>
+					</div>
+					<div id="main_center_bottom ">
+						 <div class="checkbox">
+						 <input type="checkbox" style="display:none">
+						 <label for="checkboxInput"></label>
+						 <span class='check-content'>是否需要提供人员线下交流</span>
+						 </div>
+						 <div class='checkbox' >
+						 <input type="checkbox"style="display:none">
+						 <label for="checkboxInput"></label>
+						 <span class='check-content'>是否需要提供人员线下交流</span>
+						 </div>
+						 <textarea placeholder="最多不超过50字"></textarea>
+					</div>
+				</div>
+				<div id="main_top_bottom ">
+					<div class="main_top_top">
 						<div class='title'>确认支付详情</div>
 					</div>
-					<div id="paycontent">
+					<div class="paycontent">
 						<h1>投资金额</h1>
-						<input type="text" />
-						<h2>元  /当前可用金额：</h2>
-						<h3>0.00元</h3>
-						<h4>支付平台</h4>
+						<div class='row'>
+						<div class='col-xs-4'>	<input type="text" class='form-control'  /></div>
+					
+						<div class='col-xs-4 pay-discription'>元  /当前可用金额：<span>0.00</span>&nbsp;元</div>
+						</div>
+						
+						<div class='pay-platform row'>
+							支付平台
+						</div>
 						<img src="./img/invest_02.png" alt="" />
 					</div>
 				</div>
-				<div id="main_bottom">
-					<div class="main_top_top">
-						<div class='title title_lg'>备注信息：（选填）</div>
-					</div>
-					<div id="main_center_bottom">
-						 <input type="checkbox">
-						 <h1>是否需要提供人员线下交流</h1>
-						 <input type="checkbox"class="investcheck">
-						 <h2>是否需要提供人员线下交流</h2>
-						 <input type="text" class="investcontent"/>
-					</div>
-				</div>
 				<div id="main_foot">
-					<h1>总金额</h1>
-					<h2>￥1000</h2>
-					<a href=""><h3>确认付款</h3></a>
+					<div class='row'>
+						<div class='col-xs-9'></div>
+						<div class='col-xs-2 totel-money'>总金额:<span>￥1000</span></div>
+					</div>
+					
+					
+					<input type='submit' class='btn btn-danger confirm' value='确认付款'/>
 				</div>
 				<div id="main_nail"></div>
+				</form>
 		</div>
 		
 	</div>
