@@ -1,66 +1,124 @@
+body{
+    background-color: #eeeff3;
+}
+.green-line{
+    background-color: #8bb494;
+    height: 8px;
+    margin-bottom: 20px;
+}
+#intro-panel{
+    margin-top: 80px;
 
-/*点击弹出部分*/
-#toSendEmail1{background: #ffffff;width:33.6%;height: 428px;position: absolute;z-index: 1;top:200px;right: 33.2%;float: left;display:none;}
-#toSendEmail1 #underline{width: 88%;height: 62px;margin:0 6%;float: left;border-bottom: 1px solid #e1e1e1;}
-#toSendEmail1 img{width: 10%;height: 28px;margin: 28px 0 0 3.6%;float: left;}
-#toSendEmail1 h1{ width: 84%;height: 28px;margin: 28px 0 0 2%;float: left;font-size: 20px;color:#84cf93}
-#toSendEmail1 h2{ width: 84%;height: 16px;margin:18px 0 0 8%;float: left;font-size: 16px;}
-#toSendEmail1 #toEdit{background: #f2f2f3; width: 84%;height:254px;margin:8px 8%;float: left;}
-#toSendEmail1 .toEditIn{background: #f2f2f3; width: 100%;height:100%;margin: 0;}
-#toSendEmail1 #cancel{ width: 20%;height:32px;float: left;margin: 8px 0 0 48%;text-align: center;}
-#toSendEmail1 input{float: left;width: 20%;height: 32px;margin: 8px 0 0 4% ;}
+       }
+#intro-panel .container{
+    background-color: white;
 
-#toSendEmail2{background: #ffffff;width:20%;height: 120px;position: absolute;z-index: 1;top:200px;right: 40%;float: left;display:none;}
-#toSendEmail2 img{background: red; width:20% ;height: 36px;margin:42px 0 0 14%;float: left; }
-#toSendEmail2 h1{  width: 62%;height: 36px;margin:42px 0 0 4%;float: left; font-size: 24px;}
+}
+.intro-panel .user-pic{
+    width: 100%;
+    margin-top:20px;
+    margin-left: 20px;
+}
+.intro-panel .col-xs-4 h3{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.intro-panel .detail-line{
+    margin-top: 4px;
+}
+.intro-panel .detail-line span{
+    font-size: 18px;
 
-#back2{background:black;width:100%;height:3200px;position:absolute;top:0;right:0;opacity:0.8;display:none;z-index: 1;}
+}
+.intro-panel .actionLine span{
+    font-size: 18px;
+    margin-top:10px;
+}
+.intro-panel .actionLine .btn{
+    margin-top: -3px;
+    margin-left: 20px;
+}
+.intro-panel .actionLine span a{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.intro-panel .leftside{
+    float: right;
+}
+.intro-panel .num-detail span{
+    width: 100%;
+    text-align: center;
+}
+.intro-panel .num-text span{
+    color: #333333;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.intro-panel .text-red{
+    color: red;
+}
+.intro-panel h5{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.intro-panel h6{
+    font-size: 16px;
+}
+#tabsArea  ul{
+    width:100%;
+}
 
-/*正常显示部分*/
-#main {background: blue;width: 100%;height: 1436px;float: left;}
+#tabsArea  ul li{
+    float: left;
+    width: 25%;
+}
+#tabsArea  ul li a{
+    text-align: center;
+}
+#tabsArea  ul .active{
+    background-color: #a9ddac;
 
-#otherstop{background: #eeeff3;width: 100%;height: 376px;float: left;}
+}
+#tabsArea ul .active a{
+    background-color: #a9ddac;
 
-#otherstop #otherstop_left{background: #ffffff;width: 26%;height: 220px;margin-left: 11%;margin-top:44px;float: left;}
+}
+#tabsArea .tab-content{
+    margin-top: 15px;
 
-#otherstop_left .man{width: 26%;height: 86px;float: left;margin-top:40px;margin-left: 4%; }
-#otherstop_left h1{width: 68%;height: 86px;margin-top:40px;float: left;font-size: 16px;margin-left: 2%;color: #333333;}
-#otherstop_left h2{width: 40%;height: 34px;float: left;margin-top:28px;margin-left: 4%;font-size: 14px;color: #666666;}
-#otherstop_left .place{width: 8%;height: 20px;float: left;margin-top:28px;margin-left: 4%;}
-#otherstop_left #toSendEmail{background: #66cc66;width: 30%;height: 24px;padding-top:6px; float: left;margin-top:24px;margin-bottom: 16px; font-size: 14px;color: #ffffff; font-style: bold;text-align: center;}
 
-#otherstop #otherstop_right{background: #ffffff;width: 52%;height: 220px;margin-top:44px;float: left;}
+}
+#tabContentArea{
+    background-color: #addab9;
+}
+.onebox{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.onebox a img{
+    margin-top: 20px;
+    width: 100%;
+}
+.onebox h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+}
+.onebox a{
+    color: #666668;
 
-.progray{background: #c9c9c9;display: block;margin-left: 8%; float: left;margin-top: 18px;width:40%;height: 10px;}
-.progreen{background: #6cc77f;width: 50%;height: 10px;margin-top: 0px;}
-#otherstop_right h2{ width: 40%;height: 10px;float: left;margin-left: 8%;margin-right:52%; margin-top: 10px; font-size: 13px;color: #666666; font-style: bold;text-align: center;}
-#otherstop_right h1{margin-top:20px;margin-bottom: 20px;  margin-left: 8%;width: 20%;height: 30px;float: left;font-size: 34px;color: #333333; font-style: bold;text-align: center;}
-#otherstop_right h3{margin-top:20px;margin-bottom: 20px;margin-right:52%; width: 20%;height: 30px;float: left;font-size: 34px;color: #333333; ;font-style: bold;text-align: center;}
-#otherstop_right h4{ width: 92%;float: left;margin: 8px 0 0 8%;font-size: 18px; color:#ff6666;}
-#otherstop_right h5{width: 92%;float: left;margin: 0 0 0 8%;font-size: 14px; color: #666666;}
-#otherstop_right .email{background: #66cc66;width: 20%;height: 24px;padding-top: 6px; float: left;margin-top:10px;margin-bottom: 16px;margin-left: 18%;font-size: 14px;color: #ffffff;font-style: bold;text-align: center;}
-
-#otherstop #otherstop_bottom{background: #aaddac;width: 78%;height: 48px;margin-top:54px; margin-left: 11%;float: left;}
-#otherstop_bottom .prize{background: #ffffff;width: 25%;height: 38px;float: left;text-align: center;padding-top: 10px;font-size: 16px;color: #333333;}
-#otherstop_bottom .prize:hover{background: #aaddac;width: 25%;height: 38px;float: left;text-align: center;padding-top: 10px;ont-size: 16px;color: #333333;}
-
-#othersbottom{background:red;float: left;width: 100%;height:1060px;}
-
-#othersbottom  #ChooseOne {background: #addbb9;width: 100%;height: 1060px;position:absolute;top:438px;display: block;}
-#othersbottom  #ChooseTwo {background: #addbb9;width: 100%;height: 1060px;position:absolute;top:438px;display: none;}
-#othersbottom  #ChooseThree {background: #addbb9;width: 100%;height: 1060px;position:absolute;top:438px;display: none;}
-#othersbottom  #ChooseFour {background: #addbb9;width: 100%;height: 1060px;position:absolute;top:438px;display: none;}
-
-#othersbottom #otherchoose{background: #eeeff3;width: 78%;height: 472px;float: left;margin-left: 11%;margin-top: 20px;}
-#othersbottom .main_one{background:#ffffff;  width: 32%;height: 472px; float: left;margin-right:2%;}
-#othersbottom .main_two{background:#ffffff;  width: 32%;height: 472px; float: left;}
-#othersbottom img{width: 100%;height: 300px;}
-#othersbottom h2{margin-left: 6%;width: 94%;font-weight: bold;font-size: 14px;color: #333333;}
-#othersbottom h3{margin-left: 6%;width: 94%;float: left; font-size: 14px;color: #666666;}
-#othersbottom h4{margin-left: 6%;width: 94%;float: left;font-size: 14px;color: #666666;}
-#othersbottom .micro_content{margin-top: 10px;}
-#othersbottom h5{margin-left: 6%;width: 20%;float: left;float: left;font-size: 14px;color: #666666;margin-top: 10px;}
-#othersbottom .place{margin: 4px 0 0 6%;width: 6%;height: 14px; float: left;margin-top: 10px;}
-#othersbottom h6{width:62%;float: left;font-size: 14px;color: #666666;margin-top: 10px;}
-#othersbottom .progray{background: #c9c9c9;display: block;margin-left: 6%; float: left;margin-top: 0px;width:92%;height: 10px;}
-#othersbottom .progreen{background: #6cc77f;width: 50%;height: 10px;margin-top: 0px;}
+}
+.onebox h3{
+    font-size: 18px;
+}
+.onebox h4{
+    font-size: 16px;
+    color: #666668;
+    margin-top: 10px;
+}

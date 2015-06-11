@@ -1,6 +1,6 @@
 // 加载后直接运行的函数
 window.onload=function(){
-	Progray(container,'progreen','txt1');
+	Progray(container,'progreen','percentageText');
 	invChoose();
 	toEmail();
 }
