@@ -86,6 +86,33 @@
     color: #ffffff;
     font-weight: bold;
 }
+.invest_button a{
+   background-color: transparent!important;
+}
+#sendMsg{
+    margin-top: 180px;
+}
+#sendMsg .modal-header h4{
+    color: #67c469;
+    font-size: 20px;
+}
+#sendMsg .modal-header h4 span{
+    color: #67c469;
+    font-size: 20px;
+}
+#sendMsg .modal-body h3 {
+
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#sendMsg .modal-body textarea{
+
+    height: 200px;
+}
+#sendMsg .modal-footer{
+
+    height: 70px;
+}
 #videoPart{
     margin-top: 30px;
     margin-bottom: 20px;

@@ -11,6 +11,7 @@
     <script type="text/javascript" src="./js/swiper3.07.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://api.html5media.info/1.1.4/html5media.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -20,9 +21,34 @@
 <body>
 <div id="container">
 <?php require('./nav.php') ?>
+    <div class="modal fade" id="sendMsg" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">
+                       <span class="glyphicon glyphicon-envelope"></span>发送私信
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                       <h3>发件人：张三丰</h3>
+                        <textarea class="form-control" placeholder="请输入私信内容，内容控制在2000字以内"></textarea>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <span class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭</span>
+                    <span class="btn btn-success" id="sendMsgButton">发送</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
    <div class="container">
        <div id="hotproTitle">
-           <h2>热门项目</h2>
+           <h2>泡泡龙项目</h2>
            <div class="row">
                <div class="col-xs-6">
                    <span>发起人:郭总</span>
@@ -30,12 +56,8 @@
                    <span class="titlemargin"><img src="./img/star.png" class="stars"> </span>
                </div>
                <div class="col-xs-1 col-xs-offset-2">
-
-                   <div class="btn btn-danger " style="margin-top: -30px;"><span class="glyphicon glyphicon-star-empty">我要投资</span></div>
-
-               </div>
-               <div class="col-xs-1 col-xs-offset-1" >
                    <div class="btn btn-success " style="margin-top: -30px;"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></div>
+
                </div>
 
            </div>
@@ -90,7 +112,7 @@
                                        <span>个名额</span>
                                    </div>
                                    <div style="height: 20px;"></div>
-                                   <div class="btn invest_button">投资￥1</div>
+                                   <div class="btn invest_button"><a href="invest_1.php">投资￥1</a></div>
                                </div>
                            </div>
                        </div>
@@ -129,7 +151,7 @@
                                        <span>个名额</span>
                                    </div>
                                    <div style="height: 20px;"></div>
-                                   <div class="btn invest_button">投资￥10</div>
+                                   <div class="btn invest_button"><a href="invest_1.php">投资￥10</a></div>
                                </div>
                            </div>
                        </div>
@@ -168,7 +190,7 @@
                                        <span>个名额</span>
                                    </div>
                                    <div style="height: 20px;"></div>
-                                   <div class="btn invest_button">投资￥100</div>
+                                   <div class="btn invest_button"><a href="invest_1.php">投资￥100</a></div>
                                </div>
                            </div>
                        </div>
@@ -207,7 +229,7 @@
                                        <span>个名额</span>
                                    </div>
                                    <div style="height: 20px;"></div>
-                                   <div class="btn invest_button">投资￥1000</div>
+                                   <div class="btn invest_button"><a href="invest.php">投资￥不定金额</a></div>
                                </div>
                            </div>
                        </div>
@@ -220,16 +242,16 @@
    <div id="videoPart">
       <div class="container">
           <div class="row">
-              <div class="col-sm-8 video-play">
-                  <video width="100%"controls autobuffer>
-                      <source src="./videos/Wildlife.wmv">
+              <div class="col-sm-8 video-play" >
+                  <video width="100%"controls autobuffer autoplay="autoplay">
+                      <source src="http://videos.mozilla.org/serv/webmademovies/wtfpopcorn.ogv">
                   </video>
               </div>
               <div class="col-sm-4 video-boss">
                   <div class="first-part" style="height: 40%;margin-top: 5%">
                       <div class="row" >
                           <div class="col-xs-4">
-                              <img src="./img/fan_15.png" class="img-circle pull-right">
+                              <a href="others.html"><img src="./img/fan_15.png" class="img-circle pull-right"></a>
                           </div>
                           <div class="col-xs-8">
                               <h3>发起人:郭总</h3>
@@ -244,7 +266,7 @@
                           </div>
                           <div class="col-xs-8">
                               <span>操作：</span>
-                              <span class="btn btn-success">发私信</span>
+                              <span class="btn btn-success"><a href="#sendMsg" data-toggle="modal" data-target="#sendMsg" >发私信</a></span>
                           </div>
                       </div>
                       <div class="divider"></div>
@@ -280,6 +302,7 @@
                   <h5 class="text-red">￥1000</h5>
                   <h6>已筹集资金</h6>
               </div>
+              <div style="height: 30px;"></div>
           </div>
       </div>
    </div>
@@ -351,7 +374,7 @@
                                <h2>转让此项目</h2>
                                <h3>130****0000</h3>
                                <h3 class="text-red">￥1000</h3>
-                               <div class="btn accept-btn">接受投资</div>
+                               <div class="btn accept-btn"><a href="invest.php">接受投资</a> </div>
                            </div>
                            <div class="one-market">
 
@@ -361,7 +384,7 @@
                                <h2>转让此项目</h2>
                                <h3>130****0000</h3>
                                <h3 class="text-red">￥1000</h3>
-                               <div class="btn accept-btn">接受投资</div>
+                               <div class="btn accept-btn"><a href="invest.php">接受投资</a></div>
                            </div>
                            <div class="one-market">
 
@@ -371,7 +394,7 @@
                                <h2>转让此项目</h2>
                                <h3>130****0000</h3>
                                <h3 class="text-red">￥1000</h3>
-                               <div class="btn accept-btn">接受投资</div>
+                               <div class="btn accept-btn"><a href="invest.php">接受投资</a></div>
                            </div>
                            <div class="one-market">
 
@@ -381,7 +404,7 @@
                                <h2>转让此项目</h2>
                                <h3>130****0000</h3>
                                <h3 class="text-red">￥1000</h3>
-                               <div class="btn accept-btn">接受投资</div>
+                               <div class="btn accept-btn"><a href="invest.php">接受投资</a></div>
                            </div>
                            <div class="one-market">
 
@@ -391,7 +414,7 @@
                                <h2>转让此项目</h2>
                                <h3>130****0000</h3>
                                <h3 class="text-red">￥1000</h3>
-                               <div class="btn accept-btn">接受投资</div>
+                               <div class="btn accept-btn"><a href="invest.php">接受投资</a></div>
                            </div>
                        </div>
                    </div>
