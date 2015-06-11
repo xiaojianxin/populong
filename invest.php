@@ -3,7 +3,6 @@
 <head>
     <title>投资界面</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="布尔教育 http://www.itbool.com" />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"  href="./css/reset.css"/>
     <link rel="stylesheet"  href="./css/footer.css"/>
@@ -44,13 +43,13 @@
                 <div class='title title_lg'>备注信息：（选填）</div>
             </div>
             <div id="main_center_bottom ">
-                <div class="checkbox">
-                    <input type="checkbox"  id="checkboxInput1" name="checkbox"/>
+                <div class="checkbox" id="check1">
+                    <input type="checkbox"  id="checkboxInput1" name="checkbox" style="display: none;" />
                     <label for="checkboxInput1"></label>
                     <span class='check-content'>是否需要提供人员线下交流</span>
                 </div>
-                <div class='checkbox' >
-                    <input type="checkbox"  id="checkboxInput2" name="checkbox"/>
+                <div class='checkbox' id="check2">
+                    <input type="checkbox"  id="checkboxInput2" name="checkbox" style="display: none;" />
                     <label for="checkboxInput2"></label>
                     <span class='check-content'>是否需要提供人员线下交流</span>
                 </div>
@@ -139,40 +138,80 @@
 <?php require('./footer.php')?>
 
 <script type="text/javascript">
-    $("#saveAddress").click(function(){
-        var address=$("#inputAddress").val();
-        $("#showAddress").html("");
-        var str="";
-        str+="<div class='first-row'>"+address+"</div>";
-        $("#showAddress").prepend(str);
-        alert("增加成功");
-    });
-    $("#inputMoney").keyup(function(){
-        var price=$("#inputMoney").val();
-        $(".proMoney .text-red").html("￥"+price);
-        $("#totalNum").html(price);
-    });
-    $("#payConfirm").click(function(){
-        var num=parseInt($("#totalNum").html());
-        var address=$("#showAddress .first-row").text();
-        var code;
-        var ischecked=$("#checkboxInput1").attr("checked");
-        if(ischecked)
+    $(function(){
+        checkbox={check1:false,check2:false}
+        $("#check1 label").click(function(){
 
-        {
-            alert(1);
-        }
-        else
-        {
-            alert(2);
-        }
-//      $("input[type="checkbox"]:checked").each(function () {
-//          alert(this.val());
-//      })
+            if(checkbox.check1)
+            {
+                checkbox.check1=false;
+            }
+            else
+            {
+                checkbox.check1=true;
+                alert(1);
+            }
+        });
+        $("#check2 label").click(function(){
 
+            if(checkbox.check2)
+            {
+                checkbox.check2=false;
+            }
+            else
+            {
+                checkbox.check2=true;
+            }
+        });
+        $("#saveAddress").click(function(){
+            var address=$("#inputAddress").val();
+            $("#showAddress").html("");
+            var str="";
+            str+="<div class='first-row'>"+address+"</div>";
+            $("#showAddress").prepend(str);
+            alert("增加成功");
+        });
+        $("#inputMoney").keyup(function(){
+            var price=$("#inputMoney").val();
+            $(".proMoney .text-red").html("￥"+price);
+            $("#totalNum").html(price);
+        });
+        $("#payConfirm").click(function(){
+            var num=parseInt($("#totalNum").html());
+            var address=$("#showAddress .first-row").text();
+            var code;
+            if(checkbox.check1&&checkbox.check2)
+            {
+                code=3;
+            }
+            else if(checkbox.check1&&!checkbox.check2)
+            {
+                code=1;
+            }
+            else if(!checkbox.check1&&checkbox.check2)
+            {
+                code=2;
+            }
+            else{
+                code=0;
+            }
+            $.ajax({
+                async: true,
+                type: "POST",
+                url: "",
+                dataType: "json",
+                data: [{address:address,serviceCode:code,priceAmount:num}],
+                success: function(data){
+
+                },
+                error: function(xhr, stat, err) {
+                }
+            })
+        });
 
 
     })
+
 </script>
 </body>
 </html>
