@@ -65,6 +65,8 @@
                             require('./dealrecord.php');
                         }else if($id == '13'){
                             require('./dealrecord.php');
+                        }else if ($id == '14') {
+                            require('./editinformation.php');
                         }
                     }
                     
