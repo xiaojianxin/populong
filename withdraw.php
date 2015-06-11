@@ -38,9 +38,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-1"></div>
-                            <div class="col-xs-2">
-                                <span >实际扣除金额</span>
+                            <div class="col-xs-3">
+                                <span style="float:right;">实际扣除金额</span>
                             </div>
                             <div class="col-xs-6">
                                 <span class="red-mark">0.00</span>

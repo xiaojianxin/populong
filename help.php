@@ -209,31 +209,6 @@ session_start();
             </div>
         </div>
 
-		<!-- <div id="header">
-			<img class="logo"src=""alt="logo">
-			<ul class="nav">
-				<li><a href="./index.php">首页热门</a></li>
-				<li class="chooseli"><a href="./help.html">青年助梦</a></li>
-				<li><a href="./together.html">与你同行</a></li>
-				<li><a href="./ido.html">我做你投</a></li>
-			</ul>            
-			<?PHP
-			if (isset($_SESSION["token"]))
-			{
-
-				?>
-
-				<?PHP
-			}else
-			{
-				?>
-
-				<?PHP
-			}
-			?>
-
-		</div> -->
-
 		<div id="main">
             <div class="container">
                 <div id="selectBox">
