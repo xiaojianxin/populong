@@ -20,7 +20,7 @@ session_start();
 <body>
 <?php require('./nav.php') ?>
 	
-      <form>
+      <form action='./1.php'>
           <div class='show' >
                 <?php require('./start1.php') ?>
         </div>

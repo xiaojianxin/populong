@@ -386,7 +386,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-8 actionbutton">
-                        <a href="start.php"><span class="btn btn-success" id="previousStep_prev">上一步</span></a>
+                        <span class="btn btn-success" id="previousStep_prev">上一步</span></a>
                         <span class="btn btn-success" id="nextStep_next">下一步</span>
 
                     </div>
@@ -427,15 +427,16 @@
         });
         $('#file_pic1').uploadify({
 
-            'uploader'  : './uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
-            'script'    : './Upload.php',       //指定服务器端上传处理文件，默认‘upload.php’
+            'swf'  : 'uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+            'uploader'    : '/file',        //指定服务器端上传处理文件，默认‘upload.php’
             'auto'      : true,               //选定文件后是否自动上传，默认false
             'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
             'multi'     : false,               //是否允许同时上传多文件，默认false
             'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
             fileSizeLimit:'2MB',
-            'onComplete': function(event,queueID,fileObj,response,data) {
-                $('#showPic1').attr("src","<%=basePath%>userphoto/"+response);//上传图片的服务器地址
+            'fileObjName': 'file',
+            'onUploadSuccess': function(file, data, response) {
+                $('#showPic1').attr("src",data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },
@@ -446,15 +447,16 @@
         });
         $('#file_pic2').uploadify({
 
-            'uploader'  : './uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
-            'script'    : './Upload.php',       //指定服务器端上传处理文件，默认‘upload.php’
+            'swf'  : 'uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+            'uploader'    : '/file',       //指定服务器端上传处理文件，默认‘upload.php’
             'auto'      : true,               //选定文件后是否自动上传，默认false
             'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
             'multi'     : false,               //是否允许同时上传多文件，默认false
-            'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
+            'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',   //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
+            'fileObjName': 'file',   
             fileSizeLimit:'2MB',
-            'onComplete': function(event,queueID,fileObj,response,data) {
-                $('#showPic2').attr("src","<%=basePath%>userphoto/"+response);//上传图片的服务器地址
+            'onUploadSuccess': function(file, data, response) {
+                $('#showPic2').attr("src",data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },
@@ -464,16 +466,17 @@
             }
         });
         $('#file_pic3').uploadify({
-
-            'uploader'  : './uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
-            'script'    : './Upload.php',       //指定服务器端上传处理文件，默认‘upload.php’
+            'swf'  : 'uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+            'uploader'    : '/file',        //指定服务器端上传处理文件，默认‘upload.php’
             'auto'      : true,               //选定文件后是否自动上传，默认false
             'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
             'multi'     : false,               //是否允许同时上传多文件，默认false
             'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
+
             fileSizeLimit:'2MB',
-            'onComplete': function(event,queueID,fileObj,response,data) {
-                $('#showPic3').attr("src","<%=basePath%>userphoto/"+response);//上传图片的服务器地址
+            'fileObjName': 'file',   
+            'onUploadSuccess': function(file, data, response) {
+                $('#showPic3').attr("src",data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },
@@ -484,15 +487,16 @@
         });
         $('#file_pic4').uploadify({
 
-            'uploader'  : './uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
-            'script'    : './Upload.php',       //指定服务器端上传处理文件，默认‘upload.php’
+             'swf'  : 'uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+            'uploader'    : '/file',       //指定服务器端上传处理文件，默认‘upload.php’
             'auto'      : true,               //选定文件后是否自动上传，默认false
             'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
             'multi'     : false,               //是否允许同时上传多文件，默认false
             'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
             fileSizeLimit:'2MB',
-            'onComplete': function(event,queueID,fileObj,response,data) {
-                $('#showPic4').attr("src","<%=basePath%>userphoto/"+response);//上传图片的服务器地址
+            'fileObjName': 'file',   
+            'onUploadSuccess': function(file, data, response) {
+                $('#showPic4').attr("src",data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },
@@ -503,15 +507,16 @@
         });
         $('#file_pic5').uploadify({
 
-            'uploader'  : './uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
-            'script'    : './Upload.php',       //指定服务器端上传处理文件，默认‘upload.php’
+            'swf'  : 'uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+            'uploader'    : '/file',        //指定服务器端上传处理文件，默认‘upload.php’
             'auto'      : true,               //选定文件后是否自动上传，默认false
             'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
             'multi'     : false,               //是否允许同时上传多文件，默认false
             'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
             fileSizeLimit:'2MB',
-            'onComplete': function(event,queueID,fileObj,response,data) {
-                $('#showPic5').attr("src","<%=basePath%>userphoto/"+response);//上传图片的服务器地址
+           'fileObjName': 'file',   
+              'onUploadSuccess': function(file, data, response) {
+                $('#showPic4').attr("src",data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },

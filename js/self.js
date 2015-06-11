@@ -86,6 +86,14 @@ urlGet:function()
      }
      return aGET;
  }
-})
+});
+
+
+$('.change-status').click(function(){
+    var text = $(this).html();
+    $(this).html($(this).parent().parent().prev().children(':eq(0)').html());  
+   $(this).parent().parent().prev().children(':eq(0)').html(text);
+
+});
 
 });
