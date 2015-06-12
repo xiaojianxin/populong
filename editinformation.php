@@ -3,7 +3,7 @@
                     <div class="title">个人资料</div>
                 </div>
                 <div class="btn btn-success pull-right edit-info" id="editInformation">
-                    <span class="glyphicon glyphicon-edit"><a href='./self.php?id=8'>修改信息</span>
+                    <span class="glyphicon glyphicon-edit"><a href='./self.php?id=14'>取消修改</span>
                 </div>
                 
                 <div class="container self-info">

@@ -8,7 +8,13 @@ $(function(){
                 
                 $('.personalpage').addClass('active');
 
-            }else
+            }else if (id == '14') 
+            {
+                $(".accordion-inner a").css('color','#333333');
+                
+                $('#8').css('color','#6cc77f');
+                $('#8').parent().parent().prev().addClass('active');}
+            else
             {
                 $(".accordion-inner a").css('color','#333333');
                 
@@ -18,8 +24,6 @@ $(function(){
             
            
         });
-
-
     $('#toChoosefans').click(function(e) {
 
         $(this).css('border-top','1px solid #6cc77f');
