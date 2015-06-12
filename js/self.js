@@ -8,7 +8,13 @@ $(function(){
                 
                 $('.personalpage').addClass('active');
 
-            }else
+            }else if (id == '14') 
+            {
+                $(".accordion-inner a").css('color','#333333');
+                
+                $('#8').css('color','#6cc77f');
+                $('#8').parent().parent().prev().addClass('active');}
+            else
             {
                 $(".accordion-inner a").css('color','#333333');
                 
@@ -19,6 +25,18 @@ $(function(){
            
         });
 
+
+  
+      $("#popover_bottom1").popover({placement:'bottom'});
+      $("#popover_bottom1").click(function(){
+
+            $('.popover-content').html('<div>距下一级还需要：*** ，可直接充值xxx升级，充值金额可用于投资操作，充值金额一个月以内不能提现，一个月以后自由提现</div><div><span class="popover-span">lv3</span><span class="popover-span" style="float:right">lv4</span><div><div class="progress progress-striped active" style="width:85% margin-left:20px;"><div class="progress-bar progress-bar-success " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"style="width: 40%;"></div></div><a style="float:right;margin-bottom:10px;">去升级</a>');
+      });
+      $("#popover_bottom2").popover({placement:'bottom'});
+      $("#popover_bottom2").click(function(){
+
+            $('.popover-content').html('<div>距下一级还需要：*** ，可直接充值xxx升级，充值金额可用于投资操作，充值金额一个月以内不能提现，一个月以后自由提现</div><div><span class="popover-span">lv6</span><span class="popover-span" style="float:right">lv7</span><div><div class="progress progress-striped active" style="width:85% margin-left:20px;"><div class="progress-bar progress-bar-success " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"style="width: 40%;"></div></div><a style="float:right;margin-bottom:10px;">去升级</a>');
+      });
 
     $('#toChoosefans').click(function(e) {
 

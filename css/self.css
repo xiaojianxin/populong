@@ -14,7 +14,7 @@
 
 }
 .self_right_top{
-	height: 190px;
+	height: 210px;
 	margin-left:-30px; 
 	background-color: #b5e3bf;
 	border-bottom: 1px solid #6cc77f;
@@ -120,6 +120,9 @@
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.popover-span{
+    font-size: 18px;
 }
 /********************************************交易中心**************************************************/
 #recordbox{
