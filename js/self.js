@@ -2,7 +2,7 @@
 $(function(){
     $(function(){
             var  id = $.urlGet();
-            $('ul .active').removeClass('active');
+            $('#leftnav ul .active').removeClass('active');
             //alert(id);
             if (id == '') {
                 

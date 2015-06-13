@@ -10,11 +10,10 @@
     <link rel="stylesheet" type="text/css" href="./css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="./css/jPages.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script src="./js/jquery-1.10.1.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/bootstrap-tooltip.js"></script>
     <script src="./js//bootstrap-popover.js"></script>
-	<script src="./js/jquery-1.10.1.js"></script>
-	<script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/leftnav.js"></script>
     <script src="./js/self.js"></script>
 	<!--[if lt IE 9]>
 	  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -64,7 +63,7 @@
                         }else if($id == '11'){
                             require('./message.php');
                         }else if ($id == '12') {
-                            require('./dealrecord.php');
+                            require('./platrank.php');
                         }else if($id == '13'){
                             require('./dealrecord.php');
                         }else if ($id == '14') {
