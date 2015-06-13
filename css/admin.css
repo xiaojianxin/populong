@@ -1,112 +1,537 @@
+#topnav{
+ height: 50px;
+}
+#self_top{
+	margin-top: 5px;
+	height: 50px;
+	float: right;
+	
 
+}
+#leftnav{
+    margin-top: 53px;
+    margin-right: 20px;
 
-/*正常显示部分*/
-#main {background: #eeeff3;width: 100%;height: 1436px;float: left;}
+}
+.self_right_top{
+	height: 210px;
+	margin-left:-30px; 
+	background-color: #b5e3bf;
+	border-bottom: 1px solid #6cc77f;
+}
+.self_pic{
+	width: 85px;
+	padding-top: 30px;
+	margin: 0 auto;
+}
+.self_explain{
+	font-family: "微软雅黑";
+	font-size: 15px;
+    font-weight: bold;
+	width: 135px;
+	margin: 0 auto;
+	padding-top: 5px;
+}
+#topbottom{
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 9px;
+}
+#self_nav{
+	width: 850px;
+	height: 40px;
+}
+.content_nav{
+	text-align: center;
+	vertical-align:middle;
+	font-family: '微软雅黑';
+	line-height:40px; 
+	width: 100px;
+	height: 40px;
+	background-color: #ffffff;
+	border: 1px solid #d2d2d2;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
+.tab-content{
+    width: 100%;
+    margin-left: -30px;
+}
 
-#self_top{width: 78%;margin: 18px 11% 18px 11%;float: left;height: 40px;}
-#self_top a{background: #6cc77f;width: 12%;float:right;height: 30px;text-align: center;padding-top: 10px;font-size: 16px;color: #ffffff;}
+/********************************************交易中心**************************************************/
+#recordbox{
+    background-color: #ffffff;
+}
+.record-title{
+    margin-bottom:10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 30px;
+    border-bottom: 2px solid #6cc77f;
+}
+div .title{
+    width: 125px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 40px;
+    padding-top: 10px;
+    margin-bottom:-2px; 
+    border-bottom: 2px solid #6cc77f;
+}
+.dealtype span{
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 20px;
 
-#self_left{background: #ffffff;width: 19.2%;margin: 0 2.2% 0 11%;float: left;height: 950px;}
-#self_left li{background: #6cc77f;width: 100%;float: left; height: 50px;font-size:16px;color: #ffffff;text-align: center;}
-#self_left a{width: 80%;float: left;margin-right: 20%; height: 40px;font-size:16px;color: #ffffff;text-align: center;padding-top: 10px;}
-#self_left .childA{width: 80%;float: left;margin-left: 20%;height: 40px;font-size:16px;color: #ffffff;text-align: center;padding-top: 10px;}
+}
+.dealtype .active{
+    background-color: #65cc63;
+    color: white;
+}
+#deal-list table{
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+#deal-list table tr td{
+    line-height: 50px;
+     font-size: 15px;
+     text-align: center;
+    background-color: #ffffff;
+}
+#deal-list thead tr th{
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+#deal-list{
+    margin-right: 15px;
+    margin-left: 15px;
+    min-height: 700px;
+}
+/********************************************充值**************************************************/
+#depositBox{
+    background-color: #ffffff;
+}
+#depositBox .record-title{
+    margin-bottom:20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-bottom: 2px solid #dbdbdb;
+}
+ .deposit-title{
+     text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 5px;
 
-#self_right{width: 56.6%;margin: 0 11% 0 0;float: left;height: 950px;}
-/*个人管理记录*/
-#selfRight1{background:#ffffff; width: 100%;height:100%;display:none;}
+}
+#depositForm{
+    margin:  20px 20px 20px 20px;
+    background-color: #d1f0d1;
+}
+.red-mark{
+    color: red;
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#depositForm .row{
+    margin-top: 30px;
+}
+#depositForm .row .col-xs-5 span{
+    font-size: 18px;
+}
 
-.self_right_top{background: #b5e3bf; width: 100%;height: 188px;}
-.self_right_top img{width: 12%;height: 86px;margin: 24px 44% 0 44%;}
-.self_right_top h1{ width: 100%;height: 30px;font-size: 16px;text-align: center;color: #333333;}
-.self_right_top h2{ width: 30%;height: 30px;font-size: 16px;text-align: left;font-weight: bold;padding-left: 4%;}
-.self_right_top #topbottom{width: 60%;height: 42px; margin:0 20% 0 20%;float: left;}
-.self_right_top .prize{background: #ffffff;width: 25%;height: 32px;float: left;text-align: center;padding-top: 10px;font-size: 14px;color: #333333;}
-.self_right_top .prize:hover{background: #aaddac;width: 25%;height: 32px;float: left;text-align: center;padding-top: 10px;font-size: 14px;color: #333333;}
+.chargeTitle{
+    margin-left: 30px;
+    margin-top: 10px;
+    color: white;
+    background-color: #6cc87f;
+    padding-top: 3px;
+    font-size: 24px;
+    text-align: center;
+    height: 40px;
+    width: 130px;
+}
+.divider{
+    border-top: 2px solid #dbdbdb;
+}
+#chargeArea{
+    margin:  20px 20px 20px 20px;
+    border: 1px solid #dbdbdb;
+}
+#chargePart{
+    margin-left: 30px;
+    margin-right: 30px;
+    border-top: 1px solid #dbdbdb;
+    height: 150px;
+}
+#chargePart .row{
+    margin-top: 10px;
+}
+#chargebutton{
+    width: 30%;
+    margin-left: 35%;
 
+    margin-top: 20px;
+    font-size: 24px;
+}
+#chargeDes{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#chargeDes h1{
+    line-height: 40px;
+}
+/********************************************提现**************************************************/
+#withdrawbutton{
+    width: 30%;
+    margin-left: 35%;
 
-#self_right_bottom1{background: #ffffff; width: 56.6%;height: 800px;position: absolute;top: 326px;right: 11%;display: block;}
+    margin-top: 20px;
+    font-size: 24px;
+}
+#withdrawBox{
+    background-color:#ffffff;
+}
+#withdrawDes{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#withdrawDes h1{
+    line-height: 40px;
+}
+#withdrawForm{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+}
+#withdrawForm .row .col-xs-2 span{
+    float: right;
+    margin-top: -2px;
+}
+#withdrawForm .row .btn{
+    margin-top: 4px;
+}
+/*******************************************我的投资**************************************************/
+#allPro table{
+    margin-top: 20px;
+}
+#allPro table tr td{
+    line-height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+#allPro thead tr th{
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+#allPro,#unfinishedPro,#finishedPro{
+    min-height: 700px;
+    background-color: white;
+}
+#unfinishedPro table{
+    margin-top: 20px;
+}
+#unfinishedPro table tr td{
+    line-height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+#unfinishedPro thead tr th{
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+#finishedPro table{
+    margin-top: 20px;
+}
+#finishedPro table tr td{
+     text-align: center;
+    background-color: #ffffff;
+    line-height: 50px;
+}
+#finishedPro thead tr th{
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+.prostate h1{
+    text-align: center;
+}
+#investProList #threetab ul  .active a{
+    color: #000000;
+    font-weight: bold;
 
-#selfRight1_top{width: 92%;height: 46px;margin: 0 4%;border-bottom: 2px solid #6cc77f;}
-#selfRight1_top h1{width: 76%;height: 20px;font-size: 18px;font-weight: bolder;padding: 12px 2%;float: left;}
-#selfRight1_top input{ width: 20%;height: 40px;font-size: 18px;font-weight: bolder;padding: 12px 2%;float: right;margin-top: 6px;}
+}
+#investProList{
+    background-color: #ffffff;
+}
 
-#selfRight1_bottom{background: #ffffff; width: 92%;height: 750px;margin: 0 4%;}
-#selfRight1_bottom #tradetype{ width:100%;height: 50px;}
-#selfRight1_bottom #tradetype li{ background: #ffffff;width: 16.6%;height:36px;float: left;font-size: 18px;font-weight: bolder;padding-top: 14px;}
-#selfRight1_bottom #manageType1{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display:block;}
-#selfRight1_bottom #manageType2{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display: none;}
-#selfRight1_bottom #manageType3{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display: none;}
-#selfRight1_bottom #manageType4{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display: none;}
-#selfRight1_bottom #manageType5{width: 92%;height: 800px;position: absolute;top: 98px;right: 4%;display: none;}
-#selfRight1_bottom li{background: #dbdbdb; width: 100%;height:36px;float: left;font-size: 16px;font-weight: bolder;padding-top: 14px;text-align: center;}
-#selfRight1_bottom h1{width: 20%;height:36px;float: left;font-size: 14px;}
-#selfRight1_bottom h2{width: 20%;height:36px;float: left;}
-#selfRight1_bottom h3{width: 20%;height:36px;float: left;}
-#selfRight1_bottom h4{width: 20%;height:36px;float: left;color: #66cc66;}
-#selfRight1_bottom h5{width: 20%;height:36px;float: left;}
-#self_right_bottom2{background: #ffffff; width: 56.6%;height: 800px;position: absolute;top: 326px;right: 11%;display: none;}
-#selfRight1 #self_right_bottom3{background: #ffffff; width: 56.6%;height: 800px;position: absolute;top: 326px;right: 11%;display: none;}
-#selfRight1 #self_right_bottom4{background: #ffffff; width: 56.6%;height: 800px;position: absolute;top: 326px;right: 11%;display:none ;}
+.trans{
+    margin-top: -15px;
+}
+/*******************************************转让市场**************************************************/
+#buyin table{
+    margin-top: 20px;
+}
+#buyin table tr td{
+     text-align: center;
+    background-color: #ffffff;
+    line-height: 50px;
+}
+#buyin thead tr th{
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+#sellout table{
+    margin-top: 20px;
+}
+#sellout table tr td{
+    text-align: center;
+    background-color: #ffffff;
+    line-height: 50px;
+}
+#sellout thead tr th{
+     text-align: center;
+    background-color:#dbdbdb ;
+}
+#buyin,#sellout{
+    min-height: 700px;
+    background-color: white;
+}
+#transMarket #twotab ul  .active a{
+    color: #000000;
+    font-weight: bold;
 
+}
+#transMarket {
+    background-color: #ffffff;
+}
+/*******************************************我发起的项目**************************************************/
+#allList table{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#allList table tr td{
+    text-align: center;
+    background-color: #ffffff;
+    line-height: 50px;
+}
+#allList thead tr th{
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+#financingList table{
+    margin-top: 20px;
+}
+#financingList table tr td{
+    text-align: center;
+    background-color: #ffffff;
+    line-height: 50px;
+}
+#financingList thead tr th{
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+#succeedList table{
+    margin-top: 20px;
+}
+#succeedList table tr td{
+    text-align: center;
+    background-color: #ffffff;
+    line-height: 50px;
+}
+#succeedList thead tr th{
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+#unsucceedList thead tr th{
+    text-align: center;
+    background-color:#dbdbdb ;
+}
+#unsucceedList table{
+    margin-top: 20px;
+}
+#unsucceedList table tr td{
+    text-align: center;
+    background-color: #ffffff;
+    line-height: 50px;
+}
+#allList,#financingList,#succeedList,#unsucceedList{
+    min-height: 700px;
+    background-color: white;
+}
+.nav-tabs a{
+    font-size: 18px;
+}
+.nav-tabs {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-bottom: 2px solid #6cc87f;
+}
+/*******************************************未审核的项目**************************************************/
 
-/*我发起的项目*/
-#selfRight2{background:#ffffff; width: 100%;height:100%;display:none;}
-.selfRight2_top{width: 92%;height: 46px;margin: 0 4%;border-bottom: 2px solid #6cc77f;}
-.selfRight2_top h1{width: 14%;height: 20px;font-size: 18px;font-weight: bolder;padding: 12px 0 12px 2%;float: left;}
-.selfRight2_top .positive{background:#6cc77f;  width: 14%;height: 20px;font-size: 18px;font-weight: bolder;padding: 12px 2%;float: left;}
+.onebox{
+    margin-bottom: 20px;
+    margin:15px 15px 15px 15px;
+    padding: 5%;
+    background-color: #eeeff3;
+}
+.onebox a img{
+    margin-top: 20px;
+    width: 100%;
+}
+.onebox h2{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+}
+.onebox a{
+    color: #666668;
 
-.selfRight2_bottom{background: #ffffff; width: 92%;height: 900px;margin: 0 4%;}
-.selfRight2_bottom .tradetype{ width: 80%;height: 50px;margin-left: 20%;}
-.selfRight2_bottom .tradetype li{ background: #ffffff;width: 20%;height:36px;float: left;font-size: 18px;font-weight: bolder;padding-top: 14px;}
-.selfRight2_bottom li{background: #dbdbdb; width: 100%;height:72px;float: left;font-size: 16px;font-weight: bolder;padding-top: 14px;text-align: center;border-bottom: 2px solid #ffffff;}
-.selfRight2_bottom img{width: 18.8%;height:64px;float: left;font-size: 16px;font-weight: bolder;text-align: center;margin-left: 1.2%;}
-.selfRight2_bottom h1{width: 16%;height:36px;float: left;font-size: 14px;margin-top: 20px;}
-.selfRight2_bottom h2{width:16%;height:36px;float: left;margin-top: 20px;}
-.selfRight2_bottom h3{width:16%;height:36px;float: left;margin-top: 20px;}
-.selfRight2_bottom h4{width: 16%;height:36px;float: left;color: #66cc66;margin-top: 20px;}
-.selfRight2_bottom h5{width: 16%;height:36px;float: left;margin-top: 20px;}
+}
+.onebox h3{
+    font-size: 18px;
+}
+.onebox h4{
+    font-size: 16px;
+    color: #666668;
+    margin-top: 10px;
+}
+#focusPro #twotab ul  .active a{
+    color: #000000;
+    font-weight: bold;
 
-#selfRight3{background:#ffffff; width: 100%;height:100%;display:none;}
-/*接收投资*/
-#selfRight4{width: 100%;height:100%;display:none;}
-/*我的投资*/
-#selfRight5{width: 100%;height:100%;display:none;}
-/*二级市场*/
-#selfRight6{width: 100%;height:100%;display:none;}
-/*我发起的项目*/
-#selfRight7{background:#ffffff; width: 100%;height:100%;display:none;}
+}
+#focusPro{
+    background-color: #ffffff;
+}
+/*******************************************个人资料**************************************************/
+#informationBox{
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  }
 
-/*我关注的项目*/
-#selfRight8{width: 100%;height:100%;display:none;}
-/*个人资料*/
-#selfRight9{background:#ffffff; width: 100%;height:100%;display:none;}
+.text-green{
+    color:green;
 
+}
+div .edit-info{
+    margin-right: 15px;
+    font-size: 20px;
+}
 
+.self-info{
+    margin: 50px 10px 10px 10px;
+}
 
+.green-tip img{
+    width: 25%;
 
-/*封号*/
-#selfRight10{background:#ffffff; width: 100%;height:100%;display:block;}
-#selfRight10 .selfRight2_bottom .tradetype{background: #ffffff; width: 88.8%;height: 50px;margin-left: 11.2%;}
-#selfRight10 .selfRight2_bottom .tradetype li{ width: 20%;height:36px;float: left;font-size: 18px;font-weight: bolder;padding-top: 14px;}
-#selfRight10 .selfRight10_check{width: 20%;height:20px;margin-top: 20px;margin: 20px 0;float: left;}
-#selfRight10 .selfRight10_idcheck{margin-top: 10px;}
-#selfRight10 .selfRight2_bottom img{width: 10%;height:64px;float: left;font-size: 16px;font-weight: bolder;text-align: center;margin-left: 1.2%;}
-#selfRight10 .selfRight2_bottom h1{ width:17.6%;height:36px;float: left;margin-top: 20px;}
-#selfRight10 .selfRight2_bottom h2{ width:17.6%;height:36px;float: left;margin-top: 20px;}
-#selfRight10 .selfRight2_bottom h3{ width:17.6%;height:36px;float: left;margin-top: 20px;}
-/*消息*/
-#selfRight11{background:#ffffff; width: 100%;height:100%;display:none;}
-#selfRight11 img{width: 100%;height:100%;}
+}
+.user-information .row {
+    margin-top:20px;
+}
+.user-information .row .col-xs-3 span{
+    float: right;
+}
+.user-information .user-name,.user-borntime,.user-phone,.user-email,.user-identity,.user-sex{
+    font-size: 15px;
+}
+/*******************************************消息页面**************************************************/
+#message #threetab ul  .active a{
+    color: #000000;
+    font-weight: bold;
 
-/*平台排行*/
-#selfRight12{background:#ffffff; width: 100%;height:100%;display:none;}
-#selfRight12_top{width: 92%;height: 46px;margin: 0 4%;border-bottom: 2px solid #6cc77f;}
-#selfRight12_top h1{ width: 24%;height: 12px;font-size: 18px;font-weight: bolder;padding: 12px 0 0 2%;float: left;}
-#selfRight12 #selfRight12_investor{ width: 52.2%;height: 800px;position: absolute;top: 186px;right: 13.2%;}
-#selfRight12 #selfRight12_starter{ width: 52.2%;height: 800px;position: absolute;top: 186px;right: 13.2%;display: none;}
-#selfRight12 ul{background: #dbdbdb;width: 100%;height: 50px;margin: 10px 0 40px 0; }
-#selfRight12 ul li{width: 25%;height: 36px;float: left;text-align: center;padding-top: 14px;font-size: 16px;margin-top: 0;}
-#selfRight12 li{width: 100%;height: 60px;margin-top: 2px;}
-#selfRight12 li h1{width: 25%;height: 46px;float: left;text-align: center;padding-top: 14px;font-size: 16px;}
-#selfRight12 h2{width: 25%;height: 46px;float: left;text-align: center;padding-top: 14px;font-size: 16px;}
-#selfRight12 img{width: 9%;height: 60px;float: left;text-align: center;font-size: 16px;margin: 0 8%;}
+}
+
+#message{
+    background-color: white;
+}
+.message-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+.one-receive,.one-send,.one-private{
+    margin-top: 20px;
+}
+.one-receive img{
+    width: 80%;
+    float: right;
+}
+ .comment-time{
+    margin-top: 10px;
+}
+.comment-content{
+    line-height: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+.one-receive .comment-reply{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.one-receive .comment-reply span{
+    margin-right: 30px;
+}
+.replycomment{
+    margin-top: 50px;
+}
+.replycomment input{
+    width: 80%;
+}
+.replybutton{
+    float: right;
+    margin-top: 10px;
+    margin-right: 140px;
+}
+.comment-reply .reply-btn{
+    cursor: pointer;
+}
+.text-orange{
+    color: orangered;
+}
+.one-send img{
+    width: 80%;
+    float: right;
+}
+.one-receive .comment-reply span{
+    margin-right: 30px;
+}
+.one-send .comment-reply span{
+    margin-right: 30px;
+    float: right;
+}
+.one-private img{
+    width: 80%;
+    float: right;
+}
+.one-private .comment-reply span{
+    margin-right: 30px;
+    float: right;
+}
+/*******************************************平台排行榜**************************************************/
+#platrank #twotab ul  .active a{
+    color: #000000;
+    font-weight: bold;
+
+}
+.rank-pic{
+    width: 80px;
+}
+#investRank table thead .active th{
+    background-color: #dbdbdb;
+}
+#startRank table thead .active th{
+    background-color: #dbdbdb;
+}

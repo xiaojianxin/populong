@@ -1,0 +1,103 @@
+
+                <div id="recordbox">
+                    <div class="record-title"></div>
+                <div class="row dealtype">
+                    <span>&nbsp;&nbsp;操作类型:&nbsp;</span>
+                    <span class="active">&nbsp;未发布&nbsp;</span>
+                    <span>&nbsp;发布中&nbsp;</span>
+                    <span>&nbsp;发布后&nbsp;</span>
+                    <span >&nbsp;版面&nbsp;</span>
+                    <span >&nbsp;封号&nbsp;</span>
+                </div>
+                <div id="deal-list">
+                    <table class="table">
+                        <thead >
+                            <tr class="active">
+                                <th> 时间 </th>
+                                <th>交易类型</th>
+                                <th> 交易详情 </th>
+                                <th>金额</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="warning">
+                            <td>2015.01.22 13:55</td>
+                            <td> 充值</td>
+                            <td>交易内容</td>
+                            <td style="color: #6cc87f"> 500</td>
+                            <td> 无</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2015.01.22 13:55</td>
+                            <td> 充值</td>
+                            <td>交易内容</td>
+                            <td style="color: #6cc87f"> 500</td>
+                            <td> 无</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2015.01.22 13:55</td>
+                            <td> 充值</td>
+                            <td>交易内容</td>
+                            <td style="color: #6cc87f"> 500</td>
+                            <td> 无</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2015.01.22 13:55</td>
+                            <td> 充值事实上事实上身上试试</td>
+                            <td>交易内容</td>
+                            <td style="color: #6cc87f"> 500</td>
+                            <td> 无</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2015.01.22 13:55</td>
+                            <td> 充值</td>
+                            <td>交易内容</td>
+                            <td style="color: #6cc87f"> 500</td>
+                            <td> 无</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2015.01.22 13:55</td>
+                            <td> 充值</td>
+                            <td>交易内容</td>
+                            <td style="color: #6cc87f"> 500</td>
+                            <td> 无</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2015.01.22 13:55</td>
+                            <td> 充值</td>
+                            <td>交易内容</td>
+                            <td style="color: #6cc87f"> 500</td>
+                            <td> 无</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div id="pagination">
+                    <div class="holder" style="text-align: center;">
+                        <a class="jp-previous jp-disabled">←</a>
+                        <a class="jp-current">1</a>
+                        <span class="jp-hidden">...</span>
+                        <a>2</a>
+                        <a>3</a>
+                        <a>4</a>
+                        <a>5</a>
+                        <a class="jp-hidden">6</a>
+                        <a class="jp-hidden">7</a>
+                        <a class="jp-hidden">8</a>
+                        <a class="jp-hidden">9</a>
+                        <span>...</span>
+                        <a>10</a>
+                        <a class="jp-next">→</a>
+                    </div>
+                </div>
+            </div>
+
+<script type="text/javascript">
+    // $(function(){
+    //     $("div.holder").jPages({
+    //         containerID : "deal-list"
+    //     });
+    // });
+</script>

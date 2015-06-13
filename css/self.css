@@ -333,6 +333,10 @@ div .title{
 #investProList{
     background-color: #ffffff;
 }
+
+.trans{
+    margin-top: -15px;
+}
 /*******************************************转让市场**************************************************/
 #buyin table{
     margin-top: 20px;
