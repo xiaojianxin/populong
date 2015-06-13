@@ -63,7 +63,7 @@
                         }else if($id == '11'){
                             require('./message.php');
                         }else if ($id == '12') {
-                            require('./dealrecord.php');
+                            require('./platrank.php');
                         }else if($id == '13'){
                             require('./dealrecord.php');
                         }else if ($id == '14') {
