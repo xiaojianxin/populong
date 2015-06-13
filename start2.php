@@ -7,7 +7,7 @@
         <div class="row" id="input2area">
                 <div class="row">
                     <div class="btn-group">
-                        <div class="btn btn-success active" id="repay1">&nbsp;&nbsp;实物回报&nbsp;&nbsp;</div>
+                        <div class="btn btn-default active" id="repay1">&nbsp;&nbsp;实物回报&nbsp;&nbsp;</div>
                         <div class="btn btn-default" id="repay2">&nbsp;&nbsp;资金回报&nbsp;&nbsp;</div>
                     </div>
                 </div>
