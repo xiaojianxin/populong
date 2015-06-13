@@ -20,45 +20,46 @@ session_start();
       				<li><a href="./together.php">与你同行</a></li>
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <?php if(empty($_SESSION["token"])){
-            ?>
-                 
-				<li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
-                <li><a href="./regist_1.php">注册</a></li>
-                
-             <?PHP 
-             } 
-             else{
-             ?>
-               <li><img style=" margin-top:5px;height:40px;" src="./img/head.png" alt="" /></li>
-               <li>
-                        <a class="dropdown-toggle operator-name" data-toggle="dropdown"><?PHP echo $_SESSION["nickName"] ?></a>
-                          <ul class="dropdown-menu self-menu">
-                            <li>
-                              <a href="#self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
-                            </li>
-                            <li>
-                              <a href="#self.php"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
-                            </li>
-                            <li>
-                              <a href="#self.php?id=4"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
-                            </li>
-                            <li>
-                              <a href="#self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
-                            </li>
-                            <li>
-                              <a href="./action/do_logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
-                            </li>
+            <ul class="nav navbar-nav navbar-right">
+                <?php if(empty($_SESSION["token"])){
+                    ?>
 
+                    <li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
+                    <li><a href="./regist_1.php">注册</a></li>
+
+                <?PHP
+                }
+                else{
+                    ?>
+                    <li class="user-nav">
+                        <a class="dropdown-toggle operator-name" data-toggle="dropdown"><img src="./img/head.png" alt=""class="img-circle"/>lili</a>
+                        <ul class="dropdown-menu self-menu">
+                            <li>
+                                <a href="#self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
+                            </li>
+                            <li>
+                                <a href="#self.php"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
+                            </li>
+                            <li>
+                                <a href="#self.php?id=4"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
+                            </li>
+                            <li>
+                                <a href="#self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
+                            </li>
+                            <li>
+                                <a href="./action/do_logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
+                            </li>
                         </ul>
-               </li>
-            <?PHP
-            }
-            ?>
-                 
+                    </li>
 
-          </ul>
+
+                <?PHP
+                }
+                ?>
+
+
+            </ul>
+
           <form class='navbar-form navbar-right' action="">
                 <div class="btn btn-inverse">
                     <span class="glyphicon glyphicon-search" style="color: white"></span>

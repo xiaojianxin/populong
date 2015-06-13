@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511bb46d-633c-4f3a-8554-c83897bff10b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin-leftnav.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin-record.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/admin.css" afterPath="$PROJECT_DIR$/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin.html" afterPath="$PROJECT_DIR$/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/admin.js" afterPath="$PROJECT_DIR$/js/admin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/check.css" afterPath="$PROJECT_DIR$/css/check.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check.html" afterPath="$PROJECT_DIR$/check.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myinvest.php" afterPath="$PROJECT_DIR$/myinvest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/others.css" afterPath="$PROJECT_DIR$/css/others.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/others.js" afterPath="$PROJECT_DIR$/js/others.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/self.css" afterPath="$PROJECT_DIR$/css/self.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check.php" afterPath="$PROJECT_DIR$/check.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nav.php" afterPath="$PROJECT_DIR$/nav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/reset.css" afterPath="$PROJECT_DIR$/css/reset.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="populong.iws" />

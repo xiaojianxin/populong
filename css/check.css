@@ -1,44 +1,26 @@
-#main{background:#c7e3d0;width: 100%;height: 6260px;float: left;;}
-
-
-#maincontainer1{background: #eeeff3; width: 78%;height:2062px;margin-left: 11%;float: left;}
-
-
-#pro_message{background: #eeeff3; width: 100%;height:780px;float: left;}
-.contentname{background: #6cc77f;width: 96%;float: left;height: 30px;font-size: 20px;padding: 6px 0 0 4%;margin-top:40px;}
-.left  .special_li{margin-top: 260px;}
-.left  .special_li2{margin-top: 100px;}
-.center  .special_li{margin-top: 260px;}
-.center  .special_li2{margin-top: 100px;}
-
-
-.left{width: 12%;height:706px;float: left;margin-left: 10%;}
-.left li{width: 100%;height: 28px;float: left;margin-top: 4px;}
-.left h1{font-size: 20px;width: 100%; height: 38px;text-align: center;float: left;padding: 0 20px 0 0;}
-
-.center{ width: 50%;margin-right:2%;height:706px;float: left;}
-.center img{width: 600px;height: 260px;}
-.center li{ width: 100%;height: 28px;float: left;margin-top: 4px;font-size: 18px;}
-.center h1{width:100%;height: 24px;float: left;font-size: 18px;}
-.center a{font-size: 20px;width: 40%; height: 30px;text-align: center;float: left;color: red;}
-
-.return{background:  #eeeff3;width: 100%;height: 560px;float: left;}
-.return .left{height:560px;}
-.return .right{height:560px;}
-
-.more_value{background:  #eeeff3;width: 100%;height: 160px;float: left;}
-
-#maincontainer2{background:#eeeff3; width: 78%;height:262px;margin-left: 11%;float: left;}
-#maincontainer3{background:#eeeff3; width: 78%;height:362px;margin-left: 11%;float: left;}
-#maincontainer4{background: #eeeff3; width: 78%;height:362px;margin-left: 11%;float: left;}
-.excel{width: 80%;height: 50px;float: left;margin: 0 10%;}
-.excel h1{width: 18%;height: 40px;float: left;font-size: 18px;text-align: center;padding-top: 10px;border: 1px solid black;}
-
-
-
-
-
-
-#maincontainer5{background: #eeeff3; width: 78%;height:362px;margin-left: 11%;float: left;}
-#maincontainer6{background: #eeeff3; width: 78%;height:362px;margin-left: 11%;float: left;}
-#maincontainer7{background: #eeeff3; width: 78%;height:362px;margin-left: 11%;float: left;}
+#main{
+	font-family: '微软雅黑';
+	margin-bottom: 50px;
+}
+#maincontainer1{
+	margin-top: 100px;
+}
+.title{
+	margin-top: 20px;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	height: 50px;
+	background-color: #6cc77f;
+}
+.content{
+	width: 100%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+.content-detail {
+	margin-top: 30px;
+}
+.content-detail .col-xs-2{
+	padding-left: 80px;
+}

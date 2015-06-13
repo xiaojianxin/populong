@@ -13,6 +13,37 @@ html {overflow-y: scroll;}
 .container{
     min-width: 1080px;
 }
+.navbar-fixed-top .container{
+    min-width: 0px;
+}
+.operator-name{
+    margin-left: 10px;
+    color: white;
+}
+.self-menu{
+    background-color: #6cc77f;
+}
+.glyphicon{
+    color: white;
+}
+.user-nav a {
+margin-top:-5px;
+}
+.user-nav ul{
+    background-color: #6cc87f;
+}
+.user-nav ul li a:hover{
+    background-color: #282f28;
+    color:white;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover{
+    background-color: #1f1f1f!important;
+}
+.user-nav ul li a span{
+    line-height: 35px;
+}
 a{
     cursor:pointer;
 
@@ -31,6 +62,7 @@ a:link,a:visited,a:hover,a:active{
 a:focus{
     outline:0;
 }
+
 #login,#forgetPW,#inputCode,#sendCode{
 
     margin-top: 180px;
