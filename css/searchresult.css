@@ -7,3 +7,34 @@
     line-height: 30px;
     font-weight: bold;
 }
+#searchSuccess{
+    background-color: #6cc77f;
+}
+.onebox{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    margin-top:20px;
+}
+.onebox a img{
+    margin-top: 20px;
+    width: 100%;
+}
+.onebox h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+}
+.onebox a{
+    color: #666668;
+
+}
+.onebox h3{
+    font-size: 18px;
+}
+.onebox h4{
+    font-size: 16px;
+    color: #666668;
+    margin-top: 10px;
+}

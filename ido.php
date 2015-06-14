@@ -46,29 +46,29 @@ session_start();
                                <div class="center-block">
                                    <div class="row introduce_line">
                                        <div class="col-xs-4">
-                                           <span><img src="./img/fan_01.png" class="img-circle"> </span>
+                                           <span><a href="others.php"><img src="./img/fan_01.png" class="img-circle"></a>  </span>
                                        </div>
                                        <div class="col-xs-4">
-                                           <span><img src="./img/fan_02.png" class="img-circle"> </span>
+                                           <span><a href="others.php"><img src="./img/fan_02.png" class="img-circle"></a></span>
                                        </div>
                                        <div class="col-xs-4">
-                                           <span><img src="./img/fan_03.png" class="img-circle"> </span>
+                                           <span><a href="others.php"><img src="./img/fan_03.png" class="img-circle"></a> </span>
                                        </div>
                                    </div>
                                    <div class="row introduce_line">
                                        <div class="col-xs-4">
-                                           <span><img src="./img/fan_04.png" class="img-circle"> </span>
+                                           <span><a href="others.php"><img src="./img/fan_04.png" class="img-circle"></a>  </span>
                                        </div>
                                        <div class="col-xs-4">
-                                           <span><img src="./img/fan_05.png" class="img-circle"> </span>
+                                           <span><a href="others.php"><img src="./img/fan_05.png" class="img-circle"></a> </span>
                                        </div>
                                        <div class="col-xs-4">
-                                           <span><img src="./img/fan_06.png" class="img-circle"> </span>
+                                           <span><a href="others.php"><img src="./img/fan_06.png" class="img-circle"></a>  </span>
                                        </div>
                                    </div>
-                               <button class="btn">了解他们</button>
+                                   <a href="others.php"><button class="btn">了解他们</button></a>
 
-                           </div>
+                               </div>
                         </div>
                     </div>
                     <div class="col-xs-6">
@@ -81,7 +81,7 @@ session_start();
                                 <p>超现实体验<br/> 不仅仅只是图片上那么简单<br/> 我们致力于沉浸式虚拟现实的开发<br/>
                                     让你在现实世界就能体会到 <br/>属于异世界的独特体验。 </p>
                                 <div class="center-block">
-                                    <button class="btn">项目详情</button>
+                                    <a href="pro.php"> <button class="btn">项目详情</button></a>
                                 </div>
 
                             </div>
@@ -113,7 +113,7 @@ session_start();
                     <div class="col-xs-5">
                     </div>
                     <div class="col-xs-2 headerText">
-                        <span">另类摄影</span>
+                        <span>另类摄影</span>
                     </div>
                     <div class="col-xs-5">
                     </div>
@@ -125,16 +125,16 @@ session_start();
                     <div class="col-sm-6">
                         <div class="row">
                             <div class="col-xs-3">
-                                <span><img src="./img/fan_01.png" class="img-circle"> </span>
+                                <span><a href="others.php"><img src="./img/fan_01.png" class="img-circle"></a> </span>
                             </div>
                             <div class="col-xs-3">
-                                <span><img src="./img/fan_02.png" class="img-circle"> </span>
+                                <span><a href="others.php"><img src="./img/fan_02.png" class="img-circle"></a> </span>
                             </div>
                             <div class="col-xs-3">
-                                <span><img src="./img/fan_03.png" class="img-circle"> </span>
+                                <span><a href="others.php"><img src="./img/fan_03.png" class="img-circle"></a></span>
                             </div>
                             <div class="col-xs-3">
-                                <span><img src="./img/fan_03.png" class="img-circle"> </span>
+                                <span><a href="others.php"><img src="./img/fan_04.png" class="img-circle"></a> </span>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@ session_start();
                     <div class="col-xs-5" >
                     </div>
                     <div class="col-xs-2 headerText">
-                        <button class="btn">了解他们</button>
+                        <a href="others.php"><button class="btn">了解他们</button></a>
                     </div>
                     <div class="col-xs-5">
                     </div>
@@ -166,7 +166,7 @@ session_start();
                     <div class="col-xs-5" >
                     </div>
                     <div class="col-xs-2 headerText">
-                        <button class="btn">项目详情</button>
+                        <a href="pro.php"> <button class="btn">项目详情</button></a>
                     </div>
                     <div class="col-xs-5">
                     </div>
@@ -205,7 +205,7 @@ session_start();
                                     也是超级汽车能带给你的体验<br/>
                                     加入我们吧。</p>
                                 <div class="center-block">
-                                    <button class="btn">项目详情</button>
+                                    <a href="pro.php"> <button class="btn">项目详情</button></a>
                                 </div>
 
                             </div>
@@ -220,28 +220,28 @@ session_start();
                             <div class="center-block">
                                 <div class="row introduce_line">
                                     <div class="col-xs-4">
-                                        <span><img src="./img/fan_01.png" class="img-circle"> </span>
+                                        <span><a href="others.php"><img src="./img/fan_01.png" class="img-circle"></a>  </span>
                                     </div>
                                     <div class="col-xs-4">
-                                        <span><img src="./img/fan_02.png" class="img-circle"> </span>
+                                        <span><a href="others.php"><img src="./img/fan_02.png" class="img-circle"></a> </span>
                                     </div>
                                     <div class="col-xs-4">
-                                        <span><img src="./img/fan_03.png" class="img-circle"> </span>
+                                        <span><a href="others.php"><img src="./img/fan_03.png" class="img-circle"></a> </span>
                                     </div>
                                 </div>
                                 <div class="row introduce_line">
                                     <div class="col-xs-4">
-                                        <span><img src="./img/fan_04.png" class="img-circle"> </span>
+                                        <span><a href="others.php"><img src="./img/fan_04.png" class="img-circle"></a>  </span>
                                     </div>
                                     <div class="col-xs-4">
-                                        <span><img src="./img/fan_05.png" class="img-circle"> </span>
+                                        <span><a href="others.php"><img src="./img/fan_05.png" class="img-circle"></a> </span>
                                     </div>
                                     <div class="col-xs-4">
-                                        <span><img src="./img/fan_06.png" class="img-circle"> </span>
+                                        <span><a href="others.php"><img src="./img/fan_06.png" class="img-circle"></a> </span>
                                     </div>
                                 </div>
                                 <div style="height: 25px"></div>
-                                <button class="btn">了解他们</button>
+                               <a href="others.php"><button class="btn">了解他们</button></a>
 
                             </div>
                         </div>

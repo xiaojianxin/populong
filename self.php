@@ -60,7 +60,7 @@
                         }else if($id == '9'){
                             require('./safe.php');
                         }else if ($id == '10') {
-                            require('./cardmanage.php');
+                            require('./cardlist.php');
                         }else if($id == '11'){
                             require('./message.php');
                         }else if ($id == '12') {
