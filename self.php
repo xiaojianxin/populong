@@ -12,8 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <script src="./js/jquery-1.10.1.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/bootstrap-tooltip.js"></script>
-    <script src="./js//bootstrap-popover.js"></script>
+
     <script src="./js/self.js"></script>
 	<!--[if lt IE 9]>
 	  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -80,7 +79,7 @@
         </div>
     </div>
 
-            <?php require('./footer.php')?>
+    <?php require('./footer.php') ?>
 
 	</body>
 	</html>	

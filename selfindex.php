@@ -28,6 +28,5 @@
                         <div class="tab-pane" id="concern"><?php require('./concern.php') ?></div>
                     </div>
 
-<script>
 
 
