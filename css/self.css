@@ -781,5 +781,21 @@ div .edit-info{
     margin-top: 23px;
 
 }
+#deleteCardModal{
+    background-color: white;
+    width: 400px;
+    height: 300px;
 
+    position: fixed;
+
+
+    margin: 0px auto;
+
+    top: 200px; left: 0px;
+
+    bottom: 0px;
+
+    right: 0px;
+
+    z-index: 1050;
 }

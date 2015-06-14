@@ -54,9 +54,9 @@
 
                             <div class="divider"></div>
                             <div class="actionBtn">
-                                <div style="height: 8px;"></div>
+                                <div style="height: 14px;"></div>
                                 <span><a class="addcard">新增至银行卡</a></span>
-                                <div style="height: 6px;"></div>
+                                <div style="height: 15px;"></div>
                             </div>
                         </div>
                     </div>
