@@ -18,8 +18,9 @@ html {overflow-y: scroll;}
     min-width: 0px;
 }
 .navbar-fixed-top .container .navbar-right .btn-inverse{
-    margin-top: -5px;
+    margin-top: -8px;
     margin-left: -10px;
+    margin-bottom: -5px;
 }
 .operator-name{
     margin-left: 10px;

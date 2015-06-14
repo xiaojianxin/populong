@@ -60,7 +60,7 @@ session_start();
 
             </ul>
 
-          <form class='navbar-form navbar-right' action="" style="width: 20%;margin-left:-20px;">
+          <form class='navbar-form navbar-right' action="" style="width: 20%;">
                 <div class="btn btn-inverse" >
                     <a href="searchresult.php"><span class="glyphicon glyphicon-search" style="color: white;width:20%;"></span></a>
                     <input type="text" class="form-control" placeholder="Search..." style="width:80%;background-color: black;color: white">

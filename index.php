@@ -20,12 +20,8 @@
     <![endif]-->
 </head>
 <body>
-
-
-
 <?php require('./nav.php') ?>
 <div id="container">
-
 
 <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -33,9 +29,6 @@
         <div class="swiper-slide"><a href="pro.php"><img src="images/banner2.jpg" /></a></div>
         <div class="swiper-slide"><a href="pro.php"><img src="images/banner3.jpg" /></a></div>
         <div class="swiper-slide"><a href="pro.php"><img src="images/banner4.jpg" /></a></div>
-
-
-
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -48,10 +41,10 @@
 <div class="container">
 <div class="content-top">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-xs-4">
             <h1>热门项目</h1>
         </div>
-        <div class="col-sm-4 col-sm-offset-4 ">
+        <div class="col-xs-4 col-xs-offset-4 ">
             <div style="height:20px;"></div>
             <a href="hotpro.php" class="pull-right">查看更多>></a>
         </div>
@@ -59,12 +52,12 @@
 </div>
 <div class="content-main">
     <div class="row">
-        <div class="col-sm-7">
+        <div class="col-xs-7">
             <a href="./pro.php">
                 <img class="project"src="./img/index_01.png" alt="2" style="width:100%" />
             </a>
         </div>
-        <div class="col-sm-5">
+        <div class="col-xs-5">
             <h1>MICLE傲血顶级订制主机</h1>
             <h2><a href="others.php">由Lilith发起</a></h2>
             <p>英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</p>
@@ -141,7 +134,7 @@
 </div>
 <div class="content-foot">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-xs-4">
             <div class="onebox">
                 <a href="./pro.php">
                     <img class="project"src="./img/index_02.png" alt="2" />
@@ -200,7 +193,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-4">
             <div class="onebox">
                 <a href="./pro.php">
                     <img class="project"src="./img/index_03.png" alt="2" />
@@ -259,7 +252,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-4">
             <div class="onebox">
                 <a href="./pro.php">
                     <img class="project"src="./img/index_04.png" alt="2" />
@@ -326,10 +319,10 @@
     <div class="container">
         <div class="content-top">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <h1>热门投资</h1>
                 </div>
-                <div class="col-sm-4 col-sm-offset-4">
+                <div class="col-xs-4 col-xs-offset-4">
                     <div style="height:20px;"></div>
                     <a href="./hotinv.php" class="pull-right">查看更多>></a>
                 </div>
@@ -337,7 +330,7 @@
         </div>
         <div class="content-foot">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.php">
                             <img class="project"src="./img/index_05.png" alt="2" />
@@ -396,7 +389,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.php">
                             <img class="project"src="./img/index_06.png" alt="2" />
@@ -455,7 +448,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.php">
                             <img class="project"src="./img/index_07.png" alt="2" />
@@ -522,10 +515,10 @@
     <div class="container">
         <div class="content-top">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <h1>即将到期</h1>
                 </div>
-                <div class="col-sm-4 col-sm-offset-4">
+                <div class="col-xs-4 col-xs-offset-4">
                     <div style="height:20px;"></div>
                     <a href="./hottime.php" class="pull-right">查看更多>></a>
                 </div>
@@ -533,7 +526,7 @@
         </div>
         <div class="content-foot">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.html">
                             <img class="project"src="./img/index_08.png" alt="2" />
@@ -592,7 +585,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.html">
                             <img class="project"src="./img/index_09.png" alt="2" />
@@ -651,7 +644,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.html">
                             <img class="project"src="./img/index_10.png" alt="2" />
@@ -718,10 +711,10 @@
     <div class="container">
         <div class="content-top">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <h1>热门路演</h1>
                 </div>
-                <div class="col-sm-4 col-sm-offset-4">
+                <div class="col-xs-4 col-xs-offset-4">
                     <div style="height:20px;"></div>
                     <a href="./hotvid.php" class="pull-right">查看更多>></a>
                 </div>
@@ -729,7 +722,7 @@
         </div>
         <div class="content-foot">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.php">
                             <img class="project"src="./img/index_03.png" alt="2" />
@@ -788,7 +781,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.php">
                             <img class="project"src="./img/index_06.png" alt="2" />
@@ -847,7 +840,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-xs-4">
                     <div class="onebox">
                         <a href="./pro.php">
                             <img class="project"src="./img/index_09.png" alt="2" />
@@ -914,19 +907,19 @@
 <div id="footer" >
     <div class="container">
         <div class="row">
-            <div class="col-sm-1 col-sm-offset-4">
+            <div class="col-xs-1 col-xs-offset-4">
                 <span>关于我们</span>
                 <span class="pull-right">|</span>
             </div>
-            <div class="col-sm-1">
+            <div class="col-xs-1">
                 <span>联系我们</span>
                 <span class="pull-right">|</span>
             </div>
-            <div class="col-sm-1">
+            <div class="col-xs-1">
                 <span>帮助中心</span>
                 <span class="pull-right">|</span>
             </div>
-            <div class="col-sm-1">
+            <div class="col-xs-1">
                 <span>服务规范</span>
             </div>
         </div>
