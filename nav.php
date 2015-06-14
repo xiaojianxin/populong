@@ -38,7 +38,7 @@ session_start();
                                 <a href="./self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
                             </li>
                             <li>
-                                <a href="./self.php?id=1"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
+                                <a href="./self.php?id=0"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
                             </li>
                             <li>
                                 <a href="./self.php?id=5"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
