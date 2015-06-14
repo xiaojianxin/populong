@@ -13,7 +13,7 @@
                                             <th>版面位置</th>
                                             <th>图片地址</th>
                                             <th>链接地址</th>
-                                            <th> </th>
+                                            <th> 操作</th>
                                             <th> </th>
                                         </tr>
                                         </thead>
@@ -33,7 +33,7 @@
 
                                             <td class="proMoney"> index.php</td>
                                             <td class="proTime">
-                                              
+                                              <a href="#" class='btn btn-success'> 修改</a>
                                             </td>
 
                                             <td> </td>
@@ -55,7 +55,7 @@
 
                                             <td class="proMoney"> index.php</td>
                                             <td class="proTime">
-                                              
+                                              <a href="#" class='btn btn-success'> 修改</a>
                                             </td>
 
                                             <td> </td>
@@ -77,7 +77,7 @@
 
                                             <td class="proMoney"> index.php</td>
                                             <td class="proTime">
-                                              
+                                              <a href="#" class='btn btn-success'> 修改</a>
                                             </td>
 
                                             <td> </td>

@@ -5,8 +5,6 @@
 	margin-top: 5px;
 	height: 50px;
 	float: right;
-	
-
 }
 #leftnav{
     margin-top: 53px;
@@ -61,7 +59,13 @@
     width: 100%;
     margin-left: -30px;
 }
-
+#main{
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+body{
+    background-color: #eeeff3;
+}
 
 
 /*个人中心 粉丝页面css*/
@@ -474,6 +478,7 @@ div .title{
   background-color: #ffffff;
   font-size: 15px;
   font-weight: bold;
+  padding-bottom: 30px;
   }
 
 .text-green{
@@ -590,4 +595,46 @@ div .edit-info{
 }
 #startRank table thead .active th{
     background-color: #dbdbdb;
+}
+
+/*******************************************安全认证**************************************************/
+.safe{
+    background-color: #ffffff;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+#safe-title{
+    font-size: 18px;
+    text-align: center;
+    width: 10%;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    border-bottom: 2px solid #6cc77f;
+}
+#safe-content{
+    margin-top: 50px;
+}
+.safe-content-detail{
+    min-height: 50px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.safe-content-detail .glyphicon{
+    color: #3399cc;
+    font-size: 30px;
+}
+.content-title{
+    font-weight: bold;
+    font-size: 18px;
+}
+.safe-content-detail a{
+    color:blue;
+}
+.safe-content-detail .warning{
+    color: red;
+}
+.edit{
+    margin-top: 30px;
 }

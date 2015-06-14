@@ -56,7 +56,7 @@
                    <span class="titlemargin"><img src="./img/star.png" class="stars"> </span>
                </div>
                <div class="col-xs-1 col-xs-offset-2">
-                   <div class="btn btn-success " style="margin-top: -30px;"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></div>
+                   <div class="btn btn-success collection" style="margin-top: -30px;"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></div>
 
                </div>
 
@@ -432,6 +432,9 @@
             $(this).height( height < 1200 ? 1200 : height );
             var width=$("#L-third").width;
             $(this).width(width);
+        });
+        $('.collection').click(function(){
+            $(this).html('<span class="glyphicon glyphicon-heart-empty">&nbsp已收藏</span>')
         });
     });
 

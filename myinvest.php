@@ -49,7 +49,7 @@
                                             </td>
 
                                             <td> 
-                                                <span class='status'>筹资中</span>
+                                                <span class='status'>进行中</span>
                                                 <div class='trans'> <a href='./inittransfer.php'>转让</a></div>                  
                                             </td>
 
@@ -76,7 +76,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 筹资中</td>
+                                            <td> 
+                                                 <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
                                         <tr class="warning">
@@ -100,7 +103,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 筹资中</td>
+                                            <td> 
+                                                 <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
 
@@ -141,7 +147,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 筹资中</td>
+                                            <td> 
+                                                <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
 
@@ -166,7 +175,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 筹资中</td>
+                                            <td> 
+                                              <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
                                         <tr class="warning">
@@ -190,7 +202,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 筹资中</td>
+                                            <td> 
+                                              <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
 
@@ -231,7 +246,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 筹资中</td>
+                                            <td> 
+                                                <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
 
@@ -256,7 +274,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 筹资中</td>
+                                            <td> 
+                                                <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
                                         <tr class="warning">
@@ -280,7 +301,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 筹资中</td>
+                                            <td> 
+                                                <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
 

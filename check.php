@@ -135,7 +135,7 @@
 					<div class='content'>
 						<div class="content-detail row">
 							<div class='col-xs-2'>昵称:</div>
-							<div class='col-xs-4'>孙悟空</div>
+							<div class='col-xs-4'><a  href="./others.php">孙悟空</a></div>
 						</div>
 						<div class="content-detail row">
 							<div class='col-xs-2'>真实姓名:</div>

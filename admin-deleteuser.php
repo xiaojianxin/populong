@@ -33,7 +33,7 @@
 
                                             <td class="proMoney"> 封号</td>
                                             <td class="proTime">
-                                               
+                                               <a href="#" class='btn btn-success'> 解封</a>
                                             </td>
 
                                             <td> </td>
@@ -54,7 +54,7 @@
 
                                             <td class="proMoney"> 封号</td>
                                             <td class="proTime">
-                                               
+                                                <a href="#" class='btn btn-success'> 解封</a>
                                             </td>
 
                                             <td> </td>
@@ -76,7 +76,7 @@
 
                                             <td class="proMoney"> 封号</td>
                                             <td class="proTime">
-                                               
+                                                <a href="#" class='btn btn-success'> 解封</a>
                                             </td>
 
                                             <td> </td>

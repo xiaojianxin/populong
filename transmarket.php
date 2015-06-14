@@ -44,7 +44,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 审核中</td>
+                                            <td> 
+                                                <span class='status'>进行中</span>
+                                                <div class='trans'> <a href='./inittransfer.php'>转让</a></div>
+                                            </td>
 
                                         </tr>
 

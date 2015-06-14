@@ -25,7 +25,7 @@
               <div class="accordion-group">
                   <div class="accordion-heading">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar"
-                         href="#invest-manage">发布中项目</a>
+                         href="#invest-manage">筹资中项目</a>
                   </div>
                   <div id="invest-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
@@ -39,7 +39,7 @@
               <div class="accordion-group">
                   <div class="accordion-heading">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar"
-                         href="#project-manage">发布后项目</a>
+                         href="#project-manage">进行中项目</a>
                   </div>
                   <div id="project-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">

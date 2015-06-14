@@ -71,7 +71,7 @@
                           <a id="8"> 个人资料</a>
                       </div>
                       <div class="accordion-inner">
-                          <a id="9"> 充值</a>
+                          <a id="9"> 安全认证</a>
                       </div>
                       <div class="accordion-inner">
                           <a id="10"> 银行卡管理</a>

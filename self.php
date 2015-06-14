@@ -56,7 +56,7 @@
                         }else if($id == '8'){
                             require('./selfinformation.php');
                         }else if($id == '9'){
-                            require('./dealrecord.php');
+                            require('./safe.php');
                         }else if ($id == '10') {
                             require('./platrank.php');
                         }else if($id == '11'){

@@ -15,6 +15,21 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
+                                <span>模块选择：</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <a class="btn btn-success select-ban" id="1"> 青年筑梦</a>
+                                <a class="btn btn-success select-ban" id="2" > 我做你投</a>
+                                <a class="btn btn-success select-ban" id="3"> 与你同行</a>
+                            </div>
+                        </div>
+                        <div style="height:20px;">
+                            <input type="checkbox" value="1" id="checkboxInput1" name="checkbox" style="display: none;"/>
+                            <input type="checkbox" value="1" id="checkboxInput2" name="checkbox" style="display: none;"/>
+                            <input type="checkbox" value="1" id="checkboxInput3" name="checkbox" style="display: none;"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
                                 <span>筹集资金：</span>
                             </div>
                             <div class="col-xs-9">
@@ -153,6 +168,12 @@
             {
                 alert("文件:" + fileObj.name + " 上传失败");
             }
+        });
+
+        $('.select-ban').click(function(){
+            var id = $(this).attr('id');
+
+            return $('#checkboxInput'+id).click();
         });
 
     });
