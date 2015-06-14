@@ -730,10 +730,52 @@ div .edit-info{
     margin-top: 50px;
     margin-bottom: 100px;
 }
-#cardmanage .cardContent  .actionGroup .btn{
+#cardmanage .cardContent  .actionGroup .btn {
     line-height: 40px;
     width: 30%;
     font-size: 18px;
     margin-left: 10px;
+}
+
+/*******************************************银行卡列表**************************************************/
+#cardlist .cardTitle h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+#cardlist .listContent{
+    margin-top: 20px;
+}
+#cardlist .listContent .bankpic img{
+    width: 100%;
+}
+#cardlist .listContent .bankdetail .banknumber{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+#cardlist .listContent .bankdetail .actionBtn .btn{
+     width: 25%;
+     margin-left: 15%;
+     background-color: transparent;
+     color:#66cc66;
+ }
+
+#cardlist .listContent .bankdetail .actionBtn span a{
+
+
+    background-color: transparent;
+    color:#66cc66;
+    margin-left: 80px;
+
+}
+#cardlist .listContent .bankpic span{
+    width: 100%;
+    text-align: center;
+    color: #999999;
+    font-size: 52px;
+    margin-top: 23px;
+
+}
 
 }
