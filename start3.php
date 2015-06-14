@@ -117,17 +117,14 @@
                            <span>收费标准：200元</span>
                        </div>
                    </div>
-               </div>
+                </div>
                 <div style="height: 40px;"></div>
                 <div class="row">
-                    <div class="col-xs-8 actionbutton">
+                    <div class="col-xs-8 actionbutton" >
                         <span class="btn btn-success" id="previousStep3">上一步</span>
                         <input type='submit' class="btn btn-success" id="nextStep3" value='下一步'/>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
-
-
-</body>
-</html>

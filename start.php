@@ -11,8 +11,9 @@ session_start();
     <link rel="stylesheet"  href="./css/reset.css"/>
    <link rel="stylesheet"  href="./css/uploadify.css"/>
     <link rel="stylesheet" href="./css/start.css"/>
+    <link rel="stylesheet" href="./css/footer.css"/>
     <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
- <script type="text/javascript" src="./js/start.js"></script>
+    <script type="text/javascript" src="./js/start.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
 
@@ -27,7 +28,7 @@ session_start();
           <div class="hidden1" id='start_2'>
                 <?php require('./start2.php') ?>
         </div>
-          <div class="hidden2" id='start_3'>
+          <div class="hidden2"  id='start_3'>
                 <?php require('./start3.php') ?>
         </div>
         <div class="hidden" id='start_4'>
@@ -35,7 +36,8 @@ session_start();
         </div>
 
         </form> 
-
+        <?php  require('./footer.php'); ?>
+    
 
 <script type="text/javascript">
     $('#nextstep').click(function(e){

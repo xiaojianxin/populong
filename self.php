@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet"  href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/self.css">
+     <link rel="stylesheet" type="text/css" href="./css/uploadify.css"/>
     <link rel="stylesheet" type="text/css" href="./css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="./css/jPages.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <script src="./js/jquery-1.10.1.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-
+    
+    <script src="./bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
     <script src="./js/self.js"></script>
 	<!--[if lt IE 9]>
 	  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>

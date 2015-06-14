@@ -1,5 +1,5 @@
 
-<div id="container" style="background-color: #eeeff3;">
+<div id="container" style="background-color: #eeeff3; ">
     <div class="container">
         <div class="row startpic">
             <img src="./img/start_02.png">
@@ -385,15 +385,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-8 actionbutton">
+                    <div class="col-xs-8 actionbutton" style="margin-bottom:30px;">
                         <span class="btn btn-success" id="previousStep_prev">上一步</span></a>
                         <span class="btn btn-success" id="nextStep_next">下一步</span>
 
                     </div>
                 </div>
-                </div>
               </div>
             </div>
+          </div>
 <script type="text/javascript">
     $(function() {
 //        if($("#repay1").hasClass("active"))
@@ -458,7 +458,7 @@
             'onUploadSuccess': function(file, data, response) {
                 $('#showPic2').attr("src",data);//上传图片的服务器地址
 
-//                $('#photo').attr("value",response);
+
             },
             'onError'          : function(event, queueID, fileObj)
             {

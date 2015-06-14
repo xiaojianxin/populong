@@ -117,6 +117,31 @@ $('.change-status').click(function(){
     $(this).html($(this).parent().parent().prev().children(':eq(0)').html());  
    $(this).parent().parent().prev().children(':eq(0)').html(text);
 
-});
+}); 
+
+        $('#file_pic').uploadify({
+
+           
+            'swf'  : 'uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+            'uploader'    : '/file',       //指定服务器端上传处理文件，默认‘upload.php’
+            'auto'      : true,               //选定文件后是否自动上传，默认false
+            'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
+            'multi'     : false,               //是否允许同时上传多文件，默认false
+            'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
+            fileSizeLimit:'2MB',
+            'fileObjName': 'file',
+            'onUploadSuccess': function(file, data, response) {
+                $('#self-logo').attr("src",data);//上传图片的服务器地址
+                $('#self-logo').show();
+                $('#photo').attr("value",response);
+            },
+            'onError'          : function(event, queueID, fileObj)
+            {
+                alert("文件:" + fileObj.name + " 上传失败");
+            }
+        });
+
+
+
 
 });

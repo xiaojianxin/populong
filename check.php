@@ -202,7 +202,214 @@
 						</form>	
 					</div>
 				</div>
-				
+				<div id="maincontainer4">
+					<div class='title'>4.筹资情况</div>
+					<div class='content'>
+						<div class="content-detail">
+							 <table class="table">
+                                        <thead >
+                                        <tr class="active">
+                                            <th> 投资者 </th>
+                                            <th>投资时间</th>
+                                            <th>投资金额</th>
+                                            <th>投资者账号</th>
+                                            <th>退回投资</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="warning">
+                                            <td class="proName">
+                                               孙悟空
+                                            </td>
+                                            <td class="proTime">2015.01.22 13:55</td>
+
+                                            <td class="proMoney"> 2000</td>
+                                            <td class="proState">
+                                                1234567
+                                            </td>
+
+                                            <td> 
+                                                <a class="btn btn-success">退回投资</a>                  
+                                            </td>
+
+                                        </tr>
+
+                                        <tr class="active">
+                                            <th> 投资者 </th>
+                                            <th>投资时间</th>
+                                            <th>投资金额</th>
+                                            <th>投资者账号</th>
+                                            <th>退回投资</th>
+                                        </tr>
+                                        </thead>
+                            
+                                        <tr class="warning">
+                                            <td class="proName">
+                                               孙悟空
+                                            </td>
+                                            <td class="proTime">2015.01.22 13:55</td>
+
+                                            <td class="proMoney"> 2000</td>
+                                            <td class="proState">
+                                                1234567
+                                            </td>
+
+                                            <td> 
+                                                <a class="btn btn-success">退回投资</a>                  
+                                            </td>
+
+                                        </tr>
+                                        <tr class="active">
+                                            <th> 投资者 </th>
+                                            <th>投资时间</th>
+                                            <th>投资金额</th>
+                                            <th>投资者账号</th>
+                                            <th>退回投资</th>
+                                        </tr>
+                                        </thead>
+                                        
+                                        <tr class="warning">
+                                            <td class="proName">
+                                               孙悟空
+                                            </td>
+                                            <td class="proTime">2015.01.22 13:55</td>
+
+                                            <td class="proMoney"> 2000</td>
+                                            <td class="proState">
+                                                1234567
+                                            </td>
+
+                                            <td> 
+                                                <a class="btn btn-success">退回投资</a>                  
+                                            </td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+						</div>
+						<div class='content-detail row'>
+							<div class='col-xs-8'><a class='btn btn-success' style="float:right;">筹资成功</a></div>
+							<div class='col-xs-4'><a class='btn btn-success'>筹资失败</a></div>
+						</div>
+					</div>
+					<div id="maincontainer5">
+						<div class='title'>5.项目跟进</div>
+						<div class='content'>
+							<div class="content-detail row">
+								<div class='col-xs-2'>项目跟进:</div>
+								<div class='col-xs-4'>本平台投资行为责任用户自理</div>
+							</div>	
+							<div class="content-detail row">
+								<div class='col-xs-2'>修改:</div>
+								<div class='col-xs-3'><input type="text" class="form-control" /></div>
+							</div>
+							<div class="content-detail row">
+								<div class='col-xs-2'></div>
+								<div class='col-xs-4'><a class='btn btn-success'>发放投资</a></div>
+							</div>		
+						</div>
+					</div>
+					<div id="maincontainer6">
+						<div class='title'>6.返回收益</div>
+						<div class='content'>
+							<div class="content-detail">
+							 <table class="table">
+                                        <thead >
+                                        <tr class="active">
+                                            <th> 投资者 </th>
+                                            <th>投资时间</th>
+                                            <th>投资金额</th>
+                                            <th>投资者账号</th>
+                                            <th>退回投资</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="warning">
+                                            <td class="proName">
+                                               孙悟空
+                                            </td>
+                                            <td class="proTime">2015.01.22 13:55</td>
+
+                                            <td class="proMoney"> 2000</td>
+                                            <td class="proState">
+                                                1234567
+                                            </td>
+
+                                            <td> 
+                                                <a class="btn btn-success">退回投资</a>                  
+                                            </td>
+
+                                        </tr>
+
+                                        <tr class="active">
+                                            <th> 投资者 </th>
+                                            <th>投资时间</th>
+                                            <th>投资金额</th>
+                                            <th>投资者账号</th>
+                                            <th>退回投资</th>
+                                        </tr>
+                                        </thead>
+                                        
+                                        <tr class="warning">
+                                            <td class="proName">
+                                               孙悟空
+                                            </td>
+                                            <td class="proTime">2015.01.22 13:55</td>
+
+                                            <td class="proMoney"> 2000</td>
+                                            <td class="proState">
+                                                1234567
+                                            </td>
+
+                                            <td> 
+                                                <a class="btn btn-success">退回投资</a>                  
+                                            </td>
+
+                                        </tr>
+                                        <tr class="active">
+                                            <th> 投资者 </th>
+                                            <th>投资时间</th>
+                                            <th>投资金额</th>
+                                            <th>投资者账号</th>
+                                            <th>退回投资</th>
+                                        </tr>
+                                        </thead>
+                                      
+                                        <tr class="warning">
+                                            <td class="proName">
+                                               孙悟空
+                                            </td>
+                                            <td class="proTime">2015.01.22 13:55</td>
+
+                                            <td class="proMoney"> 2000</td>
+                                            <td class="proState">
+                                                1234567
+                                            </td>
+
+                                            <td> 
+                                                <a class="btn btn-success">退回投资</a>                  
+                                            </td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+							</div>
+						<div class='content-detail row'>
+							<div class='col-xs-7'><a class='btn btn-success' style="float:right;width:200px;">返回收益</a></div>
+						</div>
+					</div>
+				</div>
+				<div id="maincontainer7">
+					<div class='title'>7.项目结束</div>
+					<div class='content'>
+						<div class='content-detail row'>
+							<div class='col-xs-7'><a class='btn btn-success' style="float:right;width:200px;">项目结束</a></div>
+						</div>	
+					</div>
+				</div>
+			</div>
 		</div>
 		<?php  require('./footer.php') ?>
 	</div>

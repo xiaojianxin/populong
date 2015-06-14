@@ -24,9 +24,9 @@
                             </div>
                         </div>
                         <div style="height:20px;">
-                            <input type="checkbox" value="1" id="checkboxInput1" name="checkbox" style="display: none;"/>
-                            <input type="checkbox" value="1" id="checkboxInput2" name="checkbox" style="display: none;"/>
-                            <input type="checkbox" value="1" id="checkboxInput3" name="checkbox" style="display: none;"/>
+                            <input type="radio" value="1" id="checkboxInput1" name="checkbox" style="display: none;"/>
+                            <input type="radio" value="1" id="checkboxInput2" name="checkbox" style="display: none;"/>
+                            <input type="radio" value="1" id="checkboxInput3" name="checkbox" style="display: none;"/>
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
@@ -162,7 +162,6 @@
             'onUploadSuccess': function(file, data, response) {
                 $('#showUploadImg').attr("src",data);//上传图片的服务器地址
                 $('#showUploadImg').show();
-                $('#photo').attr("value",response);
             },
             'onError'          : function(event, queueID, fileObj)
             {
@@ -172,7 +171,8 @@
 
         $('.select-ban').click(function(){
             var id = $(this).attr('id');
-
+            $('.active').removeClass('active');
+            $(this).addClass('active');
             return $('#checkboxInput'+id).click();
         });
 

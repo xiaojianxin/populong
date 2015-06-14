@@ -21,9 +21,9 @@
                                     <table class="table">
                                         <thead >
                                         <tr class="active">
-                                            <th> 项目 </th>
-                                            <th>买入时机</th>
-                                            <th>买入金额</th>
+                                            <th>项目名称 </th>
+                                            <th>发起时间</th>
+                                            <th>返益时间</th>
                                             <th>进度</th>
                                             <th>状态</th>
                                         </tr>
@@ -42,7 +42,7 @@
                                             </td>
                                             <td class="proTime">2015.01.22 13:55</td>
 
-                                            <td class="proMoney"> 2000</td>
+                                            <td class="proMoney"> 2015.01.22 13:55</td>
                                             <td class="proState">
                                                 <div style="height: 10px"></div>
                                                 <h1>100%</h1>
@@ -50,7 +50,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 审核中</td>
+                                            <td> 
+                                                <span class='status'>筹资成功</span>
+                                                <div class='trans'> <a href='./invest.php'>返回收益</a></div>
+                                            </td>
 
                                         </tr>
 
@@ -75,7 +78,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 已通过</td>
+                                            <td>
+                                                <span class='status'>筹资成功</span>
+                                                <div class='trans'> <a href='./invest.php'>返回收益</a></div>
+                                            </td>
 
                                         </tr>
                                         <tr class="warning">
@@ -99,7 +105,10 @@
                                                 <h1>已完成筹资</h1>
                                             </td>
 
-                                            <td> 已通过</td>
+                                            <td>
+                                                <span class='status'>筹资成功</span>
+                                                <div class='trans'> <a href='./invest.php'>返回收益</a></div>
+                                            </td>
 
                                         </tr>
 

@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511bb46d-633c-4f3a-8554-c83897bff10b" name="Default" comment="">
-      <change type="DELETED" beforePath="F:\wamp\wamp\www\populong\js\bootstrap-tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\wamp\wamp\www\populong\action\.do_login.php.swp" afterPath="" />
+      <change type="DELETED" beforePath="F:\wamp\wamp\www\populong\action\do_apply.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\wamp\wamp\www\populong\action\do_login.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\wamp\wamp\www\populong\action\do_logout.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\wamp\wamp\www\populong\action\do_regist.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\wamp\wamp\www\populong\action\test_pay.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\wamp\wamp\www\populong\action\test_query.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check.php" afterPath="$PROJECT_DIR$/check.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/self.css" afterPath="$PROJECT_DIR$/css/self.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/self.js" afterPath="$PROJECT_DIR$/js/self.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/self.php" afterPath="$PROJECT_DIR$/self.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selfindex.php" afterPath="$PROJECT_DIR$/selfindex.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selfinformation.php" afterPath="$PROJECT_DIR$/selfinformation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.php" afterPath="$PROJECT_DIR$/start.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start1.php" afterPath="$PROJECT_DIR$/start1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start2.php" afterPath="$PROJECT_DIR$/start2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start3.php" afterPath="$PROJECT_DIR$/start3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start4.php" afterPath="$PROJECT_DIR$/start4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startpro.php" afterPath="$PROJECT_DIR$/startpro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="populong.iws" />
@@ -32,7 +47,7 @@
       <file leaf-file-name="start1.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/start1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="23" selection-start="6748" selection-end="6748" vertical-scroll-proportion="0.0" vertical-offset="3550" max-vertical-offset="4200">
+            <state line="170" column="0" selection-start="7952" selection-end="7952" vertical-scroll-proportion="-5.0" vertical-offset="4100" max-vertical-offset="4725">
               <folding />
             </state>
           </provider>
@@ -140,11 +155,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="self.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/self.php">
+      <file leaf-file-name="check.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/check.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="48" selection-start="2631" selection-end="2631" vertical-scroll-proportion="4.5239615" vertical-offset="34" max-vertical-offset="2250">
-              <folding />
+            <state line="244" column="41" selection-start="9781" selection-end="9781" vertical-scroll-proportion="0.33226836" vertical-offset="5996" max-vertical-offset="10550">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#12;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#18;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#3;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,6 +197,7 @@
         <option value="$PROJECT_DIR$/css/admin.css" />
         <option value="$PROJECT_DIR$/css/inittransfer.css" />
         <option value="$PROJECT_DIR$/self.php" />
+        <option value="$PROJECT_DIR$/check.php" />
       </list>
     </option>
   </component>
@@ -210,7 +234,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,6 +314,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,8 +353,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -339,7 +363,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -347,11 +371,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -693,7 +717,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/start1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="23" selection-start="6748" selection-end="6748" vertical-scroll-proportion="0.0" vertical-offset="3550" max-vertical-offset="4200">
+        <state line="170" column="0" selection-start="7952" selection-end="7952" vertical-scroll-proportion="-5.0" vertical-offset="4100" max-vertical-offset="4725">
           <folding />
         </state>
       </provider>
@@ -784,8 +808,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/self.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="48" selection-start="2631" selection-end="2631" vertical-scroll-proportion="4.5239615" vertical-offset="34" max-vertical-offset="2250">
+        <state line="22" column="7" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.798722" vertical-offset="300" max-vertical-offset="2300">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/check.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="244" column="41" selection-start="9781" selection-end="9781" vertical-scroll-proportion="0.33226836" vertical-offset="5996" max-vertical-offset="10550">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#12;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#18;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#3;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

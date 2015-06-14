@@ -22,11 +22,10 @@
                         </div>
                     </div>
                 </div>
-
-                    <div class="tab-content">
+                    
+                    <div class="tab-content self-tab-content">
                         <div class="tab-pane active" id="fans"><?php require('./fans.php') ?></div>
                         <div class="tab-pane" id="concern"><?php require('./concern.php') ?></div>
                     </div>
-
 
 
