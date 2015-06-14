@@ -35,12 +35,12 @@ session_start();
                     <div class="swiper-slide">
                         <div class="row">
                             <div class="col-sm-7 bigpic">
-                                <img src="img/index_01.png" />
+                                <a href="pro.php"><img src="img/index_01.png" /></a>
                             </div>
                             <div class="col-sm-5">
                                 <div class="content-main">
                                     <h1>MICLE傲血顶级订制主机</h1>
-                                    <h2><a href="0">由Lilith发起</a></h2>
+                                    <h2><a href="others.php">由Lilith发起</a></h2>
                                     <p>英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</p>
                                     <div style="height:20px;"></div>
                                     <div id="right_center">
@@ -118,12 +118,12 @@ session_start();
                     <div class="swiper-slide">
                         <div class="row">
                             <div class="col-sm-7 bigpic">
-                                <img src="img/index_02.png" />
+                                <a href="pro.php"> <img src="img/index_02.png" /></a>
                             </div>
                             <div class="col-sm-5">
                                 <div class="content-main">
                                     <h1>MICLE傲血顶级订制主机</h1>
-                                    <h2><a href="0">由Lilith发起</a></h2>
+                                    <h2><a href="others.php">由Lilith发起</a></h2>
                                     <p>英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</p>
                                     <div style="height:20px;"></div>
                                     <div id="right_center">
@@ -237,8 +237,8 @@ session_start();
                             </li>
 
                         </ul>
-                    </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span>推荐关注</span>
+                    </span>
+
                     <div >
 
 
