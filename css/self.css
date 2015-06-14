@@ -635,6 +635,7 @@ div .edit-info{
 .safe-content-detail .warning{
     color: red;
 }
+
 .safe .edit{
     margin-top: 20px;
     width: 100%;
@@ -659,4 +660,80 @@ div .edit-info{
 .safe .refresh{
     float: left;
     margin-left: 5px;
+}
+/*******************************************绑定银行卡**************************************************/
+#cardmanage .cardTitle h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+#cardmanage .cardContent{
+    margin-top: 20px;
+}
+#cardmanage .cardContent .cardleft span{
+    float: right;
+    font-size: 18px;
+    line-height: 60px;
+}
+#cardmanage .cardContent .cardmiddle span{
+
+    font-size: 18px;
+    line-height: 60px;
+}
+#cardmanage .cardContent .cardright span{
+
+    font-size: 18px;
+    line-height: 60px;
+}
+#cardmanage .cardContent .cardmiddle span input{
+
+
+    height: 40px;
+    margin-top: 12px;
+}
+
+#cardmanage .cardContent .cardmiddle span select{
+
+
+    height: 40px;
+    margin-top: 12px;
+}
+#cardmanage .cardContent .cardright .btn{
+
+
+    width: 100%;
+    line-height: 30px;
+    margin-top: 10px;
+
+}
+#cardmanage .cardContent .text-red{
+    color:#ff5a3f;
+}
+#cardmanage .cardContent .cardmiddle2 input{
+
+
+    height: 40px;
+    margin-top: 12px;
+    width: 50%;
+    float: left;
+}
+#cardmanage .cardContent .cardmiddle2 .btn{
+    float: left;
+    width: 35%;
+    margin-left: 5%;
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 16px;
+}
+#cardmanage .cardContent  .actionGroup{
+    width: 60%;
+    margin-left: 17%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+#cardmanage .cardContent  .actionGroup .btn{
+    line-height: 40px;
+    width: 30%;
+    font-size: 18px;
+    margin-left: 10px;
+
 }
