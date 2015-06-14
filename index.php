@@ -30,12 +30,12 @@
 
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/44.jpg" /></div>
-        <div class="swiper-slide"><img src="images/55.jpg" /></div>
-        <div class="swiper-slide"><img src="images/66.jpg" /></div>
-        <div class="swiper-slide"><img src="images/77.jpg" /></div>
-        <div class="swiper-slide"><img src="images/88.jpg" /></div>
-        <div class="swiper-slide"><img src="images/zz.jpg" /></div>
+        <div class="swiper-slide"><a href="pro.php"><img src="images/banner1.jpg" /></a></div>
+        <div class="swiper-slide"><a href="pro.php"><img src="images/banner2.jpg" /></a></div>
+        <div class="swiper-slide"><a href="pro.php"><img src="images/banner3.jpg" /></a></div>
+        <div class="swiper-slide"><a href="pro.php"><img src="images/banner4.jpg" /></a></div>
+
+
 
     </div>
     <!-- Add Pagination -->
@@ -67,7 +67,7 @@
         </div>
         <div class="col-sm-5">
             <h1>MICLE傲血顶级订制主机</h1>
-            <h2><a href="#">由Lilith发起</a></h2>
+            <h2><a href="others.php">由Lilith发起</a></h2>
             <p>英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</p>
             <div style="height:20px;"></div>
             <div id="right_center">
