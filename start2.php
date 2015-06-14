@@ -1,5 +1,5 @@
 
-<div id="container" style="background-color: #eeeff3; ">
+<div id="container" style="background-color: #eeeff3;">
     <div class="container">
         <div class="row startpic">
             <img src="./img/start_02.png">
@@ -25,7 +25,7 @@
                                <span>支持金额：</span>
                            </div>
                            <div class="col-xs-9">
-                               <input class="form-control" placeholder="不超过20个字"/>
+                               <input name="inputAmountPer" class="form-control" placeholder="不超过20个字"/>
                                <span class="text">元</span>
                            </div>
                        </div>
@@ -34,7 +34,7 @@
                                <span>限定名额：</span>
                            </div>
                            <div class="col-xs-9">
-                               <span><input class="form-control" placeholder="不少于10000"/></span>
+                               <span><input name="inputQuota" class="form-control" placeholder="不少于10000"/></span>
 
                                <span class="text">个</span>
                                <span class="text"><small>0为不限定名额</small></span>
@@ -49,7 +49,7 @@
                                <div class="row">
                                    <div class="col-xs-4">
 <!--                                       <div class="btn btn-default">上传图片</div>-->
-                                       <input type="file" name="file-pic" id="file_pic1"/>
+                                       <input type="file" name="inputExplainPic" id="file_pic1"/>
                                    </div>
                                    <div class="col-xs-8">
                                        <span class="text"><small>（选填）</small></span>
@@ -65,7 +65,7 @@
                                <span>回报内容：</span>
                            </div>
                            <div class="col-xs-9">
-                               <textarea placeholder="最多不超过50字"></textarea>
+                               <textarea name="inputExplainText" placeholder="最多不超过50字"></textarea>
                            </div>
                        </div>
                        <div class="row">
@@ -73,7 +73,7 @@
                                <span>回报时间：</span>
                            </div>
                            <div class="col-xs-9">
-                               <input class="form-control" placeholder="不超过20个字"/>
+                               <input name="inputRewardTime" class="form-control" placeholder="不超过20个字"/>
                                <span class="text">天</span>
                            </div>
                        </div>
@@ -385,15 +385,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-8 actionbutton" style="margin-bottom:30px;">
+                    <div class="col-xs-8 actionbutton">
                         <span class="btn btn-success" id="previousStep_prev">上一步</span></a>
                         <span class="btn btn-success" id="nextStep_next">下一步</span>
 
                     </div>
                 </div>
+                </div>
               </div>
             </div>
-          </div>
 <script type="text/javascript">
     $(function() {
 //        if($("#repay1").hasClass("active"))

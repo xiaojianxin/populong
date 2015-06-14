@@ -32,7 +32,7 @@ session_start();
                 else{
                     ?>
                     <li class="user-nav">
-                        <a class="dropdown-toggle operator-name" data-toggle="dropdown"><img src="./img/head.png" alt=""class="img-circle"/>lili</a>
+                        <a class="dropdown-toggle operator-name" data-toggle="dropdown"><img src="./img/head.png" alt=""class="img-circle"/><?PHP echo  $_SESSION["nickName"]?></a>
                         <ul class="dropdown-menu self-menu">
                             <li>
                                 <a href="./self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>

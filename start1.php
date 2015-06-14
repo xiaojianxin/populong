@@ -10,7 +10,7 @@
                                 <span>项目名称：</span>
                             </div>
                             <div class="col-xs-9">
-                                <input class="form-control" placeholder="不超过20个字"/>
+                                <input name="inputProjName" class="form-control" placeholder="不超过20个字"/>
                             </div>
                         </div>
                         <div class="row">
@@ -24,16 +24,16 @@
                             </div>
                         </div>
                         <div style="height:20px;">
-                            <input type="radio" value="1" id="checkboxInput1" name="checkbox" style="display: none;"/>
-                            <input type="radio" value="1" id="checkboxInput2" name="checkbox" style="display: none;"/>
-                            <input type="radio" value="1" id="checkboxInput3" name="checkbox" style="display: none;"/>
+                            <input type="radio" value="1" id="checkboxInput1" name="inputProjType" style="display: none;"/>
+                            <input type="radio" value="1" id="checkboxInput2" name="inputProjType" style="display: none;"/>
+                            <input type="radio" value="1" id="checkboxInput3" name="inputProjType" style="display: none;"/>
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
                                 <span>筹集资金：</span>
                             </div>
                             <div class="col-xs-9">
-                                <span><input class="form-control" placeholder="不少于10000" id="gain_num"/></span>
+                                <span><input class="form-control" placeholder="不少于10000" name="inputPlanAmount" id="gain_num"/></span>
 
                                 <span class="text">元</span>
                             </div>
@@ -43,7 +43,7 @@
                                 <span>筹集天数：</span>
                             </div>
                             <div class="col-xs-9">
-                                <input class="form-control" placeholder="不超过20个字"/>
+                                <input class="form-control" name="inputRaiseDays" placeholder="不超过20个字"/>
                                 <span class="text">天</span>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                 <div class="row">
                                     <div class="col-xs-4 ">
 
-                                        <input type="file" name="file-pic" id="file_pic"/>
+                                        <input type="file" name="inputProjPho" id="file_pic"/>
                                     </div>
                                     <div class="col-xs-8">
                                         <span class="text">支持jpg,png格式图片，图片大小不超过2M</span>
@@ -81,7 +81,7 @@
                                         <div class="btn btn-default">路演视频</div>
                                     </div>
                                     <div class="col-xs-8">
-                                        <input class="form-control" placeholder="视频网址"/>
+                                        <input class="form-control" name="inputVadioLink" placeholder="视频网址"/>
                                         <span class="text">(可选)</span>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                                 <span>项目简介：</span>
                             </div>
                             <div class="col-xs-9">
-                                <input class="form-control" placeholder="不超过20个字"/>
+                                <input class="form-control" name="inputProjAbst" placeholder="不超过20个字"/>
 
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                 <span>详细介绍：</span>
                             </div>
                             <div class="col-xs-9">
-                                <textarea id="editor1"></textarea>
+                                <textarea name="inputProjIntro" id="editor1"></textarea>
                             </div>
                         </div>
 
@@ -162,6 +162,7 @@
             'onUploadSuccess': function(file, data, response) {
                 $('#showUploadImg').attr("src",data);//上传图片的服务器地址
                 $('#showUploadImg').show();
+                $('#photo').attr("value",response);
             },
             'onError'          : function(event, queueID, fileObj)
             {
@@ -171,8 +172,7 @@
 
         $('.select-ban').click(function(){
             var id = $(this).attr('id');
-            $('.active').removeClass('active');
-            $(this).addClass('active');
+
             return $('#checkboxInput'+id).click();
         });
 
