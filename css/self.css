@@ -742,6 +742,25 @@ div .edit-info{
 }
 
 /*******************************************银行卡列表**************************************************/
+#deleteCardModal .question-pic{
+    width: 100%;
+    text-align: center;
+}
+#deleteCardModal h2{
+    text-align: center;
+    margin-top: 20px;
+}
+#deleteCardModal .buttonModal{
+    margin-top: 40px;
+
+}
+#deleteCardModal .buttonModal .btn{
+    width: 140px;
+    margin-left: 30px;
+    font-size: 18px;
+
+
+}
 #cardlist .cardTitle h2{
     font-size: 20px;
     font-weight: bold;
