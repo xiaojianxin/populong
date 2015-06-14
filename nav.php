@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 
-?> 
+?>
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -14,13 +14,13 @@ session_start();
           <a class="navbar-brand" href="#">泡泡龙</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-        	<ul class="nav navbar-nav">
+        	<ul class="nav navbar-nav" style="width: 50%;">
 	            <li class="chooseli"><a href="./index.php">首页热门</a></li>
       				<li><a href="./help.php">青年助梦</a></li>
       				<li><a href="./together.php">与你同行</a></li>
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" style="width: 20%;">
                 <?php if(empty($_SESSION["token"])){
                     ?>
 
@@ -35,16 +35,16 @@ session_start();
                         <a class="dropdown-toggle operator-name" data-toggle="dropdown"><img src="./img/head.png" alt=""class="img-circle"/>lili</a>
                         <ul class="dropdown-menu self-menu">
                             <li>
-                                <a href="#self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
+                                <a href="./self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
                             </li>
                             <li>
-                                <a href="#self.php"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
+                                <a href="./self.php?id=1"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
                             </li>
                             <li>
-                                <a href="#self.php?id=4"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
+                                <a href="./self.php?id=5"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
                             </li>
                             <li>
-                                <a href="#self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
+                                <a href="./self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
                             </li>
                             <li>
                                 <a href="./action/do_logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
@@ -60,11 +60,12 @@ session_start();
 
             </ul>
 
-          <form class='navbar-form navbar-right' action="">
-                <div class="btn btn-inverse">
-                    <span class="glyphicon glyphicon-search" style="color: white"></span>
+          <form class='navbar-form navbar-right' action="" style="width: 20%;margin-left:-20px;">
+                <div class="btn btn-inverse" >
+                    <a href="searchresult.php"><span class="glyphicon glyphicon-search" style="color: white;width:20%;"></span></a>
+                    <input type="text" class="form-control" placeholder="Search..." style="width:80%;background-color: black;color: white">
                 </div>
-                <input type="text" class="form-control" placeholder="Search..." style="background-color: black;color: white">
+
           </form>
           	
          
@@ -256,6 +257,7 @@ session_start();
           if(!$('.login_username').val().match(/^[1][358]\d{9}/)){
                $('.login_username').attr('type','email');
                $('.login_username').removeAttr('pattern');
+
           }
       });
 
