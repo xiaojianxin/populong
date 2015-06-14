@@ -635,6 +635,28 @@ div .edit-info{
 .safe-content-detail .warning{
     color: red;
 }
-.edit{
-    margin-top: 30px;
+.safe .edit{
+    margin-top: 20px;
+    width: 100%;
+    margin-left:0px;
+    margin-bottom: 20px;
+}
+.safe .edit .glyphicon{
+    font-size: 10px;
+}
+.safe .edit-title{
+   text-align: right;
+}
+.safe .pic-password{
+    width: 100px;
+    height: 40px;
+    float: left;
+}
+.safe .edit input{
+    width: 90%;
+    margin: 0 auto;
+}
+.safe .refresh{
+    float: left;
+    margin-left: 5px;
 }
