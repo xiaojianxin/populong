@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 
-?> 
+?>
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -14,13 +14,13 @@ session_start();
           <a class="navbar-brand" href="#">泡泡龙</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-        	<ul class="nav navbar-nav">
+        	<ul class="nav navbar-nav" style="width: 50%;">
 	            <li class="chooseli"><a href="./index.php">首页热门</a></li>
       				<li><a href="./help.php">青年助梦</a></li>
       				<li><a href="./together.php">与你同行</a></li>
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" style="width: 20%;">
                 <?php if(empty($_SESSION["token"])){
                     ?>
 
@@ -60,11 +60,12 @@ session_start();
 
             </ul>
 
-          <form class='navbar-form navbar-right' action="">
-                <div class="btn btn-inverse">
-                    <span class="glyphicon glyphicon-search" style="color: white"></span>
+          <form class='navbar-form navbar-right' action="" style="width: 20%;margin-left:-20px;">
+                <div class="btn btn-inverse" >
+                    <span class="glyphicon glyphicon-search" style="color: white;width:20%;"></span>
+                    <input type="text" class="form-control" placeholder="Search..." style="width:80%;background-color: black;color: white">
                 </div>
-                <input type="text" class="form-control" placeholder="Search..." style="background-color: black;color: white">
+
           </form>
           	
          
