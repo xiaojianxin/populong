@@ -385,7 +385,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-8 actionbutton">
+                    <div class="col-xs-8 actionbutton" style="margin-bottom:50px;">
                         <span class="btn btn-success" id="previousStep_prev">上一步</span></a>
                         <span class="btn btn-success" id="nextStep_next">下一步</span>
 
@@ -436,7 +436,8 @@
             fileSizeLimit:'2MB',
             'fileObjName': 'file',
             'onUploadSuccess': function(file, data, response) {
-                $('#showPic1').attr("src",data);//上传图片的服务器地址
+                $('#showPic1').attr("src",data);
+                $('#imgurl2').attr('value',data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },
@@ -457,6 +458,7 @@
             fileSizeLimit:'2MB',
             'onUploadSuccess': function(file, data, response) {
                 $('#showPic2').attr("src",data);//上传图片的服务器地址
+                $('#imgurl3').attr('value',data);
 
 
             },
@@ -476,7 +478,8 @@
             fileSizeLimit:'2MB',
             'fileObjName': 'file',   
             'onUploadSuccess': function(file, data, response) {
-                $('#showPic3').attr("src",data);//上传图片的服务器地址
+                $('#showPic3').attr("src",data);
+                $('#imgurl4').attr('value',data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },
@@ -496,7 +499,8 @@
             fileSizeLimit:'2MB',
             'fileObjName': 'file',   
             'onUploadSuccess': function(file, data, response) {
-                $('#showPic4').attr("src",data);//上传图片的服务器地址
+                $('#showPic4').attr("src",data);
+                $('#imgurl5').attr('value',data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },
@@ -516,7 +520,8 @@
             fileSizeLimit:'2MB',
            'fileObjName': 'file',   
               'onUploadSuccess': function(file, data, response) {
-                $('#showPic4').attr("src",data);//上传图片的服务器地址
+                $('#showPic4').attr("src",data);
+                $('#imgurl6').attr('value',data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);
             },

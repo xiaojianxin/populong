@@ -66,7 +66,7 @@
                         }else if ($id == '12') {
                             require('./platrank.php');
                         }else if($id == '13'){
-                            require('./dealrecord.php');
+                            require('./focuspro.php');
                         }else if ($id == '14') {
                             require('./editinformation.php');
                         }
