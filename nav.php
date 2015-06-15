@@ -101,7 +101,7 @@ session_start();
                               <div class="col-sm-6" style="margin-top: 20px">
                                   <a id="tofind1" href="#forgetPW" data-toggle="modal" data-target="#forgetPW">忘记密码</a>
                                   <span>&nbsp;|&nbsp;</span>
-                                  <a id="toregist"href="./regist_1.html">快速注册</a>
+                                  <a id="toregist"href="./regist_1.php">快速注册</a>
                               </div>
                               <div class="col-sm-6 ">
                                   <button type="submit" class="btn btn-lg checklogin pull-right">登陆</button>

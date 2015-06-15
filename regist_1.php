@@ -42,7 +42,7 @@
 				        </div>
 				        <div id="main_body" class="container">
                     <div class="signup_form">
-                        <form class="form" action='' method="post">
+                        <form class="form" action='./action/do_regist.php' method="post">
                             <input type="text" name="choice1" id="checkbox1" style="display:none" value=''/>
                             <input type="text" name="choice2" id="checkbox2" style="display:none" value=''/>
 

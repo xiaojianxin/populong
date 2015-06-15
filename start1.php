@@ -64,6 +64,12 @@
                                     <div class="col-xs-4 ">
 
                                         <input type="file" name="inputProjPho" id="file_pic"/>
+                                        <input type='text' name="img-url1" id='imgurl1' style="display:none"/>
+                                        <input type='text' name="img-url2" id='imgurl2' style="display:none"/>
+                                        <input type='text' name="img-url3" id='imgurl3' style="display:none"/>
+                                        <input type='text' name="img-url4" id='imgurl4' style="display:none"/>
+                                        <input type='text' name="img-url5" id='imgurl5' style="display:none"/>
+                                        <input type='text' name="img-url6" id='imgurl6' style="display:none"/>
                                     </div>
                                     <div class="col-xs-8">
                                         <span class="text">支持jpg,png格式图片，图片大小不超过2M</span>
@@ -160,9 +166,10 @@
             fileSizeLimit:'2MB',
             'fileObjName': 'file',
             'onUploadSuccess': function(file, data, response) {
-                $('#showUploadImg').attr("src",data);//上传图片的服务器地址
+                $('#showUploadImg').attr("src",data);
+                $('#imgurl1').attr('value',data);
                 $('#showUploadImg').show();
-                $('#photo').attr("value",response);
+                //$('#photo').attr("value",response);
             },
             'onError'          : function(event, queueID, fileObj)
             {
@@ -172,7 +179,8 @@
 
         $('.select-ban').click(function(){
             var id = $(this).attr('id');
-
+            $(".active").removeClass('active');
+            $(this).addClass('active');
             return $('#checkboxInput'+id).click();
         });
 

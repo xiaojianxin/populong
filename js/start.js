@@ -435,6 +435,7 @@ function LightManAddressTree(){
         }else{
             selectobj=document.createElement("select");
             selectobj.id=this.selectName+this.grade;
+            selectobj.name=this.selectName+this.grade;
             selectobj.grade=this.grade;
             selectobj.obj=this;
             selectobj.onchange=function(){

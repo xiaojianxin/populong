@@ -21,8 +21,14 @@ session_start();
 <body>
 <?php require('./nav.php') ?>
 	
+<<<<<<< HEAD
       <form action='./1.php' method='post'>
           <div class='show' >
+=======
+     <form action='./action/do_apply.php' method="post">
+
+        <div class='show' >
+>>>>>>> e05ea305aa3c18225a9d7c34a4d41632fd558695
                 <?php require('./start1.php') ?>
         </div>
           <div class="hidden1" id='start_2'>
@@ -57,8 +63,6 @@ session_start();
          $('.hidden2').addClass('show');
          $('.hidden2').removeClass('hidden2');
          
-      
-
     });
 
      $('#previousStep_prev').click(function(e){

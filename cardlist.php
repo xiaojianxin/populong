@@ -3,19 +3,18 @@
 <div id="deleteCardModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">
-            标题栏
-        </h3>
     </div>
     <div class="modal-body">
-        <p>
-            显示信息
-        </p>
+        <div class="question-pic">
+            <img src="./img/question.jpg">
+        </div>
+        <h2>确认删除此银行卡吗？</h2>
+        <div class="buttonModal">
+            <span class="btn btn-success" >确认</span>
+            <span class="btn btn-default" data-dismiss="modal" aria-hidden="true">取消</span>
+        </div>
     </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-        <button class="btn btn-primary">保存设置</button>
-    </div>
+
 </div>
 
 <div id="cardlist" class="container">

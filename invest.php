@@ -17,6 +17,7 @@
     <div id="main" class='container'>
         <div id="main_top">
 
+
             <div class="main_top_top">
                 <div class='title'>输入收货地址</div>
             </div>
@@ -128,7 +129,8 @@
             </div>
 
 
-            <input type='submit' class='btn btn-danger confirm' id="payConfirm" value='确认付款'/>
+                <input type='submit' class='btn btn-danger confirm' id="payConfirm" value='确认付款'/>
+            
         </div>
         <div id="main_nail"></div>
 
@@ -149,7 +151,7 @@
             else
             {
                 checkbox.check1=true;
-                alert(1);
+                //alert(1);
             }
         });
         $("#check2 label").click(function(){
