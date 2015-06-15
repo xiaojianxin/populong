@@ -20,12 +20,24 @@ $(function(){
                 
                 $('#'+id).css('color','#6cc77f');
                 $('#'+id).parent().parent().prev().addClass('active');
+
+
             }
             
            
         });
-
-
+      $("#leftnav .nav-list li .accordion-group .accordion-heading").click(function(){
+          if($(this).parent().children(1).hasClass('in'))
+          {
+              $(this).children(0).children(0).removeClass('glyphicon-chevron-up');
+              $(this).children(0).children(0).addClass('glyphicon-chevron-down');
+          }
+          else
+          {
+              $(this).children(0).children(0).removeClass('glyphicon-chevron-down');
+              $(this).children(0).children(0).addClass('glyphicon-chevron-up');
+          }
+      });
   
       $("#popover_bottom1").popover({placement:'bottom'});
       $("#popover_bottom1").click(function(){
