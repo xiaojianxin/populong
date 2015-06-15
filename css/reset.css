@@ -17,6 +17,14 @@ html {overflow-y: scroll;}
 .navbar-fixed-top .container{
     min-width: 0px;
 }
+#navbar .nav .chooseli{
+    background-color: #6cc77f;
+
+}
+#navbar .nav .chooseli a{
+
+    color:white;
+}
 .navbar-fixed-top .container .navbar-right .btn-inverse{
     margin-top: -8px;
     margin-left: -10px;
