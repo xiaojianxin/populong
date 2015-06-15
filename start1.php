@@ -25,8 +25,8 @@
                         </div>
                         <div style="height:20px;">
                             <input type="radio" value="1" id="checkboxInput1" name="inputProjType" style="display: none;"/>
-                            <input type="radio" value="1" id="checkboxInput2" name="inputProjType" style="display: none;"/>
-                            <input type="radio" value="1" id="checkboxInput3" name="inputProjType" style="display: none;"/>
+                            <input type="radio" value="2" id="checkboxInput2" name="inputProjType" style="display: none;"/>
+                            <input type="radio" value="3" id="checkboxInput3" name="inputProjType" style="display: none;"/>
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
