@@ -15,7 +15,7 @@ session_start();
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         	<ul class="nav navbar-nav" style="width: 50%;">
-	            <li class="chooseli"><a href="./index.php">首页热门</a></li>
+	            <li><a href="./index.php">首页热门</a></li>
       				<li><a href="./help.php">青年助梦</a></li>
       				<li><a href="./together.php">与你同行</a></li>
       				<li><a href="./ido.php">我做你投</a></li>

@@ -819,6 +819,10 @@ session_start();
             $("div.holder").jPages({
                 containerID : "boxList"
             });
+            $("#navbar ul li").each(function(){
+                $(this).removeClass('chooseli');
+            })
+            $("#navbar ul").children("li").eq(1).addClass('chooseli');
         });
     </script>
 </body>

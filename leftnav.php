@@ -7,7 +7,8 @@
             <li class="">
                 <div class="accordion-group">
                     <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar" href="#money-manage">资金管理</a>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar" href="#money-manage">
+                            资金管理<span class="glyphicon glyphicon-chevron-up"></span></a>
                     </div>
                     <div id="money-manage" class="accordion-body in collapse">
                         <div class="accordion-inner">
@@ -28,7 +29,8 @@
               <div class="accordion-group">
                   <div class="accordion-heading">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar"
-                         href="#invest-manage">投资管理</a>
+                         href="#invest-manage">投资管理<span class="glyphicon glyphicon-chevron-up"></span></a>
+
                   </div>
                   <div id="invest-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
@@ -46,7 +48,7 @@
               <div class="accordion-group">
                   <div class="accordion-heading">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar"
-                         href="#project-manage">项目管理</a>
+                         href="#project-manage">项目管理<span class="glyphicon glyphicon-chevron-up"></span></a>
                   </div>
                   <div id="project-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
@@ -64,7 +66,7 @@
               <div class="accordion-group">
                   <div class="accordion-heading">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar"
-                         href="#account-manage">账户管理</a>
+                         href="#account-manage">账户管理<span class="glyphicon glyphicon-chevron-up"></span></a>
                   </div>
                   <div id="account-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
@@ -85,9 +87,9 @@
               <div class="accordion-group">
                   <div class="accordion-heading">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar"
-                         href="#account-manage">站内消息</a>
+                         href="#message-manage">站内消息<span class="glyphicon glyphicon-chevron-up"></span></a>
                   </div>
-                  <div id="account-manage" class="accordion-body in collapse">
+                  <div id="message-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">
                           <a id="11"> 消息</a>
                       </div>

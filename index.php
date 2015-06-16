@@ -950,7 +950,12 @@
     });
     $("#submitFind").click(function(){
         $("#inputCode").modal('hide');
+    });
+    $("#navbar ul li").each(function(){
+        $(this).removeClass('chooseli');
     })
+    $("#navbar ul").children("li").eq(0).addClass('chooseli');
+
 </script>
 </body>
 </html>

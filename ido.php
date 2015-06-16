@@ -274,6 +274,10 @@ session_start();
         $("div.holder").jPages({
             containerID : "itemContainer"
         });
+        $("#navbar ul li").each(function(){
+            $(this).removeClass('chooseli');
+        })
+        $("#navbar ul").children("li").eq(3).addClass('chooseli');
     });
 </script>
 </body>

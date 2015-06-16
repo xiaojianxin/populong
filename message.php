@@ -12,6 +12,9 @@
                                 <li class="">
                                     <a href="#privateMsg" data-toggle="tab">私信</a>
                                 </li>
+                                <li class="">
+                                    <a href="#systemMsg" data-toggle="tab">系统信息</a>
+                                </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="receiveComment">
@@ -134,6 +137,47 @@
                                                     <div class="comment-reply">
 
                                                         <span class="text-green">查看</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="systemMsg">
+                                    <div id="send-list">
+                                        <div class="one-send">
+                                            <div class="row">
+                                                <div class="col-xs-2">
+                                                    <img src="./img/fan_08.png" class="img-circle">
+                                                </div>
+                                                <div class="col-xs-10">
+                                                    <span>系统通知</span>
+                                                    <div class="comment-time">2015.02.16 11:30</div>
+                                                    <div class="comment-content">
+                                                        此处为评论内容此处为评论内容
+                                                    </div>
+                                                    <div class="comment-reply">
+                                                        <span class="text-green">查看</span>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="one-send">
+                                                <div class="row">
+                                                    <div class="col-xs-2">
+                                                        <img src="./img/fan_09.png" class="img-circle">
+                                                    </div>
+                                                    <div class="col-xs-10">
+                                                      <span>系统通知</span>
+
+                                                        <div class="comment-time">2015.02.16 11:30</div>
+                                                        <div class="comment-content">
+                                                            此处为评论内容此处为评论内容
+                                                        </div>
+                                                        <div class="comment-reply">
+                                                            <span class="text-green">查看</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

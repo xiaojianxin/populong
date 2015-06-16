@@ -21,6 +21,7 @@ session_start();
 <body>
 <?php require('./nav.php') ?>
 	
+
      <form action='./action/do_apply.php' method="post">
 
         <div class='show' >

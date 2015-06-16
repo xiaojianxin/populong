@@ -27,12 +27,14 @@ a:focus{
    color: white;
 }
 #leftnav .personalpage{
+
     text-align: center;
 }
 #leftnav .personalpage a{
     line-height: 50px;
     color: #000000;
     font-size: 18px;
+    margin-left: -30px;
 
 
 }
@@ -53,4 +55,10 @@ a:focus{
 }
 .accordion-inner {
     text-align: center;
+}
+.accordion-group .accordion-heading span{
+    color: #9b9b9b;
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
 }
