@@ -9,16 +9,16 @@
 	<link rel="stylesheet" type="text/css" href="./css/others.css">
 	<script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/others.js"></script>
 	<body>
      <?php require('./nav.php') ?>
     <div id="container">
 		<div id="intro-panel">
-			<div class="container">
+			<div class="container" style="min-width:1080px;">
 				<div class="green-line"></div>
 				<div class="intro-panel">
 					<div class="row">
-						<div class="col-xs-4 left-side">
+						<div class="col-xs-3 left-side">
 							<div class="row" >
 								<div class="col-xs-4">
 									<a href="others.php"><img src="./img/fan_15.png" class="img-circle pull-right user-pic"></a>
@@ -44,34 +44,28 @@
 						<div class="col-xs-1 verticle-line">
 							<img src="./img/vertical-line.jpg">
 						</div>
-						<div class="col-xs-5 right-side">
-							<div class="num-detail">
-								<div class="row">
-									<div class="col-xs-6 num-text">
-										<span class="percentage-text center-block">70%</span>
-									</div>
-									<div class="col-xs-6 num-text ">
-										<span class="center-block">10天</span>
-									</div>
-									<div class="progray">
-										<div class="progreen"></div>
-									</div>
-								</div>
-							</div>
+						<div class="col-xs-3">
 
-							<div class="num-detail">
-								<div class="row">
-									<div class="col-xs-6">
-										<span class="center-block">已完成</span>
-									</div>
-									<div class="col-xs-6">
-										<span class="center-block">剩余天数</span>
-									</div>
+									<h3>性别：男</h3>
+									<h3>出生日期：1990-02-02</h3>
+									<h3>最高学历：硕士</h3>
+									<h3>毕业院校：清华大学</h3>
 
-								</div>
-							</div>
-							<h5 class="text-red">￥1000</h5>
-							<h6>已筹集资金</h6>
+
+
+						</div>
+						<div class="col-xs-1 verticle-line">
+							<img src="./img/vertical-line.jpg">
+						</div>
+						<div class="col-xs-3">
+
+							<h3>公司行业：互联网</h3>
+							<h3>公司规模：500人以上</h3>
+							<h3>职位：产品经理</h3>
+							<h3>收入：1K</h3>
+
+
+
 						</div>
 					</div>
 					<div style="height: 30px;"></div>
@@ -81,7 +75,7 @@
 		<div style="height: 40px;"></div>
 		<div id="tabList">
 				<div class="tabbable" id="tabsArea">
-					<div class="container">
+					<div class="container" style="min-width:1080px;">
 						<ul class="nav nav-tabs">
 							<li>
 								<a href="#tabpanel1" data-toggle="tab">支持的项目</a>
@@ -98,7 +92,7 @@
 						</ul>
 					</div>
 					<div id="tabContentArea">
-						<div class="tab-content container">
+						<div class="tab-content container" style="min-width:1080px;">
 
 							<div class="tab-pane" id="tabpanel1">
 
@@ -113,7 +107,7 @@
 												<h3>发起人:孙总</h3>
 											</a>
 											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div id="right_center">
+											<div class="right_center">
 												<div class="row">
 													<div class="col-xs-6">
 														<span>已完成:</span>
@@ -172,7 +166,7 @@
 												<h3>发起人:孙总</h3>
 											</a>
 											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div id="right_center">
+											<div class="right_center">
 												<div class="row">
 													<div class="col-xs-6">
 														<span>已完成:</span>
@@ -231,7 +225,7 @@
 												<h3>发起人:孙总</h3>
 											</a>
 											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div id="right_center">
+											<div class="right_center">
 												<div class="row">
 													<div class="col-xs-6">
 														<span>已完成:</span>
@@ -295,7 +289,7 @@
 												<h3>发起人:孙总</h3>
 											</a>
 											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div id="right_center">
+											<div class="right_center">
 												<div class="row">
 													<div class="col-xs-6">
 														<span>已完成:</span>
@@ -354,7 +348,7 @@
 												<h3>发起人:孙总</h3>
 											</a>
 											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div id="right_center">
+											<div class="right_center">
 												<div class="row">
 													<div class="col-xs-6">
 														<span>已完成:</span>
@@ -413,7 +407,7 @@
 												<h3>发起人:孙总</h3>
 											</a>
 											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div id="right_center">
+											<div class="right_center">
 												<div class="row">
 													<div class="col-xs-6">
 														<span>已完成:</span>

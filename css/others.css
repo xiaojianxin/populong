@@ -19,7 +19,7 @@ body{
     margin-top:20px;
     margin-left: 20px;
 }
-.intro-panel .col-xs-4 h3{
+.intro-panel .col-xs-3 h3{
     font-size: 18px;
     line-height: 30px;
     font-weight: bold;
@@ -38,6 +38,8 @@ body{
 .intro-panel .actionLine .btn{
     margin-top: -3px;
     margin-left: 20px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
 }
 .intro-panel .actionLine span a{
     color: white;
@@ -122,3 +124,5 @@ body{
     color: #666668;
     margin-top: 10px;
 }
+.progray{background: #c9c9c9;display: block;margin-left: 4%; float: left;margin-top: 8px;width: 88%;height: 10px;}
+.progreen{background: #6cc77f;width: 50%;height: 10px;}
