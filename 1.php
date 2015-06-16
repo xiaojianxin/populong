@@ -1,4 +1,7 @@
- <?php 
-        var_dump($_POST);
-        echo "1111";
-  ?>
+<?php
+	echo "returndata<br>";
+	echo "<pre>";
+	print_r($_REQUEST);
+	echo "</pre>";
+
+?>
