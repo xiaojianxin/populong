@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 $ch = curl_init();
 // 设置URL和相应的选项
 $url="./action/test_query.php";
@@ -12,6 +13,21 @@ curl_close($ch);
 var_dump($r);
 return $r;
 
+=======
+
+    $start = '1';
+    $end = '2';
+    $ch = curl_init();
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_query.php?start=".$start.
+    "&end=".$end;
+    curl_setopt($ch, CURLOPT_URL, $curl_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
+    $curl_result = curl_exec($ch);
+    $result = explode(',', $curl_result);
+    curl_close($ch);
+    print_r($result);
+>>>>>>> 6cc17e95c395cf4e7da7c4121fab03a98ac0c6de
 ?>
                 <div id="startPro">
                     <div class="fourtab">
