@@ -17,6 +17,7 @@ html {overflow-y: scroll;}
 .navbar-fixed-top .container{
     min-width: 0px;
 }
+
 #navbar .nav .chooseli{
     background-color: #6cc77f;
 
@@ -42,6 +43,7 @@ html {overflow-y: scroll;}
 }
 .user-nav a {
 margin-top:-5px;
+ margin-bottom: -10px;
 }
 .user-nav ul{
     background-color: #6cc87f;
