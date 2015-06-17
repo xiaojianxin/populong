@@ -1,20 +1,4 @@
 <?php
-<<<<<<< HEAD
-$ch = curl_init();
-// 设置URL和相应的选项
-$url="./action/test_query.php";
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_HEADER, 0);
-//        curl_setopt($ch, CURLOPT_TIMEOUT, 300);           //设置超时
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$r=curl_exec($ch);
-// 关闭cURL资源，并且释放系统资源
-curl_close($ch);
-var_dump($r);
-return $r;
-
-=======
-
     $start = '1';
     $end = '2';
     $ch = curl_init();
@@ -27,7 +11,6 @@ return $r;
     $result = explode(',', $curl_result);
     curl_close($ch);
     print_r($result);
->>>>>>> 6cc17e95c395cf4e7da7c4121fab03a98ac0c6de
 ?>
                 <div id="startPro">
                     <div class="fourtab">
