@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511bb46d-633c-4f3a-8554-c83897bff10b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.php" afterPath="$PROJECT_DIR$/1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/others.php" afterPath="$PROJECT_DIR$/others.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selfinformation.php" afterPath="$PROJECT_DIR$/selfinformation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startpro.php" afterPath="$PROJECT_DIR$/startpro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regist_1.php" afterPath="$PROJECT_DIR$/regist_1.php" />
     </list>
     <ignored path="populong.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +46,7 @@
       <file leaf-file-name="selfinformation.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/selfinformation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="72" selection-start="4099" selection-end="4099" vertical-scroll-proportion="0.3436754" vertical-offset="1944" max-vertical-offset="4416">
+            <state line="87" column="72" selection-start="4099" selection-end="4099" vertical-scroll-proportion="3.0930789" vertical-offset="792" max-vertical-offset="4416">
               <folding />
             </state>
           </provider>
@@ -639,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/selfinformation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="72" selection-start="4099" selection-end="4099" vertical-scroll-proportion="0.3436754" vertical-offset="1944" max-vertical-offset="4416">
+        <state line="87" column="72" selection-start="4099" selection-end="4099" vertical-scroll-proportion="3.0930789" vertical-offset="792" max-vertical-offset="4416">
           <folding />
         </state>
       </provider>

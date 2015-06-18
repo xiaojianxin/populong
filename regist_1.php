@@ -136,7 +136,7 @@
                                     <input type="text" name="checknum" class="form-control"  placeholder="验证码">
                                 </div>
 
-                                <img class="col-xs-4 pic-password" src="./img/regist_05.png" alt="" />
+                                <img id="checkpic" onclick="changing();" src='/images/checkcode.php' />
                             </div>
 
 
@@ -248,7 +248,10 @@
     }
      
       
-   })
+   });
+   function changing(){
+    document.getElementById('checkpic').src="./checkcode.php?"+Math.random();
+} 
 
 
 
