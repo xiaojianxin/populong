@@ -14,16 +14,17 @@ function request_by_curl($remote_server, $json_string)
 $url = "123.57.74.122/logic/Userinfo";
 $json = '{"method":"userinfo"}';
 
-$json = request_by_curl($url,$json);
-$result_arr = json_decode($json,true);
+$result_arr = request_by_curl($url,$json);
+//$result_arr = json_decode($json,true);
 if(!empty($result_arr))
 {
-
-    echo($result_arr);
+	
+	print_r($result_arr);
     exit();
 }
 else
 {
-   echo($result_arr);
+    print_r($result_arr);
 }
 ?>
+

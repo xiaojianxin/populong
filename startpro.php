@@ -10,7 +10,7 @@
     $curl_result = curl_exec($ch);
     $result = explode(',', $curl_result);
     curl_close($ch);
-    print_r($result);
+    var_dump($result);
 ?>
                 <div id="startPro">
                     <div class="fourtab">

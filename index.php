@@ -21,6 +21,7 @@
 </head>
 <body>
 <?php require('./nav.php') ?>
+  
 <div id="container">
 
 <div class="swiper-container">
@@ -39,6 +40,21 @@
 <div id="main">
 <div id="hotpro">
 <div class="container">
+    <?php
+    $start = '1';
+    $end = '2';
+    $part = 'hotProj';
+    $ch = curl_init();
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_query.php?part=".$part."&start=".$start."&end".$end;
+    curl_setopt($ch, CURLOPT_URL, $curl_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
+    $curl_result = curl_exec($ch);
+    $curl_result = json_decode($curl_result,true);
+    $result = json_decode($curl_result['result']);
+    var_dump($result['1']);
+    curl_close($ch);
+    ?>
 <div class="content-top">
     <div class="row">
         <div class="col-xs-4">
@@ -58,7 +74,7 @@
             </a>
         </div>
         <div class="col-xs-5">
-            <h1>MICLE傲血顶级订制主机</h1>
+            <h1><?php ?></h1>
             <h2><a href="others.php">由Lilith发起</a></h2>
             <p>英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</p>
             <div style="height:20px;"></div>
@@ -134,12 +150,17 @@
 </div>
 <div class="content-foot">
     <div class="row">
+    <?php
+        foreach ($result as $project) {
+            //var_dump($project);
+
+    ?>
         <div class="col-xs-4">
             <div class="onebox">
                 <a href="./pro.php">
                     <img class="project"src="./img/index_02.png" alt="2" />
                 </a>
-                <h2>泡泡隆投资平台</h2>
+                <h2><?php echo $project->projName ?></h2>
                 <a href="">
                     <h3>发起人:孙总</h3>
                 </a>
@@ -171,9 +192,9 @@
                             <span>20,000元</span>
                         </div>
                         <div class="col-xs-5">
-											<span>
-												10天
-											</span>
+                                            <span>
+                                                10天
+                                            </span>
 
                         </div>
 
@@ -183,9 +204,9 @@
                             <span>已筹集资金</span>
                         </div>
                         <div class="col-xs-5">
-											<span>
-												剩余天数
-											</span>
+                                            <span>
+                                                剩余天数
+                                            </span>
 
                         </div>
 
@@ -193,127 +214,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-4">
-            <div class="onebox">
-                <a href="./pro.php">
-                    <img class="project"src="./img/index_03.png" alt="2" />
-                </a>
-                <h2>泡泡隆投资平台</h2>
-                <a href="">
-                    <h3>发起人:孙总</h3>
-                </a>
-                <h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-                <div id="right_center">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <span>已完成:</span>
-                            <span class="percentage-text">75%</span>
-                        </div>
-                        <div class="col-xs-1">
-											<span>
-												<img class="place"src="./img/index_details1.png" alt="地点" />
-											</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>北京</span>
-                        </div>
-                        <div class="col-xs-2">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="progray">
-                            <div class="progreen"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-7">
-                            <span>20,000元</span>
-                        </div>
-                        <div class="col-xs-5">
-											<span>
-												10天
-											</span>
-
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-7">
-                            <span>已筹集资金</span>
-                        </div>
-                        <div class="col-xs-5">
-											<span>
-												剩余天数
-											</span>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-4">
-            <div class="onebox">
-                <a href="./pro.php">
-                    <img class="project"src="./img/index_04.png" alt="2" />
-                </a>
-                <h2>泡泡隆投资平台</h2>
-                <a href="">
-                    <h3>发起人:孙总</h3>
-                </a>
-                <h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-                <div id="right_center">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <span>已完成:</span>
-                            <span class="percentage-text">75%</span>
-                        </div>
-                        <div class="col-xs-1">
-											<span>
-												<img class="place"src="./img/index_details1.png" alt="地点" />
-											</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>北京</span>
-                        </div>
-                        <div class="col-xs-2">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="progray">
-                            <div class="progreen"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-7">
-                            <span>20,000元</span>
-                        </div>
-                        <div class="col-xs-5">
-											<span>
-												10天
-											</span>
-
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-7">
-                            <span>已筹集资金</span>
-                        </div>
-                        <div class="col-xs-5">
-											<span>
-												剩余天数
-											</span>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php } ?>
     </div>
-</div>
-</div>
+  </div>
 </div>
 <div id="hotinv">
     <div class="container">

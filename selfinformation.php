@@ -1,17 +1,22 @@
 <?php
-$ch = curl_init();
-// 设置URL和相应的选项
-$url="./action/test_query.php";
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_HEADER, 0);
-//        curl_setopt($ch, CURLOPT_TIMEOUT, 300);           //设置超时
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$r=curl_exec($ch);
-// 关闭cURL资源，并且释放系统资源
-curl_close($ch);
-var_dump($r);
-return $r;
 
+$ch = curl_init();
+$curl_url = "http://123.57.74.122:8888/version_0.2/action/test_userinfo.php?";
+curl_setopt($ch, CURLOPT_URL, $curl_url);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
+$curl_result = curl_exec($ch);
+curl_close($ch);
+$result = json_decode($curl_result);
+$result = $result->result[0];
+var_dump($result);
+$nickname = $result->nickname;
+$email = $result->email;
+$mobilephone = $result->mobilephone;
+//$a = json_decode($nickname);
+//var_dump($a);
+//$a = $nickname['result'];
+//print_r($a);
 ?>
             <div id="informationBox">
                 <div class="record-title">
@@ -21,7 +26,7 @@ return $r;
                     <span class="glyphicon glyphicon-edit"><a  href="./self.php?id=14">修改信息</a></span>
                 </div>
                 
-                <div class="container self-info">
+                <div class="container-fluid self-info">
                     <div class="row">
                         <div class="col-xs-3">
                             <img id="self-logo" src="./img/self_03.png" style="width: 100%;">
@@ -37,7 +42,7 @@ return $r;
 
                                  </div>
                                  <div class="col-xs-6">
-                                     <span class="user-name">小美丽</span>
+                                     <span class="user-name"><?php echo $nickname ?></span>
                                  </div>
                                  <div class="col-xs-2">
                                      <span class="green-tip"><img src="./img/others_01.png"> </span>
@@ -80,7 +85,7 @@ return $r;
 
                                 </div>
                                 <div class="col-xs-6">
-                                    <span class="user-phone">139***************</span>
+                                    <span class="user-phone"><?php echo $mobilephone?></span>
                                 </div>
                                 <div class="col-xs-2">
                                     <span class="green-tip"><img src="./img/others_01.png"> </span>
@@ -95,7 +100,7 @@ return $r;
 
                                 </div>
                                 <div class="col-xs-6">
-                                    <span class="user-email">139***************</span>
+                                    <span class="user-email"><?php echo $email; ?></span>
                                 </div>
                                 <div class="col-xs-2">
                                     <span class="green-tip"><img src="./img/others_01.png"> </span>

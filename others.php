@@ -4,7 +4,7 @@
 	<title>他人主界面</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="布尔教育 http://www.itbool.com" />
-	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet"  href="./css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/others.css">
 	<script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
