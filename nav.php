@@ -21,18 +21,9 @@ session_start();
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
             <ul class="nav navbar-nav navbar-right" style="width: 20%;">
-                <?php if(empty($_SESSION["token"])){
-                    ?>
 
-                    <li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
-                    <li><a href="./regist_1.php">注册</a></li>
-
-                <?PHP
-                }
-                else{
-                    ?>
                     <li class="user-nav">
-                        <a class="dropdown-toggle operator-name" data-toggle="dropdown"><img src="./img/head.png" alt=""class="img-circle"/><?PHP echo  $_SESSION["nickName"]?></a>
+                        <a class="dropdown-toggle operator-name" data-toggle="dropdown"><img src="./img/head.png" alt=""class="img-circle"/>lilili</a>
                         <ul class="dropdown-menu self-menu">
                             <li>
                                 <a href="./self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
@@ -52,10 +43,6 @@ session_start();
                         </ul>
                     </li>
 
-
-                <?PHP
-                }
-                ?>
 
 
             </ul>
