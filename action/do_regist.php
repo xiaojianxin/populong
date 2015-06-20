@@ -1,5 +1,6 @@
 <?PHP
-if($_POST["isInitiator"] == "1")
+echo $_POST["isInitiator"];
+if($_POST["isInitiator"] == '1')
     $role = "2"; //initiator
 elseif ($_POST["isInvestor"] == "1")
     $role = "1"; //investor

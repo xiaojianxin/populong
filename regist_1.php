@@ -136,7 +136,7 @@
                                     <input type="text" name="checknum" class="form-control"  placeholder="验证码">
                                 </div>
 
-                                <img id="checkpic" onclick="changing();" src='/images/checkcode.php' />
+                                <img id="checkpic" onclick="changing();" src='./checkcode.php' />
                             </div>
 
 

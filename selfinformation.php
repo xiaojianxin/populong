@@ -1,22 +1,22 @@
 <?php
 
-$ch = curl_init();
-$curl_url = "http://123.57.74.122:8888/version_0.2/action/test_userinfo.php?";
-curl_setopt($ch, CURLOPT_URL, $curl_url);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
-$curl_result = curl_exec($ch);
-curl_close($ch);
-$result = json_decode($curl_result);
-$result = $result->result[0];
-var_dump($result);
-$nickname = $result->nickname;
-$email = $result->email;
-$mobilephone = $result->mobilephone;
-//$a = json_decode($nickname);
-//var_dump($a);
-//$a = $nickname['result'];
-//print_r($a);
+    $ch = curl_init();
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_userinfo.php";
+    curl_setopt($ch, CURLOPT_URL, $curl_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
+    $curl_result = curl_exec($ch);
+    curl_close($ch);
+    $result = json_decode($curl_result);
+    $result = $result->result[0];
+    var_dump($result);
+    $nickname = $result->nickname;
+    $email = $result->email;
+    $mobilephone = $result->mobilephone;
+    //$a = json_decode($nickname);
+    //var_dump($a);
+    //$a = $nickname['result'];
+    //print_r($a);
 ?>
             <div id="informationBox">
                 <div class="record-title">

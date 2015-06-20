@@ -2,7 +2,7 @@
 session_start();
 $projName = $_POST["inputProjName"];
 $thumbPho = 0;
-$projType = $_POST["inputProjType"];
+$projType = 1;//$_POST["inputProjType"];
 $cityCode = 0;//未定义$_POST["inputCityCode"];
 $fieldCode = 0;//未定义
 $planAmount = $_POST["inputPlanAmount"];
@@ -16,13 +16,29 @@ $creditRanting = 0;//未定义
 $raiseDays = $_POST["inputRaiseDays"];
 $charge = $planAmount*0.02 + 200*($_POST["isVadio"] + $_POST["isPush"] + $_POST["isFieldCoun"] +$_POST["isInvCoun"]);
 $projAuthy = $_POST["isVadio"] + ($_POST["isPush"]<<1) + ($_POST["isFieldCoun"]<<2) + ($_POST["isInvCoun"]<<3);
-$rewordClassCode = 0;//未定义$_POST["inputRewordClassCode"];
-$amountPer = $_POST["inputAmountPer"];
-$quota = $_POST["inputQuota"];
-$explainPic = $_POST["inputItemRewardsPho1"];//等待
-$explainText = $_POST["inputExplainText"];
-$rewardTime = $_POST["inputRewardTime"];
 
+
+if($_POST["inputAmountPer0"] != NULL)
+{
+	$rewordClassCode[0] = 1;
+	$amountPer[0] = $_POST["inputAmountPer0"]; 
+    $explainPic[0] = $_POST["inputFundRewardsPho0"];//等待
+	$quota[0] = 0;//无
+    $explainText[0] = $_POST["inputExplainText0"];
+    $rewardTime[0] = $_POST["inputRewardTime0"];
+}
+else
+{
+	for($i = 1; $i< 5; $i++)
+	{
+		$rewordClassCode[$i] = 2;
+		$amountPer[$i-1] = $_POST["inputAmountPer".$i]; 
+  		$quota[$i-1] = $_POST["inputQuota".$i];
+    	$explainPic[$i-1] = $_POST["inputItemRewardsPho".$i];//等待
+    	$explainText[$i-1] = $_POST["inputExplainText".$i];
+    	$rewardTime[$i-1] = $_POST["inputRewardTime".$i];
+	}
+}
 
 function request_by_curl($remote_server, $json_string)
 {
@@ -36,7 +52,6 @@ function request_by_curl($remote_server, $json_string)
 }
 $url = "123.57.74.122/logic/apply";
 $json = json_encode(array(
-        'token' => $_SESSION["token"],
 		'method'=>'apply',
         'projName'=>$projName,
 		'thumbPho'=>$thumbPho,

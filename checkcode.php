@@ -15,10 +15,10 @@ function random($len) {
 $str = random(4); 
  
 //验证码图片的宽度
-$width  = 50;      
+$width  = 70;      
  
 //验证码图片的高度
-$height = 25;     
+$height = 30;     
  
 //声明需要创建的图层的图片格式
 @ header("Content-Type:image/png");
