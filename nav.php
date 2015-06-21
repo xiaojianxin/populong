@@ -270,8 +270,12 @@ session_start();
               url:"./action/do_login.php",
               data:"inputEmail="+name+"&"+"inputPassword="+psw,
               success:function(data){
-                alert(data);
-                  window.location.href = data;
+                var dataobj = eval("("+data+")");
+                if(dataobj.code == ''){
+                  window.location.href = "././index.php";
+                }else{
+                  alert('登陆失败');
+                }
               },
               error:function(){
                   alert("登录失败");

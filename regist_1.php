@@ -275,16 +275,18 @@ $('#submit').click(function(){
           var inputMsgCode = $('#inputMsgCode').val();
           var inputRealName = $('#inputRealname').val();
           var inputIdCard = $('#inputIdCard').val();
-        alert(isInvestor);
+          alert(isInvestor);
           $.ajax({
               type:"POST",
               url:"./action/do_regist.php",
-              data:"isInvestor="+isInvestor+"&"+"isInitiator="+isInitiator+"&"+"inputNickname="+inputNickname+"&"+"inputPassword="+inputPassword+"&"+"inputPhoCode="+inputPhoCode+"&"+"inputEmail="+inputEmail+"&"+"inputMobilePhone="+inputMobilePhone+"&"+"inputMsgCode="+inputMsgCode+"&"+"inputRealid="+inputRealname+"&"+"inputIdCard="+inputIdCard ,
+              data:"isInvestor="+isInvestor+"&"+"isInitiator="+isInitiator+"&"+"inputNickname="+inputNickname+"&"+"inputPassword="+inputPassword+"&"+"inputPhoCode="+inputPhoCode+"&"+"inputEmail="+inputEmail+"&"+"inputMobilePhone="+inputMobilePhone+"&"+"inputMsgCode="+inputMsgCode+"&"+"inputRealName="+inputRealName+"&"+"inputIdCard="+inputIdCard,
               success:function(data){
-
-                if(data['code']=="10009")
-                //indow.location.href  = data;
-                alert(data);
+                var dataobj = eval("("+data+")");
+                if(dataobj.code == ''){
+                  window.location.href = "././success.php";
+                }else{
+                  alert('注册失败');
+                }
               },
               error:function(){
                   alert("登录失败");

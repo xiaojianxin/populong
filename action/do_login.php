@@ -28,18 +28,18 @@ if(!empty($result) && $result['code'] == "0")
 	}
 	else
 	{
-		$url = "../index.php";
+		$url = "././index.php";
 	}
 	// echo "<script language='javascript' type='text/javascript'>";
     //    echo "window.location.href='$url'";
     //    echo "</script>";
-    echo $url;
+    //echo $url;
+    echo $json;
     exit();
 }
 else
 {
-	echo "error<br>";
-    print_r($json);
+    echo $json;
 }
 ?>
 

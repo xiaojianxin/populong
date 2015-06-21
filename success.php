@@ -46,6 +46,9 @@
                              <div class='col-xs-8 success-text'>
                                 恭喜您，注册成功
                              </div>
+                                <div style="width: 230px; margin: 0 auto;">
+                                    <a href="./index.php" class="btn btn-success" style="width: 200px;margin-top: 50px;">返回首页</a>
+                                </div>
 				        </div>
 
 			</div>
