@@ -1,4 +1,6 @@
 <?PHP
+$json = $_POST['data'];
+$post = json_decode($json);
 echo $_POST["isInitiator"];
 if($_POST["isInitiator"] == '1')
     $role = "2"; //initiator
@@ -41,9 +43,10 @@ $result = json_decode($json,true);
 if(isset($result)&&$result['code'] == 0)
 {
 	$url = "../success.php";  
-    echo "<script language='javascript' type='text/javascript'>";  
-    echo "window.location.href='$url'";  
-    echo "</script>";  
+    // echo "<script language='javascript' type='text/javascript'>";  
+    // echo "window.location.href='$url'";  
+    // echo "</script>";
+    echo $url;  
     exit();
 }
 else

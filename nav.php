@@ -265,17 +265,18 @@ session_start();
           var psw=$(".login_passwd").val();
           var ischecked=$("#rememberMe").attr("ischecked");
           $.ajax({
+              cache: false,
               type:"POST",
               url:"./action/do_login.php",
-              data:{name:name,psw:psw,ischecked:ischecked},
-              dataType:"json",
+              data:"inputEmail="+name+"&"+"inputPassword="+psw,
               success:function(data){
-                alert("登录成功");
+                alert(data);
+                  window.location.href = data;
               },
               error:function(){
                   alert("登录失败");
               }
           })
-      })
+      });
 
   </script>

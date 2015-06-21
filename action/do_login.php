@@ -28,11 +28,12 @@ if(!empty($result) && $result['code'] == "0")
 	}
 	else
 	{
-		$url = "/version_0.2/index.php";
+		$url = "../index.php";
 	}
-	echo "<script language='javascript' type='text/javascript'>";
-    echo "window.location.href='$url'";
-    echo "</script>";
+	// echo "<script language='javascript' type='text/javascript'>";
+    //    echo "window.location.href='$url'";
+    //    echo "</script>";
+    echo $url;
     exit();
 }
 else
