@@ -114,10 +114,6 @@ session_start();
                               <button  class="btn btn-lg checklogin pull-right" id="navSignIn">登陆</button>
                           </div>
                       </div>
-
-
-
-
               </div>
 
           </div>
