@@ -104,6 +104,9 @@ a:focus{
     margin-right: 30px;
     color: white;
 }
+#login .error-tip{
+    color:red;
+}
 #forgetPW{
     height: 100%;
 
