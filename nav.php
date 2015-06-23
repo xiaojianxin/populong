@@ -56,8 +56,6 @@ session_start();
                             </li>
                         </ul>
                     </li>
-
-
                 <?PHP
                 }
                 ?>
