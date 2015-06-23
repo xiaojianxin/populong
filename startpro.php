@@ -8,9 +8,10 @@
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
     $curl_result = curl_exec($ch);
-    $result = explode(',', $curl_result);
+    $result = json_decode($curl_result);
     curl_close($ch);
-    var_dump($result);
+    $result = $result->result;
+    //var_dump($result);
 ?>
                 <div id="startPro">
                     <div class="fourtab">
@@ -42,6 +43,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+                                    <?php foreach ($result as $project) { ?>
                                         <tr class="warning">
                                             <td class="proName">
                                                 <div class="row">
@@ -49,26 +51,63 @@
                                                         <img src="./img/index_07.png" style="width: 80px;float: right;">
                                                     </div>
                                                     <div class="col-xs-8">
-                                                        灵石传说--邀请您认识上古战国红
+                                                        <?php echo $project->projName;?>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="proTime">2015.01.22 13:55</td>
+                                            <td class="proTime">
+                                <?php $time = $project->applyTime ;
+                                $str = (string)$time;  // 将int型转换成string
+                                $arr = str_split($str, 4);
+                                $year = $arr['0'];
+                                $datearr = str_split($arr['1'],2); 
+                                $mouth = $datearr['0'];
+                                $day = $datearr['1'];
+                                $time = $year.'.'.$mouth.'.'.$day.' '.$arr['2']; 
+                                 echo $time; // 结构输出?></td>
 
-                                            <td class="proMoney"> 2015.01.22 13:55</td>
+                                            <td class="proMoney"> 
+                                <?php 
+                                //$time = $project->rewardTime;
+                                $time = $project->applyTime ;
+                                $str = (string)$time;  // 将int型转换成string
+                                $arr = str_split($str, 4);
+                                $year = $arr['0'];
+                                $datearr = str_split($arr['1'],2); 
+                                $mouth = $datearr['0'];
+                                $day = $datearr['1'];
+                                $time = $year.'.'.$mouth.'.'.$day.' '.$arr['2']; 
+                                 echo $time; // 结构输出?></td>
                                             <td class="proState">
                                                 <div style="height: 10px"></div>
-                                                <h1>100%</h1>
+                                                <h1>
+                                                    <?php 
+                                                        $realAmount = $project->realAmount;
+                                                        $planAmount = $project->planAmount;
+                                                        $precent = $realAmount/$planAmount;
+                                                        $precent = $precent*100; 
+                                                        $precent = $precent.'%';
+                                                        echo $precent;
+                                                    ?>
+                                                </h1>
                                                 <div style="height: 10px"></div>
-                                                <h1>已完成筹资</h1>
+                                                <h1><?php 
+                                                if($precent == "100%"){
+                                                    echo "已完成筹资";
+                                                }else{
+                                                    echo "未完成筹资";
+                                                }
+                                                    ?></h1>
                                             </td>
 
                                             <td> 
-                                                <span class='status'>筹资成功</span>
+                                                <span class='status'><?php echo $project->status;?></span>
                                                 <div class='trans'> <a href='./invest.php'>返回收益</a></div>
                                             </td>
 
                                         </tr>
+                                   <?php }?>
+                                        
 
                                         <tr class="warning">
                                             <td class="proName">
@@ -129,7 +168,6 @@
                                     </table>
                                 </div>
                                 <div class="tab-pane " id="financingList">
-                                    <table class="table">
                                         <thead >
                                         <tr class="active">
                                             <th> 项目 </th>
