@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" showNewOnSourceInSync="false" showNewOnTargetInSync="false">
     <serverData>
-      <paths name="popolong">
+      <paths name="populong">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />

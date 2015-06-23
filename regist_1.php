@@ -48,8 +48,8 @@
 
                             <div class="row signup_content hidden">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span>姓名 :</span>
+                                    
+                                    <span><img class="signup_star" src="./img/regist_02.png" alt="" />姓名 :</span>
                                 </label>
                                 <div class="input">
                                     <input type="text" id="inputRealname"  class="form-control signup_input"  placeholder="姓名">
@@ -58,8 +58,8 @@
 
                             <div class="row signup_content hidden">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span> 身份证号:</span>
+                                    
+                                    <span><img class="signup_star" src="./img/regist_02.png" alt="" /> 身份证号:</span>
                                 </label>
                                 <div class="input">
                                     <input type="password" id="inputIdCard" class="form-control signup_input"  placeholder="请输入身份证号码">
@@ -70,8 +70,8 @@
                             <div class="row signup_content show">
                                
                                 <label for="inputEmail3" class="col-xs-2 control-label" >  
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" /> 
-                                    <span >选择角色 :</span>
+                                    
+                                    <span ><img class="signup_star" src="./img/regist_02.png" alt="" /> 选择角色 :</span>
                                 </label>
 
                                     <span class="col-xs-2 btn btn-default choice" id="choice1">我要投资</span>
@@ -82,8 +82,8 @@
 
                             <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span>填写昵称 :</span>
+                                    
+                                    <span><img class="signup_star" src="./img/regist_02.png" alt="" />填写昵称 :</span>
                                 </label>
                                 <div class="input">
                                     <input type="text" id="inputNickname" class="form-control signup_input"  placeholder="昵称">
@@ -93,8 +93,8 @@
 
                             <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span>填写密码 :</span>
+                                    
+                                    <span><img class="signup_star" src="./img/regist_02.png" alt="" />填写密码 :</span>
                                 </label>
                                 <div class="input">
                                     <input type="password" id="inputPassword" class="form-control signup_input"  placeholder="请输入密码">
@@ -104,8 +104,8 @@
 
                             <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span>确认密码 :</span>
+                                    
+                                    <span><img class="signup_star" src="./img/regist_02.png" alt="" />确认密码 :</span>
                                 </label>
                               <div class="input">
                                     <input type="password" id="inputPassword1" class="form-control signup_input"  placeholder="请输入密码">
@@ -118,8 +118,8 @@
                             <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
                                     &nbsp&nbsp
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span>  验证码 :</span>
+                                    
+                                    <span><img class="signup_star" src="./img/regist_02.png" alt="" />验证码 :</span>
                                 </label>
      
                                 <div class="col-xs-2">
@@ -134,8 +134,8 @@
                           
                             <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span>绑定邮箱 :</span>
+                                    
+                                    <span><img class="signup_star" src="./img/regist_02.png" alt="" />绑定邮箱 :</span>
                                 </label>
                                   <div class="input">
                                     <input type="email" id="inputEmail" class="form-control signup_input"  placeholder="请输入邮箱">
@@ -146,8 +146,8 @@
                             
                             <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span>绑定手机 :</span>
+                                    
+                                    <span><img class="signup_star" src="./img/regist_02.png" alt="" />绑定手机 :</span>
                                 </label>
                                  <div class="input">
                                     <input type="text" id="inputMobilePhone" class="form-control signup_input"  placeholder="请输入手机号">
@@ -157,8 +157,8 @@
 
                             <div class="row signup_content show">
                                 <label for="inputEmail3" class="col-xs-2 control-label" style="margin-top: 12px">
-                                    <img class="signup_star" src="./img/regist_02.png" alt="" />
-                                    <span>  手机验证码 :</span>
+                                    
+                                    <span>  <img class="signup_star" src="./img/regist_02.png" alt="" />手机验证码 :</span>
                                 </label>
      
                                 <div class="col-xs-2">

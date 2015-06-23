@@ -2,7 +2,7 @@
     $start = '1';
     $end = '2';
     $ch = curl_init();
-    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_query.php?start=".$start.
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_start.php?start=".$start.
     "&end=".$end;
     curl_setopt($ch, CURLOPT_URL, $curl_url);
     curl_setopt($ch, CURLOPT_POST, 1);

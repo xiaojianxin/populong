@@ -274,7 +274,7 @@ session_start();
                 if(dataobj.code == ''){
                   window.location.href = "././index.php";
                 }else{
-                  alert('登陆失败');
+                  alert(data);
                 }
               },
               error:function(){

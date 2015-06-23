@@ -1,19 +1,16 @@
 <?php
 
     $ch = curl_init();
-    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_trade.php";
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_dealrecord.php";
     curl_setopt($ch, CURLOPT_URL, $curl_url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
     $curl_result = curl_exec($ch);
     curl_close($ch);
-    $result = json_decode($curl_result);
-    $result = $result->result;
+    $r = json_decode($curl_result);
+    $result = $r->result;
     $result = json_decode($result);
     var_dump($result);
-    $nickname = $result->nickname;
-    $email = $result->email;
-    $mobilephone = $result->mobilephone;
     //$a = json_decode($nickname);
     //var_dump($a);
     //$a = $nickname['result'];
@@ -31,6 +28,42 @@
                     <span>&nbsp;提现&nbsp;</span>
                     <span >&nbsp;投资&nbsp;</span>
                     <span >&nbsp;收益&nbsp;</span>
+                </div>
+
+                
+                    <div id="deal-list">
+                    <table class="table">
+                        <thead >
+                            <tr class="active">
+                                <th> 时间 </th>
+                                <th>交易类型</th>
+                                <th> 交易详情 </th>
+                                <th>金额</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        <?php foreach ($result as $dealcontent) { ?>    
+                        <tr class="warning">
+                            <td><?php $time = $dealcontent->time ;
+                            $str = (string)$time;  // 将int型转换成string
+                            $arr = str_split($str, 4);
+                            $year = $arr['0'];
+                            $datearr = str_split($arr['1'],2); 
+                            $mouth = $datearr['0'];
+                            $day = $datearr['1'];
+                            $time = $year.'.'.$mouth.'.'.$day.' '.$arr['2']; 
+                            echo $time; // 结构输出?></td>
+                            <td> <?php echo $dealcontent->tradeType ?></td>
+                            <td><a href="./pro.php?id=<?php echo $dealcontent->amount?>"><?php echo $dealcontent->projName ?></a></td>
+                            <td style="color: #6cc87f"> <?php echo $dealcontent->amount;?></td>
+                            <td><?php echo $dealcontent->comment ?></td>
+                        </tr>
+                        <?php } ?>
+
+                        </tbody>
+                    </table>
                 </div>
                 <div id="deal-list">
                     <table class="table">

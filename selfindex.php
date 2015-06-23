@@ -17,7 +17,7 @@
                    
                     <div class="container-fluid" id="self_nav">
                         <div id="topbottom" class="row">
-                            <div id="toChooseone" class="col-xs-3 content_nav" ><a>关注者110</div>
+                            <div id="toChooseone" class="col-xs-3 content_nav" >关注者110</div>
                             <div id="toChoosefans" class="col-xs-3 content_nav" >粉丝110万</div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                     <div class="tab-content self-tab-content">
                         
                         <div class="tab-pane show" id="concern"><?php require('./concern.php') ?></div>
-                        <div class="tab-pane show" id="fans"><?php require('./fans.php') ?></div>
+                        <div class="tab-pane " id="fans"><?php require('./fans.php') ?></div>
                     </div>
 
 
