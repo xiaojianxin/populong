@@ -3,7 +3,7 @@
                     <div class="title">个人资料</div>
                 </div>
                 <div class="btn btn-success pull-right edit-info" id="editInformation">
-                    <span class="glyphicon glyphicon-edit"><a href='./self.php?id=14'>取消修改</span>
+                    <span class="glyphicon glyphicon-edit"><a href='./self.php?id=14'>取消修改</a></span>
                 </div>
                 
                 <div class="container-fluid self-info">
@@ -116,13 +116,12 @@
                                     <span>最高学历：</span>
                                 </div>
                                  <div class="col-xs-3">
-                                   <select class="form-control">
-                                      <option>1</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
+                                     <select class="form-control">
+                                         <option value ="volvo">Volvo</option>
+                                         <option value ="saab">Saab</option>
+                                         <option value="opel">Opel</option>
+                                         <option value="audi">Audi</option>
+                                     </select>
                                 </div>
                             </div>
                             <div class="row">
