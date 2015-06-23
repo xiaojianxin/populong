@@ -1,7 +1,8 @@
 <?PHP
-if($_POST["isInitiator"] == "1")
+echo $_POST["isInitiator"];
+if($_POST["isInitiator"] == '1')
     $role = "2"; //initiator
-elseif ($_POST["isInvestor"] == "1")
+elseif ($_POST["isInvestor"] == '1')
     $role = "1"; //investor
 else
     $role = "0";
@@ -39,16 +40,16 @@ $json = request_by_curl($url,$json);
 $result = json_decode($json,true);
 if(isset($result)&&$result['code'] == 0)
 {
-	$url = "../success.php";  
-    echo "<script language='javascript' type='text/javascript'>";  
-    echo "window.location.href='$url'";  
-    echo "</script>";  
+	//$url = "././success.php";  
+//    echo "<script language='javascript' type='text/javascript'>";
+//    echo "window.location.href='$url'";
+//    echo "</script>";
+    echo $json;
     exit();
 }
 else
 {
-	echo "error";
-	print_r($result);
+	echo $json;
 }
 ?>
 
