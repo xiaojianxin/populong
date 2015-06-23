@@ -52,7 +52,7 @@ session_start();
                                 <a href="./self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
                             </li>
                             <li>
-                                <a href="./action/do_logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
+                                <a><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
                             </li>
                         </ul>
                     </li>
@@ -108,9 +108,10 @@ session_start();
                                   <span>&nbsp;|&nbsp;</span>
                                   <a id="toregist"href="./regist_1.php">快速注册</a>
                               </div>
-                              <div class="col-sm-6 ">
-                                  <button  class="btn btn-lg checklogin pull-right" id="navSignIn">登陆</button>
+                              <div class="col-sm-6 error-tip ">
+
                               </div>
+                              <button  class="btn btn-lg checklogin pull-right" id="navSignIn">登陆</button>
                           </div>
                       </div>
 
