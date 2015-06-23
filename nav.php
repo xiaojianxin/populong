@@ -290,8 +290,24 @@ session_start();
                 }
                   else
                 {
+                    toastr.options = {
+                        "closeButton": false,
+                        "debug": false,
+                        "positionClass": "toast-bottom-full-width",
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+                    toastr.success("登录成功");
+                    $("#login").fadeOut();
+                    setTimeout(function(){window.location.href="./index.php";},1000);
 
-                    window.location.href="./index.php";
+
                 }
               },
               error:function(){
