@@ -12,10 +12,12 @@ session_start();
    <link rel="stylesheet"  href="./css/uploadify.css"/>
     <link rel="stylesheet" href="./css/start.css"/>
     <link rel="stylesheet" href="./css/footer.css"/>
+    <link href="./css/toastr.css" rel="stylesheet"/>
     <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="./js/start.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
+    <script type="text/javascript" src="./js/toastr.js"></script>
 
 </head>
 <body>

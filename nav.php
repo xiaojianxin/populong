@@ -2,12 +2,6 @@
 session_start();
 
 ?>
-
-
-<link href="./css/toastr.css" rel="stylesheet"/>
-<script type="text/javascript" src="./js/toastr.js"></script>
-<script type="text/javascript" src="./js/nav.js"></script>
-
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -53,7 +47,7 @@ session_start();
                                 <a href="./self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
                             </li>
                             <li>
-                                <a  id="navSignOut"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
+                                <a href="./action/do_logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
                             </li>
                         </ul>
                     </li>
@@ -85,7 +79,7 @@ session_start();
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                   <h4 class="modal-title" id="myModalLabel">
                       <img src="./img/login_01.png" alt="" />
-                      登录
+                      登陆
                   </h4>
               </div>
               <div class="modal-body">
@@ -109,11 +103,9 @@ session_start();
                                   <span>&nbsp;|&nbsp;</span>
                                   <a id="toregist"href="./regist_1.php">快速注册</a>
                               </div>
-                              <div class="col-sm-6 error-tip ">
-
-
+                              <div class="col-sm-6 ">
+                                  <button  class="btn btn-lg checklogin pull-right" id="navSignIn">登陆</button>
                               </div>
-                              <button  class="btn btn-lg checklogin pull-right" id="navSignIn">登录</button>
                           </div>
                       </div>
 

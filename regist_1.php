@@ -239,7 +239,7 @@
     var inputIdCard = $('#inputIdCard').val();
 
     if(!$('#inputEmail').val().match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/ )){
-     
+          $('.email').html('请输入邮箱');
          $('.email').removeClass('hidden1');
 
     }else if(role1==''&&role2==''){
@@ -252,11 +252,13 @@
      }else if(inputPassword != inputPassword1){
        $('.password1').removeClass('hidden1');
      }else if(inputMobilePhone==''){
+      $('.mobliephone').html('请输入手机号');
       $('.mobliephone').removeClass('hidden1');
      }else{
+       $('.hidden').addClass('show1');
        $('.hidden').removeClass('hidden');
        $('.show').addClass('hidden');
-       $('.show').removeClass('show');
+       //$('.show').removeClass('show');
     }
      
       
@@ -284,8 +286,31 @@ $('#submit').click(function(){
                 var dataobj = eval("("+data+")");
                 if(dataobj.code == ''){
                   window.location.href = "././success.php";
-                }else{
-                  alert('注册失败');
+                }else if (dataobj.code == "10008") {
+                   $('.hidden').removeClass('hidden');
+                   $('.show1').addClass('hidden');
+                   $('.show1').removeClass('show1');
+                   $('.mobliephone').html('手机号已存在');
+                   $('.mobliephone').removeClass('hidden1');
+                }else if(dataobj.code == "10009"){
+                   $('.hidden').removeClass('hidden');
+                   $('.show1').addClass('hidden');
+                   $('.show1').removeClass('show1');
+                   $('.email').html('邮箱已存在');
+                   $('.email').removeClass('hidden1');
+                }else if (dataobj.code == "10007") {
+                   $('.hidden').removeClass('hidden');
+                   $('.show1').addClass('hidden');
+                   $('.show1').removeClass('show1');
+                   $('.nickname').html('昵称已存在');
+                   $('.nickname').removeClass('hidden1');
+                }else
+                {
+
+                    toastr.success("登录成功");
+                    setTimeout(function(){window.location.href=window.location.href;},1000);
+
+
                 }
               },
               error:function(){

@@ -9,7 +9,6 @@
     curl_close($ch);
     $r = json_decode($curl_result);
     $result = $r->result;
-    $result = json_decode($result);
     var_dump($result);
     //$a = json_decode($nickname);
     //var_dump($a);
