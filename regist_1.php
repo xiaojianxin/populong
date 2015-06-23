@@ -277,7 +277,6 @@ $('#submit').click(function(){
           var inputMsgCode = $('#inputMsgCode').val();
           var inputRealName = $('#inputRealname').val();
           var inputIdCard = $('#inputIdCard').val();
-          alert(isInvestor);
           $.ajax({
               type:"POST",
               url:"./action/do_regist.php",
@@ -285,7 +284,8 @@ $('#submit').click(function(){
               success:function(data){
                 var dataobj = eval("("+data+")");
                 if(dataobj.code == ''){
-                  window.location.href = "././success.php";
+                    toastr.success("注册成功");
+                    setTimeout(function(){window.location.href="./index.php";},1000);
                 }else if (dataobj.code == "10008") {
                    $('.hidden').removeClass('hidden');
                    $('.show1').addClass('hidden');
@@ -304,13 +304,6 @@ $('#submit').click(function(){
                    $('.show1').removeClass('show1');
                    $('.nickname').html('昵称已存在');
                    $('.nickname').removeClass('hidden1');
-                }else
-                {
-
-                    toastr.success("登录成功");
-                    setTimeout(function(){window.location.href=window.location.href;},1000);
-
-
                 }
               },
               error:function(){

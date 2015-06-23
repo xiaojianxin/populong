@@ -16,7 +16,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">泡泡龙</a>
+          <a class="navbar-brand" href="./index.php">泡泡龙</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         	<ul class="nav navbar-nav" style="width: 50%;">
