@@ -2,6 +2,7 @@
 session_start();
 
 ?>
+
 <link href="./css/toastr.css" rel="stylesheet"/>
 <script type="text/javascript" src="./js/toastr.js"></script>
   <nav class="navbar navbar-inverse navbar-fixed-top">
