@@ -92,6 +92,18 @@ a:focus{
     background-color: #f2f2f3;
     height: 50px;
 }
+#login .error-tip{
+    margin-top: -30px;
+    color: red;
+
+}
+#login .checklogin{
+    margin-right: 30px;
+}
+#login .checklogin:hover{
+    margin-right: 30px;
+    color: white;
+}
 #forgetPW{
     height: 100%;
 
