@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="./css/jPages.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <script src="./js/jquery-1.10.1.js"></script>
-    
     <script src="./bootstrap/js/bootstrap.min.js"></script> 
     <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
     <script src="./js/self.js"></script>

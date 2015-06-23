@@ -55,7 +55,7 @@ $(function(){
       
       
 
-    $('#toChoosefans').click(function(e) {
+    $('#toChoosefans').click(function() {
 
         $(this).css('border-top','1px solid #6cc77f');
         $(this).css('border-left','1px solid #6cc77f');
@@ -63,13 +63,11 @@ $(function(){
         $(this).css('border-bottom','1px solid #ffffff');
 
         $('#toChooseone').css('border','1px solid #d2d2d2');
+        $("#concern").css("display","none");
+        $("#fans").css("display","block");
 
-        $("#fans").removeClass('hidden');
-        $('#fans').addClass('show');
-        $("#concern").removeClass('show');
-        $('#concern').addClass('hidden');
     });
-$('#toChooseone').click(function(e) {
+$('#toChooseone').click(function() {
 
     $(this).css('border-top','1px solid #6cc77f');
     $(this).css('border-left','1px solid #6cc77f');
@@ -78,11 +76,10 @@ $('#toChooseone').click(function(e) {
 
 
     $('#toChoosefans').css('border','1px solid #d2d2d2');
-        $("#fans").removeClass('show');
-        $('#fans').addClass('hidden');
-        $("#concern").removeClass('hidden');
-        $('#concern').addClass('show');
-       
+
+    $("#fans").css("display","none");
+    $("#concern").css("display","block");
+
 });
 
 $('#leftnav a').click(function(e){
