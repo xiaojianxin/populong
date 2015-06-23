@@ -23,10 +23,15 @@
                     </div>
                 </div>
                     
-                    <div class="tab-content self-tab-content">
+                    <div class="self-tab-content">
                         
+<<<<<<< HEAD
                         <div class="tab-pane show" id="concern"><?php require('./concern.php') ?></div>
                         <div class="tab-pane " id="fans"><?php require('./fans.php') ?></div>
+=======
+                        <div id="concern"><?php require('./concern.php') ?></div>
+                        <div id="fans" style="display: none;"><?php require('./fans.php') ?></div>
+>>>>>>> 8553cf25d5303a53da1cc20b62e4767155f8a9bc
                     </div>
 
 

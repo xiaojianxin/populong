@@ -7,6 +7,7 @@
     <link rel="stylesheet"  href="./css/reset.css"/>
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link href="./css/toastr.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <link rel="stylesheet" type="text/css" href="./css/nav.css">
@@ -14,7 +15,8 @@
     <script type="text/javascript" src="./js/swiper3.07.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <!--[if lt IE 9]>
+    <script type="text/javascript" src="./js/toastr.js"></script>
+     <!--[if lt IE 9]>
     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
