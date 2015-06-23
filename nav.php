@@ -52,7 +52,7 @@ session_start();
                                 <a href="./self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
                             </li>
                             <li>
-                                <a href="./action/do_logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
+                                <a id="navSignOut"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
                             </li>
                         </ul>
                     </li>
