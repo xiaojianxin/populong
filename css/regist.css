@@ -41,8 +41,8 @@ a{
 }
 
 .signup_form{
-	width: 480px;
-	margin: 0 auto;
+	width: 90%;
+	margin-left: 300px;
 }
 .signup_content{
 	font-family: "微软雅黑";
@@ -87,9 +87,20 @@ div .detail-close{
 .hidden{
 	display: none;
 }
+.hidden1{
+	display: none;
+}
 .main{
 	min-height: 92%;
 }
-
+.warning{
+	width: 100px;
+	padding-left: 10px;
+	color: red;
+}
+.choice{
+	width: 110px;
+	margin-right: 20px;
+}
 
 

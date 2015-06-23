@@ -70,7 +70,7 @@ session_start();
                   </h4>
               </div>
               <div class="modal-body">
-                  <form action="./action/do_login.php" method="post">
+
 
                       <div class="form-group">
                           <input type="text" name="inputEmail" class="form-control login_username" placeholder="邮箱/手机" pattern="[1][358]\d{9}">
@@ -80,7 +80,7 @@ session_start();
                       </div>
                       <div class="checkbox">
                           <label>
-                              <input type="checkbox">记住用户名
+                              <input type="checkbox" id="rememberMe">记住用户名
                           </label>
                       </div>
                       <div class="forget" style="margin-top: 10px;">
@@ -91,14 +91,14 @@ session_start();
                                   <a id="toregist"href="./regist_1.php">快速注册</a>
                               </div>
                               <div class="col-sm-6 ">
-                                  <button type="submit" class="btn btn-lg checklogin pull-right">登陆</button>
+                                  <button  class="btn btn-lg checklogin pull-right" id="navSignIn">登陆</button>
                               </div>
                           </div>
                       </div>
 
 
 
-                  </form>
+
               </div>
 
           </div>
@@ -246,6 +246,28 @@ session_start();
                $('.login_username').removeAttr('pattern');
 
           }
+      });
+      $("#navSignIn").click(function(){
+          var name=$(".login_username").val();
+          var psw=$(".login_passwd").val();
+          var ischecked=$("#rememberMe").attr("ischecked");
+          $.ajax({
+              cache: false,
+              type:"POST",
+              url:"./action/do_login.php",
+              data:"inputEmail="+name+"&"+"inputPassword="+psw,
+              success:function(data){
+                var dataobj = eval("("+data+")");
+                if(dataobj.code == ''){
+                  window.location.href = "././index.php";
+                }else{
+                  alert('登陆失败');
+                }
+              },
+              error:function(){
+                  alert("登录失败");
+              }
+          })
       });
 
   </script>

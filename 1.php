@@ -1,7 +1,6 @@
-<?php
-	echo "returndata<br>";
-	echo "<pre>";
-	print_r($_REQUEST);
-	echo "</pre>";
-
+<?PHP
+   
+   echo $_POST['inputEmail'];
+  //  $a = $json->inputEmail;
+  // print_r($a);
 ?>
