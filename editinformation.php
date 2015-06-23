@@ -116,13 +116,12 @@
                                     <span>最高学历：</span>
                                 </div>
                                  <div class="col-xs-3">
-                                   <select class="form-control">
-                                      <option>1</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
+                                     <select class="form-control">
+                                         <option value ="volvo">Volvo</option>
+                                         <option value ="saab">Saab</option>
+                                         <option value="opel">Opel</option>
+                                         <option value="audi">Audi</option>
+                                     </select>
                                 </div>
                             </div>
                             <div class="row">
