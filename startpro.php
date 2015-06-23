@@ -364,10 +364,3 @@
                 </div>
 
 
-<script type="text/javascript">
-    $(function(){
-        $("#all-holder").jPages({
-            containerID : "allTables"
-        });
-    });
-</script>

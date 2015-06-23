@@ -153,7 +153,11 @@ $('.change-status').click(function(){
                 alert("文件:" + fileObj.name + " 上传失败");
             }
         });
-
+  $(function(){
+        $("#all-holder").jPages({
+            containerID : "allTables"
+        });
+    });
 
 
 
