@@ -2,6 +2,8 @@
 session_start();
 
 ?>
+<link href="./css/toastr.css" rel="stylesheet"/>
+<script type="text/javascript" src="./js/toastr.js"></script>
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -288,7 +290,7 @@ session_start();
                 }else if(dataobj.code == '10005'){
                     $("#login .error-tip").html('密码错误');
                 }
-                  else
+                else
                 {
                     toastr.options = {
                         "closeButton": false,

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b6d1da2-1cea-4453-802a-293d5cccc26d" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\wamp\www\populong\action\test_trade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealrecord.php" afterPath="$PROJECT_DIR$/dealrecord.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/editinformation.php" afterPath="$PROJECT_DIR$/editinformation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nav.php" afterPath="$PROJECT_DIR$/nav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/regist.css" afterPath="$PROJECT_DIR$/css/regist.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regist_1.php" afterPath="$PROJECT_DIR$/regist_1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selfindex.php" afterPath="$PROJECT_DIR$/selfindex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startpro.php" afterPath="$PROJECT_DIR$/startpro.php" />
     </list>
     <ignored path="populong.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +65,7 @@
       <file leaf-file-name="startpro.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/startpro.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7776">
+            <state line="5" column="17" selection-start="178" selection-end="178" vertical-scroll-proportion="0.2660754" vertical-offset="0" max-vertical-offset="7776">
               <folding />
             </state>
           </provider>
@@ -156,6 +150,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="populong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="populong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="populong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="populong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="action" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -193,7 +215,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939634" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -265,7 +287,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/startpro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7776">
+        <state line="5" column="17" selection-start="178" selection-end="178" vertical-scroll-proportion="0.2660754" vertical-offset="0" max-vertical-offset="7776">
           <folding />
         </state>
       </provider>
