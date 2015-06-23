@@ -64,8 +64,10 @@ $(function(){
 
         $('#toChooseone').css('border','1px solid #d2d2d2');
 
-        $("#fans").attr('class',"tab-pane active");
-        $("#concern").attr('class',"tab-pane");
+        $("#fans").removeClass('hidden');
+        $('#fans').addClass('show');
+        $("#concern").removeClass('show');
+        $('#concern').addClass('hidden');
     });
 $('#toChooseone').click(function(e) {
 
@@ -76,9 +78,11 @@ $('#toChooseone').click(function(e) {
 
 
     $('#toChoosefans').css('border','1px solid #d2d2d2');
-
-    $("#concern").attr('class',"tab-pane active");
-    $("#fans").attr('class',"tab-pane");
+        $("#fans").removeClass('show');
+        $('#fans').addClass('hidden');
+        $("#concern").removeClass('hidden');
+        $('#concern').addClass('show');
+       
 });
 
 $('#leftnav a').click(function(e){
