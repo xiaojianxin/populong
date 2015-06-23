@@ -367,7 +367,8 @@
 <script type="text/javascript">
     $(function(){
         $("#all-holder").jPages({
-            containerID : "allTables"
+            containerID : "allTables",
+            perPage : 10
         });
     });
 </script>
