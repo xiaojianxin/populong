@@ -8,6 +8,7 @@ session_start();
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="./js/themes/default/default.css"/>
     <link rel="stylesheet"  href="./css/reset.css"/>
    <link rel="stylesheet"  href="./css/uploadify.css"/>
     <link rel="stylesheet" href="./css/start.css"/>
@@ -15,9 +16,11 @@ session_start();
     <link href="./css/toastr.css" rel="stylesheet"/>
     <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/kindeditor-min.js"></script>
+    <script type="text/javascript" src="./js/lang/zh_CN.js"></script>
     <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
     <script type="text/javascript" src="./js/toastr.js"></script>
-    <script type="text/javascript" src="./js/tinymce.min.js"></script>
+
     <script type="text/javascript" src="./js/start.js"></script>
 
 </head>
@@ -40,12 +43,6 @@ session_start();
 
         </form> 
         <?php  require('./footer.php'); ?>
-    
-
-<script type="text/javascript">
-
-   
-</script>
 
 
 </body>

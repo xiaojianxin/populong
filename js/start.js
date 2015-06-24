@@ -1,7 +1,5 @@
-
-
 var AddressTree={};
-AddressTree["a_row"]=new Array(); //存所有记录 
+AddressTree["a_row"]=new Array(); //存所有记录
 with(AddressTree){
     a_row["1"]=["北京市",0,1];
     a_row["2"]=["上海市",0,1];
@@ -401,10 +399,10 @@ with(AddressTree){
     a_row["397"]=["sss",285,1];
 }
 var j=0;
-AddressTree["a_record"]=new Array();//存储记录的记录号 
+AddressTree["a_record"]=new Array();//存储记录的记录号
 for(i in AddressTree["a_row"]){AddressTree["a_record"][j++]=i;}
 AddressTree.ObjNumber=1;
-//地址选择构造函数 
+//地址选择构造函数
 function LightManAddressTree(){
     var Data = AddressTree; //数据记录数据变量
     this.noselectshow=["--请选择省份--","--请选择城市--"];//各级不选择显示值
@@ -575,28 +573,12 @@ $('#previousStep3').click(function(e){
 
 
 });
-
-tinymce.init({
-    selector: "textarea",
-    theme: "modern",
-    plugins: [
-        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-        "searchreplace wordcount visualblocks visualchars code fullscreen",
-        "insertdatetime media nonbreaking save table contextmenu directionality",
-        "emoticons template paste textcolor colorpicker textpattern"
-    ],
-    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-    toolbar2: "print preview media | forecolor backcolor emoticons",
-    image_advtab: true,
-    templates: [
-        {title: 'Test template 1', content: 'Test 1'},
-        {title: 'Test template 2', content: 'Test 2'}
-    ],
-    language:'zh_CN'
-//        content = tinymce.get('editor1').getContent({format: 'raw'});
-});
-
 $(function() {
+    KindEditor.ready(function(K) {
+         K.create('textarea[name="inputProjIntro"]', {
+            allowFileManager : true
+        });
+    });
     $('#file_pic').uploadify({
 
 
