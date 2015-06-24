@@ -14,10 +14,11 @@ session_start();
     <link rel="stylesheet" href="./css/footer.css"/>
     <link href="./css/toastr.css" rel="stylesheet"/>
     <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
-    <script type="text/javascript" src="./js/start.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
     <script type="text/javascript" src="./js/toastr.js"></script>
+    <script type="text/javascript" src="./js/tinymce.min.js"></script>
+    <script type="text/javascript" src="./js/start.js"></script>
 
 </head>
 <body>
@@ -42,47 +43,6 @@ session_start();
     
 
 <script type="text/javascript">
-    $('#nextstep').click(function(e){
-
-         $('.show').addClass('hidden0');
-        $('.show').removeClass('show');
-        $('.hidden1').addClass('show');
-         $('.hidden1').removeClass('hidden1');
-         
-      
-
-    });
-     $('#nextStep_next').click(function(e){
-
-         $('.show').addClass('hidden1');
-         $('.show').removeClass('show');
-         $('.hidden2').addClass('show');
-         $('.hidden2').removeClass('hidden2');
-         
-    });
-
-     $('#previousStep_prev').click(function(e){
-
-         $('.show').addClass('hidden1');
-         $('.show').removeClass('show');
-         $('.hidden0').addClass('show');
-         $('.hidden0').removeClass('hidden0');
-         
-      
-
-    });
-      
-         $('#previousStep3').click(function(e){
-
-         $('.show').addClass('hidden2');
-         $('.show').removeClass('show');
-         $('.hidden1').addClass('show');
-         $('.hidden1').removeClass('hidden1');
-         
-      
-
-    });
-    
 
    
 </script>
