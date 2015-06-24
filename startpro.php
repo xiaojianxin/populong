@@ -48,7 +48,7 @@
                                             <td class="proName">
                                                 <div class="row">
                                                     <div class="col-xs-4">
-                                                        <img src="./img/index_07.png" style="float:right;width: 80px;margin-left: 20px;">
+                                                        <img src="./img/index_07.png" style="width: 80px;margin-left: 20px;">
                                                     </div>
                                                     <div class="col-xs-8">
                                                         <?php echo $project->projName;?>
