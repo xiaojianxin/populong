@@ -22,6 +22,7 @@ session_start();
 </head>
 <body>
 <?php require('./nav.php') ?>
+    <?php require('./agreement.php')?>
 	
 
      <form action='./action/do_apply.php' method="post">

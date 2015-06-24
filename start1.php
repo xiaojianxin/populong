@@ -140,7 +140,7 @@
                         <div class="col-xs-3"></div>
                         <div class="col-xs-9">
 
-                            <div class="text-left"><input type="checkbox">我已阅读并同意《某某条款》</div>
+                            <div class="text-left"><input type="checkbox">我已阅读并同意<a href="#detail" data-toggle="modal" data-target="#detail">《泡泡龙网站协议条款》</a></div>
                             <div class="btn btn-success" id="nextstep"> 下一步</div>
                         </div>
                      </div>
