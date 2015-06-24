@@ -25,7 +25,7 @@
                                <span>支持金额：</span>
                            </div>
                            <div class="col-xs-9">
-                               <input name="inputAmountPer" class="form-control" placeholder="不超过20个字"/>
+                               <input name="inputAmountPer1" class="form-control" placeholder="不超过20个字"/>
                                <span class="text">元</span>
                            </div>
                        </div>
@@ -34,7 +34,7 @@
                                <span>限定名额：</span>
                            </div>
                            <div class="col-xs-9">
-                               <span><input name="inputQuota" class="form-control" placeholder="不少于10000"/></span>
+                               <span><input name="inputQuota1" class="form-control" placeholder="不少于10000"/></span>
 
                                <span class="text">个</span>
                                <span class="text"><small>0为不限定名额</small></span>
@@ -65,7 +65,7 @@
                                <span>回报内容：</span>
                            </div>
                            <div class="col-xs-9">
-                               <textarea name="inputExplainText" placeholder="最多不超过50字"></textarea>
+                               <textarea name="inputExplainText1" placeholder="最多不超过50字"></textarea>
                            </div>
                        </div>
                        <div class="row">
@@ -73,7 +73,7 @@
                                <span>回报时间：</span>
                            </div>
                            <div class="col-xs-9">
-                               <input name="inputRewardTime" class="form-control" placeholder="不超过20个字"/>
+                               <input name="inputRewardTime1" class="form-control" placeholder="不超过20个字"/>
                                <span class="text">天</span>
                            </div>
                        </div>
@@ -102,7 +102,7 @@
                                 <span>支持金额：</span>
                             </div>
                             <div class="col-xs-9">
-                                <input class="form-control" placeholder="不超过20个字"/>
+                                <input class="form-control" name="inputAmountPer2" placeholder="不超过20个字"/>
                                 <span class="text">元</span>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                                 <span>限定名额：</span>
                             </div>
                             <div class="col-xs-9">
-                                <span><input class="form-control" placeholder="不少于10000"/></span>
+                                <span><input class="form-control" name="inputQuota2" placeholder="不少于10000"/></span>
 
                                 <span class="text">个</span>
                                 <span class="text"><small>0为不限定名额</small></span>
@@ -141,7 +141,7 @@
                                 <span>回报内容：</span>
                             </div>
                             <div class="col-xs-9">
-                                <textarea placeholder="最多不超过50字"></textarea>
+                                <textarea name="inputExplainText2" placeholder="最多不超过50字"></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -149,7 +149,7 @@
                                 <span>回报时间：</span>
                             </div>
                             <div class="col-xs-9">
-                                <input class="form-control" placeholder="不超过20个字"/>
+                                <input name="inputRewardTime2" class="form-control" placeholder="不超过20个字"/>
                                 <span class="text">天</span>
                             </div>
                         </div>
@@ -177,7 +177,7 @@
                                         <span>支持金额：</span>
                                     </div>
                                     <div class="col-xs-9">
-                                        <input class="form-control" placeholder="不超过20个字"/>
+                                        <input class="form-control" name="inputAmountPer3" placeholder="不超过20个字"/>
                                         <span class="text">元</span>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@
                                         <span>限定名额：</span>
                                     </div>
                                     <div class="col-xs-9">
-                                        <span><input class="form-control" placeholder="不少于10000"/></span>
+                                        <span><input class="form-control" name="inputQuota3" placeholder="不少于10000"/></span>
 
                                         <span class="text">个</span>
                                         <span class="text"><small>0为不限定名额</small></span>
@@ -217,7 +217,7 @@
                                         <span>回报内容：</span>
                                     </div>
                                     <div class="col-xs-9">
-                                        <textarea placeholder="最多不超过50字"></textarea>
+                                        <textarea name="inputExplainText3" placeholder="最多不超过50字"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -225,7 +225,7 @@
                                         <span>回报时间：</span>
                                     </div>
                                     <div class="col-xs-9">
-                                        <input class="form-control" placeholder="不超过20个字"/>
+                                        <input  name="inputRewardTime3" class="form-control" placeholder="不超过20个字"/>
                                         <span class="text">天</span>
                                     </div>
                                 </div>
@@ -255,7 +255,7 @@
                                                 <span>支持金额：</span>
                                             </div>
                                             <div class="col-xs-9">
-                                                <input class="form-control" placeholder="不超过20个字"/>
+                                                <input class="form-control" name="inputAmountPer4" placeholder="不超过20个字"/>
                                                 <span class="text">元</span>
                                             </div>
                                         </div>
@@ -264,7 +264,7 @@
                                                 <span>限定名额：</span>
                                             </div>
                                             <div class="col-xs-9">
-                                                <span><input class="form-control" placeholder="不少于10000"/></span>
+                                                <span><input class="form-control" name="inputQuota4"  placeholder="不少于10000"/></span>
 
                                                 <span class="text">个</span>
                                                 <span class="text"><small>0为不限定名额</small></span>
@@ -292,7 +292,7 @@
                                                 <span>回报内容：</span>
                                             </div>
                                             <div class="col-xs-9">
-                                                <textarea placeholder="最多不超过50字"></textarea>
+                                                <textarea name="inputExplainText4" placeholder="最多不超过50字"></textarea>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -300,7 +300,7 @@
                                                 <span>回报时间：</span>
                                             </div>
                                             <div class="col-xs-9">
-                                                <input class="form-control" placeholder="不超过20个字"/>
+                                                <input  name="inputRewardTime4" class="form-control" placeholder="不超过20个字"/>
                                                 <span class="text">天</span>
                                             </div>
                                         </div>
@@ -327,7 +327,7 @@
                                             <span>最低金额：</span>
                                         </div>
                                         <div class="col-xs-9">
-                                            <input class="form-control" placeholder="不超过20个字" id="input-percentage"/>
+                                            <input class="form-control" placeholder="不超过20个字" name="inputAmountPer0" id="input-percentage"/>
                                             <span class="text" id="showPrice">%=</span>
                                             <span id="showNum">元</span>
                                             <span class="num-tip">(只能输入整数)</span>
@@ -357,7 +357,7 @@
                                             <span>回报内容：</span>
                                         </div>
                                         <div class="col-xs-9">
-                                            <textarea placeholder="最多不超过50字"></textarea>
+                                            <textarea name="inputExplainText0" placeholder="最多不超过50字"></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -365,7 +365,7 @@
                                             <span>回报时间：</span>
                                         </div>
                                         <div class="col-xs-9">
-                                            <input class="form-control" placeholder="不超过20个字"/>
+                                            <input class="form-control" name="inputRewardTime0" placeholder="不超过20个字"/>
                                             <span class="text">天</span>
                                         </div>
                                     </div>
@@ -436,6 +436,7 @@
             fileSizeLimit:'2MB',
             'fileObjName': 'file',
             'onUploadSuccess': function(file, data, response) {
+                var data = data.substring(1,data.length-1);
                 $('#showPic1').attr("src",data);
                 $('#imgurl2').attr('value',data);//上传图片的服务器地址
 
@@ -457,6 +458,7 @@
             'fileObjName': 'file',   
             fileSizeLimit:'2MB',
             'onUploadSuccess': function(file, data, response) {
+                var data = data.substring(1,data.length-1);
                 $('#showPic2').attr("src",data);//上传图片的服务器地址
                 $('#imgurl3').attr('value',data);
 
@@ -478,6 +480,7 @@
             fileSizeLimit:'2MB',
             'fileObjName': 'file',   
             'onUploadSuccess': function(file, data, response) {
+                var data = data.substring(1,data.length-1);
                 $('#showPic3').attr("src",data);
                 $('#imgurl4').attr('value',data);//上传图片的服务器地址
 
@@ -499,6 +502,7 @@
             fileSizeLimit:'2MB',
             'fileObjName': 'file',   
             'onUploadSuccess': function(file, data, response) {
+                var data = data.substring(1,data.length-1);
                 $('#showPic4').attr("src",data);
                 $('#imgurl5').attr('value',data);//上传图片的服务器地址
 
@@ -520,7 +524,8 @@
             fileSizeLimit:'2MB',
            'fileObjName': 'file',   
               'onUploadSuccess': function(file, data, response) {
-                $('#showPic4').attr("src",data);
+                var data = data.substring(1,data.length-1);
+                $('#showPic5').attr("src",data);
                 $('#imgurl6').attr('value',data);//上传图片的服务器地址
 
 //                $('#photo').attr("value",response);

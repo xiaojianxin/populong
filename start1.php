@@ -64,12 +64,12 @@
                                     <div class="col-xs-4 ">
 
                                         <input type="file" name="inputProjPho" id="file_pic"/>
-                                        <input type='text' name="img-url1" id='imgurl1' style="display:none"/>
-                                        <input type='text' name="img-url2" id='imgurl2' style="display:none"/>
-                                        <input type='text' name="img-url3" id='imgurl3' style="display:none"/>
-                                        <input type='text' name="img-url4" id='imgurl4' style="display:none"/>
-                                        <input type='text' name="img-url5" id='imgurl5' style="display:none"/>
-                                        <input type='text' name="img-url6" id='imgurl6' style="display:none"/>
+                                        <input type='text' name="inputProjPho" id='imgurl1' style="display:none"/>
+                                        <input type='text' name="inputItemRewardsPho1" id='imgurl2' style="display:none"/>
+                                        <input type='text' name="inputItemRewardsPho2" id='imgurl3' style="display:none"/>
+                                        <input type='text' name="inputItemRewardsPho3" id='imgurl4' style="display:none"/>
+                                        <input type='text' name="inputItemRewardsPho4" id='imgurl5' style="display:none"/>
+                                        <input type='text' name="inputFundRewardsPho0" id='imgurl6' style="display:none"/>
                                     </div>
                                     <div class="col-xs-8">
                                         <span class="text">支持jpg,png格式图片，图片大小不超过2M</span>
@@ -166,7 +166,8 @@
             fileSizeLimit:'2MB',
             'fileObjName': 'file',
             'onUploadSuccess': function(file, data, response) {
-                $('#showUploadImg').attr("src",data);
+                var data1 = data.substring(1,data.length-1);
+                $('#showUploadImg').attr("src",data1);
                 $('#imgurl1').attr('value',data);
                 $('#showUploadImg').show();
                 //$('#photo').attr("value",response);
