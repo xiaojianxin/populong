@@ -127,6 +127,7 @@
                                 </div>
 
                                 <img id="checkpic" onclick="changing();" src='./checkcode.php' />
+                                <div class="col-xs-3 warning hidden1 checknum">请输入验证码</div>
                             </div>
 
 
@@ -230,6 +231,7 @@
     var inputname = $('#checkbox1').val();
     var inputNickname = $('#inputNickname').val();
     var inputPassword = $('#inputPassword').val();
+    var inputchecknum = $('#checknum').val();
     var inputPassword1 = $('#inputPassword1').val();
     var inputPhoCode = $('#inputPhoCode').val();
     var inputEmail = $('#inputEmail').val();
@@ -272,6 +274,7 @@ $('#submit').click(function(){
           var inputNickname = $('#inputNickname').val();
           var inputPassword = $('#inputPassword').val();
           var inputPhoCode = $('#inputPhoCode').val();
+          var inputchecknum = $('#checknum').val();
           var inputEmail = $('#inputEmail').val();
           var inputMobilePhone = $('#inputMobilePhone').val();
           var inputMsgCode = $('#inputMsgCode').val();
@@ -280,9 +283,16 @@ $('#submit').click(function(){
           $.ajax({
               type:"POST",
               url:"./action/do_regist.php",
-              data:"isInvestor="+isInvestor+"&"+"isInitiator="+isInitiator+"&"+"inputNickname="+inputNickname+"&"+"inputPassword="+inputPassword+"&"+"inputPhoCode="+inputPhoCode+"&"+"inputEmail="+inputEmail+"&"+"inputMobilePhone="+inputMobilePhone+"&"+"inputMsgCode="+inputMsgCode+"&"+"inputRealName="+inputRealName+"&"+"inputIdCard="+inputIdCard,
+              data:"isInvestor="+isInvestor+"&"+"isInitiator="+isInitiator+"&"+"inputNickname="+inputNickname+"&"+"inputPassword="+inputPassword+"&"+"inputPhoCode="+inputPhoCode+"&"+"inputEmail="+inputEmail+"&"+"inputMobilePhone="+inputMobilePhone+"&"+"inputMsgCode="+inputMsgCode+"&"+"inputRealName="+inputRealName+"&"+"inputIdCard="+inputIdCard+"&"+"inputchecknum="+inputchecknum,
               success:function(data){
-                var dataobj = eval("("+data+")");
+                if(data == 0){
+                  $('.hidden').removeClass('hidden');
+                   $('.show1').addClass('hidden');
+                   $('.show1').removeClass('show1');
+                   $('.checknum').html('验证码错误');
+                   $('.checknum').removeClass('hidden1');
+                }else{
+                  var dataobj = eval("("+data+")");
                 if(dataobj.code == ''){
                     toastr.success("注册成功");
                     setTimeout(function(){window.location.href="./index.php";},1000);
@@ -305,9 +315,11 @@ $('#submit').click(function(){
                    $('.nickname').html('昵称已存在');
                    $('.nickname').removeClass('hidden1');
                 }
+                }
+                
               },
               error:function(){
-                  alert("登录失败");
+                  alert("注册失败");
               }
           })
 });
