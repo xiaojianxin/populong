@@ -1,3 +1,4 @@
+
 .startpic{
     margin-top: 80px;
 }
@@ -83,6 +84,19 @@
 }
 #selectCity{
     margin-top: 10px;
+}
+.error-tip{
+    color:red ;
+    font-size: 16px!important;
+}
+.detail-content{
+    width: 800px;
+    margin-left:-200px;
+}
+div .detail-close{
+    width: 100px;
+    margin-left: 42%;
+    margin-bottom:10px; 
 }
 
 /*********************************发起项目2***********************************************************8*/

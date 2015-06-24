@@ -9,8 +9,11 @@
                             <div class="col-xs-3">
                                 <span>项目名称：</span>
                             </div>
-                            <div class="col-xs-9">
-                                <input name="inputProjName" class="form-control" placeholder="不超过20个字"/>
+                            <div class="col-xs-6">
+                                <input name="inputProjName" class="form-control" placeholder="不超过20个字" id="inputProjName"/>
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="projNameError"></span>
                             </div>
                         </div>
                         <div class="row">
@@ -32,27 +35,39 @@
                             <div class="col-xs-3">
                                 <span>筹集资金：</span>
                             </div>
-                            <div class="col-xs-9">
-                                <span><input class="form-control" placeholder="不少于10000" name="inputPlanAmount" id="gain_num"/></span>
+                            <div class="col-xs-6">
+                                <span><input class="form-control" placeholder="不少于10000" name="inputPlanAmount" id="gain_num"
+                                             style="width: 90%;float: left;"/>
+                                     <span class="text" style="float: left;margin-top: -3px;">元</span>
+                                </span>
 
-                                <span class="text">元</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="gainNumError"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
                                 <span>筹集天数：</span>
                             </div>
-                            <div class="col-xs-9">
-                                <input class="form-control" name="inputRaiseDays" placeholder="不超过20个字"/>
-                                <span class="text">天</span>
+                            <div class="col-xs-6">
+                                <input class="form-control" id="inputRaiseDays" name="inputRaiseDays" placeholder="不超过20个字"
+                                       style="width: 90%;float: left;"/>
+                                <span class="text"style="float: left;margin-top: -3px;">天</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="raiseDaysError"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
                                 <span>项目地点：</span>
                             </div>
-                            <div class="col-xs-9 two-input" id="selectCity">
+                            <div class="col-xs-6 two-input" id="selectCity">
 
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="cityError"></span>
                             </div>
                         </div>
                         <div class="row">
@@ -64,12 +79,12 @@
                                     <div class="col-xs-4 ">
 
                                         <input type="file" name="inputProjPho" id="file_pic"/>
-                                        <input type='text' name="img-url1" id='imgurl1' style="display:none"/>
-                                        <input type='text' name="img-url2" id='imgurl2' style="display:none"/>
-                                        <input type='text' name="img-url3" id='imgurl3' style="display:none"/>
-                                        <input type='text' name="img-url4" id='imgurl4' style="display:none"/>
-                                        <input type='text' name="img-url5" id='imgurl5' style="display:none"/>
-                                        <input type='text' name="img-url6" id='imgurl6' style="display:none"/>
+                                        <input type='text' name="inputProjPho" id='imgurl1' style="display:none"/>
+                                        <input type='text' name="inputItemRewardsPho1" id='imgurl2' style="display:none"/>
+                                        <input type='text' name="inputItemRewardsPho2" id='imgurl3' style="display:none"/>
+                                        <input type='text' name="inputItemRewardsPho3" id='imgurl4' style="display:none"/>
+                                        <input type='text' name="inputItemRewardsPho4" id='imgurl5' style="display:none"/>
+                                        <input type='text' name="inputFundRewardsPho0" id='imgurl6' style="display:none"/>
                                     </div>
                                     <div class="col-xs-8">
                                         <span class="text">支持jpg,png格式图片，图片大小不超过2M</span>
@@ -97,9 +112,12 @@
                             <div class="col-xs-3">
                                 <span>项目简介：</span>
                             </div>
-                            <div class="col-xs-9">
-                                <input class="form-control" name="inputProjAbst" placeholder="不超过20个字"/>
+                            <div class="col-xs-6">
+                                <input class="form-control" id="inputProjAbst" name="inputProjAbst" placeholder="不超过20个字"/>
 
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="projAbstError"></span>
                             </div>
                         </div>
                         <div class="row">
@@ -107,7 +125,7 @@
                                 <span>详细介绍：</span>
                             </div>
                             <div class="col-xs-9">
-                                <textarea name="inputProjIntro" id="editor1"></textarea>
+                                <textarea name="inputProjIntro" id="editor1" class="form-control"></textarea>
                             </div>
                         </div>
 
@@ -122,7 +140,7 @@
                         <div class="col-xs-3"></div>
                         <div class="col-xs-9">
 
-                            <div class="text-left"><input type="checkbox">我已阅读并同意《某某条款》</div>
+                            <div class="text-left"><input type="checkbox">我已阅读并同意<a href="#detail" data-toggle="modal" data-target="#detail">《泡泡龙网站协议条款》</a></div>
                             <div class="btn btn-success" id="nextstep"> 下一步</div>
                         </div>
                      </div>
@@ -130,62 +148,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="./js/tinymce.min.js"></script>
-<script type="text/javascript">
-
-    tinymce.init({
-        selector: "textarea",
-        theme: "modern",
-        plugins: [
-            "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-            "searchreplace wordcount visualblocks visualchars code fullscreen",
-            "insertdatetime media nonbreaking save table contextmenu directionality",
-            "emoticons template paste textcolor colorpicker textpattern"
-        ],
-        toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-        toolbar2: "print preview media | forecolor backcolor emoticons",
-        image_advtab: true,
-        templates: [
-            {title: 'Test template 1', content: 'Test 1'},
-            {title: 'Test template 2', content: 'Test 2'}
-        ],
-        language:'zh_CN'
-//        content = tinymce.get('editor1').getContent({format: 'raw'});
-    });
-
-    $(function() {
-        $('#file_pic').uploadify({
-
-           
-            'swf'  : 'uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
-            'uploader'    : '/file',       //指定服务器端上传处理文件，默认‘upload.php’
-            'auto'      : true,               //选定文件后是否自动上传，默认false
-            'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
-            'multi'     : false,               //是否允许同时上传多文件，默认false
-            'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
-            fileSizeLimit:'2MB',
-            'fileObjName': 'file',
-            'onUploadSuccess': function(file, data, response) {
-                $('#showUploadImg').attr("src",data);
-                $('#imgurl1').attr('value',data);
-                $('#showUploadImg').show();
-                //$('#photo').attr("value",response);
-            },
-            'onError'          : function(event, queueID, fileObj)
-            {
-                alert("文件:" + fileObj.name + " 上传失败");
-            }
-        });
-
-        $('.select-ban').click(function(){
-            var id = $(this).attr('id');
-            $(".active").removeClass('active');
-            $(this).addClass('active');
-            return $('#checkboxInput'+id).click();
-        });
-
-    });
-    var obj=document.getElementById("selectCity");
-    var city=new LightManAddressTree;
-    city.selectshow(obj,0);
-</script>
+<script type="text/javascript"></script>

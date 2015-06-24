@@ -85,7 +85,7 @@ $result = json_decode($json,true);
 
 if(isset($result)&&$result['code'] == 0)
 {
-	$url = "../regist_2.html";  
+	$url = "../start-success.php";
     echo "<script language='javascript' type='text/javascript'>";  
     echo "window.location.href='$url'";  
     echo "</script>";  

@@ -1,7 +1,5 @@
-
-
 var AddressTree={};
-AddressTree["a_row"]=new Array(); //存所有记录 
+AddressTree["a_row"]=new Array(); //存所有记录
 with(AddressTree){
     a_row["1"]=["北京市",0,1];
     a_row["2"]=["上海市",0,1];
@@ -401,10 +399,10 @@ with(AddressTree){
     a_row["397"]=["sss",285,1];
 }
 var j=0;
-AddressTree["a_record"]=new Array();//存储记录的记录号 
+AddressTree["a_record"]=new Array();//存储记录的记录号
 for(i in AddressTree["a_row"]){AddressTree["a_record"][j++]=i;}
 AddressTree.ObjNumber=1;
-//地址选择构造函数 
+//地址选择构造函数
 function LightManAddressTree(){
     var Data = AddressTree; //数据记录数据变量
     this.noselectshow=["--请选择省份--","--请选择城市--"];//各级不选择显示值
@@ -534,4 +532,188 @@ function LightManAddressTree(){
         }
         catch(e){}
     }
-} 
+}
+
+$(function() {
+    KindEditor.ready(function(K) {
+         K.create('textarea[name="inputProjIntro"]', {
+             width : '500px',
+             height:"400px",
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText0"]', {
+            width : '500px',
+            height:"400px",
+
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText1"]', {
+            width : '500px',
+            height:"400px",
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText2"]', {
+            width : '500px',
+            height:"400px",
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText3"]', {
+            width : '500px',
+            height:"400px",
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText4"]', {
+            width : '500px',
+            height:"400px",
+            allowFileManager : true
+        });
+
+    });
+    $('#file_pic').uploadify({
+
+
+        'swf'  : 'uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+        'uploader'    : '/file',       //指定服务器端上传处理文件，默认‘upload.php’
+        'auto'      : true,               //选定文件后是否自动上传，默认false
+        'folder'    : '/userphoto'   ,     //要上传到的服务器路径，
+        'multi'     : false,               //是否允许同时上传多文件，默认false
+        'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
+        fileSizeLimit:'2MB',
+        'fileObjName': 'file',
+        'onUploadSuccess': function(file, data, response) {
+            var data1 = data.substring(1,data.length-1);
+            $('#showUploadImg').attr("src",data1);
+            $('#imgurl1').attr('value',data);
+            $('#showUploadImg').show();
+            //$('#photo').attr("value",response);
+        },
+        'onError'          : function(event, queueID, fileObj)
+        {
+            alert("文件:" + fileObj.name + " 上传失败");
+        }
+    });
+
+    $('.select-ban').click(function(){
+        var id = $(this).attr('id');
+        $(".active").removeClass('active');
+        $(this).addClass('active');
+        return $('#checkboxInput'+id).click();
+    });
+    var obj=document.getElementById("selectCity");
+    var city=new LightManAddressTree;
+    city.selectshow(obj,0);
+    $("#inputProjName").bind("blur",function(){
+        var len=$(this).val().length;
+        console.log(len);
+        if(len==0)
+        {
+            $("#projNameError").text("项目名称不能为空");
+        }
+        else if(len>20)
+        {
+            $("#projNameError").text("不能超过20个字");
+        }
+        else
+        {
+            $("#projNameError").text("");
+        }
+    });
+    $("#inputProjName").bind("focus",function(){
+
+        $("#projNameError").text("");
+    });
+    $("#gain_num").bind("blur",function(){
+        var len=$(this).val().length;
+        var num=parseInt($(this).val());
+        var error=$("#gainNumError");
+        if(len==0)
+        {
+            error.text("筹集资金不能为空");
+        }
+        else if(num>=10000)
+        {
+            error.text("")
+
+        }
+        else if(num&&num<10000)
+        {
+            error.text("不应少于10000");
+        }
+        else
+        {
+            error.text("请输入数字");
+        }
+    });
+    $("#gain_num").bind("focus",function(){
+
+        $("#gainNumError").text("");
+    });
+    $("#inputRaiseDays").bind("blur",function(){
+        var len=$(this).val().length;
+        var num=parseInt($(this).val());
+        var error=$("#raiseDaysError");
+        if(len==0)
+        {
+            error.text("筹集天数不能为空");
+        }
+        else if(len>20)
+        {
+            error.text("不超过20个字");
+        }
+        else if(num==0)
+        {
+            error.text("天数最少大于1天");
+        }
+        else if(num>0)
+        {
+            error.text("");
+        }
+        else
+        {
+            error.text("请输入数字");
+        }
+    });
+    $("#inputRaiseDays").bind("focus",function(){
+
+        $("#raiseDaysError").text("");
+    });
+
+    $("#inputProjAbst").bind("blur",function(){
+        var len=$(this).val().length;
+        console.log(len);
+        var error=$("#projAbstError");
+        if(len==0)
+        {
+            error.text("项目描述不能为空");
+        }
+        else if(len>20)
+        {
+            error.text("不能超过20个字");
+        }
+        else
+        {
+            error.text("");
+        }
+    });
+    $("#inputProjAbst").bind("focus",function(){
+
+        $("#projAbstError").text("");
+    });
+    $("#a_tree1_0").bind("blur",function(){
+        var id=$("#a_tree1_0").val();
+        var error=$("#cityError");
+        if(id=="")
+        {
+            error.text("项目地点不能为空");
+        }
+
+        else
+        {
+            error.text("");
+        }
+    });
+    $("#a_tree1_0").bind("focus",function(){
+
+        $("#cityError").text("");
+    });
+});
