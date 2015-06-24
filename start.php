@@ -43,7 +43,46 @@ session_start();
 
         </form> 
         <?php  require('./footer.php'); ?>
+<script type="text/javascript">
+    $('#nextstep').click(function(e){
 
+        $('.show').addClass('hidden0');
+        $('.show').removeClass('show');
+        $('.hidden1').addClass('show');
+        $('.hidden1').removeClass('hidden1');
+
+    });
+    $('#nextStep_next').click(function(e){
+
+        $('.show').addClass('hidden1');
+        $('.show').removeClass('show');
+        $('.hidden2').addClass('show');
+        $('.hidden2').removeClass('hidden2');
+
+    });
+
+    $('#previousStep_prev').click(function(e){
+
+        $('.show').addClass('hidden1');
+        $('.show').removeClass('show');
+        $('.hidden0').addClass('show');
+        $('.hidden0').removeClass('hidden0');
+
+
+
+    });
+
+    $('#previousStep3').click(function(e){
+
+        $('.show').addClass('hidden2');
+        $('.show').removeClass('show');
+        $('.hidden1').addClass('show');
+        $('.hidden1').removeClass('hidden1');
+
+
+
+    });
+</script>
 
 </body>
 </html>

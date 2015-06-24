@@ -357,7 +357,7 @@
                                             <span>回报内容：</span>
                                         </div>
                                         <div class="col-xs-9">
-                                            <textarea name="inputExplainText0" placeholder="最多不超过50字"></textarea>
+                                            <textarea name="inputExplainText0" ></textarea>
                                         </div>
                                     </div>
                                     <div class="row">

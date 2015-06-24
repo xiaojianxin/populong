@@ -533,51 +533,41 @@ function LightManAddressTree(){
         catch(e){}
     }
 }
-$('#nextstep').click(function(e){
 
-    $('.show').addClass('hidden0');
-    $('.show').removeClass('show');
-    $('.hidden1').addClass('show');
-    $('.hidden1').removeClass('hidden1');
-
-
-
-});
-$('#nextStep_next').click(function(e){
-
-    $('.show').addClass('hidden1');
-    $('.show').removeClass('show');
-    $('.hidden2').addClass('show');
-    $('.hidden2').removeClass('hidden2');
-
-});
-
-$('#previousStep_prev').click(function(e){
-
-    $('.show').addClass('hidden1');
-    $('.show').removeClass('show');
-    $('.hidden0').addClass('show');
-    $('.hidden0').removeClass('hidden0');
-
-
-
-});
-
-$('#previousStep3').click(function(e){
-
-    $('.show').addClass('hidden2');
-    $('.show').removeClass('show');
-    $('.hidden1').addClass('show');
-    $('.hidden1').removeClass('hidden1');
-
-
-
-});
 $(function() {
     KindEditor.ready(function(K) {
          K.create('textarea[name="inputProjIntro"]', {
+             width : '500px',
+             height:"400px",
             allowFileManager : true
         });
+        K.create('textarea[name="inputExplainText0"]', {
+            width : '500px',
+            height:"400px",
+
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText1"]', {
+            width : '500px',
+            height:"400px",
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText2"]', {
+            width : '500px',
+            height:"400px",
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText3"]', {
+            width : '500px',
+            height:"400px",
+            allowFileManager : true
+        });
+        K.create('textarea[name="inputExplainText4"]', {
+            width : '500px',
+            height:"400px",
+            allowFileManager : true
+        });
+
     });
     $('#file_pic').uploadify({
 
