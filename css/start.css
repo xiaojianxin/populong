@@ -1,3 +1,4 @@
+
 .startpic{
     margin-top: 80px;
 }
@@ -84,7 +85,10 @@
 #selectCity{
     margin-top: 10px;
 }
-
+.error-tip{
+    color:red ;
+    font-size: 16px!important;
+}
 /*********************************发起项目2***********************************************************8*/
 
 /*#input-percentage .num-tip{*/

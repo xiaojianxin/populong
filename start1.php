@@ -9,8 +9,11 @@
                             <div class="col-xs-3">
                                 <span>项目名称：</span>
                             </div>
-                            <div class="col-xs-9">
-                                <input name="inputProjName" class="form-control" placeholder="不超过20个字"/>
+                            <div class="col-xs-6">
+                                <input name="inputProjName" class="form-control" placeholder="不超过20个字" id="inputProjName"/>
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="projNameError"></span>
                             </div>
                         </div>
                         <div class="row">
@@ -32,27 +35,39 @@
                             <div class="col-xs-3">
                                 <span>筹集资金：</span>
                             </div>
-                            <div class="col-xs-9">
-                                <span><input class="form-control" placeholder="不少于10000" name="inputPlanAmount" id="gain_num"/></span>
+                            <div class="col-xs-6">
+                                <span><input class="form-control" placeholder="不少于10000" name="inputPlanAmount" id="gain_num"
+                                             style="width: 90%;float: left;"/>
+                                     <span class="text" style="float: left;margin-top: -3px;">元</span>
+                                </span>
 
-                                <span class="text">元</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="gainNumError"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
                                 <span>筹集天数：</span>
                             </div>
-                            <div class="col-xs-9">
-                                <input class="form-control" name="inputRaiseDays" placeholder="不超过20个字"/>
-                                <span class="text">天</span>
+                            <div class="col-xs-6">
+                                <input class="form-control" id="inputRaiseDays" name="inputRaiseDays" placeholder="不超过20个字"
+                                       style="width: 90%;float: left;"/>
+                                <span class="text"style="float: left;margin-top: -3px;">天</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="raiseDaysError"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-3">
                                 <span>项目地点：</span>
                             </div>
-                            <div class="col-xs-9 two-input" id="selectCity">
+                            <div class="col-xs-6 two-input" id="selectCity">
 
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="cityError"></span>
                             </div>
                         </div>
                         <div class="row">
@@ -97,9 +112,12 @@
                             <div class="col-xs-3">
                                 <span>项目简介：</span>
                             </div>
-                            <div class="col-xs-9">
-                                <input class="form-control" name="inputProjAbst" placeholder="不超过20个字"/>
+                            <div class="col-xs-6">
+                                <input class="form-control" id="inputProjAbst" name="inputProjAbst" placeholder="不超过20个字"/>
 
+                            </div>
+                            <div class="col-xs-3">
+                                <span class="error-tip" id="projAbstError"></span>
                             </div>
                         </div>
                         <div class="row">
@@ -184,9 +202,123 @@
             $(this).addClass('active');
             return $('#checkboxInput'+id).click();
         });
+        var obj=document.getElementById("selectCity");
+        var city=new LightManAddressTree;
+        city.selectshow(obj,0);
+        $("#inputProjName").bind("blur",function(){
+            var len=$(this).val().length;
+            console.log(len);
+            if(len==0)
+            {
+                $("#projNameError").text("项目名称不能为空");
+            }
+            else if(len>20)
+            {
+                $("#projNameError").text("不能超过20个字");
+            }
+            else
+            {
+                $("#projNameError").text("");
+            }
+        });
+        $("#inputProjName").bind("focus",function(){
 
+                $("#projNameError").text("");
+        });
+        $("#gain_num").bind("blur",function(){
+            var len=$(this).val().length;
+            var num=parseInt($(this).val());
+            var error=$("#gainNumError");
+            if(len==0)
+            {
+                error.text("筹集资金不能为空");
+            }
+            else if(num>=10000)
+            {
+                error.text("")
+
+            }
+            else if(num&&num<10000)
+            {
+                error.text("不应少于10000");
+            }
+            else
+            {
+                error.text("请输入数字");
+            }
+        });
+        $("#gain_num").bind("focus",function(){
+
+            $("#gainNumError").text("");
+        });
+        $("#inputRaiseDays").bind("blur",function(){
+            var len=$(this).val().length;
+            var num=parseInt($(this).val());
+            var error=$("#raiseDaysError");
+            if(len==0)
+            {
+                error.text("筹集天数不能为空");
+            }
+            else if(len>20)
+            {
+                error.text("不超过20个字");
+            }
+            else if(num==0)
+            {
+                error.text("天数最少大于1天");
+            }
+            else if(num>0)
+            {
+                error.text("");
+            }
+            else
+            {
+                error.text("请输入数字");
+            }
+        });
+        $("#inputRaiseDays").bind("focus",function(){
+
+            $("#raiseDaysError").text("");
+        });
+
+        $("#inputProjAbst").bind("blur",function(){
+            var len=$(this).val().length;
+            console.log(len);
+            var error=$("#projAbstError");
+            if(len==0)
+            {
+                error.text("项目描述不能为空");
+            }
+            else if(len>20)
+            {
+                error.text("不能超过20个字");
+            }
+            else
+            {
+                error.text("");
+            }
+        });
+        $("#inputProjAbst").bind("focus",function(){
+
+            $("#projAbstError").text("");
+        });
+        $("#a_tree1_0").bind("blur",function(){
+            var id=$("#a_tree1_0").val();
+            var error=$("#cityError");
+            if(id=="")
+            {
+                error.text("项目地点不能为空");
+            }
+
+            else
+            {
+                error.text("");
+            }
+        });
+        $("#a_tree1_0").bind("focus",function(){
+
+            $("#cityError").text("");
+        });
     });
-    var obj=document.getElementById("selectCity");
-    var city=new LightManAddressTree;
-    city.selectshow(obj,0);
+
 </script>
