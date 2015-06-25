@@ -20,8 +20,8 @@ session_start();
     <script type="text/javascript" src="./js/lang/zh_CN.js"></script>
     <script type="text/javascript" src="./js/jquery.uploadify.min.js"></script>
     <script type="text/javascript" src="./js/toastr.js"></script>
-
     <script type="text/javascript" src="./js/start.js"></script>
+
 
 </head>
 <body>
@@ -44,14 +44,12 @@ session_start();
         </form> 
         <?php  require('./footer.php'); ?>
 <script type="text/javascript">
-    $('#nextstep').click(function(e){
+    var judge=new JudgeFunc();
+    judge.aboutCity();
+    judge.bindEvent();
+</script>
+<script type="text/javascript">
 
-        $('.show').addClass('hidden0');
-        $('.show').removeClass('show');
-        $('.hidden1').addClass('show');
-        $('.hidden1').removeClass('hidden1');
-
-    });
     $('#nextStep_next').click(function(e){
 
         $('.show').addClass('hidden1');
