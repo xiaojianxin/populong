@@ -82,7 +82,7 @@ $json = json_encode(array(
 		
 $json = request_by_curl($url,$json);
 //echo $projPho."<br>";
-echo $json;
+//echo $json;
 $result = json_decode($json,true);
 
 if(isset($result)&&$result['code'] == 0)

@@ -40,7 +40,12 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                    <?php foreach ($result as $project) { ?>
+                                    <?php
+                                    if(empty($result['0']->projName)){
+                                        echo "您还没有投资记录";
+
+                                    } else{ 
+                                     foreach ($result as $project) { ?>
                                         <tr class="warning">
                                             <td class="proName">
                                                 <div class="row">
@@ -53,7 +58,8 @@
                                                 </div>
                                             </td>
                                             <td class="proTime">
-                                                <?php $time = $project->applyTime ;
+                                                <?php 
+                                                $time = $project->applyTime ;
                                                 $str = (string)$time;  // 将int型转换成string
                                                 $arr = str_split($str, 4);
                                                 $year = $arr['0'];
@@ -95,7 +101,9 @@
                                             </td>
 
                                         </tr>
-                                    <?php } ?> 
+                                    <?php
+                                        } 
+                                     } ?> 
 
                                         <tr class="warning">
                                             <td class="proName">

@@ -305,6 +305,7 @@ $('#submit').click(function(){
                    $('.checknum').removeClass('hidden1');
                 }else{
                   var dataobj = eval("("+data+")");
+                  alert(dataobj);
                 if(dataobj.code == ''){
                     toastr.success("注册成功");
                     setTimeout(function(){window.location.href="./index.php";},1000);
