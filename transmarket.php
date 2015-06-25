@@ -46,7 +46,12 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                    <?php foreach ($result as $project) { ?>
+                                    <?php 
+                                    if(empty($result['0']->projName)){
+                                        echo "您还没有投资记录";
+
+                                    } else{ 
+                                    foreach ($result as $project) { ?>
                                         <tr class="warning">
                                             <td class="proName">
                                                 <div class="row">
@@ -101,7 +106,9 @@
 
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php
+                                        } 
+                                    } ?>
 
                                         <tr class="warning">
                                             <td class="proName">

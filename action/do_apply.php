@@ -20,6 +20,7 @@ $projAuthy = $_POST["isVadio"] + ($_POST["isPush"]<<1) + ($_POST["isFieldCoun"]<
 
 if($_POST["inputAmountPer0"] != NULL)
 {
+	echo "11";
 	$rewordClassCode[0] = 1;
 	$amountPer[0] = $_POST["inputAmountPer0"]; 
     $explainPic[0] = $_POST["inputFundRewardsPho0"];//等待
@@ -31,6 +32,7 @@ else
 {
 	for($i = 1; $i< 5; $i++)
 	{
+		echo "00";
 		$rewordClassCode[$i] = 2;
 		$amountPer[$i-1] = $_POST["inputAmountPer".$i]; 
   		$quota[$i-1] = $_POST["inputQuota".$i];
@@ -79,8 +81,8 @@ $json = json_encode(array(
 		));
 		
 $json = request_by_curl($url,$json);
-echo $projPho."<br>";
-echo $json;
+//echo $projPho."<br>";
+//echo $json;
 $result = json_decode($json,true);
 
 if(isset($result)&&$result['code'] == 0)

@@ -63,35 +63,54 @@
            </div>
        </div>
        <div id="tabPrice">
+                              <?PHP
+                                    function request_by_curl($remote_server, $json_string)
+                                    {
+                                        $ch = curl_init();
+                                        curl_setopt($ch,CURLOPT_URL,$remote_server);
+                                        curl_setopt($ch,CURLOPT_POSTFIELDS,$json_string);
+                                        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+                                        $data = curl_exec($ch);
+                                        curl_close($ch);
+                                        return $data;
+                                    }
+
+                                    $url = "123.57.74.122:8088/logic/project";
+                                    $json = '{"method": "project_payback", "projectId": 122}';
+
+                                    $result_arr = request_by_curl($url,$json);
+                                    $result_arr = json_decode($result_arr);
+                                    $result = $result_arr->result;
+                                    $result_content = $result;
+                                    var_dump($result);
+
+                              ?>
            <div class="tabbable" id="tabs-1">
                <ul class="nav nav-tabs ">
+                <?php $i = 1;
+                      foreach ($result as $reword) { ?>
                    <li >
-                       <a href="#panel-1" data-toggle="tab">￥1</a>
+                       <a href="#panel-<?php echo $i; ?>"    <?php if($i == 1){echo 'class="active"';} ?>data-toggle="tab">￥1</a>
                    </li>
-                   <li class="active">
-                       <a href="#panel-2" data-toggle="tab">￥10</a>
-                   </li>
-                   <li>
-                       <a href="#panel-3" data-toggle="tab">￥100</a>
-                   </li>
-                   <li>
-                       <a href="#panel-4" data-toggle="tab">￥1000</a>
-                   </li>
+                <?php 
+                  $i++;
+                }?>
                </ul>
                <div class="tab-content">
-                   <div class="tab-pane" id="panel-1">
+                <?php $i = 1;
+                      foreach ($result_content as $content) {
+                        ?>
+                   <div class="tab-pane active" id="panel-<?php echo $i; ?>">
                        <div style="height: 20px;background-color: #a9ddac;"></div>
                        <div class="thumbnail">
                            <div class="row box-introduce">
                                <div class="col-xs-4">
-                                   <img src="./img/pro_1.png" alt="...">
+                                   <img src="<?php echo $content->explainPic ?>" alt="...">
                                </div>
                                <div class="col-xs-5">
                                     <h1>支持后您将获得</h1>
-                                   <p>1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
+                                   <p>
+                                    <?php echo $content->explainText;?>
                                    </p>
                                </div>
                                <div class="col-xs-3">
@@ -99,26 +118,29 @@
                                     <div class="row">
 
                                             <span>支持金额:</span>
-                                            <span class="text-red">10元</span>
+                                            <span class="text-red"><?php echo $content->amountPer;?>元</span>
 
                                     </div>
                                    <div style="height: 20px;"></div>
                                    <div class="row">
                                        <span class="glyphicon glyphicon-user" style="background-color:#9ab26b; "></span>
-                                       <span>22</span>
+                                       <span><?php echo $content->quota;?></span>
                                        <span>|</span>
                                        <span>剩余</span>
-                                       <span class="text-red">10</span>
+                                       <span class="text-red"><?php echo $content->quotaRemain;?></span>
                                        <span>个名额</span>
                                    </div>
                                    <div style="height: 20px;"></div>
-                                   <div class="btn invest_button"><a href="invest_1.php">投资￥1</a></div>
+                                   <div class="btn invest_button"><a href="invest_1.php">投资￥<?php echo $content->amountPer;?></a></div>
                                </div>
                            </div>
                        </div>
                        <div style="height: 20px;background-color: #a9ddac;"></div>
                    </div>
-                   <div class="tab-pane active" id="panel-2">
+                   <?php 
+                  $i++;
+                }?>
+                   <div class="tab-pane " id="panel-2">
                        <div style="height: 20px;background-color: #a9ddac;"></div>
                        <div class="thumbnail">
                            <div class="row box-introduce">

@@ -11,7 +11,7 @@
     $result = json_decode($curl_result);
     curl_close($ch);
     $result = $result->result;
-   //var_dump($result);
+   var_dump($result);
 ?>
                 <div id="startPro">
                     <div class="fourtab">
@@ -43,7 +43,12 @@
                                         </tr>
                                         </thead>
                                         <tbody id="allTables">
-                                    <?php foreach ($result as $project) { ?>
+                                    <?php
+                                    if(empty($result)){
+                                        echo "您还没有发起项目";
+
+                                    } else{
+                                    foreach ($result as $project) { ?>
                                         <tr class="warning">
                                             <td class="proName">
                                                 <div class="row">
@@ -106,7 +111,9 @@
                                             </td>
 
                                         </tr>
-                                   <?php }?>
+                                       <?php   
+                                   } 
+                               }?>
                                         
 
                                         <tr class="warning">

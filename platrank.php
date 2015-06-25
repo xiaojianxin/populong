@@ -1,4 +1,23 @@
+<?PHP
+    function request_by_curl($remote_server, $json_string)
+    {
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL,$remote_server);
+        curl_setopt($ch,CURLOPT_POSTFIELDS,$json_string);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+        $data = curl_exec($ch);
+        curl_close($ch);
+        return $data;
+    }
 
+    $url = "123.57.74.122:8088/logic/insite";
+    $json = '{"method":"sponser_ranklist"}';
+
+    $result_arr = request_by_curl($url,$json);
+    $result_arr = json_decode($result_arr);
+    $result = $result_arr->result;
+    var_dump($result);
+?>
                 <div id="platrank">
                     <div class="twotab">
                         <div class="tabbable" id="twotab">
@@ -23,23 +42,45 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr class="warning">
-                                            <td class="randId">1</td>
-                                            <td class="proName">
-                                                <span>
-                                                    <img src="./img/index_04.png"  class="img-circle rank-pic">
-                                                </span>
-                                                <span>
-                                                    Mike
-                                                </span>
-                                            </td>
-                                            <td class="proNum">2000</td>
-                                            <td class="proMoney"> 2000</td>
-                                        </tr>
+                                    <?php 
+                                    if (empty($result['0']->userName)){
+                                        echo "没有发起人";
+                                    }else{
+                                        foreach ($result as $user) { ?>
+                                          <tr class="warning">
+                                                <td class="randId">1</td>
+                                                <td class="proName">
+                                                    <span>
+                                                        <img src="./img/index_04.png"  class="img-circle rank-pic">
+                                                    </span>
+                                                    <span>
+                                                        <?php echo $user->userName ?>
+                                                    </span>
+                                                </td>
+                                                <td class="proNum"><span><?php echo $user->projNums ?></span></td>
+                                                <td class="proMoney"><span> <?php echo $user->amount?></span></td>
+                                            </tr>
+                                   <?php 
+                                    }
+                                }
+                                    ?>
+                                        
                                         </tbody>
                                     </table>
                                 </div>
+
+
                                 <div class="tab-pane " id="investRank">
+
+ <?PHP
+    $url = "123.57.74.122:8088/logic/insite";
+    $json = '{"method":"investor_ranklist"}';
+
+    $result_arr = request_by_curl($url,$json);
+    $result_arr = json_decode($result_arr);
+    $result = $result_arr->result;
+    var_dump($result);
+?>   
                                     <table class="table">
                                         <thead >
                                         <tr class="active">
@@ -51,21 +92,29 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr class="warning">
-                                            <td class="randId">1</td>
-                                            <td class="proName">
-                                                <div class="row">
+                                <?php 
+                                    if (empty($result['0']->user)){
+                                        echo "没有发起人";
+                                    }else{
+                                        foreach ($result as $user) { 
+                                ?>
+                                            <tr class="warning">
+                                                <td class="randId">1</td>
+                                                <td class="proName">
                                                     <span>
-                                                        <img src="./img/index_06.png"  class="img-circle rank-pic">
+                                                        <img src="./img/index_04.png"  class="img-circle rank-pic">
                                                     </span>
                                                     <span>
-                                                        Mike
+                                                        <?php echo $user->userName ?>
                                                     </span>
-                                                </div>
-                                            </td>
-                                            <td class="proTime">2000</td>
-                                            <td class="proMoney"> 2000</td>
-                                        </tr>
+                                                </td>
+                                                <td class="proNum"><span><?php echo $user->projNums ?></span></td>
+                                                <td class="proMoney"><span><?php echo $user->amount ?></span></td>
+                                            </tr>
+                                   <?php 
+                                    }
+                                }
+                                    ?>
                                         </tbody>
                                     </table>
                                 </div>
