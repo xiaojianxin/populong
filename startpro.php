@@ -2,8 +2,10 @@
     $start = '1';
     $end = '2';
     $ch = curl_init();
-    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_start.php?start=".$start.
-    "&end=".$end;
+    $token = $_SESSION['token'];
+    //var_dump($token);
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_start.php?token=".$token;
+    //var_dump($_SESSION);
     curl_setopt($ch, CURLOPT_URL, $curl_url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
@@ -11,7 +13,7 @@
     $result = json_decode($curl_result);
     curl_close($ch);
     $result = $result->result;
-   var_dump($result);
+    //var_dump($result);
 ?>
                 <div id="startPro">
                     <div class="fourtab">
@@ -44,7 +46,7 @@
                                         </thead>
                                         <tbody id="allTables">
                                     <?php
-                                    if(empty($result)){
+                                    if(empty($result['0']->projName)){
                                         echo "您还没有发起项目";
 
                                     } else{

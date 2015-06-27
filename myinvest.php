@@ -2,11 +2,13 @@
     $start = '1';
     $end = '2';
     $ch = curl_init();
-    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_invest.php";
+    $token = $_SESSION['token'];
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_invest.php?token=".$token;
     curl_setopt($ch, CURLOPT_URL, $curl_url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
     $curl_result = curl_exec($ch);
+    var_dump($curl_result);
     $result = json_decode($curl_result);
     curl_close($ch);
     $result = $result->result;

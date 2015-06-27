@@ -1,13 +1,15 @@
 <?php
 
     $ch = curl_init();
-    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_dealrecord.php";
+    $token = $_SESSION['token'];
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_dealrecord.php?token=".$token;
     curl_setopt($ch, CURLOPT_URL, $curl_url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
     $curl_result = curl_exec($ch);
     curl_close($ch);
     $r = json_decode($curl_result);
+    //var_dump($r);
     $result = $r->result;
     var_dump($result);
     //$a = json_decode($nickname);

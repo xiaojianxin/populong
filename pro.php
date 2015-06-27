@@ -82,6 +82,7 @@
                                     $result_arr = json_decode($result_arr);
                                     $result = $result_arr->result;
                                     $result_content = $result;
+                                    $projIntro  = $result['0']->projIntro;
                                     var_dump($result);
 
                               ?>
@@ -100,7 +101,7 @@
                 <?php $i = 1;
                       foreach ($result_content as $content) {
                         ?>
-                   <div class="tab-pane active" id="panel-<?php echo $i; ?>">
+                   <div class="tab-pane  <?php if($i == 1){echo "active";}?>" id="panel-<?php echo $i; ?>">
                        <div style="height: 20px;background-color: #a9ddac;"></div>
                        <div class="thumbnail">
                            <div class="row box-introduce">
@@ -140,123 +141,6 @@
                    <?php 
                   $i++;
                 }?>
-                   <div class="tab-pane " id="panel-2">
-                       <div style="height: 20px;background-color: #a9ddac;"></div>
-                       <div class="thumbnail">
-                           <div class="row box-introduce">
-                               <div class="col-xs-4">
-                                   <img src="./img/pro_1.png" alt="...">
-                               </div>
-                               <div class="col-xs-5">
-                                   <h1>支持后您将获得</h1>
-                                   <p>1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                   </p>
-                               </div>
-                               <div class="col-xs-3">
-                                   <div style="height: 20px;"></div>
-                                   <div class="row">
-
-                                       <span>支持金额:</span>
-                                       <span class="text-red">10元</span>
-
-                                   </div>
-                                   <div style="height: 20px;"></div>
-                                   <div class="row">
-                                       <span class="glyphicon glyphicon-user" style="background-color:#9ab26b; "></span>
-                                       <span>22</span>
-                                       <span>|</span>
-                                       <span>剩余</span>
-                                       <span class="text-red">10</span>
-                                       <span>个名额</span>
-                                   </div>
-                                   <div style="height: 20px;"></div>
-                                   <div class="btn invest_button"><a href="invest_1.php">投资￥10</a></div>
-                               </div>
-                           </div>
-                       </div>
-                       <div style="height: 20px;background-color: #a9ddac;"></div>
-                   </div>
-                   <div class="tab-pane" id="panel-3">
-                       <div style="height: 20px;background-color: #a9ddac;"></div>
-                       <div class="thumbnail">
-                           <div class="row box-introduce">
-                               <div class="col-xs-4">
-                                   <img src="./img/pro_1.png" alt="...">
-                               </div>
-                               <div class="col-xs-5">
-                                   <h1>支持后您将获得</h1>
-                                   <p>1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                   </p>
-                               </div>
-                               <div class="col-xs-3">
-                                   <div style="height: 20px;"></div>
-                                   <div class="row">
-
-                                       <span>支持金额:</span>
-                                       <span class="text-red">10元</span>
-
-                                   </div>
-                                   <div style="height: 20px;"></div>
-                                   <div class="row">
-                                       <span class="glyphicon glyphicon-user" style="background-color:#9ab26b; "></span>
-                                       <span>22</span>
-                                       <span>|</span>
-                                       <span>剩余</span>
-                                       <span class="text-red">10</span>
-                                       <span>个名额</span>
-                                   </div>
-                                   <div style="height: 20px;"></div>
-                                   <div class="btn invest_button"><a href="invest_1.php">投资￥100</a></div>
-                               </div>
-                           </div>
-                       </div>
-                       <div style="height: 20px;background-color: #a9ddac;"></div>
-                   </div>
-                   <div class="tab-pane" id="panel-4">
-                       <div style="height: 20px;background-color: #a9ddac;"></div>
-                       <div class="thumbnail">
-                           <div class="row box-introduce">
-                               <div class="col-xs-4">
-                                   <img src="./img/pro_1.png" alt="...">
-                               </div>
-                               <div class="col-xs-5">
-                                   <h1>支持后您将获得</h1>
-                                   <p>1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                       1.成为一起会员享受所有会员福利<br/>
-                                   </p>
-                               </div>
-                               <div class="col-xs-3">
-                                   <div style="height: 20px;"></div>
-                                   <div class="row">
-
-                                       <span>支持金额:</span>
-                                       <span class="text-red">10元</span>
-
-                                   </div>
-                                   <div style="height: 20px;"></div>
-                                   <div class="row">
-                                       <span class="glyphicon glyphicon-user" style="background-color:#9ab26b; "></span>
-                                       <span>22</span>
-                                       <span>|</span>
-                                       <span>剩余</span>
-                                       <span class="text-red">10</span>
-                                       <span>个名额</span>
-                                   </div>
-                                   <div style="height: 20px;"></div>
-                                   <div class="btn invest_button"><a href="invest.php">投资￥不定金额</a></div>
-                               </div>
-                           </div>
-                       </div>
-                       <div style="height: 20px;background-color: #a9ddac;"></div>
-                   </div>
                </div>
            </div>
        </div>
@@ -357,7 +241,7 @@
                                </ul>
                                <div class="tab-content">
                                    <div class="tab-pane active" id="box-1">
-                                       <iframe src="prodetail.html" class="mainframe" name="mainiframe1" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="prodetail.php" class="mainframe" name="mainiframe1" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-2">
                                        <iframe src="comment.html" class="mainframe" name="mainiframe2" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>

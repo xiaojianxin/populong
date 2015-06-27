@@ -25,14 +25,15 @@
                                         curl_close($ch);
                                         return $data;
                                     }
-
+                                    $token = '"'.$_SESSION['token'].'"';
                                     $url = "123.57.74.122:8088/logic/invest";
-                                    $json = '{"method": "invest_sold_query", "account": 6}';
+                                    $json = '{"method": "invest_sold_query", "token": '.$token.'}';
 
                                     $result_arr = request_by_curl($url,$json);
+                                    var_dump($result_arr);
                                     $result_arr = json_decode($result_arr);
-                                    $result = $result_arr->result;
-                                    var_dump($result);
+                                    //$result = $result_arr->result;
+                                    var_dump($result_arr);
 
                                     ?>
                                     <table class="table">

@@ -247,6 +247,7 @@
     $('.password').addClass('hidden1');
     $('.password1').addClass('hidden1');
     $('.mobliephone').addClass('hidden1');
+    $('.checknum').addClass('hidden1');
 
 
 
@@ -305,8 +306,8 @@ $('#submit').click(function(){
                    $('.checknum').removeClass('hidden1');
                 }else{
                   var dataobj = eval("("+data+")");
-                  alert(dataobj);
-                if(dataobj.code == ''){
+                  //alert(dataobj);
+                if(dataobj.code == '0'){
                     toastr.success("注册成功");
                     setTimeout(function(){window.location.href="./index.php";},1000);
                 }else if (dataobj.code == "10008") {
