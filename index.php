@@ -159,7 +159,7 @@
     ?>
         <div class="col-xs-4">
             <div class="onebox">
-                <a href="./pro.php">
+                <a href="./pro.php?projId=<?php echo $project->projID;?>">
                     <img class="project"src="./img/index_02.png" alt="2" />
                 </a>
                 <h2><?php echo $project->projName ?></h2>

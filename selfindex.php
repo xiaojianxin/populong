@@ -24,8 +24,8 @@
                 </div>
                     
                     <div class=" self-tab-content">
-                        <div class="tab-pane show" id="concern"><?php require('./concern.php') ?></div>
-                        <div class="tab-pane show" id="fans"><?php require('./fans.php') ?></div>
+                        <div class="tab-pane" id="concern"><?php require('./concern.php') ?></div>
+                        <div class="tab-pane" id="fans" style="display:none"><?php require('./fans.php') ?></div>
                     </div>
 
 

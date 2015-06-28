@@ -10,6 +10,7 @@
     <script src="./js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="./js/swiper3.07.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/pro.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="http://api.html5media.info/1.1.4/html5media.min.js"></script>
     <!--[if lt IE 9]>
@@ -84,6 +85,8 @@
                                     $result_content = $result;
                                     $projIntro  = $result['0']->projIntro;
                                     var_dump($result);
+                                    $projectId = $_GET['projId'];
+                                    var_dump($projectId);
 
                               ?>
            <div class="tabbable" id="tabs-1">
@@ -244,7 +247,7 @@
                                        <iframe src="prodetail.php" class="mainframe" name="mainiframe1" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-2">
-                                       <iframe src="comment.html" class="mainframe" name="mainiframe2" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="comment.php?projId=<?php echo $projectId;?>" class="mainframe" id="comment" name="mainiframe2" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-3">
                                        <iframe src="processPro.html" class="mainframe" name="mainiframe3" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
