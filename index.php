@@ -45,7 +45,7 @@
     <?php
     $start = '1';
     $end = '2';
-    $part = 'hotProj';
+    $part = 'hotInvs';
     $ch = curl_init();
     $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_query.php?part=".$part."&start=".$start."&end".$end;
     curl_setopt($ch, CURLOPT_URL, $curl_url);
@@ -159,7 +159,7 @@
     ?>
         <div class="col-xs-4">
             <div class="onebox">
-                <a href="./pro.php">
+                <a href="./pro.php?projId=<?php echo $project->projID;?>">
                     <img class="project"src="./img/index_02.png" alt="2" />
                 </a>
                 <h2><?php echo $project->projName ?></h2>

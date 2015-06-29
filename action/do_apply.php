@@ -2,15 +2,25 @@
 session_start();
 $projName = $_POST["inputProjName"];
 $thumbPho = 0;
-$projType = 1;//$_POST["inputProjType"];
-$cityCode = 0;//未定义$_POST["inputCityCode"];
+$projType = $_POST["inputProjType"];
+$provinceCode = $_POST["a_tree1_0"];
+if ($provinceCode > 4) {
+	if($provinceCode==32||$provinceCode==33){
+			$cityCode = 0;
+		}else{
+			$cityCode = $_POST["a_tree1_1"];
+		}	
+}else{
+	$cityCode = 0;
+}
+
 $fieldCode = 0;//未定义
 $planAmount = $_POST["inputPlanAmount"];
 $projAbst = $_POST["inputProjAbst"];
 $projIntro = $_POST["inputProjIntro"];
 $projPho = $_POST["inputProjPho"];
 $countryCode = 0;//未定义
-$provinceCode = 0;//未定义$_POST["inputProvinceCode"];
+
 $vadioLink = $_POST["inputVadioLink"];
 $creditRanting = 0;//未定义
 $raiseDays = $_POST["inputRaiseDays"];
@@ -22,7 +32,7 @@ if($_POST["inputAmountPer0"] != NULL)
 {
 	$rewordClassCode[0] = 1;
 	$amountPer[0] = $_POST["inputAmountPer0"]; 
-    $explainPic[0] = $_POST["inputFundRewardsPho0"];//等待
+    $explainPic[0] = $_POST["inputFundRewardsPho0"];
 	$quota[0] = 0;//无
     $explainText[0] = $_POST["inputExplainText0"];
     $rewardTime[0] = $_POST["inputRewardTime0"];
@@ -31,10 +41,10 @@ else
 {
 	for($i = 1; $i< 5; $i++)
 	{
-		$rewordClassCode[$i] = 2;
+		$rewordClassCode[$i-1] = 2;
 		$amountPer[$i-1] = $_POST["inputAmountPer".$i]; 
   		$quota[$i-1] = $_POST["inputQuota".$i];
-    	$explainPic[$i-1] = $_POST["inputItemRewardsPho".$i];//等待
+    	$explainPic[$i-1] = $_POST["inputItemRewardsPho".$i];
     	$explainText[$i-1] = $_POST["inputExplainText".$i];
     	$rewardTime[$i-1] = $_POST["inputRewardTime".$i];
 	}
@@ -50,6 +60,27 @@ function request_by_curl($remote_server, $json_string)
         curl_close($ch);
         return $data;
 }
+
+$storejson = json_encode(array(
+		"method"=>"mongostore", 
+		"mime"=>"text/plain", 
+		"data"=>$projIntro));
+
+
+$storeurl = "123.57.74.122/logic/mongostore";
+$storejson = request_by_curl($storeurl,$storejson);
+
+$projIntroUrl = json_decode($storejson,true);
+
+
+$storejson = json_encode(array(
+    "method"=>"mongostore",
+    "mime"=>"text/plain",
+    "data"=>$explainText));
+$storejson = request_by_curl($storeurl,$storejson);
+$explainText = json_decode($storejson,true);
+
+
 $url = "123.57.74.122/logic/apply";
 $json = json_encode(array(
 		'method'=>'apply',
@@ -61,7 +92,7 @@ $json = json_encode(array(
 		'fieldCode'=>$fieldCode,
 		'planAmount'=>$planAmount,
 		'projAbst'=>$projAbst,
-		'projIntro'=>$projIntro,
+		'projIntro'=>$projIntroUrl["url"],
 		'planAmount'=>$planAmount,
 		'countryCode'=>$countryCode,
 		'provinceCode'=>$provinceCode,
@@ -79,8 +110,8 @@ $json = json_encode(array(
 		));
 		
 $json = request_by_curl($url,$json);
-echo $projPho."<br>";
-echo $json;
+//echo $projPho."<br>";
+//echo $json;
 $result = json_decode($json,true);
 
 if(isset($result)&&$result['code'] == 0)

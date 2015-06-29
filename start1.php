@@ -125,7 +125,7 @@
                                 <span>详细介绍：</span>
                             </div>
                             <div class="col-xs-9">
-                                <textarea name="inputProjIntro" id="editor1"></textarea>
+                                <textarea name="inputProjIntro" id="editor1" class="form-control"></textarea>
                             </div>
                         </div>
 
@@ -149,7 +149,3 @@
     </div>
 </div>
 
-<script type="text/javascript">
-
-
-</script>

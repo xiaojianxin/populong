@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
@@ -240,6 +241,16 @@
     var inputRealName = $('#inputRealname').val();
     var inputIdCard = $('#inputIdCard').val();
 
+    $('.email').addClass('hidden1');
+    $('.role').addClass('hidden1');
+    $('.nickname').addClass('hidden1');
+    $('.password').addClass('hidden1');
+    $('.password1').addClass('hidden1');
+    $('.mobliephone').addClass('hidden1');
+    $('.checknum').addClass('hidden1');
+
+
+
     if(!$('#inputEmail').val().match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/ )){
           $('.email').html('请输入邮箱');
          $('.email').removeClass('hidden1');
@@ -280,11 +291,13 @@ $('#submit').click(function(){
           var inputMsgCode = $('#inputMsgCode').val();
           var inputRealName = $('#inputRealname').val();
           var inputIdCard = $('#inputIdCard').val();
+          alert(inputMobilePhone);
           $.ajax({
               type:"POST",
               url:"./action/do_regist.php",
               data:"isInvestor="+isInvestor+"&"+"isInitiator="+isInitiator+"&"+"inputNickname="+inputNickname+"&"+"inputPassword="+inputPassword+"&"+"inputPhoCode="+inputPhoCode+"&"+"inputEmail="+inputEmail+"&"+"inputMobilePhone="+inputMobilePhone+"&"+"inputMsgCode="+inputMsgCode+"&"+"inputRealName="+inputRealName+"&"+"inputIdCard="+inputIdCard+"&"+"inputchecknum="+inputchecknum,
               success:function(data){
+                alert(data);
                 if(data == 0){
                   $('.hidden').removeClass('hidden');
                    $('.show1').addClass('hidden');
@@ -293,7 +306,8 @@ $('#submit').click(function(){
                    $('.checknum').removeClass('hidden1');
                 }else{
                   var dataobj = eval("("+data+")");
-                if(dataobj.code == ''){
+                  //alert(dataobj);
+                if(dataobj.code == '0'){
                     toastr.success("注册成功");
                     setTimeout(function(){window.location.href="./index.php";},1000);
                 }else if (dataobj.code == "10008") {
