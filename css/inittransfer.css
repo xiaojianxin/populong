@@ -26,6 +26,9 @@ a{
 .container-content .inittransfer input{
 	width: 30%;
 }
+.container-content .inittransfer a{
+	width: 30%;
+}
 .initransfer-title{
 	font-size: 18px;
 	width: 20%;

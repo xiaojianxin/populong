@@ -23,7 +23,7 @@
 			<div class='container-head'>
 				<a class="title"><span>+&nbsp</span>发起转让</a>
 			</div>
-			<div class='container-content'>
+			<div class='container-content'
 				<form>
 					<div class="inittransfer row">
 						<div class="initransfer-title col-xs-2"><span>发起人:</span></div>
@@ -55,14 +55,48 @@
 						 <a href="#detail" data-toggle="modal" data-target="#detail">《泡泡龙网站服务协议》</a>
 					</div>
 					<div class="inittransfer row">
-						<div class="col-xs-8">
-							<input type='submit' class="btn btn-success inittransfer-btn" value="发起"/>
+						<div class="col-xs-8" style="margin-bottom:120px;">
+							<a class="btn btn-success inittransfer-btn">发起</a>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
 	<?php require('./footer.php')?>	
+
+
+	<script>
+		$(".inittransfer-btn").click(function(){
+	        var name=1;
+	        var psw=2;
+	        $.ajax({
+	            cache: false,
+	            type:"POST",
+	            url:"./action/do_transfer.php",
+	            data:"inputEmail="+name+"&"+"inputPassword="+psw,
+	            success:function(data){
+	                alert(data);
+	                // if(dataobj.code == '10006'){
+	                //     $("#login .error-tip").html('用户名不存在');
+	                // }else if(dataobj.code == '10005'){
+	                //     $("#login .error-tip").html('密码错误');
+	                // }
+	                // else
+	                // {
+
+	                //     toastr.success("登录成功");
+	                //     $("#login").fadeOut();
+	                //     setTimeout(function(){window.location.href="./index.php";},1000);
+
+
+	                // }
+	            },
+	            error:function(){
+	                alert("登录失败");
+	            }
+	        })
+	    });
+	</script>
 
 </body>
 </html>

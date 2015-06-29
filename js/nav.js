@@ -61,7 +61,9 @@ $(document).ready(function(){
 
                     toastr.success("登录成功");
                     $("#login").fadeOut();
-                    setTimeout(function(){window.location.href='./index.php';},1000);
+
+                    setTimeout(function(){window.location.href="./index.php";},1000);
+
 
 
                 }
@@ -78,6 +80,7 @@ $(document).ready(function(){
             dataType:"Json",
             success:function(data){
                 toastr.success("注销成功");
+
                 setTimeout(function(){window.location.href='./index.php';},1000);
             },
             error:function(){
