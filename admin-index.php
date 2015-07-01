@@ -14,6 +14,4 @@
                         <div class="tab-pane active" id="concern"><?php require('./admin-record.php') ?></div>
                     </div>
 
-<script>
-
 

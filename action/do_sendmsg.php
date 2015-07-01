@@ -1,14 +1,7 @@
 <?PHP
-$projId = $_POST['projId'];
+$userId = $_POST['userId'];
 $token = '"'.$_POST['token'].'"';
-$commentId = $_POST['commentId'];
 $content = '"'.$_POST['content'].'"';
-$id = $_POST['id'];
-if($id==0){
-  $ctype = 0;
-}else{
-  $ctype = 1;
-}
 session_start();
 function request_by_curl($remote_server, $json_string)
 {
@@ -21,13 +14,11 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 
-$url = "123.57.74.122:8088/logic/project";
+$url = "123.57.74.122:8088/logic/message";
 $json = '{
-  "method": "add_project_comment",
-  "projectId": '.$projId.',
+  "method": "send_message",
   "content": '.$content.',
-  "ctype": '.$ctype.',
-  "commentId": '.$commentId.',
+  "toUserId": '.$userId.',
   "token": '.$token.'
 }';
 //echo $json;

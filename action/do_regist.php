@@ -8,7 +8,7 @@ elseif ($_POST["isInvestor"] == '1')
 else
     $role = "0";
 $nickname = $_POST["inputNickname"];
-$password = $_POST["inputPassword"];
+$password = md5($_POST["inputPassword"]);
 $phoCode = $_POST["inputPhoCode"];
 $checknum = $_POST['inputchecknum'];
 //$verification = json_encode($_SESSION['verification']);

@@ -10,26 +10,16 @@ function request_by_curl($remote_server, $json_string)
     curl_close($ch);
     return $data;
 }
-$token = '"'.$_GET['token'].'"';
-$url = "123.57.74.122:8088/logic/project";
-$json = '{
-    "method": "project_query",
-    "token": '.$token.'
-}';
 
-
+$url = "123.57.74.122:8088/logic/trade";
+$json = '{"method": "trade_query", "account": 1234567890}';
 
 $result_arr = request_by_curl($url,$json);
 //$result_arr = json_decode($json,true);
 if(!empty($result_arr))
 {
-
-//    $result_arr = json_decode($result_arr["result"],true);
-//	foreach($result_arr as $result)
-//	{
-//		print_r($result);
-//	}
-    print_r($result_arr);
+	
+	print_r($result_arr);
     exit();
 }
 else
@@ -37,4 +27,3 @@ else
     print_r($result_arr);
 }
 ?>
-

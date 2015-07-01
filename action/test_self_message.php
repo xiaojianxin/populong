@@ -11,11 +11,12 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 $token = '"'.$_GET['token'].'"';
-$url = "123.57.74.122:8088/logic/project";
+$url = "123.57.74.122:8088/logic/message";
 $json = '{
-    "method": "project_query",
+    "method": "get_message",
     "token": '.$token.'
 }';
+
 
 
 
@@ -37,4 +38,3 @@ else
     print_r($result_arr);
 }
 ?>
-

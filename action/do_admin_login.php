@@ -1,14 +1,6 @@
 <?PHP
-$projId = $_POST['projId'];
-$token = '"'.$_POST['token'].'"';
-$commentId = $_POST['commentId'];
-$content = '"'.$_POST['content'].'"';
-$id = $_POST['id'];
-if($id==0){
-  $ctype = 0;
-}else{
-  $ctype = 1;
-}
+$account = $_POST["inputAdminName"];
+$password = md5($_POST["inputAdminPassword"]);
 session_start();
 function request_by_curl($remote_server, $json_string)
 {
@@ -21,20 +13,16 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 
-$url = "123.57.74.122:8088/logic/project";
-$json = '{
-  "method": "add_project_comment",
-  "projectId": '.$projId.',
-  "content": '.$content.',
-  "ctype": '.$ctype.',
-  "commentId": '.$commentId.',
-  "token": '.$token.'
-}';
-//echo $json;
+$url = "123.57.74.122:55555/logic/admin";
+$json = json_encode(array('method'=>'login','nickname'=>$account,'password'=>$password));
 $json = request_by_curl($url,$json);
 $result = json_decode($json,true);
 if(!empty($result) && $result['code'] == "0")
 {
+	// echo "<script language='javascript' type='text/javascript'>";
+    //    echo "window.location.href='$url'";
+    //    echo "</script>";
+    //echo $url;
     echo $json;
     exit();
 }

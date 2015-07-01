@@ -32,17 +32,18 @@ session_start();
         curl_close($ch);
         return $data;
     }
+    $projectId = $_GET['projId'];
 
     $url = "123.57.74.122:8088/logic/project";
-    $json = '{"method": "project_comment", "projectId": 125}';
+    $json = '{"method": "project_comment", "projectId": '.$projectId.'}';
 
     $result_arr = request_by_curl($url,$json);
     $result_arr = json_decode($result_arr);
     $result = $result_arr->result;
     $result_content = $result;
-    var_dump($result);
-    $projectId = $_GET['projId'];
-    var_dump($projectId);
+    //var_dump($result);
+    
+    //var_dump($projectId);
 
 ?>
 <div id="comment">
@@ -102,6 +103,15 @@ session_start();
        
 
         <?php $i++;}?>
+        <div class="reply-form">
+            <div style="height:50px;"></div>
+            <div style="font-size:20px; margin-bottom:10px;">评论项目</div>
+            <input type="text" id="commentId0" style="display:none" value="0" />
+            <input type="text" id="reply-content0" class="form-control" placeholder="我也来说一句">
+            <div style="height: 10px"></div>
+            <div class="btn btn-success pull-right do-reply" id="0">回复</div>
+        </div>
+        <div style="height: 30px"></div>
          <input type="text" id="record" style="display:none" value="<?php echo $i;?>" />
          <input type="text" id="projId" style="display:none" value="<?php echo $projectId;?>" />
          <input type="text" id="token" style="display:none" value="<?php echo $_SESSION['token'];?>">
@@ -127,8 +137,9 @@ session_start();
                  $.ajax({
                   type:"POST",
                   url:"./action/do_reply.php",
-                  data:"content="+content+"&projId="+projId+"&commentId="+commentId+"&token="+token,
+                  data:"content="+content+"&projId="+projId+"&commentId="+commentId+"&token="+token+"&id="+i,
                   success:function(data){
+                    //alert(data);
                     var dataobj = eval("("+data+")");
                     if (dataobj.code==0) {
                      window.location.reload();
