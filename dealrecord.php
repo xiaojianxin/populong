@@ -48,7 +48,7 @@
                         <?php foreach ($result as $dealcontent) { ?>    
                         <tr class="warning">
                             <td><?php $time = $dealcontent->time ;
-                            <?php echo date('Y-m-d H:i:s',$time)?>
+                            echo date('Y-m-d H:i:s',$time)
                             ?></td>
                             <td> <?php echo $dealcontent->tradeType ?></td>
                             <td><a href="./pro.php?id=<?php echo $dealcontent->amount?>"><?php echo $dealcontent->projName ?></a></td>

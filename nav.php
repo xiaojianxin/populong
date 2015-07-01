@@ -1,6 +1,6 @@
 <?PHP
 session_start();
-
+date_default_timezone_set("PRC");
 ?>
 <link href="./css/toastr.css" rel="stylesheet"/>
 <script type="text/javascript" src="./js/toastr.js"></script>
