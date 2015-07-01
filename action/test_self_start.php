@@ -19,7 +19,6 @@ $json = '{
 
 
 
-
 $result_arr = request_by_curl($url,$json);
 //$result_arr = json_decode($json,true);
 if(!empty($result_arr))

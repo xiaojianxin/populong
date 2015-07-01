@@ -93,8 +93,8 @@
                <ul class="nav nav-tabs ">
                 <?php $i = 1;
                       foreach ($result as $reword) { ?>
-                   <li >
-                       <a href="#panel-<?php echo $i; ?>"    <?php if($i == 1){echo 'class="active"';} ?>data-toggle="tab">￥1</a>
+                   <li <?php if($i == 1){echo 'class="active"';}?>>
+                       <a href="#panel-<?php echo $i; ?>" data-toggle="tab">￥1</a>
                    </li>
                 <?php 
                   $i++;
