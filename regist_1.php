@@ -291,7 +291,7 @@ $('#submit').click(function(){
           var inputMsgCode = $('#inputMsgCode').val();
           var inputRealName = $('#inputRealname').val();
           var inputIdCard = $('#inputIdCard').val();
-          alert(inputMobilePhone);
+          //alert(inputMobilePhone);
           $.ajax({
               type:"POST",
               url:"./action/do_regist.php",

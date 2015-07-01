@@ -1,3 +1,34 @@
+.admin_login{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 280px;
+    font-size: 20px;
+}
+.admin_login .row{
+    margin-top: 20px;
+}
+.admin_login_head{
+    border-bottom: 1px solid #99cc66;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.admin_login_content .col-xs-3 span{
+    float: right;
+}
+.head_content{
+    font-size: 30px;
+    color: #99cc66;
+    width: 100px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.admin_login_nail .btn{
+    float: right;
+    margin-right:50px; 
+    margin-top: 30px;
+}
 #topnav{
  height: 50px;
 }

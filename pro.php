@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"  href="./css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="./css/hotdetail.css">
+    <link href="./css/toastr.css" rel="stylesheet"/>
     <script src="./js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="./js/swiper3.07.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./js/pro.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/toastr.js"></script>
     <script src="http://api.html5media.info/1.1.4/html5media.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -32,10 +34,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="post">
+                    
                        <h3>发件人：张三丰</h3>
-                        <textarea class="form-control" placeholder="请输入私信内容，内容控制在2000字以内"></textarea>
-                    </form>
+                        <textarea class="form-control msg-content" placeholder="请输入私信内容，内容控制在2000字以内"></textarea>
+                  
                 </div>
                 <div class="modal-footer">
                     <span class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭</span>
@@ -84,9 +86,9 @@
                                     $result = $result_arr->result;
                                     $result_content = $result;
                                     $projIntro  = $result['0']->projIntro;
-                                    var_dump($result);
+                                    //var_dump($result);
                                     $projectId = $_GET['projId'];
-                                    var_dump($projectId);
+                                    //var_dump($projectId);
 
                               ?>
            <div class="tabbable" id="tabs-1">
@@ -174,6 +176,8 @@
                               <span style="color: #666666;">北京</span>
                           </div>
                           <div class="col-xs-8">
+                            <input type="text" id="userId" style="display:none" value="<?php echo $result_content['0']->userID;?>" />
+                            <input type="text" id="usertoken" style="display:none" value="<?php echo $_SESSION['token'];?>">
                               <span>操作：</span>
                               <span class="btn btn-success"><a href="#sendMsg" data-toggle="modal" data-target="#sendMsg" >发私信</a></span>
                           </div>
@@ -345,6 +349,30 @@
         $('.collection').click(function(){
             $(this).html('<span class="glyphicon glyphicon-heart-empty">&nbsp已收藏</span>')
         });
+
+        $('#sendMsgButton').click(function(){
+          
+          var userID = $('#userId').val();
+          var token = $('#usertoken').val();
+          var content = $('.msg-content').val();
+             $.ajax({
+                  type:"POST",
+                  url:"./action/do_sendmsg.php",
+                  data:"content="+content+"&userId="+userID+"&token="+token,
+                  success:function(data){
+                    var dataobj = eval("("+data+")");
+                    if (dataobj.code==0) {
+                      toastr.success("发送私信成功");
+                      $("#sendMsg").fadeOut();
+
+                      setTimeout(function(){window.location.href=window.location.href;},1000);
+                    };
+                  },
+                  error:function(){
+                      alert("发送私信失败");
+                  }
+                });
+        })
     });
 
 </script>
