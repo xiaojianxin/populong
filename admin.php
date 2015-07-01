@@ -1,7 +1,4 @@
-<?PHP
-session_start();
 
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
@@ -30,7 +27,7 @@ session_start();
 
     <body>
     <div id="topnav">
-        <?php require('./nav.php') ?>
+        <?php require('./admin_nav.php') ?>
     </div>
     <div id="main">
         <div class="container">
@@ -55,7 +52,7 @@ session_start();
                             <span>密码 :</span>
                         </div>
                         <div class="col-xs-8">
-                            <input type="text" name="inputAdminPassword" class="form-control"  placeholder="密码">
+                            <input type="password" name="inputAdminPassword" class="form-control"  placeholder="密码">
                         </div>
                     </div>
                 </form>
@@ -72,6 +69,7 @@ session_start();
                     ?>
                     <div id="self_top" >
                     </div>
+                    <?php var_dump( $_SESSION);?>
                     <div class="row">
                         <div class="col-xs-3">
                             <?php require('./admin-leftnav.php') ?>
@@ -122,13 +120,14 @@ session_start();
        $('.admin_loginin').click(function(){
 
             var user =  $("form").serialize();
-            alert(user);
+            //alert(user);
             $.ajax({
             cache: false,
             type:"POST",
             url:"./action/do_admin_login.php",
             data:user,
             success:function(data){
+                //alert(data);
                 var dataobj = eval("("+data+")");
                 if(dataobj.code == '10006'){
                     $("#login .error-tip").html('用户名不存在');
@@ -141,7 +140,7 @@ session_start();
                     toastr.success("登录成功");
                     $("#login").fadeOut();
 
-                    setTimeout(function(){window.location.href="./index.php";},1000);
+                    setTimeout(function(){window.location.href=window.location.href;},1000);
 
 
 

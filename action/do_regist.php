@@ -37,7 +37,9 @@ if ($_SESSION["verification"] == md5($checknum)) {
             'phoCode'=>$phoCode,
             'email'=>$email,
             'mobilePhone'=>$mobilePhone,
-            'msgCode'=>$msgCode
+            'msgCode'=>$msgCode,
+            'realName'=>$realName,
+            'IDCard'=>$IdCard
             ));
             
     $json = request_by_curl($url,$json);

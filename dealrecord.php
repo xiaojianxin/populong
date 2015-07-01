@@ -48,14 +48,8 @@
                         <?php foreach ($result as $dealcontent) { ?>    
                         <tr class="warning">
                             <td><?php $time = $dealcontent->time ;
-                            $str = (string)$time;  // 将int型转换成string
-                            $arr = str_split($str, 4);
-                            $year = $arr['0'];
-                            $datearr = str_split($arr['1'],2); 
-                            $mouth = $datearr['0'];
-                            $day = $datearr['1'];
-                            $time = $year.'.'.$mouth.'.'.$day.' '.$arr['2']; 
-                            echo $time; // 结构输出?></td>
+                            <?php echo date('Y-m-d H:i:s',$time)?>
+                            ?></td>
                             <td> <?php echo $dealcontent->tradeType ?></td>
                             <td><a href="./pro.php?id=<?php echo $dealcontent->amount?>"><?php echo $dealcontent->projName ?></a></td>
                             <td style="color: #6cc87f"> <?php echo $dealcontent->amount;?></td>

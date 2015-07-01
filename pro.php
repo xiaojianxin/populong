@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
@@ -50,23 +51,7 @@
 
     </div>
    <div class="container">
-       <div id="hotproTitle">
-           <h2>泡泡龙项目</h2>
-           <div class="row">
-               <div class="col-xs-6">
-                   <span>发起人:郭总</span>
-                   <span class="titlemargin">地点：北京</span>
-                   <span class="titlemargin"><img src="./img/star.png" class="stars"> </span>
-               </div>
-               <div class="col-xs-1 col-xs-offset-2">
-                   <div class="btn btn-success collection" style="margin-top: -30px;"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></div>
-
-               </div>
-
-           </div>
-       </div>
-       <div id="tabPrice">
-                              <?PHP
+                        <?PHP
                                     function request_by_curl($remote_server, $json_string)
                                     {
                                         $ch = curl_init();
@@ -77,22 +62,62 @@
                                         curl_close($ch);
                                         return $data;
                                     }
+                                    $projectId = $_GET['projId'];
+                                    if (empty($_SESSION['token'])){
+                                      $json = '{"method": "project_detail", "projectId": '.$projectId.',"token": ""}';
 
+                                    }else{
+                                      $token = '"'.$_SESSION['token'].'"';
+                                      $json = '{"method": "project_detail", "projectId": '.$projectId.',"token": '.$token.'}';
+                                    }
+                                    
                                     $url = "123.57.74.122:8088/logic/project";
-                                    $json = '{"method": "project_payback", "projectId": 122}';
+                                    
+                                    //var_dump($json);
 
                                     $result_arr = request_by_curl($url,$json);
+                                    //var_dump($result_arr);
                                     $result_arr = json_decode($result_arr);
                                     $result = $result_arr->result;
-                                    $result_content = $result;
-                                    $projIntro  = $result['0']->projIntro;
-                                    //var_dump($result);
-                                    $projectId = $_GET['projId'];
+                
+                                    $result_content = $result->paybacks;
+                                    //var_dump($result_content);
+                                    $isfocus = $result->isFocus;
+                                    //$projIntro  = $result->projIntro;
+                                    //var_dump($isfocus)
+                                    
                                     //var_dump($projectId);
 
-                              ?>
+                              ?>    
+                            
+       <div id="hotproTitle">
+           <h2>泡泡龙项目</h2>
+           <div class="row">
+               <div class="col-xs-6">
+                   <span>发起人:郭总</span>
+                   <span class="titlemargin">地点：北京</span>
+                   <span class="titlemargin"><img src="./img/star.png" class="stars"> </span>
+               </div>
+                 
+               <div class="col-xs-1 col-xs-offset-2">
+                  <?php if($isfocus == 1){?>
+                   <div class="btn btn-success collection hidden" style="margin-top: -30px;"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></div>
+
+                  <div class="btn btn-success collection-cancel " style="margin-top: -30px;"><span class="glyphicon glyphicon-heart-empty">已收藏</span></div>
+                  <?php }else{ ?>
+                  <div class="btn btn-success collection " style="margin-top: -30px;"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></div>
+                  <div class="btn btn-success collection-cancel hidden" style="margin-top: -30px;"><span class="glyphicon glyphicon-heart-empty">已收藏</span></div>
+ 
+                  <?php } ?>
+               </div>
+
+           </div>
+       </div>
+       <div id="tabPrice">
+
            <div class="tabbable" id="tabs-1">
                <ul class="nav nav-tabs ">
+                <Input class="hidden" id="proid" value="<?php echo $projectId;?>"/>
                 <?php $i = 1;
                       foreach ($result as $reword) { ?>
                    <li <?php if($i == 1){echo 'class="active"';}?>>
@@ -177,7 +202,7 @@
                           </div>
                           <div class="col-xs-8">
                             <input type="text" id="userId" style="display:none" value="<?php echo $result_content['0']->userID;?>" />
-                            <input type="text" id="usertoken" style="display:none" value="<?php echo $_SESSION['token'];?>">
+                            <input type="text" id="usertoken" style="display:none" value="<?php echo $_SESSION['token'];?>"/>
                               <span>操作：</span>
                               <span class="btn btn-success"><a href="#sendMsg" data-toggle="modal" data-target="#sendMsg" >发私信</a></span>
                           </div>
@@ -248,7 +273,7 @@
                                </ul>
                                <div class="tab-content">
                                    <div class="tab-pane active" id="box-1">
-                                       <iframe src="prodetail.php" class="mainframe" name="mainiframe1" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="prodetail.php?projIntro=<?php echo $projIntro ?> " class="mainframe" name="mainiframe1" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-2">
                                        <iframe src="comment.php?projId=<?php echo $projectId;?>" class="mainframe" id="comment" name="mainiframe2" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
@@ -347,7 +372,29 @@
             $(this).width(width);
         });
         $('.collection').click(function(){
-            $(this).html('<span class="glyphicon glyphicon-heart-empty">&nbsp已收藏</span>')
+          var token = $('#usertoken').val();
+          var proID = $('#proid').val();
+          //alert(token);
+          //alert(proID);
+                  $.ajax({
+                    type:"POST",
+                    url:"./action/do_pro_focus.php",
+                    data:"&proId="+proID+"&token="+token,
+                    success:function(data){
+                      alert(data);
+                      var dataobj = eval("("+data+")");
+                      if (dataobj.code==0) {
+                        toastr.success("收藏成功");
+                        $("#sendMsg").fadeOut();
+
+                        setTimeout(function(){window.location.href=window.location.href;},1000);
+                      };
+                    },
+                    error:function(){
+                        alert("发送私信失败");
+                    }
+                });
+            
         });
 
         $('#sendMsgButton').click(function(){

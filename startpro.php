@@ -63,28 +63,10 @@
                                                 </div>
                                             </td>
                                             <td class="proTime">
-                                <?php $time = $project->applyTime ;
-                                $str = (string)$time;  // 将int型转换成string
-                                $arr = str_split($str, 4);
-                                $year = $arr['0'];
-                                $datearr = str_split($arr['1'],2); 
-                                $mouth = $datearr['0'];
-                                $day = $datearr['1'];
-                                $time = $year.'.'.$mouth.'.'.$day.' '.$arr['2']; 
-                                 echo $time; // 结构输出?></td>
+                                <?php echo date('Y-m-d H:i:s',$project->applyTime)?></td>
 
                                             <td class="proMoney"> 
-                                <?php 
-                                //$time = $project->rewardTime;
-                                $time = $project->applyTime ;
-                                $str = (string)$time;  // 将int型转换成string
-                                $arr = str_split($str, 4);
-                                $year = $arr['0'];
-                                $datearr = str_split($arr['1'],2); 
-                                $mouth = $datearr['0'];
-                                $day = $datearr['1'];
-                                $time = $year.'.'.$mouth.'.'.$day.' '.$arr['2']; 
-                                 echo $time; // 结构输出?></td>
+                                <?php echo date('Y-m-d H:i:s',$project->rewardTime)?></td>
                                             <td class="proState">
                                                 <div style="height: 10px"></div>
                                                 <h1>

@@ -30,22 +30,35 @@ $projAuthy = $_POST["isVadio"] + ($_POST["isPush"]<<1) + ($_POST["isFieldCoun"]<
 
 if($_POST["inputAmountPer0"] != NULL)
 {
+	$storejson = json_encode(array(
+   			"method"=>"mongostore",
+    		"mime"=>"text/plain",
+    		"data"=>$_POST["inputExplainText0"]));
+	$storejson = request_by_curl($storeurl,$storejson);
+	$storeText = json_decode($storejson,true);
 	$rewordClassCode[0] = 1;
 	$amountPer[0] = $_POST["inputAmountPer0"]; 
     $explainPic[0] = $_POST["inputFundRewardsPho0"];
 	$quota[0] = 0;//无
-    $explainText[0] = $_POST["inputExplainText0"];
+    $explainText[0] = $storeText['url'];
     $rewardTime[0] = $_POST["inputRewardTime0"];
 }
 else
 {
 	for($i = 1; $i< 5; $i++)
 	{
+		
+		$storejson = json_encode(array(
+   			"method"=>"mongostore",
+    		"mime"=>"text/plain",
+    		"data"=>$_POST["inputExplainText".$i]));
+		$storejson = request_by_curl($storeurl,$storejson);
+		$storeText = json_decode($storejson,true);
 		$rewordClassCode[$i-1] = 2;
 		$amountPer[$i-1] = $_POST["inputAmountPer".$i]; 
   		$quota[$i-1] = $_POST["inputQuota".$i];
     	$explainPic[$i-1] = $_POST["inputItemRewardsPho".$i];
-    	$explainText[$i-1] = $_POST["inputExplainText".$i];
+    	$explainText[$i-1] = $storeText['url'];
     	$rewardTime[$i-1] = $_POST["inputRewardTime".$i];
 	}
 }
@@ -73,17 +86,11 @@ $storejson = request_by_curl($storeurl,$storejson);
 $projIntroUrl = json_decode($storejson,true);
 
 
-$storejson = json_encode(array(
-    "method"=>"mongostore",
-    "mime"=>"text/plain",
-    "data"=>$explainText));
-$storejson = request_by_curl($storeurl,$storejson);
-$explainText = json_decode($storejson,true);
-
 
 $url = "123.57.74.122/logic/apply";
 $json = json_encode(array(
 		'method'=>'apply',
+		'token'=>$_SESSION["token"],
         'projName'=>$projName,
 		'thumbPho'=>$thumbPho,
 		'projPho'=>$projPho,

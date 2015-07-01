@@ -1,13 +1,36 @@
+<?PHP
+function request_by_curl($remote_server, $json_string)
+{
+    $ch = curl_init();
+    curl_setopt($ch,CURLOPT_URL,$remote_server);
+    curl_setopt($ch,CURLOPT_POSTFIELDS,$json_string);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return $data;
+}
+$token = '"'.$_SESSION['admin_token'].'"';
+//var_dump($token);
+$url = "123.57.74.122:55555/logic/admin";
+$json = '{
+    "method": "trade_query",
+    "token": '.$token.'
+}';
+//var_dump($status);
 
+$result_arr = request_by_curl($url,$json);
+$result_arr = json_decode($result_arr,true);
+var_dump($result_arr);
+?>
                 <div id="recordbox">
                     <div class="record-title"></div>
                 <div class="row dealtype">
                     <span>&nbsp;&nbsp;操作类型:&nbsp;</span>
-                    <span class="active">&nbsp;未发布&nbsp;</span>
-                    <span>&nbsp;发布中&nbsp;</span>
-                    <span>&nbsp;发布后&nbsp;</span>
-                    <span >&nbsp;版面&nbsp;</span>
-                    <span >&nbsp;封号&nbsp;</span>
+                    <span class="active type" id="1">&nbsp;未发布&nbsp;</span>
+                    <span class=" type" id="2">&nbsp;发布中&nbsp;</span>
+                    <span class=" type" id="3">&nbsp;发布后&nbsp;</span>
+                    <span class=" type" id="4">&nbsp;版面&nbsp;</span>
+                    <span class=" type" id="5">&nbsp;封号&nbsp;</span>
                 </div>
                 <div id="deal-list">
                     <table class="table">
@@ -21,55 +44,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <tr class="warning">
-                            <td>2015.01.22 13:55</td>
-                            <td> 充值</td>
-                            <td>交易内容</td>
-                            <td style="color: #6cc87f"> 500</td>
-                            <td> 无</td>
-                        </tr>
-                        <tr class="warning">
-                            <td>2015.01.22 13:55</td>
-                            <td> 充值</td>
-                            <td>交易内容</td>
-                            <td style="color: #6cc87f"> 500</td>
-                            <td> 无</td>
-                        </tr>
-                        <tr class="warning">
-                            <td>2015.01.22 13:55</td>
-                            <td> 充值</td>
-                            <td>交易内容</td>
-                            <td style="color: #6cc87f"> 500</td>
-                            <td> 无</td>
-                        </tr>
-                        <tr class="warning">
-                            <td>2015.01.22 13:55</td>
-                            <td> 充值事实上事实上身上试试</td>
-                            <td>交易内容</td>
-                            <td style="color: #6cc87f"> 500</td>
-                            <td> 无</td>
-                        </tr>
-                        <tr class="warning">
-                            <td>2015.01.22 13:55</td>
-                            <td> 充值</td>
-                            <td>交易内容</td>
-                            <td style="color: #6cc87f"> 500</td>
-                            <td> 无</td>
-                        </tr>
-                        <tr class="warning">
-                            <td>2015.01.22 13:55</td>
-                            <td> 充值</td>
-                            <td>交易内容</td>
-                            <td style="color: #6cc87f"> 500</td>
-                            <td> 无</td>
-                        </tr>
-                        <tr class="warning">
-                            <td>2015.01.22 13:55</td>
-                            <td> 充值</td>
-                            <td>交易内容</td>
-                            <td style="color: #6cc87f"> 500</td>
-                            <td> 无</td>
-                        </tr>
+                            <?php foreach ($result_arr['result'] as $record) {?>
+                                <tr class="warning">
+                                    <td><?php echo date('Y-m-d H:i:s',$record['time'])?></td>
+                                    <td> <?php echo $record['tradeType']?></td>
+                                    <td><?php //echo $record['projName']?></td>
+                                    <td style="color: #6cc87f"> <?php echo $record['amount']?></td>
+                                    <td> <?php echo $record['comment']?></td>
+                                </tr>
+                            <?php }?>
 
                         </tbody>
                     </table>
@@ -95,9 +78,26 @@
             </div>
 
 <script type="text/javascript">
-    // $(function(){
-    //     $("div.holder").jPages({
-    //         containerID : "deal-list"
-    //     });
-    // });
+    var record = $('#record').val();
+         
+
+            $('.type').click(function(){
+                var i = $(this).attr('id');
+                 $.ajax({
+                  type:"POST",
+                  url:"./action/test_admin_trade_query.php",
+                  data:"status="+i,
+                  success:function(data){
+                    alert(data);
+                    var dataobj = eval("("+data+")");
+                    if (dataobj.code==0) {
+                     window.location.reload();
+                    };
+                  },
+                  error:function(){
+                      alert("注册失败");
+                  }
+                });
+
+            });
 </script>

@@ -2,7 +2,7 @@
     width: 40%;
     margin: 0 auto;
     margin-top: 100px;
-    margin-bottom: 280px;
+    min-height: 505px;
     font-size: 20px;
 }
 .admin_login .row{

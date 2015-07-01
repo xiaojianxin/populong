@@ -1,7 +1,7 @@
 <?PHP
 //session_start();
-$account = $_POST["inputAdminName"];
-$password = md5($_POST["inputAdminPassword"]);
+$token = $_POST["token"];
+$proId = $_POST["proId"];
 session_start();
 function request_by_curl($remote_server, $json_string)
 {
@@ -14,15 +14,13 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 
-$url = "123.57.74.122:55555/logic/admin";
-$json = json_encode(array('method'=>'login','nickname'=>$account,'password'=>$password));
+$url = "123.57.74.122:55555/logic/focus";
+$json = json_encode(array('method'=>'focus','projID'=>$proId,'token'=>$token));
+//echo $json;
 $json = request_by_curl($url,$json);
-//var_dump($json);
 $result = json_decode($json,true);
 if(!empty($result) && $result['code'] == "0")
-{   
-    $_SESSION['admin'] = $result['nickname'];
-    $_SESSION['admin_token'] = $result['token'];
+{  
 	// echo "<script language='javascript' type='text/javascript'>";
     //    echo "window.location.href='$url'";
     //    echo "</script>";

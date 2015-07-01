@@ -20,29 +20,13 @@
 <body>
 <div id="prodetail">
     <div class="container" style="min-width: 720px;">
-                    <?PHP
-                    function request_by_curl($remote_server, $json_string)
-                    {
-                        $ch = curl_init();
-                        curl_setopt($ch,CURLOPT_URL,$remote_server);
-                        curl_setopt($ch,CURLOPT_POSTFIELDS,$json_string);
-                        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-                        $data = curl_exec($ch);
-                        curl_close($ch);
-                        return $data;
-                    }
+                   
+                              <?PHP
+                                   
+                                    $projIntro = $_GET['projIntro'];                            
+                                    echo $projIntro;
 
-                    $url = "123.57.74.122:8088/logic/project";
-                    $json = '{"method": "project_payback", "projectId": 122}';
-
-                    $result_arr = request_by_curl($url,$json);
-                    $result_arr = json_decode($result_arr);
-                    $result = $result_arr->result;
-                    $result_content = $result;
-                    $projIntro  = $result['0']->projIntro;
-                    echo $projIntro;
-
-                    ?>
+                              ?>
          
     </div>
 
