@@ -16,6 +16,7 @@
     <script src="./js//bootstrap-popover.js"></script>
 	<script src="./js/jquery-1.10.1.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
+     <script src="./js/jPages.min.js"></script>
     <script src="./js/leftnav.js"></script>
     <script src="./js/admin.js"></script>
     <script type="text/javascript" src="./js/toastr.js"></script>

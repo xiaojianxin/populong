@@ -66,5 +66,10 @@ urlGet:function()
      return aGET;
  }
 });
+ $(function(){
+        $("#all-holder").jPages({
+            containerID : "allTables"
+        });
+    });
 
 });

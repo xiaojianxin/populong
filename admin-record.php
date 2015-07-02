@@ -25,13 +25,13 @@ var_dump($result_arr);
                 <div id="recordbox">
                     <div class="record-title"></div>
                 <div class="row dealtype">
-                    <span>&nbsp;&nbsp;操作类型:&nbsp;</span>
+                  <!--   <span>&nbsp;&nbsp;操作类型:&nbsp;</span>
                     <span class="active type" id="1">&nbsp;未发布&nbsp;</span>
                     <span class=" type" id="2">&nbsp;发布中&nbsp;</span>
                     <span class=" type" id="3">&nbsp;发布后&nbsp;</span>
                     <span class=" type" id="4">&nbsp;版面&nbsp;</span>
                     <span class=" type" id="5">&nbsp;封号&nbsp;</span>
-                </div>
+ -->                </div>
                 <div id="deal-list">
                     <table class="table">
                         <thead >
