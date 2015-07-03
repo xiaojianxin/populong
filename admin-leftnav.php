@@ -42,13 +42,19 @@
                          href="#project-manage">进行中项目</a>
                   </div>
                   <div id="project-manage" class="accordion-body in collapse">
+                    <div class="accordion-inner">
+                          <a id="11"> 进行中的项目</a>
+                      </div>
                       <div class="accordion-inner">
                           <a id="6"> 筹资失败项目</a>
                       </div>
+                       
                       <div class="accordion-inner">
                           <a id="7"> 筹资成功项目</a>
                       </div>
-
+                       <div class="accordion-inner">
+                          <a id="12"> 已结束的项目</a>
+                      </div>
                   </div>
               </div>
 
@@ -57,7 +63,7 @@
               <div class="accordion-group">
                   <div class="accordion-heading">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-leftbar"
-                         href="#account-manage">已结束项目</a>
+                         href="#account-manage">平台管理</a>
                   </div>
                   <div id="account-manage" class="accordion-body in collapse">
                       <div class="accordion-inner">

@@ -43,11 +43,11 @@ $result_arr = json_decode($result_arr,true);
                                                 <a href="./pro.php?projId=<?php echo $project['projID'];?>">
                                                     <img class="project" src=<?php echo $project['projPho'] ?> alt="2" />
                                                 </a>
-                                                <h2>泡泡隆投资平台</h2>
+                                                <h2><?php echo $project['projName'];?></h2>
                                                 <a href="">
-                                                    <h3>发起人:孙总</h3>
+                                                    <h3>发起人:<?php echo $project['projUserName'];?></h3>
                                                 </a>
-                                                <h4>最大限度服务投资者，为投资者打造最优投资平台，为有梦想的项目发起者提供展示自我的最佳平台</h4>
+                                                <h4><?php echo $project['projAbst'];?></h4>
                                                 <div id="right_center">
                                                     <div class="row">
                                                         <div class="col-xs-6">
@@ -60,7 +60,7 @@ $result_arr = json_decode($result_arr,true);
                                             </span>
                                                         </div>
                                                         <div class="col-xs-3">
-                                                            <span>北京</span>
+                                                            <span><?php echo $project['city'];?></span>
                                                         </div>
                                                         <div class="col-xs-2">
                                                         </div>

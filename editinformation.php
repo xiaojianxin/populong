@@ -3,17 +3,20 @@
                     <div class="title">个人资料</div>
                 </div>
                 <div class="btn btn-success pull-right edit-info" id="editInformation">
-                    <span class="glyphicon glyphicon-edit"><a href='./self.php?id=14'>取消修改</a></span>
+                    <span class="glyphicon glyphicon-edit"><a href='./self.php?id=8'>取消修改</a></span>
                 </div>
                 
                 <div class="container-fluid self-info">
                     <div class="row">
+                      <form>
                         <div class="col-xs-3">
-                            <img src="./img/self_03.png" style="width: 100%;">
-
+                            <img src="./img/self_03.png" id="self-logo" style="width: 100%;">
+                             <div style="width:100px; margin: 0 auto;">
+                                <input type="file" name="file-pic" id="file_pic"/>
+                                <input type="text" name="self_pic" id="self_imgurl" style="display:none"/>
+                            </div>
                         </div>
                         <div class="col-xs-9 user-information">
-                            <form action='./1.php' method='post'> 
                              <div class="row">
                                  <div class="col-xs-3">
                                      <span >昵称:</span>
@@ -116,12 +119,7 @@
                                     <span>最高学历：</span>
                                 </div>
                                  <div class="col-xs-3">
-                                     <select class="form-control">
-                                         <option value ="volvo">Volvo</option>
-                                         <option value ="saab">Saab</option>
-                                         <option value="opel">Opel</option>
-                                         <option value="audi">Audi</option>
-                                     </select>
+                                    <input name="degree" class="form-control">
                                 </div>
                             </div>
                             <div class="row">
@@ -130,13 +128,14 @@
                                     <span>毕业院校：</span>
                                 </div>
                                   <div class="col-xs-3">
-                                   <select class="form-control">
+                               <!--     <select class="form-control">
                                       <option>1</option>
                                       <option>2</option>
                                       <option>3</option>
                                       <option>4</option>
                                       <option>5</option>
-                                    </select>
+                                    </select> -->
+                                  <input name="school" class='form-control' type="text" >
                                 </div>
                             </div>
                             <div class="row">
@@ -145,7 +144,7 @@
                                     <span>居住地区：</span>
                                 </div>
                                  <div class="col-xs-4">
-                                    <input type="text" class='form-control'/>
+                                    <input name="address" type="text" class='form-control'/>
                                 </div>
                             </div>
                             <div class="row">
@@ -155,13 +154,7 @@
                                 </div>
 
                                  <div class="col-xs-3">
-                                   <select class="form-control">
-                                      <option>1</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
+                                  <input name="companyField" class="form-control">
                                 </div>
 
                                  
@@ -173,13 +166,7 @@
                                 </div>
 
                                   <div class="col-xs-3">
-                                   <select class="form-control">
-                                      <option>1</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
+                                    <input name="companySize" class="form-control">
                                 </div>
                             </div>
                             <div class="row">
@@ -189,7 +176,7 @@
                                 </div>
 
                                 <div class="col-xs-3">
-                                    <input type="text" class='form-control'/>
+                                    <input name="position" type="text" class='form-control'/>
                                 </div>
                             </div>
                             <div class="row">
@@ -199,15 +186,15 @@
                                 </div>
 
                                 <div class="col-xs-3">
-                                    <input type="text" class='form-control'/>
+                                    <input name="salary" type="text" class='form-control'/>
                                 </div>
                             </div>
 
-
+                                    <input name="token" type="text" style="display:none" value="<?PHP echo $_SESSION['token'];?>" >
                             <div class='row'>
                                 <div style="height:20px;"></div>
                                 <div class='col-xs-6'>
-                                    <input type='submit' class='btn btn-success' style="width:200px; float:right; margin-bottom:20px;" value="保存"/>
+                                    <a  class='btn btn-success edit-self-info' style="width:200px; float:right; margin-bottom:20px;" >保存</a>
                                 </div>
                             </div>
                         </form>
@@ -215,3 +202,40 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+            $(".edit-self-info").click(function(){
+
+                  var data = $("form").serialize();
+                  alert(data);
+                  $.ajax({
+                  cache: false,
+                  type:"POST",
+                  url:"./action/do_edit_selfinfo.php",
+                  data:data,
+                  success:function(data){
+                      alert(data);
+                      var dataobj = eval("("+data+")");
+                      if(dataobj.code == '10006'){
+                          $("#login .error-tip").html('用户名不存在');
+                      }else if(dataobj.code == '10005'){
+                          $("#login .error-tip").html('密码错误');
+                      }
+                      else
+                      {
+
+                          toastr.success("登录成功");
+                          $("#login").fadeOut();
+
+                          setTimeout(function(){window.location.href=window.location.href;},1000);
+
+
+
+                      }
+                  },
+                  error:function(){
+                      alert("登录失败");
+                  }
+              })
+            });
+            </script>

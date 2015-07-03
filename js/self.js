@@ -144,8 +144,10 @@ $('.change-status').click(function(){
             fileSizeLimit:'2MB',
             'fileObjName': 'file',
             'onUploadSuccess': function(file, data, response) {
-                $('#self-logo').attr("src",data);//上传图片的服务器地址
+                var data1 = data.substring(1,data.length-1);
+                $('#self-logo').attr("src",data1);//上传图片的服务器地址
                 $('#self-logo').show();
+                $('#self_imgurl').attr('value',data);
                 $('#photo').attr("value",response);
             },
             'onError'          : function(event, queueID, fileObj)

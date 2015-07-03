@@ -15,7 +15,7 @@ $url = "123.57.74.122:55555/logic/admin";
 $json = '{
     "method": "project_query",
     "token": '.$token.',
-    "status":"3"
+    "status":"5"
 }';
 //var_dump($status);
 
@@ -27,9 +27,9 @@ $result_arr = json_decode($result_arr,true);
                     <div class="fourtab">
                         <div class="tabbable" id="fourtab">
                             <ul class="nav nav-tabs">
-                                    <a data-toggle="tab">筹资失败的项目</a>
+                                    <a data-toggle="tab">进行中的项目</a>
                             </ul>
-                            <div class="tab-content">
+                             <div class="tab-content">
                                 <div class="tab-pane active" id="allList">
                                     <table class="table" >
                                         <thead >
@@ -45,7 +45,7 @@ $result_arr = json_decode($result_arr,true);
                                     <?php foreach ($result_arr['result'] as $project) {?>
                                         <tr class="warning">
                                             <td class="proName">
-                                                 <div class="row">
+                                                  <div class="row">
                                                     <div class="col-xs-4">
                                                     <a href="./pro.php?<?php echo $project['projID'] ; ?>">
                                                         <img src=<?php echo $project['projPho'];?> style="width: 80px;float: right;">

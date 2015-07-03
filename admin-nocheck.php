@@ -17,7 +17,7 @@ $json = '{
     "token": '.$token.',
     "status":"0"
 }';
-//var_dump($status);
+var_dump($status);
 
 $result_arr = request_by_curl($url,$json);
 $result_arr = json_decode($result_arr,true);
@@ -47,10 +47,14 @@ $result_arr = json_decode($result_arr,true);
                                             <td class="proName">
                                                 <div class="row">
                                                     <div class="col-xs-4">
+                                                    <a href="./pro.php?projID=<?php echo $project['projID'] ; ?>">
                                                         <img src=<?php echo $project['projPho'];?> style="width: 80px;float: right;">
+                                                    </a>
                                                     </div>
                                                     <div class="col-xs-8">
+                                                    <a href="./check.php?projID=<?php echo $project['projID'];?>">
                                                         <?php echo $project['projName'];?>
+                                                    </a>
                                                     </div>
                                                 </div>
                                             </td>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
@@ -30,10 +29,8 @@
     <div id="main">
         <div class="container">
             
-            <?php if(empty($_SESSION["admin"])){
-                    ?> 
                     <div class="row admin_login_head">
-                        <div class="head_content">登录</div>
+                        <div class="head_content">注册</div>
                     </div>
                 <div class="admin_login">
                    <form >
@@ -55,77 +52,20 @@
                     </div>
                 </form>
                     <div class="row admin_login_nail">
-                        <a class="btn btn-success admin_loginin">登录</a>
-                        <a class="btn btn-success admin_regist" href="./admin_register.php">注册</a>
+                        <a class="btn btn-success admin_regist">注册</a>
                     </div>
                 </div>
-                   
-
-                <?PHP
-                }
-                else{
-                    ?>
-                    <div id="self_top" >
-                    </div>
-                    <?php var_dump( $_SESSION);?>
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <?php require('./admin-leftnav.php') ?>
-                        </div>
-                        <div  class="col-xs-9">
-                            <?php 
-                            if(empty($_GET)){
-                                require('./admin-index.php');
-                            }else{
-                                $id = $_GET['id'];
-                                if ($id == '0') {
-                                    require('./admin-nocheck.php');
-                                }else if($id == '2'){
-                                    require('./admin-nodeal.php');
-                                }else if ($id == '4'){
-                                    require('./admin-investing.php');
-                                }else if($id == '6'){
-                                    require('./admin-investfailure.php');
-                                }else if($id == '7') {
-                                    require('./admin-investsuccess.php');
-                                }else if($id == '8'){
-                                    require('./admin-manage.php');
-                                }else if($id == '9'){
-                                    require('./admin-moneyrecord.php');
-                                }else if ($id == '10') {
-                                    require('./admin-deleteuser.php');
-                                }
-                                else if ($id == '11') {
-                                    require('./admin_projectnow.php');
-                                }
-                            }
-                            
-                            
-
-                            ?>
-
-                        </div>
-                    </div>
-
-                     
-                <?PHP
-                }
-                ?>
-            
+            </div>
         </div>
-    </div>
-
-            <?php require('./footer.php')?>
-
-       <script>
-       $('.admin_loginin').click(function(){
+          <script>
+       $('.admin_regist').click(function(){
 
             var user =  $("form").serialize();
             //alert(user);
             $.ajax({
             cache: false,
             type:"POST",
-            url:"./action/do_admin_login.php",
+            url:"./action/do_admin_register.php",
             data:user,
             success:function(data){
                 //alert(data);
@@ -138,10 +78,10 @@
                 else
                 {
 
-                    toastr.success("登录成功");
+                    toastr.success("注册成功");
                     $("#login").fadeOut();
 
-                    setTimeout(function(){window.location.href=window.location.href;},1000);
+                    setTimeout(function(){window.location.href="./admin.php";},1000);
 
 
 
@@ -153,6 +93,7 @@
         })
        });
        </script>     
+    </body>
 
-	</body>
-	</html>	
+</html>
+                   

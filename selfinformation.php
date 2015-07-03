@@ -30,9 +30,7 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <img id="self-logo" src="./img/self_03.png" style="width: 100%;">
-                            <div style="width:100px; margin: 0 auto;">
-                                <input type="file" name="file-pic" id="file_pic"/>
-                            </div>
+                           
                         </div>
                         <div class="col-xs-9 user-information">
                              <div class="row">

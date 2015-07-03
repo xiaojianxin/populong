@@ -5,13 +5,15 @@ $thumbPho = 0;
 $projType = $_POST["inputProjType"];
 $provinceCode = $_POST["a_tree1_0"];
 if ($provinceCode > 4) {
-	if($provinceCode==32||$provinceCode==33){
-			$cityCode = 0;
+	if($provinceCode==32){
+			$cityCode = 5;
+		}else if ($provinceCode==33) {
+			$cityCode = 6;
 		}else{
 			$cityCode = $_POST["a_tree1_1"];
 		}	
 }else{
-	$cityCode = 0;
+	$cityCode = $provinceCode;
 }
 
 $fieldCode = 0;//未定义
@@ -26,7 +28,10 @@ $creditRanting = 0;//未定义
 $raiseDays = $_POST["inputRaiseDays"];
 $charge = $planAmount*0.02 + 200*($_POST["isVadio"] + $_POST["isPush"] + $_POST["isFieldCoun"] +$_POST["isInvCoun"]);
 $projAuthy = $_POST["isVadio"] + ($_POST["isPush"]<<1) + ($_POST["isFieldCoun"]<<2) + ($_POST["isInvCoun"]<<3);
-
+$isVadio = $_POST["isVadio"];
+$isPush = $_POST["isPush"];
+$isFieldCoun = $_POST['isFieldCoun'];
+$isInvCoun = $_POST['isInvCoun'];
 
 if($_POST["inputAmountPer0"] != NULL)
 {
@@ -107,6 +112,10 @@ $json = json_encode(array(
 		'creditRanting'=>$creditRanting,
 		'raiseDays'=>$raiseDays,
 		'charge'=>$charge,
+		'isVadio'=>$isVadio,
+		'isPush' =>$isPush,
+		'isFieldCoun'=>$isFieldCoun,
+		'isInvCoun'=>$isInvCoun,
 		'projAuthy'=>$projAuthy,
 		'rewordClassCode'=>$rewordClassCode,
 		'amountPer'=>$amountPer,

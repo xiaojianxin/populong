@@ -18,9 +18,42 @@
 </head>
 <body>
 	<div id="container">
-		<?php require('./nav.php') ?>  
+		<?php require('./admin_nav.php') ?> 
 		<div id="main" class='container'>
+							
 				<div id="maincontainer1">
+ <?PHP
+                                    function request_by_curl($remote_server, $json_string)
+                                    {
+                                        $ch = curl_init();
+                                        curl_setopt($ch,CURLOPT_URL,$remote_server);
+                                        curl_setopt($ch,CURLOPT_POSTFIELDS,$json_string);
+                                        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+                                        $data = curl_exec($ch);
+                                        curl_close($ch);
+                                        return $data;
+                                    }
+                                    $projectId = $_GET['projID'];
+                                    $json = '{"method": "projet_detail", "projectId": '.$projectId.',"token": ""}';
+                                    $url = "123.57.74.122:8088/logic/project";
+                                    
+                                    var_dump($json);
+
+                                    $result_arr = request_by_curl($url,$json);
+                                    var_dump($result_arr);
+                                    $result_arr = json_decode($result_arr);
+
+                                    $result = $result_arr->result;
+                
+                                    $result_content = $result->paybacks;
+                                    var_dump($result_content);
+                                    $isfocus = $result->isFocus;
+                                    //$projIntro  = $result->projIntro;
+                                    //var_dump($isfocus)
+                                    
+                                    //var_dump($projectId);
+
+                              ?>    
 					<div class='title'>1.项目信息</div>
 					<div class="content">
 						<div class="content-detail row">
