@@ -36,7 +36,7 @@
                 </div>
                 <div class="modal-body">
                     
-                       <h3>发件人：张三丰</h3>
+                       <h3>发件人：<?php echo $_SESSION['nickName'];?></h3>
                         <textarea class="form-control msg-content" placeholder="请输入私信内容，内容控制在2000字以内"></textarea>
                   
                 </div>
@@ -76,10 +76,12 @@
                                     //var_dump($json);
 
                                     $result_arr = request_by_curl($url,$json);
-                                    //var_dump($result_arr);
+                                    
                                     $result_arr = json_decode($result_arr);
+                                    //var_dump($result_arr);
                                     $result = $result_arr->result;
-                
+                                    $projIntro  = $result->projIntro;
+                                    //var_dump($projIntro);
                                     $result_content = $result->paybacks;
                                     //var_dump($result_content);
                                     $isfocus = $result->isFocus;
@@ -119,9 +121,9 @@
                <ul class="nav nav-tabs ">
                 <Input class="hidden" id="proid" value="<?php echo $projectId;?>"/>
                 <?php $i = 1;
-                      foreach ($result as $reword) { ?>
+                      foreach ($result_content as $reword) { ?>
                    <li <?php if($i == 1){echo 'class="active"';}?>>
-                       <a href="#panel-<?php echo $i; ?>" data-toggle="tab">￥1</a>
+                       <a href="#panel-<?php echo $i; ?>" data-toggle="tab">￥<?php echo $reword->amountPer;?></a>
                    </li>
                 <?php 
                   $i++;
@@ -273,7 +275,7 @@
                                </ul>
                                <div class="tab-content">
                                    <div class="tab-pane active" id="box-1">
-                                       <iframe src="prodetail.php?projIntro=<?php echo $projIntro ?> " class="mainframe" name="mainiframe1" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="prodetail.php?projIntro=<?php echo $projIntro ?> " class="mainframe"  name="mainiframe1" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-2">
                                        <iframe src="comment.php?projId=<?php echo $projectId;?>" class="mainframe" id="comment" name="mainiframe2" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
@@ -282,7 +284,7 @@
                                        <iframe src="processPro.html" class="mainframe" name="mainiframe3" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-4">
-                                       <iframe src="investers.html" class="mainframe" name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="investers.php?projId=<?php echo $projectId;?>" class="mainframe" name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-5">
                                        <iframe src="subbusiness.html" class="mainframe" name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>

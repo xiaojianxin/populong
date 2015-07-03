@@ -20,13 +20,22 @@
 <body>
 <div id="prodetail">
     <div class="container" style="min-width: 720px;">
-                   
-                              <?PHP
-                                   
-                                    $projIntro = $_GET['projIntro'];                            
-                                    echo $projIntro;
+                   <?php
 
-                              ?>
+                        $ch = curl_init();
+                        $url = $_GET['projIntro'];
+                        $curl_url = $url;
+                        curl_setopt($ch, CURLOPT_URL, $curl_url);
+                        curl_setopt($ch, CURLOPT_POST, 1);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
+                        $curl_result = curl_exec($ch);
+                        curl_close($ch);
+                        print_r($curl_result);
+                        //$a = json_decode($nickname);
+                        //var_dump($a);
+                        //$a = $nickname['result'];
+                        //print_r($a);
+                ?>
          
     </div>
 

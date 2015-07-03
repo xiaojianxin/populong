@@ -11,7 +11,7 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 $token = '"'.$_GET['token'].'"';
-var_dump($token);
+//var_dump($token);
 $url = "123.57.74.122:8088/logic/invest";
 $json = '{
     "method": "invest_query",
