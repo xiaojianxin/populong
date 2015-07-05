@@ -266,6 +266,10 @@ frame{
     margin-top: 40px;
     margin-left: 20%;
 }
+.one-comment .user-pic img{
+    width: 80%;
+
+}
 .one-comment .user-name{
     color: #66cc66;
     font-size: 22px;

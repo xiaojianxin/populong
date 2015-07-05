@@ -52,7 +52,7 @@ session_start();
         <div class="one-comment" id="comment<?php echo $i;?>">
             <div class="row">
                 <div class="col-xs-2">
-                    <div class="user-pic"><img src=<?php echo $comment->headImg?> class="img-circle"> </div>
+                    <div class="user-pic"><img  src=<?php echo $comment->headImg?> class="img-circle"> </div>
                 </div>
                 <div class="col-xs-10">
                     <div style="height: 30px"></div>
@@ -69,7 +69,7 @@ session_start();
                             <div class="one-reply">
                                 <div class="row">
                                     <div class="col-xs-2">
-                                        <img src=<?php echo $comment->headImg?>>
+                                        <img style="width: 110%;margin-top: 10px;margin-left: 10px;" class="img-circle" src=<?php echo $comment->headImg?> >
                                     </div>
                                     <div class="col-xs-10">
                                         <div style="height: 20px;"></div>
