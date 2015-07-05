@@ -72,6 +72,10 @@ body{
 }
 .onebox a img{
     margin-top: 20px;
+    max-width: 325px;
+    max-height: 320px;
+    min-width: 325px;
+    min-height: 320px;
     width: 100%;
 }
 .onebox h2{
