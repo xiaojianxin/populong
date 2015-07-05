@@ -9,7 +9,7 @@
     curl_close($ch);
     $result = json_decode($curl_result);
     $result = $result->result[0];
-    var_dump($result);
+    //var_dump($result);
     $nickname = $result->nickname;
     $email = $result->email;
     $mobilephone = $result->mobilephone;
@@ -29,7 +29,7 @@
                 <div class="container-fluid self-info">
                     <div class="row">
                         <div class="col-xs-3">
-                            <img id="self-logo" src="./img/self_03.png" style="width: 100%;">
+                            <img  src=<?php echo $result->headImg;?> style="width: 100%;">
                            
                         </div>
                         <div class="col-xs-9 user-information">

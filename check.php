@@ -11,6 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="./css/check.css">
 	<link rel="stylesheet" type="text/css" href="./css/footer.css">
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
+	<script src="./js/jquery-1.10.1.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -34,71 +36,102 @@
                                         return $data;
                                     }
                                     $projectId = $_GET['projID'];
-                                    $json = '{"method": "projet_detail", "projectId": '.$projectId.',"token": ""}';
-                                    $url = "123.57.74.122:8088/logic/project";
+                                    $token = '"'.$_SESSION['admin_token'].'"';
+                                    $json = '{"method": "check_project_info", "projID": '.$projectId.',"token": '.$token.'}';
+                                    $url = "123.57.74.122:55555/logic/admin";
                                     
-                                    var_dump($json);
+                                    //var_dump($json);
 
                                     $result_arr = request_by_curl($url,$json);
-                                    var_dump($result_arr);
+                                    
                                     $result_arr = json_decode($result_arr);
 
                                     $result = $result_arr->result;
-                
-                                    $result_content = $result->paybacks;
-                                    var_dump($result_content);
-                                    $isfocus = $result->isFocus;
+                					 var_dump($result);
+                                    $project = $result->projBasic;
+                                    //var_dump($result_content);
+                                    $rewards = $result->reward;
+                                   
                                     //$projIntro  = $result->projIntro;
                                     //var_dump($isfocus)
                                     
                                     //var_dump($projectId);
 
-                              ?>    
+                              ?>  
+					
+                        <input id="projectid" value=<?php echo $projectId;?> style="display:none"/>
+                        <input id="token" value="<?php echo $_SESSION['admin_token'];?>" style="display:none"/>    
 					<div class='title'>1.项目信息</div>
 					<div class="content">
 						<div class="content-detail row">
 								<div class='col-xs-2'>项目名称:</div>
-								<div class='col-xs-4'>开心农场</div>
+								<div class='col-xs-4'><?php echo $project[0]->projName;?></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>模块选择:</div>
-								<div class='col-xs-4'>青年助梦</div>
+								<div class='col-xs-4'><?php  if ($project[0]->projType==1) {
+									echo "青年筑梦";
+								}else if($project[0]->projType==2){
+									echo "与你同行";
+								}else if($project[0]->projType==3){
+									echo "我做你投";
+								}?></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>筹集金额:</div>
-								<div class='col-xs-4'>20000元</div>
+								<div class='col-xs-4'><?php echo $project[0]->planAmount;?>元</div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>筹集天数:</div>
-								<div class='col-xs-4'>50天</div>
+								<div class='col-xs-4'><?php echo $project[0]->raiseDays?>天</div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>项目地点:</div>
-								<div class='col-xs-4'>北京</div>
+								<div class='col-xs-4'><?php echo $project[0]->cityName?></div>
 						</div>	
 						<div class="content-detail row">
 								<div class='col-xs-2'>项目封面:</div>
-								<div class='col-xs-6'><img class="project"src="./img/index_01.png" alt="2" style="width:100%" /></div>
+								<div class='col-xs-6'><img class="project"src=<?php echo $project[0]->projPho?>alt="2" style="width:100%" /></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>路演视频:</div>
-								<div class='col-xs-4'><a style="color:red">http://www.soku.com</a></div>
+								<div class='col-xs-4'><a style="color:red"><?php echo $project[0]->vadioLink?></a></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>项目简介:</div>
-								<div class='col-xs-4'>一个有追求有节操的手机品牌</div>
+								<div class='col-xs-4'><?php echo $project[0]->projAbst?></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>详情介绍:</div>
-								<div class='col-xs-6'>小米的LOGO是一个“MI”形，是Mobile Internet的缩写，小米手机 是小米公司（全称北京小米科技有限责任公司）研发的高性能发烧级智能手机。坚持 “为发烧而生”的设计理念，采用线上销售模式。2013年4月9日，米粉节上，搭载高通骁龙600 四核1.7G的小米手机2S在官网销售，小米2A同时发布。2014年3月13日，红米手机在新加坡开始第三轮网上限量销售，被抢购一空</div>
+								<div class='col-xs-6'>   <?php
+
+                        $ch = curl_init();
+                        $url = $project[0]->projIntro;
+                        $curl_url = $url;
+                        curl_setopt($ch, CURLOPT_URL, $curl_url);
+                        curl_setopt($ch, CURLOPT_POST, 1);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
+                        $curl_result = curl_exec($ch);
+                        curl_close($ch);
+                        print_r($curl_result);
+                        //$a = json_decode($nickname);
+                        //var_dump($a);
+                        //$a = $nickname['result'];
+                        //print_r($a);
+                ?></div>
 						</div>
-						<div class="content-detail row">
-								<div class='col-xs-2'>回报01:</div>
-								<div class='col-xs-4'>资金回报</div>
+						<?php $i=1; foreach ($rewards as $reward) {?>
+							<div class="content-detail row">
+								<div class='col-xs-2'>回报0<?php echo $i;?>:</div>
+								<div class='col-xs-4'><?php if ($reward->rewardClassCode==1) {
+									echo "资金回报";
+								}elseif ($reward->rewardClassCode==2) {
+									echo "实物回报";
+								};?></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>投资比例:</div>
-								<div class='col-xs-4'>1%=200元</div>
+								<div class='col-xs-4'>1%=<?php echo $reward->amountPer/100;?>元</div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>限定名额:</div>
@@ -106,85 +139,79 @@
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>说明图片:</div>
-								<div class='col-xs-6'><img class="project"src="./img/index_01.png" alt="2" style="width:100%" /></div>
+								<div class='col-xs-6'><img class="project"src=<?php echo $reward->explainPic;?> alt="2" style="width:100%" /></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>回报描述:</div>
-								<div class='col-xs-6'>我们会返还您5.7英寸1080P屏幕，比5.5英寸的iPhone6Plus还要大，采用了金属边框加双面曲面玻璃的结构，正面是2.5D玻璃，背部是3D弯曲玻璃。在硬件上采用骁龙801处理器搭配3GB RAM，1300万像素索尼堆栈式主摄像头，并且支持HiFi音效的小米手机一部。</div>
+								<div class='col-xs-6'><?php echo $reward->explainText;?> </div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>回报时间:</div>
-								<div class='col-xs-4'>2015.09.09</div>
+								<div class='col-xs-4'><?php echo $reward->rewardTime;?></div>
 						</div>
-						<div class="content-detail row">
-								<div class='col-xs-2'>回报02:</div>
-								<div class='col-xs-4'>实物回报</div>
-						</div>
-						<div class="content-detail row">
-								<div class='col-xs-2'>投资金额:</div>
-								<div class='col-xs-4'>200元</div>
-						</div>
-						<div class="content-detail row">
-								<div class='col-xs-2'>限定名额:</div>
-								<div class='col-xs-4'>20个</div>
-						</div>
-						<div class="content-detail row">
-								<div class='col-xs-2'>说明图片:</div>
-								<div class='col-xs-6'><img class="project"src="./img/index_01.png" alt="2" style="width:100%" /></div>
-						</div>
-						<div class="content-detail row">
-								<div class='col-xs-2'>回报描述:</div>
-								<div class='col-xs-6'>我们会返还您5.7英寸1080P屏幕，比5.5英寸的iPhone6Plus还要大，采用了金属边框加双面曲面玻璃的结构，正面是2.5D玻璃，背部是3D弯曲玻璃。在硬件上采用骁龙801处理器搭配3GB RAM，1300万像素索尼堆栈式主摄像头，并且支持HiFi音效的小米手机一部。</div>
-						</div>
-						<div class="content-detail row">
-								<div class='col-xs-2'>回报时间:</div>
-								<div class='col-xs-4'>2015.09.09</div>
-						</div>
+						<?php $i++;}?>
 						<div class="content-detail row">
 								<div class='col-xs-2'>增值服务</div>
 								<div class='col-xs-4'></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>进行路演:</div>
-								<div class='col-xs-4'>是 收费200元</div>
+								<div class='col-xs-4'><?php if($project[0]->isVadio==0){
+									echo "否";
+								}else{
+									echo "是 收费200元";
+								}?></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>热门推送:</div>
-								<div class='col-xs-4'>是 收费200元</div>
+								<div class='col-xs-4'><?php if($project[0]->isPush==0){
+									echo "否";
+								}else{
+									echo "是 收费200元";
+								}?></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>行业顾问:</div>
-								<div class='col-xs-4'>是 收费200元</div>
+								<div class='col-xs-4'><?php if($project[0]->isFieldCoun==0){
+									echo "否";
+								}else{
+									echo "是 收费200元";
+								}?></div>
 						</div>
 						<div class="content-detail row">
 								<div class='col-xs-2'>投资顾问:</div>
-								<div class='col-xs-4'>是 收费200元</div>
+								<div class='col-xs-4'><?php if($project[0]->isInvCoun==0){
+									echo "否";
+								}else{
+									echo "是 收费200元";
+								}?></div>
 						</div>
 
 					</div>
 				</div>
+
 				<div id="maincontainer2">
 					<div class='title'>2.发起人信息</div>
 					<div class='content'>
 						<div class="content-detail row">
 							<div class='col-xs-2'>昵称:</div>
-							<div class='col-xs-4'><a  href="./others.php">孙悟空</a></div>
+							<div class='col-xs-4'><a  href="./others.php"><?php echo $project[0]->nickName ;?></a></div>
 						</div>
 						<div class="content-detail row">
 							<div class='col-xs-2'>真实姓名:</div>
-							<div class='col-xs-4'>孙行者</div>
+							<div class='col-xs-4'><?php echo $project[0]->realName;?></div>
 						</div>	
 						<div class="content-detail row">
 							<div class='col-xs-2'>身份证号:</div>
-							<div class='col-xs-4'>*************</div>
+							<div class='col-xs-4'><?php echo $project[0]->IDCard;?></div>
 						</div>	
 						<div class="content-detail row">
 							<div class='col-xs-2'>手机号:</div>
-							<div class='col-xs-4'>13********</div>
+							<div class='col-xs-4'><?php echo $project[0]->mobilephone;?></div>
 						</div>	
 						<div class="content-detail row">
 							<div class='col-xs-2'>邮箱:</div>
-							<div class='col-xs-4'>123@123.com</div>
+							<div class='col-xs-4'><?php echo $project[0]->email;?></div>
 						</div>		
 					</div>
 				</div>
@@ -194,7 +221,17 @@
 						<form>
 						<div class="content-detail row">
 							<div class='col-xs-2'>审核状态:</div>
-							<div class='col-xs-4'>审核/未审核</div>
+							<div class='col-xs-4'><?php if ($project[0]->projStatus==0) {
+								echo "未审核";
+								echo " </div></div>
+								<div class='content-detail row'>
+									<div class='col-xs-2'><a class='btn btn-success check'>审核项目</a></div>
+		
+								</div>  ";
+								echo "</form></div></div>";
+							}else{
+								echo "已审核";
+							?></div>
 						</div>	
 						<div class="content-detail row">
 							<div class='col-xs-2'>审核时间:</div>
@@ -442,9 +479,36 @@
 						</div>	
 					</div>
 				</div>
+				<?php }?>
 			</div>
+			
 		</div>
+		
 		<?php  require('./footer.php') ?>
 	</div>
+
+	<script>
+	$(".check").click(function(){
+		var projectId = $('#projectid').val();
+		var token  = $("#token").val();
+		alert(token);
+		 $.ajax({
+                  type:"POST",
+                  url:"./action/do_change_status.php",
+                  data:"projId="+projectId+"&newStatus=1"+"&token="+token,
+                  success:function(data){
+                   // alert(data);
+                    var dataobj = eval("("+data+")");
+                    if (dataobj.code==0) {
+                     window.location.reload();
+                    };
+                  },
+                  error:function(){
+                      alert("注册失败");
+                  }
+                });
+
+	});
+	</script>
 </body>
 </html>
