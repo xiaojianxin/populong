@@ -286,19 +286,19 @@
                                        <iframe src="prodetail.php?projIntro=<?php echo $projIntro ?> "  name="mainiframe1" width="100%" height="1155px" frameborder="0" scrolling="yes" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-2">
-                                       <iframe src="comment.php?projId=<?php echo $projectId;?>"  id="comment" name="mainiframe2" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="comment.php?projId=<?php echo $projectId;?>"  id="comment" name="mainiframe2" width="100%" height="1155px"   frameborder="0" scrolling="yes" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-3">
-                                       <iframe src="processPro.html"  name="mainiframe3" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="processPro.html"  name="mainiframe3" width="100%" height="1155px"   frameborder="0" scrolling="yes" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-4">
-                                       <iframe src="investers.php?projId=<?php echo $projectId;?>"  name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="investers.php?projId=<?php echo $projectId;?>" height="1155px"  name="mainiframe4" width="100%"   frameborder="0" scrolling="yes" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-5">
-                                       <iframe src="subbusiness.html"  name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="subbusiness.html"  name="mainiframe4" width="100%" height="1155px"   frameborder="0" scrolling="yes" marginwidth="0" marginheight="0"></iframe>
                                    </div>
                                    <div class="tab-pane" id="box-6">
-                                       <iframe src="subinvest.html"  name="mainiframe4" width="100%"   frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                       <iframe src="subinvest.html"  name="mainiframe4" width="100%" height="1155px"   frameborder="0" scrolling="yes" marginwidth="0" marginheight="0"></iframe>
                                    </div>
 
                                </div>
