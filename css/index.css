@@ -181,6 +181,9 @@ div,h1,span,h2,h3,h4,h5,h6,li{
 	font-size: 16px;
 	color: #666668;
 	margin-top: 10px;
+    line-height: 30px;
+    height: 90px;
+    overflow-y: hidden;
 }
 
 .progray{background: #c9c9c9;display: block;margin-left: 4%; float: left;margin-top: 8px;width: 88%;height: 10px;}
