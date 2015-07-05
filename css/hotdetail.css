@@ -55,10 +55,14 @@
     width: 93%;
 
 }
-
 .box-introduce  img{
-    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
     vertical-align:middle;
+
+}
+.box-introduce  .picbox{
+    text-align: center;
 
 }
 .box-introduce h1{
@@ -72,6 +76,7 @@
     font-size: 18px;
     color: #000000;
 }
+
 .text-red{
     font-size: 24px;
     font-weight: bold;
@@ -245,7 +250,9 @@ frame{
 .content-area{
     margin: 20px 20px 20px 20px;
 
+
 }
+
 /*******************************************评论*****************************************************/
 
 .one-comment .user-pic{
