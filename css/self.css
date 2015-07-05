@@ -684,6 +684,9 @@ div .edit-info{
     font-size: 18px;
     line-height: 60px;
 }
+#cardmanage .cardContent .cardmiddle a{
+    margin-top: 15px;
+}
 #cardmanage .cardContent .cardright span{
 
     font-size: 18px;

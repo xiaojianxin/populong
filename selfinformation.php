@@ -9,7 +9,7 @@
     curl_close($ch);
     $result = json_decode($curl_result);
     $result = $result->result[0];
-    //var_dump($result);
+    var_dump($result);
     $nickname = $result->nickname;
     $email = $result->email;
     $mobilephone = $result->mobilephone;
