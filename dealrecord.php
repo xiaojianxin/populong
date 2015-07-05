@@ -11,7 +11,7 @@
     $r = json_decode($curl_result);
     //var_dump($r);
     $result = $r->result;
-    var_dump($result);
+    //var_dump($result);
     //$a = json_decode($nickname);
     //var_dump($a);
     //$a = $nickname['result'];

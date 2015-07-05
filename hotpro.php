@@ -29,6 +29,7 @@ session_start();
 <body>
 <?php require('./nav.php') ?>
 <div id="container">
+<<<<<<< HEAD
     <?PHP
     function request_by_curl($remote_server, $json_string)
     {
@@ -51,6 +52,9 @@ session_start();
     $result = json_decode($curl_result['result']);
     ?>
 
+=======
+    
+>>>>>>> b76f034056af99e03203731eb5ea376b36466189
     <div class="container">
         <h2 style="margin-bottom: 5px;font-size: 1.5em;">热门投资</h2>
         <div class="swiper-container">

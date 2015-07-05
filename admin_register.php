@@ -68,7 +68,7 @@
             url:"./action/do_admin_register.php",
             data:user,
             success:function(data){
-                //alert(data);
+                alert(data);
                 var dataobj = eval("("+data+")");
                 if(dataobj.code == '10006'){
                     $("#login .error-tip").html('用户名不存在');

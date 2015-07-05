@@ -16,7 +16,7 @@
     $result_arr = request_by_curl($url,$json);
     $result_arr = json_decode($result_arr);
     $result = $result_arr->result;
-    var_dump($result);
+    //var_dump($result);
 ?>
                 <div id="platrank">
                     <div class="twotab">
@@ -79,7 +79,7 @@
     $result_arr = request_by_curl($url,$json);
     $result_arr = json_decode($result_arr);
     $result = $result_arr->result;
-    var_dump($result);
+    //var_dump($result);
 ?>   
                                     <table class="table">
                                         <thead >

@@ -16,8 +16,9 @@ function request_by_curl($remote_server, $json_string)
 
 $url = "123.57.74.122:55555/logic/admin";
 $json = json_encode(array('method'=>'register','nickname'=>$account,'password'=>$password));
-$json = request_by_curl($url,$json);
 //var_dump($json);
+$json = request_by_curl($url,$json);
+
 $result = json_decode($json,true);
 if(!empty($result) && $result['code'] == "0")
 {   

@@ -19,6 +19,11 @@ body{
     margin-top:20px;
     margin-left: 20px;
 }
+.intro-panel .left-side h3{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+}
 .intro-panel .col-xs-3 h3{
     font-size: 18px;
     line-height: 30px;
