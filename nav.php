@@ -1,3 +1,12 @@
+<?PHP
+session_start();
+date_default_timezone_set("PRC");
+?>
+<link href="./css/toastr.css" rel="stylesheet"/>
+<script type="text/javascript" src="./js/toastr.js"></script>
+<script type="text/javascript" src="./js/nav.js"></script>
+
+
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -7,26 +16,60 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">泡泡龙</a>
+          <a class="navbar-brand" href="./index.php">泡泡龙</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-        	<ul class="nav navbar-nav">
-	            <li class="chooseli"><a href="./index.php">首页热门</a></li>
+        	<ul class="nav navbar-nav" style="width: 50%;">
+	            <li><a href="./index.php">首页热门</a></li>
       				<li><a href="./help.php">青年助梦</a></li>
       				<li><a href="./together.php">与你同行</a></li>
       				<li><a href="./ido.php">我做你投</a></li>
 	        </ul>
-          <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" style="width: 20%;">
+                <?php if(empty($_SESSION["token"])){
+                    ?>
 
-                  <li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
+                    <li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
+                    <li><a href="./regist_1.php">注册</a></li>
 
-                  <li><a href="./regist_1.php">注册</a></li>
-          </ul>
-          <form class='navbar-form navbar-right' action="">
-                <div class="btn btn-inverse">
-                    <span class="glyphicon glyphicon-search" style="color: white"></span>
+                <?PHP
+                }
+                else{
+                    ?>
+                    <li class="user-nav">
+                        <a class="dropdown-toggle operator-name" data-toggle="dropdown"><img src="./img/head.png" alt=""class="img-circle"/><?PHP echo  $_SESSION["nickName"]?></a>
+                        <ul class="dropdown-menu self-menu">
+                            <li>
+                                <a href="./self.php?id=11"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;消息</a>
+                            </li>
+                            <li>
+                                <a href="./self.php"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a>
+                            </li>
+                            <li>
+                                <a href="./self.php?id=5"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;资金管理</a>
+                            </li>
+                            <li>
+                                <a href="./self.php?id=7"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</a>
+                            </li>
+                            <li>
+                                <a id="navSignOut"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a>
+
+                            </li>
+                        </ul>
+                    </li>
+                <?PHP
+                }
+                ?>
+
+
+            </ul>
+
+          <form class='navbar-form navbar-right' action="" style="width: 20%;">
+                <div class="btn btn-inverse" >
+                    <a href="searchresult.php"><span class="glyphicon glyphicon-search" style="color: white;width:20%;"></span></a>
+                    <input type="text" class="form-control" placeholder="Search..." style="width:80%;background-color: black;color: white">
                 </div>
-                <input type="text" class="form-control" placeholder="Search..." style="background-color: black;color: white">
+
           </form>
           	
          
@@ -44,17 +87,17 @@
                   </h4>
               </div>
               <div class="modal-body">
-                  <form action="">
+
 
                       <div class="form-group">
-                          <input type="email" class="form-control login_username" placeholder="邮箱/手机">
+                          <input type="text" name="inputEmail" class="form-control login_username" placeholder="邮箱/手机" pattern="[1][358]\d{9}">
                       </div>
                       <div class="form-group">
-                          <input type="password" class="form-control login_passwd" placeholder="密码">
+                          <input type="password" name="inputPassword" class="form-control login_passwd" placeholder="密码">
                       </div>
                       <div class="checkbox">
                           <label>
-                              <input type="checkbox">记住用户名
+                              <input type="checkbox" id="rememberMe">记住用户名
                           </label>
                       </div>
                       <div class="forget" style="margin-top: 10px;">
@@ -62,17 +105,14 @@
                               <div class="col-sm-6" style="margin-top: 20px">
                                   <a id="tofind1" href="#forgetPW" data-toggle="modal" data-target="#forgetPW">忘记密码</a>
                                   <span>&nbsp;|&nbsp;</span>
-                                  <a id="toregist"href="./regist_1.html">快速注册</a>
+                                  <a id="toregist"href="./regist_1.php">快速注册</a>
                               </div>
-                              <div class="col-sm-6 ">
-                                  <button type="submit" class="btn btn-lg checklogin pull-right">登陆</button>
+                              <div class="col-sm-6 error-tip ">
+
                               </div>
+                              <button  class="btn btn-lg checklogin pull-right" id="navSignIn">登陆</button>
                           </div>
                       </div>
-
-
-
-                  </form>
               </div>
 
           </div>
@@ -202,15 +242,3 @@
       </div>
 
   </div>
-  <script>
-      $("#tofind1").click(function(){
-          $('#login').modal('hide');
-
-      });
-      $("#nextFind").click(function(){
-          $("#forgetPW").modal('hide');
-      });
-      $("#submitFind").click(function(){
-          $("#inputCode").modal('hide');
-      })
-  </script>

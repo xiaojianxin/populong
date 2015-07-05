@@ -1,0 +1,58 @@
+body{
+	background-color: #eeeff3;
+	font-family: '微软雅黑';
+}
+.container-head {
+	margin-top: 100px;
+	margin-left: 70px;
+}
+.container-head .title{
+	font-size: 23px;
+	font-weight: bold;
+
+}
+.container-head .title span{
+	height: 40px;
+	width: 30px;
+}
+a{
+	color: #5ead6f;
+}
+.container-content{
+	width: 85%;
+	margin:0 auto;
+	margin-bottom: 50px;
+}
+.container-content .inittransfer input{
+	width: 30%;
+}
+.container-content .inittransfer a{
+	width: 30%;
+}
+.initransfer-title{
+	font-size: 18px;
+	width: 20%;
+} 
+.inittransfer{
+	margin-top: 20px;
+}
+.initransfer-title span{
+	float: right;
+}
+.inittransfer-btn{
+	margin-left: 300px;
+	margin-top: 30px;
+}
+div .detail-close{
+	width: 100px;
+	margin-left: 42%;
+	margin-bottom:10px; 
+}
+
+.detail-content{
+	width: 800px;
+	margin-left:-200px;
+}
+.hidden{
+	display: none;
+}

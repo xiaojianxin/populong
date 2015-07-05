@@ -1,3 +1,4 @@
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
 body { background:#fff; color:#555; font-size:14px; font-family: "微软雅黑"; }
 td,th,caption { font-size:14px; }
@@ -12,6 +13,52 @@ table { border-collapse:collapse; }
 html {overflow-y: scroll;}
 .container{
     min-width: 1080px;
+}
+.navbar-fixed-top .container{
+    min-width: 0px;
+}
+
+#navbar .nav .chooseli{
+    background-color: #6cc77f;
+
+}
+#navbar .nav .chooseli a{
+
+    color:white;
+}
+.navbar-fixed-top .container .navbar-right .btn-inverse{
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-bottom: -5px;
+}
+.operator-name{
+    margin-left: 10px;
+    color: white;
+}
+.self-menu{
+    background-color: #6cc77f;
+}
+.glyphicon{
+    color: white;
+}
+.user-nav a {
+margin-top:-5px;
+ margin-bottom: -10px;
+}
+.user-nav ul{
+    background-color: #6cc87f;
+}
+.user-nav ul li a:hover{
+    background-color: #282f28;
+    color:white;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover{
+    background-color: #1f1f1f!important;
+}
+.user-nav ul li a span{
+    line-height: 35px;
 }
 a{
     cursor:pointer;
@@ -31,6 +78,7 @@ a:link,a:visited,a:hover,a:active{
 a:focus{
     outline:0;
 }
+
 #login,#forgetPW,#inputCode,#sendCode{
 
     margin-top: 180px;
@@ -43,6 +91,21 @@ a:focus{
 #login .login_passwd{
     background-color: #f2f2f3;
     height: 50px;
+}
+#login .error-tip{
+    margin-top: -30px;
+    color: red;
+
+}
+#login .checklogin{
+    margin-right: 30px;
+}
+#login .checklogin:hover{
+    margin-right: 30px;
+    color: white;
+}
+#login .error-tip{
+    color:red;
 }
 #forgetPW{
     height: 100%;

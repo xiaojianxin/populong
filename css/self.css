@@ -5,8 +5,6 @@
 	margin-top: 5px;
 	height: 50px;
 	float: right;
-	
-
 }
 #leftnav{
     margin-top: 53px;
@@ -14,7 +12,7 @@
 
 }
 .self_right_top{
-	height: 190px;
+	height: 210px;
 	margin-left:-30px; 
 	background-color: #b5e3bf;
 	border-bottom: 1px solid #6cc77f;
@@ -51,28 +49,35 @@
 	background-color: #ffffff;
 	border: 1px solid #d2d2d2;
 }
-.hidden{
-    display: none;
-}
-.show{
-    display: block;
-}
 
+.self-tab-content{
+     width: 100%;
+    margin-left: -30px;
+}
+#toChooseone{
+    cursor: pointer;
+    border-top:1px solid #6cc77f;
+    border-left:1px solid #6cc77f;
+    border-right:1px solid #6cc77f;
+    border-bottom:1px solid #ffffff;
+}
+#toChoosefans{
+    cursor: pointer;
+}
+#main{
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+body{
+    background-color: #eeeff3;
+}
 
 
 /*个人中心 粉丝页面css*/
 
 #self_fans{
-	width: 879px;
-	margin-left: -30px;
+	width: 104%;
     background-color: #ffffff;
-}
-div.col-xs-4.fans_card{
-	margin:9px;
-	width: 275px;
-	height: 140px;
-	background-color: #eeeff3;
-	
 }
 
 .fans_pic{
@@ -109,11 +114,12 @@ div.col-xs-4.fans_card{
 
 .fans_card{
     background-color: #eeeff3;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 10px;
+    margin-right: 2%;
+    margin-top: 1%;
     margin-bottom: 10px;
-    height: 160px;
+    width: 31%;
+    height: 140px;
+    float: right;
 }
 #startpro,#followpro,#follows,#fans{
     background-color: #ffffff;
@@ -123,6 +129,9 @@ div.col-xs-4.fans_card{
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.popover-span{
+    font-size: 18px;
 }
 /********************************************交易中心**************************************************/
 #recordbox{
@@ -333,6 +342,10 @@ div .title{
 #investProList{
     background-color: #ffffff;
 }
+
+.trans{
+    margin-top: -15px;
+}
 /*******************************************转让市场**************************************************/
 #buyin table{
     margin-top: 20px;
@@ -470,6 +483,7 @@ div .title{
   background-color: #ffffff;
   font-size: 15px;
   font-weight: bold;
+  padding-bottom: 30px;
   }
 
 .text-green{
@@ -586,4 +600,222 @@ div .edit-info{
 }
 #startRank table thead .active th{
     background-color: #dbdbdb;
+}
+
+/*******************************************安全认证**************************************************/
+.safe{
+    background-color: #ffffff;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+#safe-title{
+    font-size: 18px;
+    text-align: center;
+    width: 10%;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    border-bottom: 2px solid #6cc77f;
+}
+#safe-content{
+    margin-top: 50px;
+}
+.safe-content-detail{
+    min-height: 50px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.safe-content-detail .glyphicon{
+    color: #3399cc;
+    font-size: 30px;
+}
+.content-title{
+    font-weight: bold;
+    font-size: 18px;
+}
+.safe-content-detail a{
+    color:blue;
+}
+.safe-content-detail .warning{
+    color: red;
+}
+
+.safe .edit{
+    margin-top: 20px;
+    width: 100%;
+    margin-left:0px;
+    margin-bottom: 20px;
+}
+.safe .edit .glyphicon{
+    font-size: 10px;
+}
+.safe .edit-title{
+   text-align: right;
+}
+.safe .pic-password{
+    width: 100px;
+    height: 40px;
+    float: left;
+}
+.safe .edit input{
+    width: 90%;
+    margin: 0 auto;
+}
+.safe .refresh{
+    float: left;
+    margin-left: 5px;
+}
+/*******************************************绑定银行卡**************************************************/
+#cardmanage .cardTitle h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+#cardmanage .cardContent{
+    margin-top: 20px;
+}
+#cardmanage .cardContent .cardleft span{
+    float: right;
+    font-size: 18px;
+    line-height: 60px;
+}
+#cardmanage .cardContent .cardmiddle span{
+
+    font-size: 18px;
+    line-height: 60px;
+}
+#cardmanage .cardContent .cardright span{
+
+    font-size: 18px;
+    line-height: 60px;
+}
+#cardmanage .cardContent .cardmiddle span input{
+
+
+    height: 40px;
+    margin-top: 12px;
+}
+
+#cardmanage .cardContent .cardmiddle span select{
+
+
+    height: 40px;
+    margin-top: 12px;
+}
+#cardmanage .cardContent .cardright .btn{
+
+
+    width: 100%;
+    line-height: 30px;
+    margin-top: 10px;
+
+}
+#cardmanage .cardContent .text-red{
+    color:#ff5a3f;
+}
+#cardmanage .cardContent .cardmiddle2 input{
+
+
+    height: 40px;
+    margin-top: 12px;
+    width: 50%;
+    float: left;
+}
+#cardmanage .cardContent .cardmiddle2 .btn{
+    float: left;
+    width: 35%;
+    margin-left: 5%;
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 16px;
+}
+#cardmanage .cardContent  .actionGroup{
+    width: 60%;
+    margin-left: 17%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+#cardmanage .cardContent  .actionGroup .btn {
+    line-height: 40px;
+    width: 30%;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/*******************************************银行卡列表**************************************************/
+#deleteCardModal .question-pic{
+    width: 100%;
+    text-align: center;
+}
+#deleteCardModal h2{
+    text-align: center;
+    margin-top: 20px;
+}
+#deleteCardModal .buttonModal{
+    margin-top: 40px;
+
+}
+#deleteCardModal .buttonModal .btn{
+    width: 140px;
+    margin-left: 30px;
+    font-size: 18px;
+
+
+}
+#cardlist .cardTitle h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+#cardlist .listContent{
+    margin-top: 20px;
+}
+#cardlist .listContent .bankpic img{
+    width: 100%;
+}
+#cardlist .listContent .bankdetail .banknumber{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+#cardlist .listContent .bankdetail .actionBtn .btn{
+     width: 25%;
+     margin-left: 15%;
+     background-color: transparent;
+     color:#66cc66;
+ }
+
+#cardlist .listContent .bankdetail .actionBtn span a{
+
+
+    background-color: transparent;
+    color:#66cc66;
+    margin-left: 80px;
+
+}
+#cardlist .listContent .bankpic span{
+    width: 100%;
+    text-align: center;
+    color: #999999;
+    font-size: 52px;
+    margin-top: 23px;
+
+}
+#deleteCardModal{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+
+    position: fixed;
+
+
+    margin: 0px auto;
+
+    top: 200px; left: 0px;
+
+    bottom: 0px;
+
+    right: 0px;
+
+    z-index: 1050;
 }

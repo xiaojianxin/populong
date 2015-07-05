@@ -1,6 +1,17 @@
+
 .startpic{
     margin-top: 80px;
 }
+.hidden0{
+    display: none;
+}
+.hidden1{
+    display: none;
+}
+.hidden2{
+    display: none;
+}
+
 #inputarea{
     margin-top: 30px;
 }
@@ -43,6 +54,10 @@
     margin-top: 5px;
 
 }
+
+#file-pic{
+    width: 100%;
+}
 #inputarea .thumbnail{
     width: 80%;
     margin-left: 10%;
@@ -67,14 +82,44 @@
     margin-top: 20px;
     width: 40%;
 }
+#selectCity{
+    margin-top: 10px;
+}
+.error-tip{
+    color:red ;
+    font-size: 16px!important;
+}
+.detail-content{
+    width: 800px;
+    margin-left:-200px;
+}
+div .detail-close{
+    width: 100px;
+    margin-left: 42%;
+    margin-bottom:10px; 
+}
+
 /*********************************发起项目2***********************************************************8*/
+
+/*#input-percentage .num-tip{*/
+    /*width: 10%;*/
+    /*float: right;*/
+    /*margin-left: 5%;*/
+/*}*/
 #input2area .btn-group{
     float: left;
     margin-top: 30px;
     margin-left: 6%;
 
 }
-#input2area .btn-group .btn{
+#input2area .btn-group .active{
+
+    height: 40px;
+
+    margin-left: 20px;
+    background-color: #66cc66;
+}
+#input2area .btn-group .btn {
 
     height: 40px;
 
@@ -156,6 +201,9 @@
 }
 #input2area #previousStep{
     margin-left: 15%;
+}
+#input-percentage{
+    width: 30%!important;
 }
 /*********************************发起项目3***********************************************************8*/
 #input3area .row .col-xs-3 span{

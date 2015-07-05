@@ -41,18 +41,25 @@
     color: #6cc77f;
     margin-top: 30px;
 }
+.introduce button a{
+    color:#6cc77f!important;
+}
 .introduce button:hover{
     background-color: transparent;
     border-color: #6cc77f;
-    color: #ffffff;
+    color: white;
     margin-top: 30px;
 }
-.introduce-text button{
+.introduce-text button {
     background-color: transparent;
     border-color: #6cc77f;
     color: #6cc77f;
     margin-top: 30px;
 }
+.introduce-text button a{
+    color:#6cc77f!important;
+}
+
 .introduce-text button:hover{
     background-color: transparent;
     border-color: #6cc77f;
@@ -93,14 +100,14 @@
 #memberPic button{
     background-color: transparent;
     border-color: #6cc77f;
-    color: #6cc77f;
+    color: #6cc77f!important;
     margin-top: 30px;
     margin-left: 15%;
 }
 #memberPic  button:hover{
     background-color: transparent;
     border-color: #6cc77f;
-    color: #ffffff;
+    color: #6cc77f;
     margin-top: 30px;
 }
 #memberPic div p{
