@@ -13,28 +13,53 @@
 	<body>
      <?php require('./nav.php') ?>
     <div id="container">
+		<?PHP
+		function request_by_curl($remote_server, $json_string)
+		{
+			$ch = curl_init();
+			curl_setopt($ch,CURLOPT_URL,$remote_server);
+			curl_setopt($ch,CURLOPT_POSTFIELDS,$json_string);
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+			$data = curl_exec($ch);
+			curl_close($ch);
+			return $data;
+		}
+		$userId = $_GET['userId'];
+
+		$json = '{"method": "other_user_info", "userId": '.$userId.'}';
+
+		$url = "123.57.74.122:8088/logic/otheruser";
+
+		//var_dump($json);
+
+		$result_arr = request_by_curl($url,$json);
+
+		$result_arr = json_decode($result_arr);
+		//var_dump($result_arr);
+		$result = $result_arr->result[0];
+		?>
 		<div id="intro-panel">
 			<div class="container" style="min-width:1080px;">
 				<div class="green-line"></div>
 				<div class="intro-panel">
 					<div class="row">
-						<div class="col-xs-3 left-side">
+						<div class="col-xs-4 left-side">
 							<div class="row" >
-								<div class="col-xs-4">
-									<a href="others.php"><img src="./img/fan_15.png" class="img-circle pull-right user-pic"></a>
+								<div class="col-xs-4 col-xs-offset-1">
+									<a href="others.php?userId=<?php echo $_GET['userId']?>"><img class="img-circle pull-right user-pic" src=<?php echo $result->headImg;?> ></a>
 								</div>
-								<div class="col-xs-8">
-									<h3>发起人:郭总</h3>
-									<h3>130****0000</h3>
+								<div class="col-xs-7">
+									<h3>发起人:<?php echo $result->nickname;?></h3>
+									<h3><?php echo $result->mobilephone;?></h3>
 									<h3>积分:471</h3>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-xs-4 detail-line">
+								<div class="col-xs-4 col-xs-offset-1 detail-line">
 									<span class="glyphicon glyphicon-map-marker" style="color: #66cc66;"></span>
 									<span style="color: #666666;">北京</span>
 								</div>
-								<div class="col-xs-8 actionLine">
+								<div class="col-xs-7 actionLine">
 									<span>操作：</span>
 									<span class="btn btn-success"><a href="#sendMsg" data-toggle="modal" data-target="#sendMsg" >发私信</a></span>
 								</div>
@@ -48,8 +73,8 @@
 
 									<h3>性别：男</h3>
 									<h3>出生日期：1990-02-02</h3>
-									<h3>最高学历：硕士</h3>
-									<h3>毕业院校：清华大学</h3>
+									<h3>最高学历：<?php echo $result->degree;?></h3>
+									<h3>毕业院校:<?php echo $result->school;?></h3>
 
 
 
@@ -59,20 +84,20 @@
 						</div>
 						<div class="col-xs-3">
 
-							<h3>公司行业：互联网</h3>
-							<h3>公司规模：500人以上</h3>
-							<h3>职位：产品经理</h3>
-							<h3>收入：1K</h3>
+							<h3>公司行业：<?php echo $result->companyFeild;?></h3>
+							<h3>公司规模：<?php echo $result->companySize;?></h3>
+							<h3>职位：<?php echo $result->position;?></h3>
+							<h3>收入：<?php echo $result->monthlyIncome;?></h3>
 
 
 
 						</div>
 					</div>
-					<div style="height: 30px;"></div>
+
 				</div>
 			</div>
 		</div>
-		<div style="height: 40px;"></div>
+		<div style="height: 20px;"></div>
 		<div id="tabList">
 				<div class="tabbable" id="tabsArea">
 					<div class="container" style="min-width:1080px;">
