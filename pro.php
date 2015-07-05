@@ -83,7 +83,8 @@
                                     $projIntro  = $result->projIntro;
                                     //var_dump($projIntro);
                                     $result_content = $result->paybacks;
-                                    //var_dump($result_content);
+                                    $info = $result->info;
+                                   
                                     $isfocus = $result->isFocus;
                                     //$projIntro  = $result->projIntro;
                                     //var_dump($isfocus)
@@ -93,11 +94,11 @@
                               ?>    
                             
        <div id="hotproTitle">
-           <h2>泡泡龙项目</h2>
+           <h2><?php echo $info[0]->projName;?></h2>
            <div class="row">
                <div class="col-xs-6">
-                   <span>发起人:郭总</span>
-                   <span class="titlemargin">地点：北京</span>
+                   <span>发起人:<?php echo $info[0]->userName;?></span>
+                   <span class="titlemargin">地点：<?php echo $info[0]->cityName;?></span>
                    <span class="titlemargin"><img src="./img/star.png" class="stars"> </span>
                </div>
                  
@@ -197,18 +198,18 @@
                   <div class="first-part" style="height: 40%;margin-top: 5%">
                       <div class="row" >
                           <div class="col-xs-4">
-                              <a href="others.html"><img src="./img/fan_15.png" class="img-circle pull-right"></a>
+                              <a href="others.php?userId=<?php echo $result_content[0]->userID;?>"><img src=<?php echo $info[0]->headImg;?> class="img-circle pull-right"></a>
                           </div>
                           <div class="col-xs-8">
-                              <h3>发起人:郭总</h3>
-                              <h3>130****0000</h3>
+                              <h3>发起人:<?php echo $info[0]->userName;?></h3>
+                              <h3><?php echo $info[0]->mobilephone;?></h3>
                               <h3>积分:471</h3>
                           </div>
                       </div>
                       <div class="row">
                           <div class="col-xs-4 detail-line">
                               <span class="glyphicon glyphicon-map-marker" style="color: #66cc66;"></span>
-                              <span style="color: #666666;">北京</span>
+                              <span style="color: #666666;"><?php echo $info[0]->cityName;?></span>
                           </div>
                           <div class="col-xs-8">
                             <input type="text" id="userId" style="display:none" value="<?php echo $result_content['0']->userID;?>" />
@@ -247,7 +248,7 @@
                           <div class="progreen"></div>
                       </div>
                   </div>
-                  <h5 class="text-red">￥1000</h5>
+                  <h5 class="text-red">￥<?php echo $info[0]->realAmount;?></h5>
                   <h6>已筹集资金</h6>
               </div>
               <div style="height: 30px;"></div>
