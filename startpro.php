@@ -13,7 +13,7 @@
     $result = json_decode($curl_result);
     curl_close($ch);
     $result = $result->result;
-    //var_dump($result);
+    var_dump($result);
 ?>
                 <div id="startPro">
                     <div class="fourtab">
@@ -55,7 +55,7 @@
                                             <td class="proName">
                                                 <div class="row">
                                                     <div class="col-xs-4">
-                                                        <img src="./img/index_07.png" style="width: 80px;margin-left: 20px;">
+                                                        <img src=<?php echo $project->thumbPho;?> style="width: 80px;margin-left: 20px;">
                                                     </div>
                                                     <div class="col-xs-8">
                                                         <?php echo $project->projName;?>

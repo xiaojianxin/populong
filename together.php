@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
-    <title>青年助梦</title>
+    <title>与你同行</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="布尔教育 http://www.itbool.com" />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
@@ -379,7 +379,7 @@ session_start();
             $("#navbar ul li").each(function(){
                 $(this).removeClass('chooseli');
             })
-            $("#navbar ul").children("li").eq(1).addClass('chooseli');
+            $("#navbar ul").children("li").eq(2).addClass('chooseli');
         });
     </script>
 </body>

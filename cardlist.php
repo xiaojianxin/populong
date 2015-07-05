@@ -84,6 +84,18 @@
         </div>
         <div class="row">
             <div class="col-xs-2 cardleft">
+                <span>选择绑定功能：</span>
+                <span class="text-red">&nbsp;*&nbsp;&nbsp;</span>
+            </div>
+            <div class="col-xs-5 cardmiddle">
+                <a class="btn btn-success recharge">充值</a>
+                <a class="btn btn-success withdraw">提现</a>
+                <input type="radio" value="1" id="checkboxInput1" name="inputCardType" style="display: none;"/>
+                <input type="radio" value="2" id="checkboxInput2" name="inputCardType" style="display: none;"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 cardleft">
                 <span>开户人姓名</span>
                 <span class="text-red">&nbsp;*&nbsp;&nbsp;</span>
             </div>
@@ -121,7 +133,9 @@
                 <span class="text-red">&nbsp;*&nbsp;&nbsp;</span>
             </div>
             <div class="col-xs-5 cardmiddle">
-                <span><input class="form-control"> </span>
+                <div class="col-xs-6 two-input" id="selectCity">
+
+                </div>
             </div>
         </div>
         <div class="row">
@@ -169,4 +183,14 @@
         $("#cardmanage").hide();
     });
 
+    $(".recharge").click(function(){
+        $(".active").removeClass('active');
+        $(this).addClass('active');
+        return $('#checkboxInput1').click();
+    });
+     $(".withdraw").click(function(){
+        $(".active").removeClass('active');
+        $(this).addClass('active');
+        return $('#checkboxInput2').click();
+    });
 </script>

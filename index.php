@@ -44,7 +44,7 @@
 <div class="container">
     <?php
     $start = '1';
-    $end = '2';
+    $end = '3';
     $part = 'hotInvs';
     $ch = curl_init();
     $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_query.php?part=".$part."&start=".$start."&end".$end;
@@ -166,7 +166,7 @@
                 <a href="">
                     <h3>发起人:孙总</h3>
                 </a>
-                <h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
+                <h4><?php echo $project->projAbst;?></h4>
                 <div id="right_center">
                     <div class="row">
                         <div class="col-xs-6">

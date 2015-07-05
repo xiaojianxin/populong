@@ -45,14 +45,14 @@ $result_arr = json_decode($result_arr,true);
                                     <?php foreach ($result_arr['result'] as $project) {?>
                                         <tr class="warning">
                                             <td class="proName">
-                                                 <div class="row">
+                                            <div class="row">
                                                     <div class="col-xs-4">
-                                                    <a href="./pro.php?<?php echo $project['projID'] ; ?>">
+                                                    <a href="./pro.php?projID=<?php echo $project['projID'] ; ?>">
                                                         <img src=<?php echo $project['projPho'];?> style="width: 80px;float: right;">
                                                     </a>
                                                     </div>
                                                     <div class="col-xs-8">
-                                                    <a href="./check.php?<?php echo $project['projID'];?>">
+                                                    <a href="./check.php?projID=<?php echo $project['projID'];?>">
                                                         <?php echo $project['projName'];?>
                                                     </a>
                                                     </div>
