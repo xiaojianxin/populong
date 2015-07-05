@@ -1,5 +1,5 @@
 <?PHP
-session_start();
+//session_start();
 function request_by_curl($remote_server, $json_string)
 {
     $ch = curl_init();
@@ -10,9 +10,11 @@ function request_by_curl($remote_server, $json_string)
     curl_close($ch);
     return $data;
 }
+$token = '"'.$_GET['token'].'"';
 
-$url = "123.57.74.122/logic/Userinfo";
-$json = '{"method":"userinfo"}';
+$url = "123.57.74.122:8088/logic/Userinfo";
+$json = '{"method":"userinfo","token":'.$token.'}';
+print_r($json);
 
 $result_arr = request_by_curl($url,$json);
 //$result_arr = json_decode($json,true);

@@ -29,6 +29,7 @@ session_start();
 <body>
 <?php require('./nav.php') ?>
 <div id="container">
+    
     <div class="container">
         <h2 style="margin-bottom: 5px;font-size: 1.5em;">热门投资</h2>
         <div class="swiper-container">

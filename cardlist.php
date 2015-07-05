@@ -1,5 +1,29 @@
 
+<?PHP
+function request_by_curl($remote_server, $json_string)
+{
+    $ch = curl_init();
+    curl_setopt($ch,CURLOPT_URL,$remote_server);
+    curl_setopt($ch,CURLOPT_POSTFIELDS,$json_string);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return $data;
+}
+$token = '"'.$_SESSION['token'].'"';
+$url = "123.57.74.122/logic/bankcard";
+$json = '{
+    "method": "bankcard_query",
+    "token": '.$token.'
+}';
+//var_dump($json);
 
+
+$result_arr = request_by_curl($url,$json);
+var_dump($result_arr);
+$result_arr = json_decode($result_arr,true);
+var_dump($result_arr);
+?>
 <div id="deleteCardModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>

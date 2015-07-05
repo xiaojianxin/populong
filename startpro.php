@@ -13,7 +13,7 @@
     $result = json_decode($curl_result);
     curl_close($ch);
     $result = $result->result;
-    var_dump($result);
+    //var_dump($result);
 ?>
                 <div id="startPro">
                     <div class="fourtab">

@@ -1,6 +1,6 @@
 <?PHP
 session_start();
-
+date_default_timezone_set("PRC");
 ?>
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">

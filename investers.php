@@ -152,12 +152,15 @@ $(".focusButton").click(function(){
     $.ajax({
         type:"POST",
         url:"./action/do_focus.php",
-        data:"&idolId="+idolId+"&token="+token+"&id="+i,
+        data:"idolId="+idolId+"&token="+token+"&id="+i,
         success:function(data){
-            alert(data);
-            $("#focusPane"+i).hide();
-            $("#unFocusPane"+i).show();
-            toastr.success("关注成功");
+             var dataobj = eval("("+data+")");
+                    if (dataobj.code==0) {
+                    $("#focusPane"+i).hide();
+                    $("#unFocusPane"+i).show();
+                    toastr.success("关注成功");
+                    };
+            
         },
         error:function(){
             toastr.error("关注失败");
