@@ -163,6 +163,9 @@ div .title{
     background-color: #65cc63;
     color: white;
 }
+.dealtype .showAll,.showRecharge,.showEncash,.showInvest,.showGain{
+    cursor: pointer;
+}
 #deal-list table{
     margin-top: 20px;
     background-color: #ffffff;
