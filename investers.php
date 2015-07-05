@@ -50,6 +50,7 @@ session_start();
         //var_dump($result_arr);
         $result_arr = json_decode($result_arr);
         $result = $result_arr->result;
+        $isFocus=$result->isFocus;
 
         var_dump($result);
 
@@ -69,15 +70,26 @@ session_start();
                             <h2><?php echo $invester->nickname;?></h2>
                             <h3>支持此项目</h3>
                             <h3 class="text-red">￥<?php echo $invester->invsAmount ?></h3>
-                            <li class="dropdown btn focus-btn" style="display: none;" id="unFocusPane<?php echo $i;?>">
-                                <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-ok"><span>已关注</a>
-                                <ul class="dropdown-menu">
-                                    <a  href="#followModal"  data-toggle="modal" data-target="#followModal"
-                                        style="color: grey;line-height: 30px;margin-left: 30%;">
-                                         取消关注
+                            <?php if($isFocus == 1){?>
+
+                                <li class="dropdown btn focus-btn" style="display: none;" id="unFocusPane<?php echo $i;?>">
+                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-ok"><span>已关注</a>
+                                    <ul class="dropdown-menu">
+                                        <a  href="#followModal"  data-toggle="modal" data-target="#followModal"
+                                            style="color: grey;line-height: 30px;margin-left: 30%;">
+                                            取消关注
+                                        </a>
+                                    </ul>
+                                </li>
+
+                            <?php }else{ ?>
+                                <div class="btn focus-btn" id="focusPane<?php echo $i;?>">
+                                    <a id="<?php echo $i;?>" class="focusButton" >
+                                    <span class="glyphicon glyphicon-plus"><span>关注
                                     </a>
-                                </ul>
-                            </li>
+                                </div>
+                            <?php } ?>
+
                             <div class="modal fade" id="followModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -112,11 +124,7 @@ session_start();
 
                             </div>
 
-                            <div class="btn focus-btn" id="focusPane<?php echo $i;?>">
-                                <a id="<?php echo $i;?>" class="focusButton" >
-                                    <span class="glyphicon glyphicon-plus"><span>关注
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -156,9 +164,11 @@ $(".focusButton").click(function(){
         success:function(data){
              var dataobj = eval("("+data+")");
                     if (dataobj.code==0) {
-                    $("#focusPane"+i).hide();
-                    $("#unFocusPane"+i).show();
+
                     toastr.success("关注成功");
+                        setTimeout(" window.location.reload();",3000);
+
+
                     };
             
         },
@@ -179,9 +189,9 @@ $(".focusButton").click(function(){
             success:function(data){
 
                 $('#followModal').modal('hide');
-                $("#focusPane"+i).show();
-                $("#unFocusPane"+i).hide();
+
                 toastr.success("已取消关注");
+                setTimeout(" window.location.reload();",3000);
             },
             error:function(){
                 toastr.error("取消关注失败");
