@@ -178,6 +178,9 @@
     margin-top: 30px;
     margin-bottom: 150px;
 }
+#R-third{
+    overflow-y: scroll;
+}
 #tabs-2 ul li{
     width: 16%;
 
@@ -205,12 +208,15 @@
 .one-market{
     margin: 20px 20px 20px 20px;
     background-color: #f2f2f3;
-    height: 205px;
+    height: 220px;
+}
+#R-third .one-market{
+    height: 265px;
 }
 .one-market img{
-    margin-top: 20px;
-    width: 20%;
-    margin-left: 40%;
+
+    width: 30%;
+    margin-left: 35%;
     display: block;
 
 
@@ -329,4 +335,17 @@ frame{
     margin-left: 20%;
 
 
+}
+.focus-btn{
+    width: 60%;
+    background-color:#66cc66 ;
+    margin-left: 20%;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.focus-btn .dropdown-menu  li{
+    color: black;
 }
