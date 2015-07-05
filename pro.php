@@ -137,13 +137,21 @@
                        <div style="height: 20px;background-color: #a9ddac;"></div>
                        <div class="thumbnail">
                            <div class="row box-introduce">
-                               <div class="col-xs-4">
+                               <div class="col-xs-4 picbox">
                                    <img src="<?php echo $content->explainPic ?>" alt="...">
                                </div>
                                <div class="col-xs-5">
                                     <h1>支持后您将获得</h1>
                                    <p>
-                                    <?php echo $content->explainText;?>
+                                    <?php
+                                    $ch = curl_init();
+                                    $curl_url = $content->explainText;
+                                    curl_setopt($ch, CURLOPT_URL, $curl_url);
+                                    curl_setopt($ch, CURLOPT_POST, 1);
+                                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
+                                    $curl_result = curl_exec($ch);
+                                    curl_close($ch);
+                                    print_r($curl_result); ?>
                                    </p>
                                </div>
                                <div class="col-xs-3">

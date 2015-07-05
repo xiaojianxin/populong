@@ -90,5 +90,8 @@ body{
     font-size: 16px;
     color: #666668;
     margin-top: 10px;
+    line-height: 30px;
+    height: 90px;
+    overflow-y: hidden;
 }
 
