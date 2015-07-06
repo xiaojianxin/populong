@@ -54,7 +54,10 @@
     $curl_result = curl_exec($ch);
     $curl_result = json_decode($curl_result,true);
     $result = json_decode($curl_result['result']);
-    //var_dump($result);
+    $smallresult[0] = $result[1];
+    $smallresult[1] = $result[2];
+    $smallresult[3] = $result[3];
+    //var_dump($result[0]);
     curl_close($ch);
     ?>
 <div class="content-top">
@@ -71,14 +74,14 @@
 <div class="content-main">
     <div class="row">
         <div class="col-xs-7">
-            <a href="./pro.php?projId=122">
-                <img class="project"src="./img/index_01.png" alt="2" style="width:100%" />
+            <a href="./pro.php?projId=<?php echo $result[0]->projID;?>">
+                <img class="project" src=<?php echo $result[0]->projPho?> alt="2" style="width:100% ;max-height:500px;" />
             </a>
         </div>
         <div class="col-xs-5">
             <h1><?php ?></h1>
-            <h2><a href="others.php">由Lilith发起</a></h2>
-            <p>英特尔30周年纪念全球制定机型，高端pc独家强力推荐，MICLE傲血顶级订制主机，值得拥有。</p>
+            <h2><a href="others.php?<?php echo $result[0]->userID;?>">由<?php echo $result[0]->nickname;?>发起</a></h2>
+            <p><?php echo $result[0]->projAbst;?></p>
             <div style="height:20px;"></div>
             <div id="right_center">
                 <div class="row">
@@ -92,7 +95,7 @@
 										</span>
                     </div>
                     <div class="col-xs-3">
-                        <span>北京</span>
+                        <span><?php echo $result[0]->cityName;?></span>
                     </div>
                     <div class="col-xs-4">
                     </div>
@@ -135,7 +138,7 @@
 										<img class="investor"src="./img/index_details3.png" alt="投资者" />
 									</span>
 									<span>
-									投资者：220
+									投资者：<?php echo $result[0]->invsNum;?>
 									</span>
                 </div>
                 <div class="col-xs-6 pull-right">
@@ -143,7 +146,7 @@
 										<img class="follower"src="./img/index_details4.png" alt="投资者" />
 									</span>
 									<span>
-									关注者：1500
+									关注者：<?php echo $result[0]->focusNum;?>
 									</span>
                 </div>
             </div>
@@ -153,7 +156,7 @@
 <div class="content-foot">
     <div class="row">
     <?php
-        foreach ($result as $project) {
+        foreach ($smallresult as $project) {
             //var_dump($project);
 
     ?>

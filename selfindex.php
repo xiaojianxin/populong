@@ -50,8 +50,8 @@ $fans = $result_arr2->result;
                         </div>
                     </div>
                 </div>
-                    
-                    <div class=" self-tab-content">
+                    <br/>
+                    <div class=" self-tab-content" style="margin-top:-18px;">
                         <div class="tab-pane" id="concern"><?php require('./concern.php') ?></div>
                         <div class="tab-pane" id="fans" style="display:none"><?php require('./fans.php') ?></div>
                     </div>

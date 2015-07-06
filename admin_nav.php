@@ -11,7 +11,7 @@ date_default_timezone_set("PRC");
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./index.php">泡泡龙管理员系统</a>
+          <a class="navbar-brand" href="./admin.php">泡泡龙管理员系统</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         	<ul class="nav navbar-nav" style="width: 50%;">
@@ -62,7 +62,7 @@ date_default_timezone_set("PRC");
             success:function(data){
                 toastr.success("注销成功");
 
-                setTimeout(function(){window.location.href=window.location.href;},1000);
+                setTimeout(function(){window.location.href="./admin.php";},1000);
             },
             error:function(){
                 toastr.error("注销失败");

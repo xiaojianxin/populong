@@ -17,14 +17,28 @@ $json = '{
     "token": '.$token.'
 }';
 //var_dump($json);
-
+$json1 = '{
+    "method": "whBindCard_query",
+    "token": '.$token.'
+}';
+$json2 = '{
+    "method": "sdpBindCard_query",
+    "token": '.$token.'
+}';
 
 $result_arr = request_by_curl($url,$json);
-//var_dump($result_arr);
+$result_arr1 = request_by_curl($url,$json1);
+$result_arr2 = request_by_curl($url,$json2);
+
+//var_dump($result_arr1);
 $result_arr = json_decode($result_arr,true);
+$result_arr1 = json_decode($result_arr1,true);
+$result_arr2 = json_decode($result_arr2,true);
 //var_dump($result_arr);
 $result = $result_arr['result'];
-//var_dump($result);
+$result1 = $result_arr1['result'];
+$result2 = $result_arr2['result'];
+//var_dump($result2);
 ?>
 <div id="deleteCardModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
@@ -52,14 +66,15 @@ $result = $result_arr['result'];
     <div class="listContent">
 
         <div class="row">
-            <div class="col-xs-3">
+            <?php foreach ($result1 as $card) {?>
+                 <div class="col-xs-3">
                 <div class="onecard">
                     <div class="thumbnail">
                         <div class="bankpic">
-                            <img src="./img/bank1.jpg">
+                           <?php echo $card['bankName'];?>
                         </div>
                         <div class="bankdetail">
-                            <div class="banknumber">6213 &nbsp;**** &nbsp;****&nbsp; 9809</div>
+                            <div class="banknumber"><?php echo $card['OpenAcctId'];?></div>
                             <div class="divider"></div>
                             <div class="actionBtn">
                                 <span class="btn">修改</span>
@@ -69,6 +84,27 @@ $result = $result_arr['result'];
                     </div>
                 </div>
             </div>
+           <?php }?>
+             <?php foreach ($result2 as $card) {?>
+                 <div class="col-xs-3">
+                <div class="onecard">
+                    <div class="thumbnail">
+                        <div class="bankpic">
+                           <?php; echo $card['bankName'];?>
+                        </div>
+                        <div class="bankdetail">
+                            <div class="banknumber"><?php echo $card['OpenAcctId'];?></div>
+                            <div class="divider"></div>
+                            <div class="actionBtn">
+                                <span class="btn">修改</span>
+                                <span class="btn" id="deleteCard"><a href="#deleteCardModal" role="button" class="btn" data-toggle="modal">删除</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <?php }?>
+           
             <div class="col-xs-3">
                 <div class="onecard">
                     <div class="thumbnail">
