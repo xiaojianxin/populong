@@ -39,6 +39,7 @@ $money = $result_arr1['balance'];
                     <div id="withdrawForm">
                         <div style="height: 40px;"></div>
                         <div class="row">
+                            <form>
                             <div class="col-xs-1"></div>
                             <div class="col-xs-2">                            
                                 <span>提现金额</span>
@@ -48,6 +49,25 @@ $money = $result_arr1['balance'];
                                 <div style="height: 5px;"></div>
                                 <input name="encashAmount" class="form-control encashAmount" /><br/>
                             </div>
+                        </div>
+                         <div class="row">
+                                <div class="col-xs-1"></div>
+                                <div class="col-xs-2">                            
+                                <span>账户选择</span>
+                                <span class="red-mark">*</span>
+                            </div>
+
+                                <div class="col-xs-6">
+                                        <span>
+                                            <select class="form-control" name="bankcard">
+                                                <option selected>请选择银行</option>
+                                                <?php foreach ($result as $bank) {?>
+                                                    <option value="<?php echo $bank['OpenAcctId'];?>"><?php echo $bank['OpenAcctId'];?></option>
+                                                <?php }?>
+                                                
+                                            </select>
+                                        </span>
+                                </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-1"></div>
@@ -77,33 +97,7 @@ $money = $result_arr1['balance'];
                                 <span ><?php echo date('Y-m-d',$result_arr1['currentTime'])?>  1-2个工作日（双休日和法定节假日除外）之内到账</span>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-1"></div>
-                            <div class="col-xs-2">
-
-                                <span>手机号码</span>
-                                <span class="red-mark">*</span>
-                            </div>
-                            <div class="col-xs-6">
-                                <div style="height: 5px;"></div>
-                                <input class="form-control" placeholder="输入手机号码" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1"></div>
-                            <div class="col-xs-2">
-
-                                <span>验证码</span>
-                                <span class="red-mark">*</span>
-                            </div>
-                            <div class="col-xs-3">
-                                <div style="height: 5px;"></div>
-                                <input class="form-control" placeholder="输入验证码" />
-                            </div>
-                            <div class="col-xs-3">
-                                <div class="btn btn-success">获取手机验证码</div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div style="height: 20px"></div>
                     <div id="chargeBox">
@@ -112,11 +106,12 @@ $money = $result_arr1['balance'];
                         </div>
 
                         <div id="withdrawArea">
-
+                            <input type="text" name="token" style="display:none" value="<?php echo $_SESSION['token'];?>">
                             <div class="btn btn-success" id="withdrawbutton">
                                 提现
                             </div>
                         </div>
+                    </form>
                         <div id="withdrawDes">
                             <h1>温馨提示:</h1>
                             <h1>   1.为了您的账户安全,请在充值前进行身份认证、手机绑定以及提现密码设 置。</h1>
@@ -129,3 +124,40 @@ $money = $result_arr1['balance'];
                     </div>
 
                 </div>
+<script>
+$('#withdrawbutton').click(function(){
+
+        var data = $("form").serialize();
+        alert(data);
+        $.ajax({
+            cache: false,
+            type:"POST",
+            url:"./action/do_withdraw.php",
+            data:data,
+            success:function(data){
+                alert(data);
+                var dataobj = eval("("+data+")");
+                if(dataobj.code == '10006'){
+                    $("#login .error-tip").html('用户名不存在');
+                }else if(dataobj.code == '10005'){
+                    $("#login .error-tip").html('密码错误');
+                }
+                else if(dataobj.code == "0")
+                {
+
+                    toastr.success("充值成功");
+                    $("#login").fadeOut();
+
+                    setTimeout(function(){window.location.href=window.location.href;},1000);
+
+
+
+                }
+            },
+            error:function(){
+                alert("登录失败");
+            }
+        })
+     });
+
+</script>
