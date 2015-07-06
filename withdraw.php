@@ -24,7 +24,7 @@ $result_arr1 = request_by_curl($url,$json1);
 //var_dump($result_arr1);
 
 $result_arr1 = json_decode($result_arr1,true);
-var_dump($result_arr1);
+//var_dump($result_arr1);
 
 $result = $result_arr1['result'];
 
@@ -85,7 +85,7 @@ $money = $result_arr1['balance'];
                                 <span>提现费用</span>
                             </div>
                             <div class="col-xs-6">
-                                <span >0.00</span>
+                                <span id="encashNum">0.00</span>
                             </div>
                         </div>
                         <div class="row">
@@ -125,6 +125,19 @@ $money = $result_arr1['balance'];
 
                 </div>
 <script>
+   $("input[name='encashAmount']").blur(function(){
+
+        var num=$("input[name='encashAmount']").val();
+        var isNum=parseInt(num);
+        if(num=="")
+        {
+            $("#encashNum").html("0.00");
+        }
+        else
+        {
+            $("#encashNum").html(parseInt(num)*0.02);
+        }
+    });
 $('#withdrawbutton').click(function(){
 
         var data = $("form").serialize();
