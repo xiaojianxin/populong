@@ -1,3 +1,4 @@
+
 #topnav{
  height: 50px;
 }
@@ -76,10 +77,18 @@ body{
 /*个人中心 粉丝页面css*/
 
 #self_fans{
-	width: 104%;
+	width: 100%;
     background-color: #ffffff;
 }
 
+.fans_card{
+    background-color: #eeeff3;
+    margin-top: 4%;
+    margin-bottom: 10px;
+    height: 140px;
+    width: 96%;
+    margin-left: 2%;
+}
 .fans_pic{
 	margin-top: 20px;
 	margin-left: 10px;
@@ -88,39 +97,33 @@ body{
 }
 .fans_pic img{
     margin-top: 20px;
+    width: 100%;
 }
 .fans_name{
 	font-family: "微软雅黑";
 	font-size: 15px;
 	font-weight:bold;
 	text-align: center;
+    height: 22px;
 }
 .fans_introduction{
 	text-align: center;
 	font-family: "微软雅黑";
     margin-top: 3px;
+    height: 20px;
 }
 .fans_description{
 	margin-top: 20px;
+    height: 22px;
 }
 .foucus{
     margin-left: 10px;
-
     background-color: transparent;
     border-color: #6cc77f;
     color: #6cc77f;
     margin-top: 10px;
 }
 
-.fans_card{
-    background-color: #eeeff3;
-    margin-right: 2%;
-    margin-top: 1%;
-    margin-bottom: 10px;
-    width: 31%;
-    height: 140px;
-    float: right;
-}
 #startpro,#followpro,#follows,#fans{
     background-color: #ffffff;
 }

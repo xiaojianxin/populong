@@ -41,7 +41,7 @@ session_start();
     $result_arr = json_decode($result_arr);
     $result = $result_arr->result;
     $result_content = $result;
-    var_dump($result);
+    //var_dump($result);
     
     //var_dump($projectId);
 

@@ -30,13 +30,15 @@
 
 		$url = "123.57.74.122:8088/logic/otheruser";
 
-		//var_dump($json);
+		var_dump($json);
 
 		$result_arr = request_by_curl($url,$json);
 
 		$result_arr = json_decode($result_arr);
 		//var_dump($result_arr);
-		$result = $result_arr->result[0];
+		$result = $result_arr->result;
+		$result = $result->userInfo[0];
+
 		?>
 		<div id="intro-panel">
 			<div class="container" style="min-width:1080px;">

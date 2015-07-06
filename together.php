@@ -272,7 +272,7 @@ session_start();
             </div>
 
             <div class="container">
-                <div id="boxList">
+                <div id="boxList container-fluid">
                     <div class="row">
                         <?php foreach ($result as $project) {?>
                             <div class="col-sm-4">
@@ -339,9 +339,11 @@ session_start();
                                     </div>
                                 </div>
                             </div>
+
                         </div>
-                        <?php } ?>
+                         <?php } ?>
                       </div>
+                     
                  </div>
         <div class="holder" style="text-align: center;">
             <a class="jp-previous jp-disabled">←</a>

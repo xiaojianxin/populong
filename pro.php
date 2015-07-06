@@ -73,7 +73,7 @@
                                     
                                     $url = "123.57.74.122:8088/logic/project";
                                     
-                                    //var_dump($json);
+                                    
 
                                     $result_arr = request_by_curl($url,$json);
                                     
@@ -139,7 +139,7 @@
                        <div class="thumbnail">
                            <div class="row box-introduce">
                                <div class="col-xs-4 picbox">
-                                   <img src="<?php echo $content->explainPic ?>" alt="...">
+                                   <img src=<?php if(empty($content->explainPic)){echo "./img/pro_1.png";}else{echo $content->explainPic;}?> alt="...">
                                </div>
                                <div class="col-xs-5">
                                     <h1>支持后您将获得</h1>
@@ -198,7 +198,7 @@
                   <div class="first-part" style="height: 40%;margin-top: 5%">
                       <div class="row" >
                           <div class="col-xs-4">
-                              <a href="others.php?userId=<?php echo $result_content[0]->userID;?>"><img src=<?php echo $info[0]->headImg;?> class="img-circle pull-right"></a>
+                              <a href="others.php?userId=<?php echo $result_content[0]->userID;?>"><img src=<?php if(empty($info[0]->headImg)){echo "./img/login_01.png";}else{echo $info[0]->headImg;}?> class="img-circle pull-right"></a>
                           </div>
                           <div class="col-xs-8">
                               <h3>发起人:<?php echo $info[0]->userName;?></h3>

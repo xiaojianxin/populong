@@ -208,7 +208,7 @@ session_start();
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
- <?PHP
+                                <?PHP
                                     function request_by_curl($remote_server, $json_string)
                                     {
                                         $ch = curl_init();
