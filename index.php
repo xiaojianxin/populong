@@ -78,10 +78,10 @@
                 <img class="project" src=<?php echo $result[0]->projPho?> alt="2" style="width:100% ;max-height:500px;" />
             </a>
         </div>
-        <div class="col-xs-5">
+        <div class="col-xs-4">
             <h1><?php ?></h1>
             <h2><a href="others.php?<?php echo $result[0]->userID;?>">由<?php echo $result[0]->nickname;?>发起</a></h2>
-            <p><?php echo $result[0]->projAbst;?></p>
+            <p style="font-size:20px;line-height:30px;"><?php echo $result[0]->projAbst;?></p>
             <div style="height:20px;"></div>
             <div id="right_center">
                 <div class="row">

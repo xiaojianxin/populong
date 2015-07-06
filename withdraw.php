@@ -1,4 +1,35 @@
+<?PHP
+function request_by_curl($remote_server, $json_string)
+{
+    $ch = curl_init();
+    curl_setopt($ch,CURLOPT_URL,$remote_server);
+    curl_setopt($ch,CURLOPT_POSTFIELDS,$json_string);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return $data;
+}
+$token = '"'.$_SESSION['token'].'"';
+$url = "123.57.74.122:9999/logic/bankcard";
 
+//var_dump($json);
+$json1 = '{
+    "method": "sdpBindCard_query",
+    "token": '.$token.'
+}';
+
+$result_arr1 = request_by_curl($url,$json1);
+
+
+//var_dump($result_arr1);
+
+$result_arr1 = json_decode($result_arr1,true);
+var_dump($result_arr1);
+
+$result = $result_arr1['result'];
+
+$money = $result_arr1['balance'];
+?>
                 <div id="withdrawBox">
                     <div id="withdrawTitle">
                         <div class="record-title">
@@ -10,12 +41,12 @@
                         <div class="row">
                             <div class="col-xs-1"></div>
                             <div class="col-xs-2">                            
-                                <span>充值金额</span>
+                                <span>提现金额</span>
                                 <span class="red-mark">*</span>
                             </div>
                             <div class="col-xs-6">
                                 <div style="height: 5px;"></div>
-                                <input class="form-control" /><br/>
+                                <input name="encashAmount" class="form-control encashAmount" /><br/>
                             </div>
                         </div>
                         <div class="row">
@@ -25,7 +56,7 @@
                                 <span>可用金额</span>
                             </div>
                             <div class="col-xs-6">
-                                <span class="red-mark">0.00</span>
+                                <span class="red-mark"><?php echo $money;?></span>
                             </div>
                         </div>
                         <div class="row">
@@ -38,20 +69,12 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-3">
-                                <span style="float:right;">实际扣除金额</span>
-                            </div>
-                            <div class="col-xs-6">
-                                <span class="red-mark">0.00</span>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-xs-1"></div>
                             <div class="col-xs-2">
                                 <span >预计到款时间</span>
                             </div>
                             <div class="col-xs-6">
-                                <span >2015-03-10   1-2个工作日（双休日和法定节假日除外）之内到账</span>
+                                <span ><?php echo date('Y-m-d',$result_arr1['currentTime'])?>  1-2个工作日（双休日和法定节假日除外）之内到账</span>
                             </div>
                         </div>
                         <div class="row">
