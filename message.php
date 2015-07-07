@@ -171,7 +171,9 @@
                                            <div class="one-send">
                                             <div class="row">
                                                 <div class="col-xs-2">
+
                                                     <img src="./img/fan_08.png" class="img-circle" style="width: 60%;">
+
                                                 </div>
                                                 <div class="col-xs-10">
                                                     <span>系统通知</span>

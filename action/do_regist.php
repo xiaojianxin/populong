@@ -29,7 +29,7 @@ if ($_SESSION["verification"] == md5($checknum)) {
             curl_close($ch);
             return $data;
     }
-    $url = "123.57.74.122/logic/registe";
+    $url = "123.57.74.122:55555/logic/registe";
     $json = json_encode(array('method'=>'registe',
             'role'=>$role,
             'nickname'=>$nickname,

@@ -50,9 +50,10 @@ session_start();
         //var_dump($result_arr);
         $result_arr = json_decode($result_arr);
         $result = $result_arr->result;
-        $isFocus=$result->isFocus;
+        $isFocus=$result[0]->focus;
 
-        var_dump($result);
+        //var_dump($result);
+        //var_dump($isFocus);
 
   ?>
    
@@ -72,7 +73,7 @@ session_start();
                             <h3 class="text-red">￥<?php echo $invester->invsAmount ?></h3>
                             <?php if($isFocus == 1){?>
 
-                                <li class="dropdown btn focus-btn" style="display: none;" id="unFocusPane<?php echo $i;?>">
+                                <li class="dropdown btn focus-btn"  id="unFocusPane<?php echo $i;?>">
                                     <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-ok"><span>已关注</a>
                                     <ul class="dropdown-menu">
                                         <a  href="#followModal"  data-toggle="modal" data-target="#followModal"

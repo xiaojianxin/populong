@@ -29,7 +29,7 @@ date_default_timezone_set("PRC");
                 <?php if(empty($_SESSION["token"])){
                     ?>
 
-                    <li><a href="#login" data-toggle="modal" data-target="#login" >登录</a></li>
+                    <li><a href="#login" id="loginclick" data-toggle="modal" data-target="#login" >登录</a></li>
                     <li><a href="./regist_1.php">注册</a></li>
 
                 <?PHP

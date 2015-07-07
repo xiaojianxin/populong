@@ -17,7 +17,7 @@ $json = '{
     "token": '.$token.',
     "status":"0"
 }';
-var_dump($status);
+//var_dump($status);
 
 $result_arr = request_by_curl($url,$json);
 $result_arr = json_decode($result_arr,true);

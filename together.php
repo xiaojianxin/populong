@@ -1,6 +1,4 @@
-<?PHP
-session_start();
-?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
@@ -221,19 +219,19 @@ session_start();
                                     }
                                     $json = '{"method": "index_projects", "projType":"2"}';
 
-                                   
+
                                     $url = "123.57.74.122:8088/logic/project";
-                                    
+
                                     //var_dump($json);
 
                                     $result_arr = request_by_curl($url,$json);
-                                    
+
                                     $result_arr = json_decode($result_arr);
-                                    
+
                                     $result = $result_arr->result;
                                     //var_dump($result);
-                                  
-                              ?>    
+
+                              ?>
         <div id="main">
             <div class="container">
                 <div id="selectBox">
@@ -273,15 +271,14 @@ session_start();
 
             <div class="container">
                 <div id="boxList">
-                    <div class="row">
+                    <div class="row" id="togetherPages">
                         <?php foreach ($result as $project) {?>
                             <div class="col-sm-4">
                             <div class="onebox">
                                 <a href="./pro.php?projId=<?php echo $project->projID;?>">
-                                    <img class="project" src=<?php echo $project->projPho;?> alt="2" />
+                                    <img class="project" src=<?php echo $project->projPho;?> />
                                 </a>
-                                <h2></h2>
-                                <a href="">
+                                <a href="./others.php?userId=<?php //echo $project->userID;?>">
                                     <h3>发起人:<?php echo $project->userName;?></h3>
                                 </a>
                                 <h4><?php echo  $project->projAbst ;?></h4>
@@ -299,8 +296,7 @@ session_start();
                                         <div class="col-xs-3">
                                             <span><?php echo $project->cityName;?></span>
                                         </div>
-                                        <div class="col-xs-2">
-                                        </div>
+
                                     </div>
                                     <div class="row">
                                         <div class="progray">
@@ -333,31 +329,20 @@ session_start();
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-7">
-                                        <?php echo $project->status;?>
-                                    </div>
+                                            <?php echo $project->status;?>
+                                        </div>
+                                        <div class="col-xs-5"></div>
 
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <?php } ?>
+
+                         <?php } ?>
                       </div>
+                     
                  </div>
         <div class="holder" style="text-align: center;">
-            <a class="jp-previous jp-disabled">←</a>
-            <a class="jp-current">1</a>
-            <span class="jp-hidden">...</span>
-            <a>2</a>
-            <a>3</a>
-            <a>4</a>
-            <a>5</a>
-            <a class="jp-hidden">6</a>
-            <a class="jp-hidden">7</a>
-            <a class="jp-hidden">8</a>
-            <a class="jp-hidden">9</a>
-            <span>...</span>
-            <a>10</a>
-            <a class="jp-next">→</a>
         </div>
     </div>
             <?php require('./footer.php')?>
@@ -374,7 +359,10 @@ session_start();
         });
         $(function(){
             $("div.holder").jPages({
-                containerID : "boxList"
+                containerID : "togetherPages",
+                previous : "←",
+                next : "→",
+                perPage : 9
             });
             $("#navbar ul li").each(function(){
                 $(this).removeClass('chooseli');

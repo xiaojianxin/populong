@@ -34,7 +34,7 @@ $result = $result[0];
                 <div class="container-fluid self-info">
                     <div class="row">
                         <div class="col-xs-3">
-                            <img  src=<?php echo $result['headImg'];?> style="width: 100%;">
+                            <img   src=<?php echo $result['headImg'];?> style="width: 100%;">
                            
                         </div>
                         <div class="col-xs-9 user-information">

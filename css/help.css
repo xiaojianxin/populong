@@ -33,7 +33,9 @@ body{
 .content-main .percentage-text{
     font-weight: bold;
 }
-
+＃right_center{
+    height: 150px;
+}
 #right_center span{
     font-size: 18px;
 }
@@ -72,11 +74,8 @@ body{
 }
 .onebox a img{
     margin-top: 20px;
-    max-width: 325px;
-    max-height: 320px;
-    min-width: 325px;
-    min-height: 320px;
-    width: 100%;
+    width:325px;
+    height: 320px;
 }
 .onebox h2{
     font-size: 20px;

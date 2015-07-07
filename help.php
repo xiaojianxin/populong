@@ -1,6 +1,4 @@
-<?PHP
-session_start();
-?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
@@ -14,7 +12,6 @@ session_start();
     <link rel="stylesheet" href="./css/animate.css"/>
     <link rel="stylesheet" href="./css/jPages.css"/>
     <link rel="stylesheet" href="./css/footer.css"/>
-
     <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
@@ -208,7 +205,7 @@ session_start();
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
- <?PHP
+                                <?PHP
                                     function request_by_curl($remote_server, $json_string)
                                     {
                                         $ch = curl_init();
@@ -264,16 +261,14 @@ session_start();
                         </ul>
                     </span>
 
-                    <div >
 
-
-                    </div>
                 </div>
             </div>
+         
 
             <div class="container">
                 <div id="boxList">
-                    <div class="row">
+                    <div class="row" id="helpPages">
                         <?php foreach ($result as $project) {?>
                             <div class="col-sm-4">
                             <div class="onebox">
@@ -281,7 +276,7 @@ session_start();
                                     <img class="project" src=<?php echo $project->projPho;?> alt="2" />
                                 </a>
                                 <h2></h2>
-                                <a href="">
+                                <a href="./others.php?userId=<?php //echo $project->userID;?>">
                                     <h3>发起人:<?php echo $project->userName;?></h3>
                                 </a>
                                 <h4><?php echo  $project->projAbst ;?></h4>
@@ -298,8 +293,6 @@ session_start();
                                         </div>
                                         <div class="col-xs-3">
                                             <span><?php echo $project->cityName;?></span>
-                                        </div>
-                                        <div class="col-xs-2">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -334,7 +327,8 @@ session_start();
                                     <div class="row">
                                         <div class="col-xs-7">
                                         <?php echo $project->status;?>
-                                    </div>
+                                        </div>
+                                        <div class="col-xs-5"></div>
 
                                     </div>
                                 </div>
@@ -344,20 +338,6 @@ session_start();
                       </div>
       	         </div>
         <div class="holder" style="text-align: center;">
-            <a class="jp-previous jp-disabled">←</a>
-            <a class="jp-current">1</a>
-            <span class="jp-hidden">...</span>
-            <a>2</a>
-            <a>3</a>
-            <a>4</a>
-            <a>5</a>
-            <a class="jp-hidden">6</a>
-            <a class="jp-hidden">7</a>
-            <a class="jp-hidden">8</a>
-            <a class="jp-hidden">9</a>
-            <span>...</span>
-            <a>10</a>
-            <a class="jp-next">→</a>
         </div>
 	</div>
             <?php require('./footer.php')?>
@@ -374,7 +354,10 @@ session_start();
         });
         $(function(){
             $("div.holder").jPages({
-                containerID : "boxList"
+                containerID : "helpPages",
+                previous : "←",
+                next : "→",
+                perPage : 9
             });
             $("#navbar ul li").each(function(){
                 $(this).removeClass('chooseli');

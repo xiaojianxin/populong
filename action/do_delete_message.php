@@ -1,10 +1,8 @@
 <?PHP
 //session_start();
-$projID = $_POST["projId"];
-$token = $_POST['token'];
-$newStatus = $_POST['newStatus'];
-$userID = $_POST['userID'];
-$projName = $_POST['projName'];
+$commentId = $_POST["messageId"];
+$token= $_POST["token"];
+session_start();
 function request_by_curl($remote_server, $json_string)
 {
     $ch = curl_init();
@@ -16,19 +14,14 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 
-$url = "123.57.74.122:55555/logic/admin";
-if($newStatus==1){
-$json = json_encode(array('method'=>'project_changeStatus','projID'=>$projID,'newStatus'=>"1",'token'=>$token));
-}else if($newStatus == 2){
-$json = json_encode(array('method'=>'send_systemMessage','projID'=>$projID,'userID'=>$userID,'projName'=>$projName,'messageType'=>"1",'token'=>$token));
-}
+$url = "123.57.74.122:8088/logic/message";
+$json = json_encode(array('method'=>'delete_comment','commentId'=>$commentId,'token'=>$token));
+//echo($json);
 $json = request_by_curl($url,$json);
-
+//var_dump($json);
 $result = json_decode($json,true);
 if(!empty($result) && $result['code'] == "0")
 {   
-    //$_SESSION['admin'] = $result['nickname'];
-    //$_SESSION['admin_token'] = $result['token'];
 	// echo "<script language='javascript' type='text/javascript'>";
     //    echo "window.location.href='$url'";
     //    echo "</script>";

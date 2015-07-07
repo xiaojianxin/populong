@@ -52,6 +52,7 @@
     </div>
    <div class="container">
                         <?PHP
+
                                     function request_by_curl($remote_server, $json_string)
                                     {
                                         $ch = curl_init();
@@ -73,7 +74,7 @@
                                     
                                     $url = "123.57.74.122:8088/logic/project";
                                     
-                                    //var_dump($json);
+                                    
 
                                     $result_arr = request_by_curl($url,$json);
                                     
@@ -81,13 +82,14 @@
                                     //var_dump($result_arr);
                                     $result = $result_arr->result;
                                     $projIntro  = $result->projIntro;
-                                    //var_dump($projIntro);
+                                    
                                     $result_content = $result->paybacks;
+                                    //var_dump($result_content);
                                     $info = $result->info;
                                    
                                     $isfocus = $result->isFocus;
                                     //$projIntro  = $result->projIntro;
-                                    //var_dump($isfocus)
+                                    //var_dump($info);
                                     
                                     //var_dump($projectId);
 
@@ -139,7 +141,7 @@
                        <div class="thumbnail">
                            <div class="row box-introduce">
                                <div class="col-xs-4 picbox">
-                                   <img src="<?php echo $content->explainPic ?>" alt="...">
+                                   <img src=<?php if(empty($content->explainPic)){echo "./img/pro_1.png";}else{echo $content->explainPic;}?> alt="...">
                                </div>
                                <div class="col-xs-5">
                                     <h1>支持后您将获得</h1>
@@ -173,7 +175,7 @@
                                        <span>个名额</span>
                                    </div>
                                    <div style="height: 20px;"></div>
-                                   <div class="btn invest_button"><a href="invest_1.php">投资￥<?php echo $content->amountPer;?></a></div>
+                                   <div class="btn invest_button"><a href="invest_1.php?rewardId=195&projId=<?php echo $projectId;?>&investAmount=<?php echo $content->amountPer;?>">投资￥<?php echo $content->amountPer;?></a></div>
                                </div>
                            </div>
                        </div>
@@ -191,14 +193,18 @@
           <div class="row">
               <div class="col-sm-8 video-play" >
                   <video width="100%"controls autobuffer autoplay="autoplay">
-                      <source src="http://videos.mozilla.org/serv/webmademovies/wtfpopcorn.ogv">
+                      <source src=<?php 
+                      if (empty($info[0]->videoLink)){
+                        echo 'http://videos.mozilla.org/serv/webmademovies/wtfpopcorn.ogv';}else{
+                        echo $info[0]->videoLink;
+                        }?>>
                   </video>
               </div>
               <div class="col-sm-4 video-boss">
                   <div class="first-part" style="height: 40%;margin-top: 5%">
                       <div class="row" >
                           <div class="col-xs-4">
-                              <a href="others.php?userId=<?php echo $result_content[0]->userID;?>"><img src=<?php echo $info[0]->headImg;?> class="img-circle pull-right"></a>
+                              <a href="others.php?userId=<?php echo $result_content[0]->userID;?>"><img src=<?php if(empty($info[0]->headImg)){echo "./img/login_01.png";}else{echo $info[0]->headImg;}?> class="img-circle pull-right"></a>
                           </div>
                           <div class="col-xs-8">
                               <h3>发起人:<?php echo $info[0]->userName;?></h3>
@@ -213,7 +219,7 @@
                           </div>
                           <div class="col-xs-8">
                             <input type="text" id="userId" style="display:none" value="<?php echo $result_content['0']->userID;?>" />
-                            <input type="text" id="usertoken" style="display:none" value="<?php echo $_SESSION['token'];?>"/>
+                            <input type="text" id="usertoken" style="display:none" value="<?php if(empty($_SESSION['token'])){echo "";}else{echo $_SESSION['token'];}?>"/>
                               <span>操作：</span>
                               <span class="btn btn-success"><a href="#sendMsg" data-toggle="modal" data-target="#sendMsg" >发私信</a></span>
                           </div>
@@ -383,16 +389,21 @@
             $(this).width(width);
         });
         $('.collection').click(function(){
+
           var token = $('#usertoken').val();
           var proID = $('#proid').val();
           //alert(token);
           //alert(proID);
-                  $.ajax({
+          if(token == ""){
+            return $("#loginclick").click();
+          }else{
+
+                   $.ajax({
                     type:"POST",
                     url:"./action/do_pro_focus.php",
                     data:"&proId="+proID+"&token="+token,
                     success:function(data){
-                      alert(data);
+                      //alert(data);
                       var dataobj = eval("("+data+")");
                       if (dataobj.code==0) {
                         toastr.success("收藏成功");
@@ -405,6 +416,7 @@
                         alert("发送私信失败");
                     }
                 });
+            }
             
         });
 

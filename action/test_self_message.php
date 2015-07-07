@@ -1,5 +1,4 @@
 <?PHP
-session_start();
 function request_by_curl($remote_server, $json_string)
 {
     $ch = curl_init();
@@ -11,17 +10,30 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 $token = '"'.$_GET['token'].'"';
-$url = "123.57.74.122:8088/logic/message";
-$json = '{
+$status = $_GET['status'];
+
+if ($status == 1) {
+   $token = '"'.$_GET['token'].'"';
+    $url = "123.57.74.122:55555/logic/message";
+    $json = '{
+    "method": "get_systemMessage",
+    "token": '.$token.'
+}';
+//echo $json;
+}elseif($status == 0){
+    $url = "123.57.74.122:8088/logic/message";
+    $json = '{
     "method": "get_message",
     "token": '.$token.'
 }';
+}
+
 
 
 
 
 $result_arr = request_by_curl($url,$json);
-//$result_arr = json_decode($json,true);
+//$result_arr = json_decode($result_arr,true);
 if(!empty($result_arr))
 {
 

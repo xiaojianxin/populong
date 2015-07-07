@@ -11,7 +11,6 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 $token = '"'.$_SESSION['token'].'"';
-
 $url = "123.57.74.122:9999/logic/bankcard";
 $json = '{
     "method": "bankcard_query",
@@ -88,6 +87,7 @@ $result2 = $result_arr2['result'];
            <?php }?>
              <?php foreach ($result2 as $card) {?>
                  <div class="col-xs-4">
+
                 <div class="onecard">
                     <div class="thumbnail">
                         <div class="bankpic">

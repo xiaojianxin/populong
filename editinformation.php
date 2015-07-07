@@ -35,7 +35,8 @@ $result = $result[0];
                     <div class="row">
                        <form>
                         <div class="col-xs-3">
-                            <img  src=<?php echo $result['headImg'];?> style="width: 100%;">
+    
+                            <img  id="self-logo" src=<?php echo $result['headImg'];?> style="width: 100%;">
                              <div style="width:100px; margin: 0 auto;">
                                 <input type="file" name="file-pic" id="file_pic"/>
                                 <input type="text" name="headImg" id="self_imgurl" style="display:none"/>
@@ -232,14 +233,14 @@ $result = $result[0];
             $(".edit-self-info").click(function(){
 
                   var data = $("form").serialize();
-                  alert(data);
+                  //alert(data);
                   $.ajax({
                   cache: false,
                   type:"POST",
                   url:"./action/do_edit_selfinfo.php",
                   data:data,
                   success:function(data){
-                      alert(data);
+                      //alert(data);
                       var dataobj = eval("("+data+")");
                       if(dataobj.code == '10006'){
                           $("#login .error-tip").html('用户名不存在');
