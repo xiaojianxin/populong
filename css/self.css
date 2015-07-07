@@ -592,6 +592,10 @@ div .edit-info{
     margin-right: 30px;
     float: right;
 }
+.one-send .comment-reply a{
+    margin-right: 30px;
+    float: right;
+}
 /*******************************************平台排行榜**************************************************/
 #platrank #twotab ul  .active a{
     color: #000000;

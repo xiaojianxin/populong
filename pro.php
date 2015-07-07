@@ -87,7 +87,7 @@
                                    
                                     $isfocus = $result->isFocus;
                                     //$projIntro  = $result->projIntro;
-                                    //var_dump($isfocus)
+                                    //var_dump($info);
                                     
                                     //var_dump($projectId);
 
@@ -191,7 +191,11 @@
           <div class="row">
               <div class="col-sm-8 video-play" >
                   <video width="100%"controls autobuffer autoplay="autoplay">
-                      <source src="http://videos.mozilla.org/serv/webmademovies/wtfpopcorn.ogv">
+                      <source src=<?php 
+                      if (empty($info[0]->videoLink)){
+                        echo 'http://videos.mozilla.org/serv/webmademovies/wtfpopcorn.ogv';}else{
+                        echo $info[0]->videoLink;
+                        }?>>
                   </video>
               </div>
               <div class="col-sm-4 video-boss">
@@ -383,11 +387,16 @@
             $(this).width(width);
         });
         $('.collection').click(function(){
+
           var token = $('#usertoken').val();
           var proID = $('#proid').val();
           //alert(token);
           //alert(proID);
-                  $.ajax({
+          if(token == ""){
+            return $("#loginclick").click();
+          }else{
+
+                   $.ajax({
                     type:"POST",
                     url:"./action/do_pro_focus.php",
                     data:"&proId="+proID+"&token="+token,
@@ -405,6 +414,7 @@
                         alert("发送私信失败");
                     }
                 });
+            }
             
         });
 

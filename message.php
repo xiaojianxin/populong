@@ -11,7 +11,7 @@
     $result = json_decode($curl_result);
     curl_close($ch);
     $result = $result->result;
-    //var_dump($result);
+   // var_dump($result);
 ?>
                 <div id="message">
                     <div class="threetab">
@@ -90,7 +90,8 @@
                                                         <?php echo $message->content ?>
                                                     </div>
                                                     <div class="comment-reply">
-                                                        <span class="text-orange" id="delete-comment">删除</span>
+                                                         <input type="text" id="token" style="display:none" value="<?php echo $_SESSION['token'];?>">
+                                                        <a class="text-orange delete-comment" id="<?php echo $message->commentId?>">删除</a>
                                                         <span class="text-green">查看</span>
                                                     </div>
 
@@ -180,5 +181,39 @@
     });
     $("#reply-btn1").click(function(){
         $("#replycomment1").slideToggle();
-    })
+    });
+    $('.delete-comment').click(function(){
+        var messageId = $(this).attr("id");
+        var token = $('#token').val();
+        alert(token);
+         $.ajax({
+            cache: false,
+            type:"POST",
+            url:"./action/do_delete_message.php",
+            data:"messageId="+messageId+"&token="+token,
+            success:function(data){
+                alert(data);
+                var dataobj = eval("("+data+")");
+                if(dataobj.code == '10006'){
+                    $("#login .error-tip").html('用户名不存在');
+                }else if(dataobj.code == '10005'){
+                    $("#login .error-tip").html('密码错误');
+                }
+                else
+                {
+
+                    toastr.success("删除成功");
+                    $("#login").fadeOut();
+
+                    setTimeout(function(){window.location.href=window.location.href;},1000);
+
+
+
+                }
+            },
+            error:function(){
+                alert("登录失败");
+            }
+        })
+    });
 </script>

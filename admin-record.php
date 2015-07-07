@@ -20,7 +20,7 @@ $json = '{
 
 $result_arr = request_by_curl($url,$json);
 $result_arr = json_decode($result_arr,true);
-var_dump($result_arr);
+//var_dump($result_arr);
 ?>
                 <div id="recordbox">
                     <div class="record-title"></div>
