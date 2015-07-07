@@ -18,8 +18,8 @@ function request_by_curl($remote_server, $json_string)
 
 $url = "123.57.74.122:9999/logic/encash";
 
-    $json = json_encode(array('method'=>'encash','token'=>$token,'openAcctId'=>$openAcctId,'encashAmount'=>$rechgAmount));
-    echo $json;
+    $json = json_encode(array('method'=>'encash','token'=>$token,'openAcctId'=>$openAcctId,'encashAmount'=>$encashAmount));
+    //echo $json;
 $json = request_by_curl($url,$json);
 
 $result = json_decode($json,true);

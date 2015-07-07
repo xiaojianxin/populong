@@ -141,14 +141,14 @@ $money = $result_arr1['balance'];
 $('#withdrawbutton').click(function(){
 
         var data = $("form").serialize();
-        alert(data);
+        //alert(data);
         $.ajax({
             cache: false,
             type:"POST",
             url:"./action/do_withdraw.php",
             data:data,
             success:function(data){
-                alert(data);
+                //alert(data);
                 var dataobj = eval("("+data+")");
                 if(dataobj.code == '10006'){
                     $("#login .error-tip").html('用户名不存在');
@@ -158,7 +158,7 @@ $('#withdrawbutton').click(function(){
                 else if(dataobj.code == "0")
                 {
 
-                    toastr.success("充值成功");
+                    toastr.success("提现成功");
                     $("#login").fadeOut();
 
                     setTimeout(function(){window.location.href=window.location.href;},1000);

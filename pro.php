@@ -52,6 +52,7 @@
     </div>
    <div class="container">
                         <?PHP
+
                                     function request_by_curl($remote_server, $json_string)
                                     {
                                         $ch = curl_init();
@@ -81,8 +82,9 @@
                                     //var_dump($result_arr);
                                     $result = $result_arr->result;
                                     $projIntro  = $result->projIntro;
-                                    //var_dump($projIntro);
+                                    
                                     $result_content = $result->paybacks;
+                                    //var_dump($result_content);
                                     $info = $result->info;
                                    
                                     $isfocus = $result->isFocus;
@@ -173,7 +175,7 @@
                                        <span>个名额</span>
                                    </div>
                                    <div style="height: 20px;"></div>
-                                   <div class="btn invest_button"><a href="invest_1.php">投资￥<?php echo $content->amountPer;?></a></div>
+                                   <div class="btn invest_button"><a href="invest_1.php?rewardId=195&projId=<?php echo $projectId;?>&investAmount=<?php echo $content->amountPer;?>">投资￥<?php echo $content->amountPer;?></a></div>
                                </div>
                            </div>
                        </div>
@@ -217,7 +219,7 @@
                           </div>
                           <div class="col-xs-8">
                             <input type="text" id="userId" style="display:none" value="<?php echo $result_content['0']->userID;?>" />
-                            <input type="text" id="usertoken" style="display:none" value="<?php echo $_SESSION['token'];?>"/>
+                            <input type="text" id="usertoken" style="display:none" value="<?php if(empty($_SESSION['token'])){echo "";}else{echo $_SESSION['token'];}?>"/>
                               <span>操作：</span>
                               <span class="btn btn-success"><a href="#sendMsg" data-toggle="modal" data-target="#sendMsg" >发私信</a></span>
                           </div>
