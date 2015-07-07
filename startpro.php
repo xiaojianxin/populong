@@ -158,22 +158,10 @@
                                         </tbody>
                                     </table>
                                     <div class="holder" style="text-align: center;" id="all-holder">
-                                        <a class="jp-previous jp-disabled">←</a>
-                                        <a class="jp-current">1</a>
-                                        <span class="jp-hidden">...</span>
-                                        <a>2</a>
-                                        <a>3</a>
-                                        <a>4</a>
-                                        <a>5</a>
-                                        <a class="jp-hidden">6</a>
-                                        <a class="jp-hidden">7</a>
-                                        <a class="jp-hidden">8</a>
-                                        <a class="jp-hidden">9</a>
-                                        <span>...</span>
-                                        <a>10</a>
-                                        <a class="jp-next">→</a>
+
                                     </div>
                                 </div>
+
                                 <div class="tab-pane " id="financingList">
                                     <table class="table">
                                         <thead >

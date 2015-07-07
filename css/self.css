@@ -1,3 +1,4 @@
+
 #topnav{
  height: 50px;
 }
@@ -76,10 +77,18 @@ body{
 /*个人中心 粉丝页面css*/
 
 #self_fans{
-	width: 104%;
+	width: 100%;
     background-color: #ffffff;
 }
 
+.fans_card{
+    background-color: #eeeff3;
+    margin-top: 4%;
+    margin-bottom: 10px;
+    height: 140px;
+    width: 96%;
+    margin-left: 2%;
+}
 .fans_pic{
 	margin-top: 20px;
 	margin-left: 10px;
@@ -88,39 +97,33 @@ body{
 }
 .fans_pic img{
     margin-top: 20px;
+    width: 100%;
 }
 .fans_name{
 	font-family: "微软雅黑";
 	font-size: 15px;
 	font-weight:bold;
 	text-align: center;
+    height: 22px;
 }
 .fans_introduction{
 	text-align: center;
 	font-family: "微软雅黑";
     margin-top: 3px;
+    height: 20px;
 }
 .fans_description{
 	margin-top: 20px;
+    height: 22px;
 }
 .foucus{
     margin-left: 10px;
-
     background-color: transparent;
     border-color: #6cc77f;
     color: #6cc77f;
     margin-top: 10px;
 }
 
-.fans_card{
-    background-color: #eeeff3;
-    margin-right: 2%;
-    margin-top: 1%;
-    margin-bottom: 10px;
-    width: 31%;
-    height: 140px;
-    float: right;
-}
 #startpro,#followpro,#follows,#fans{
     background-color: #ffffff;
 }
@@ -447,31 +450,43 @@ div .title{
 /*******************************************我关注的项目**************************************************/
 
 .onebox{
-    margin-bottom: 20px;
+
     margin:15px 15px 15px 15px;
     padding: 5%;
     background-color: #eeeff3;
 }
+
 .onebox a img{
     margin-top: 20px;
+    max-width: 210px;
+    max-height: 180px;
+    min-width: 210px;
+    min-height: 180px;
     width: 100%;
+
 }
 .onebox h2{
     font-size: 18px;
     font-weight: bold;
-    line-height: 22px;
+    line-height: 20px;
+    height: 20px;
+    overflow-y: hidden;
 }
 .onebox a{
     color: #666668;
 
 }
 .onebox h3{
-    font-size: 18px;
+    font-size: 15px;
+    margin-top: 5px;
 }
 .onebox h4{
-    font-size: 16px;
+    font-size: 14px;
     color: #666668;
     margin-top: 10px;
+    line-height: 25px;
+    height: 70px;
+    overflow-y: hidden;
 }
 #focusPro #twotab ul  .active a{
     color: #000000;
@@ -589,6 +604,10 @@ div .edit-info{
     margin-right: 30px;
     float: right;
 }
+.one-send .comment-reply a{
+    margin-right: 30px;
+    float: right;
+}
 /*******************************************平台排行榜**************************************************/
 #platrank #twotab ul  .active a{
     color: #000000;
@@ -596,7 +615,7 @@ div .edit-info{
 
 }
 .rank-pic{
-    width: 80px;
+    width: 60px;
 }
 #investRank table thead .active th{
     background-color: #dbdbdb;

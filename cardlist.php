@@ -11,18 +11,35 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 $token = '"'.$_SESSION['token'].'"';
-$url = "123.57.74.122/logic/bankcard";
+
+$url = "123.57.74.122:9999/logic/bankcard";
 $json = '{
     "method": "bankcard_query",
     "token": '.$token.'
 }';
 //var_dump($json);
-
+$json1 = '{
+    "method": "whBindCard_query",
+    "token": '.$token.'
+}';
+$json2 = '{
+    "method": "sdpBindCard_query",
+    "token": '.$token.'
+}';
 
 $result_arr = request_by_curl($url,$json);
-var_dump($result_arr);
+$result_arr1 = request_by_curl($url,$json1);
+$result_arr2 = request_by_curl($url,$json2);
+
+//var_dump($result_arr1);
 $result_arr = json_decode($result_arr,true);
-var_dump($result_arr);
+$result_arr1 = json_decode($result_arr1,true);
+$result_arr2 = json_decode($result_arr2,true);
+//var_dump($result_arr);
+$result = $result_arr['result'];
+$result1 = $result_arr1['result'];
+$result2 = $result_arr2['result'];
+//var_dump($result2);
 ?>
 <div id="deleteCardModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
@@ -41,7 +58,7 @@ var_dump($result_arr);
 
 </div>
 
-<div id="cardlist" class="container">
+<div id="cardlist">
     <div class="cardTitle">
         <h2>银行卡绑定</h2>
         <div class="divider">
@@ -50,14 +67,15 @@ var_dump($result_arr);
     <div class="listContent">
 
         <div class="row">
-            <div class="col-xs-3">
+            <?php foreach ($result1 as $card) {?>
+                 <div class="col-xs-4">
                 <div class="onecard">
                     <div class="thumbnail">
                         <div class="bankpic">
-                            <img src="./img/bank1.jpg">
+                           <?php echo $card['bankName'];?>
                         </div>
                         <div class="bankdetail">
-                            <div class="banknumber">6213 &nbsp;**** &nbsp;****&nbsp; 9809</div>
+                            <div class="banknumber"><?php echo $card['OpenAcctId'];?></div>
                             <div class="divider"></div>
                             <div class="actionBtn">
                                 <span class="btn">修改</span>
@@ -67,7 +85,28 @@ var_dump($result_arr);
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3">
+           <?php }?>
+             <?php foreach ($result2 as $card) {?>
+                 <div class="col-xs-4">
+                <div class="onecard">
+                    <div class="thumbnail">
+                        <div class="bankpic">
+                           <?php; echo $card['bankName'];?>
+                        </div>
+                        <div class="bankdetail">
+                            <div class="banknumber"><?php echo $card['OpenAcctId'];?></div>
+                            <div class="divider"></div>
+                            <div class="actionBtn">
+                                <span class="btn">修改</span>
+                                <span class="btn" id="deleteCard"><a href="#deleteCardModal" role="button" class="btn" data-toggle="modal">删除</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <?php }?>
+           <br/>
+            <div class="col-xs-4">
                 <div class="onecard">
                     <div class="thumbnail">
                         <div class="bankpic" >
@@ -96,6 +135,7 @@ var_dump($result_arr);
         </div>
     </div>
     <div class="cardContent">
+        <form>
 
         <div class="row">
             <div class="col-xs-2 cardleft">
@@ -124,7 +164,7 @@ var_dump($result_arr);
                 <span class="text-red">&nbsp;*&nbsp;&nbsp;</span>
             </div>
             <div class="col-xs-5 cardmiddle">
-                <span>*研</span>
+                <span><?php echo $result_arr['openAcctName'];?></span>
             </div>
         </div>
         <div class="row">
@@ -133,7 +173,7 @@ var_dump($result_arr);
                 <span class="text-red">&nbsp;*&nbsp;&nbsp;</span>
             </div>
             <div class="col-xs-5 cardmiddle">
-                <span><input class="form-control"> </span>
+                <span><input name="bankcard" class="form-control "> </span>
             </div>
         </div>
         <div class="row">
@@ -143,10 +183,12 @@ var_dump($result_arr);
             </div>
             <div class="col-xs-5 cardmiddle">
                     <span>
-                        <select class="form-control">
+                        <select class="form-control" name="bank">
                             <option selected>请选择银行</option>
-                            <option >中国银行</option>
-                            <option >中国工商银行</option>
+                            <?php foreach ($result as $bank) {?>
+                                <option value="<?php echo $bank['openBankId'];?>"><?php echo $bank['bank'];?></option>
+                            <?php }?>
+                            
                         </select>
                     </span>
             </div>
@@ -157,24 +199,22 @@ var_dump($result_arr);
                 <span class="text-red">&nbsp;*&nbsp;&nbsp;</span>
             </div>
             <div class="col-xs-5 cardmiddle">
-                <div class="col-xs-6 two-input" id="selectCity">
+                <div style="margin-top:20px;" id="selectCity">
 
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-2 cardleft">
-                <span>开户行</span>
+                <span>银行预留手机号</span>
                 <span class="text-red">&nbsp;*&nbsp;&nbsp;</span>
             </div>
             <div class="col-xs-5 cardmiddle">
-                <span><input class="form-control"> </span>
+                <span><input class="form-control" name="mobilephone"> </span>
             </div>
-            <div class="col-xs-2 cardright">
-                <span class="btn btn-success">搜索</span>
-            </div>
+           
         </div>
-        <div class="row">
+      <!--   <div class="row">
             <div class="col-xs-2 cardleft">
                 <span>手机验证码</span>
                 <span class="text-red">&nbsp;*&nbsp;&nbsp;</span>
@@ -185,15 +225,20 @@ var_dump($result_arr);
                 <span class="btn btn-success">点击获取手机验证码</span>
 
             </div>
-        </div>
+        </div> -->
         <div class="actionGroup">
             <span class="btn btn-success" id="addconfirm">确认</span>
             <span class="btn btn-default" id="addcancel">取消</span>
         </div>
+        <input type="text" name="token" style="display:none" value="<?php echo $_SESSION['token'];?>">
+    </form>
 
     </div>
 </div>
 <script type="text/javascript">
+  var obj=document.getElementById("selectCity");
+  var city=new LightManAddressTree;
+  city.selectshow(obj,0);
     $("#cardlist .addcard").click(function(){
         $("#cardlist").hide();
         $("#cardmanage").show();
@@ -217,4 +262,40 @@ var_dump($result_arr);
         $(this).addClass('active');
         return $('#checkboxInput2').click();
     });
+     $('#addconfirm').click(function(){
+
+        var data = $("form").serialize();
+        alert(data);
+        $.ajax({
+            cache: false,
+            type:"POST",
+            url:"./action/do_bankcard_Binding.php",
+            data:data,
+            success:function(data){
+                //alert(data);
+                var dataobj = eval("("+data+")");
+                if(dataobj.code == '10006'){
+                    $("#login .error-tip").html('用户名不存在');
+                }else if(dataobj.code == '10005'){
+                    $("#login .error-tip").html('密码错误');
+                }
+                else if(dataobj.code == "0")
+                {
+
+                    toastr.success("绑定成功");
+                    $("#login").fadeOut();
+
+                    setTimeout(function(){window.location.href=window.location.href;},1000);
+
+
+
+                }
+            },
+            error:function(){
+                alert("登录失败");
+            }
+        })
+     });
+
+
 </script>

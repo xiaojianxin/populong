@@ -41,13 +41,13 @@
 
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody style="background-color: white;">
                                     <?php 
                                     if (empty($result['0']->userName)){
                                         echo "没有发起人";
                                     }else{
                                         foreach ($result as $user) { ?>
-                                          <tr class="warning">
+                                          <tr>
                                                 <td class="randId">1</td>
                                                 <td class="proName">
                                                     <span>
@@ -91,14 +91,14 @@
 
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody style="background-color: white;">
                                 <?php 
                                     if (empty($result['0']->user)){
                                         echo "没有发起人";
                                     }else{
                                         foreach ($result as $user) { 
                                 ?>
-                                            <tr class="warning">
+                                            <tr >
                                                 <td class="randId">1</td>
                                                 <td class="proName">
                                                     <span>
