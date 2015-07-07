@@ -305,8 +305,8 @@ session_start();
                                 <a href="./pro.php?projId=<?php echo $project->projID;?>">
                                     <img class="project"src=<?php echo $project->projPho;?> alt="2" />
                                 </a>
-                                <h2><?php echo $project->projName ?></h2>
-                                <a href="">
+                                <h2><a href="./pro.php?projId=<?php echo $project->projID;?>"><?php echo $project->projName ?></a></h2>
+                                <a href="./others.php?userId=<?php echo $project->userID;?>">
                                     <h3>发起人:孙总</h3>
                                 </a>
                                 <h4><?php echo $project->projAbst;?></h4>
@@ -392,7 +392,10 @@ session_start();
         });
         $(function(){
             $("div.holder").jPages({
-                containerID : "boxList"
+                containerID : "boxList",
+                previous : "←",
+                next : "→",
+                perPage : 9
             });
         });
     </script>
