@@ -1,6 +1,6 @@
 
 <div id="self_fans" class="container-fluid">
-    <div class="row">
+    <div class="row" style="height: 560px;">
         <?php foreach ($fans as $result) {?>
             <div class="col-xs-4">
                 <div class="fans_card">

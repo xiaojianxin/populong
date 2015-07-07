@@ -1,6 +1,6 @@
 
 <div id="self_fans" class="container-fluid">
-    <div class="row">
+    <div class="row" style="height: 560px;">
         <?php foreach ($idols as $result) {?>
             <div class="col-xs-4">
                 <div class="fans_card">
@@ -31,6 +31,7 @@
 
             </div>
         <?php } ?>
+
     </div>
     <div class="seemore"><a>查看更多</a></div>
 </div>
