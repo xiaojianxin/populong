@@ -6,10 +6,12 @@
 	<meta name="description" content="布尔教育 http://www.itbool.com" />
 	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet"  href="./css/reset.css"/>
+	<link rel="stylesheet" href="./css/jPages.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/others.css">
 	<script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/others.js"></script>
+    <script type="text/javascript" src="./js/jPages.min.js"></script>
 	<body>
      <?php require('./nav.php') ?>
     <div id="container">
@@ -30,14 +32,17 @@
 
 		$url = "123.57.74.122:8088/logic/otheruser";
 
-		var_dump($json);
-
 		$result_arr = request_by_curl($url,$json);
 
 		$result_arr = json_decode($result_arr);
 		//var_dump($result_arr);
 		$result = $result_arr->result;
+		$support=$result->projectsInvest;
+		$start=$result->projectsSponsor;
+		$focus=$result->projectsFocus;
 		$result = $result->userInfo[0];
+	
+
 
 		?>
 		<div id="intro-panel">
@@ -53,13 +58,13 @@
 								<div class="col-xs-7">
 									<h3>发起人:<?php echo $result->nickname;?></h3>
 									<h3><?php echo $result->mobilephone;?></h3>
-									<h3>积分:471</h3>
+									<h3>积分:470</h3>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-4 col-xs-offset-1 detail-line">
 									<span class="glyphicon glyphicon-map-marker" style="color: #66cc66;"></span>
-									<span style="color: #666666;">北京</span>
+									<span style="color: #666666;"><?php echo $result->position;?></span>
 								</div>
 								<div class="col-xs-7 actionLine">
 									<span>操作：</span>
@@ -123,377 +128,272 @@
 
 							<div class="tab-pane" id="tabpanel1">
 
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="onebox">
-											<a href="./pro.php">
-												<img class="project"src="./img/index_03.png" alt="2" />
-											</a>
-											<h2>泡泡隆投资平台</h2>
-											<a href="">
-												<h3>发起人:孙总</h3>
-											</a>
-											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div class="right_center">
-												<div class="row">
-													<div class="col-xs-6">
-														<span>已完成:</span>
-														<span class="percentage-text">75%</span>
-													</div>
-													<div class="col-xs-1">
+								<div class="row" id="jjpage1">
+									<?php foreach ($support as $result) {?>
+										<div class="col-sm-4">
+											<div class="onebox">
+												<a href="./pro.php?projId=<?php echo $result->projID?>">
+													<img class="project"src=<?php echo $result->projPho?> alt="2" />
+												</a>
+												<h2><?php echo $result->projName?></h2>
+												<a  href="./others.php?userId=<?php echo $result->userID?>">
+													<h3>发起人:<?php echo $result->projUserName?></h3>
+												</a>
+												<h4><?php echo $result->projAbst?></h4>
+												<div class="right_center">
+													<div class="row">
+														<div class="col-xs-6">
+															<span>已完成:</span>
+															<span class="percentage-text">75%</span>
+														</div>
+														<div class="col-xs-1">
 											<span>
 												<img class="place"src="./img/index_details1.png" alt="地点" />
 											</span>
+														</div>
+														<div class="col-xs-3">
+															<span><?php echo $result->city?></span>
+														</div>
+														<div class="col-xs-2">
+														</div>
 													</div>
-													<div class="col-xs-3">
-														<span>北京</span>
+													<div class="row">
+														<div class="progray">
+															<div class="progreen"></div>
+														</div>
 													</div>
-													<div class="col-xs-2">
-													</div>
-												</div>
-												<div class="row">
-													<div class="progray">
-														<div class="progreen"></div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>20,000元</span>
-													</div>
-													<div class="col-xs-5">
+													<div class="row">
+														<div class="col-xs-7">
+															<span><?php echo $result->planAmount?></span>
+														</div>
+														<div class="col-xs-5">
 											<span>
-												10天
+												<?php echo $result->closeTime?>
 											</span>
 
-													</div>
+														</div>
 
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>已筹集资金</span>
 													</div>
-													<div class="col-xs-5">
+													<div class="row">
+														<div class="col-xs-7">
+															<span>已筹集资金</span>
+														</div>
+														<div class="col-xs-5">
 											<span>
 												剩余天数
 											</span>
 
-													</div>
+														</div>
 
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="onebox">
-											<a href="./pro.php">
-												<img class="project"src="./img/index_03.png" alt="2" />
-											</a>
-											<h2>泡泡隆投资平台</h2>
-											<a href="">
-												<h3>发起人:孙总</h3>
-											</a>
-											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div class="right_center">
-												<div class="row">
-													<div class="col-xs-6">
-														<span>已完成:</span>
-														<span class="percentage-text">75%</span>
-													</div>
-													<div class="col-xs-1">
-											<span>
-												<img class="place"src="./img/index_details1.png" alt="地点" />
-											</span>
-													</div>
-													<div class="col-xs-3">
-														<span>北京</span>
-													</div>
-													<div class="col-xs-2">
-													</div>
-												</div>
-												<div class="row">
-													<div class="progray">
-														<div class="progreen"></div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>20,000元</span>
-													</div>
-													<div class="col-xs-5">
-											<span>
-												10天
-											</span>
+									<?php } ?>
 
-													</div>
-
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>已筹集资金</span>
-													</div>
-													<div class="col-xs-5">
-											<span>
-												剩余天数
-											</span>
-
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="onebox">
-											<a href="./pro.php">
-												<img class="project"src="./img/index_03.png" alt="2" />
-											</a>
-											<h2>泡泡隆投资平台</h2>
-											<a href="">
-												<h3>发起人:孙总</h3>
-											</a>
-											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div class="right_center">
-												<div class="row">
-													<div class="col-xs-6">
-														<span>已完成:</span>
-														<span class="percentage-text">75%</span>
-													</div>
-													<div class="col-xs-1">
-											<span>
-												<img class="place"src="./img/index_details1.png" alt="地点" />
-											</span>
-													</div>
-													<div class="col-xs-3">
-														<span>北京</span>
-													</div>
-													<div class="col-xs-2">
-													</div>
-												</div>
-												<div class="row">
-													<div class="progray">
-														<div class="progreen"></div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>20,000元</span>
-													</div>
-													<div class="col-xs-5">
-											<span>
-												10天
-											</span>
-
-													</div>
-
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>已筹集资金</span>
-													</div>
-													<div class="col-xs-5">
-											<span>
-												剩余天数
-											</span>
-
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
 								</div>
-
+								<div class=" holder holder1" style="text-align: center;"></div>
 							</div>
 							<div class="tab-pane active" id="tabpanel2">
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="onebox">
-											<a href="./pro.php">
-												<img class="project"src="./img/index_03.png" alt="2" />
-											</a>
-											<h2>泡泡隆投资平台</h2>
-											<a href="">
-												<h3>发起人:孙总</h3>
-											</a>
-											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div class="right_center">
-												<div class="row">
-													<div class="col-xs-6">
-														<span>已完成:</span>
-														<span class="percentage-text">75%</span>
-													</div>
-													<div class="col-xs-1">
+								<div class="row" id="jjpage2">
+									<?php foreach ($start as $result) {?>
+										<div class="col-sm-4">
+											<div class="onebox">
+												<a href="./pro.php?projId=<?php echo $result->projID?>">
+													<img class="project"src=<?php echo $result->projPho?> alt="2" />
+												</a>
+												<h2><?php echo $result->projName?></h2>
+												<a  href="./others.php?userId=<?php echo $result->userID?>">
+													<h3>发起人:<?php echo $result->projUserName?></h3>
+												</a>
+												<h4><?php echo $result->projAbst?></h4>
+												<div class="right_center">
+													<div class="row">
+														<div class="col-xs-6">
+															<span>已完成:</span>
+															<span class="percentage-text">75%</span>
+														</div>
+														<div class="col-xs-1">
 											<span>
 												<img class="place"src="./img/index_details1.png" alt="地点" />
 											</span>
+														</div>
+														<div class="col-xs-3">
+															<span><?php echo $result->city?></span>
+														</div>
+														<div class="col-xs-2">
+														</div>
 													</div>
-													<div class="col-xs-3">
-														<span>北京</span>
+													<div class="row">
+														<div class="progray">
+															<div class="progreen"></div>
+														</div>
 													</div>
-													<div class="col-xs-2">
-													</div>
-												</div>
-												<div class="row">
-													<div class="progray">
-														<div class="progreen"></div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>20,000元</span>
-													</div>
-													<div class="col-xs-5">
+													<div class="row">
+														<div class="col-xs-7">
+															<span><?php echo $result->planAmount?></span>
+														</div>
+														<div class="col-xs-5">
 											<span>
-												10天
+												<?php echo $result->closeTime?>
 											</span>
 
-													</div>
+														</div>
 
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>已筹集资金</span>
 													</div>
-													<div class="col-xs-5">
+													<div class="row">
+														<div class="col-xs-7">
+															<span>已筹集资金</span>
+														</div>
+														<div class="col-xs-5">
 											<span>
 												剩余天数
 											</span>
 
-													</div>
+														</div>
 
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="onebox">
-											<a href="./pro.php">
-												<img class="project"src="./img/index_03.png" alt="2" />
-											</a>
-											<h2>泡泡隆投资平台</h2>
-											<a href="">
-												<h3>发起人:孙总</h3>
-											</a>
-											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div class="right_center">
-												<div class="row">
-													<div class="col-xs-6">
-														<span>已完成:</span>
-														<span class="percentage-text">75%</span>
-													</div>
-													<div class="col-xs-1">
-											<span>
-												<img class="place"src="./img/index_details1.png" alt="地点" />
-											</span>
-													</div>
-													<div class="col-xs-3">
-														<span>北京</span>
-													</div>
-													<div class="col-xs-2">
-													</div>
-												</div>
-												<div class="row">
-													<div class="progray">
-														<div class="progreen"></div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>20,000元</span>
-													</div>
-													<div class="col-xs-5">
-											<span>
-												10天
-											</span>
+									<?php } ?>
 
-													</div>
-
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>已筹集资金</span>
-													</div>
-													<div class="col-xs-5">
-											<span>
-												剩余天数
-											</span>
-
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="onebox">
-											<a href="./pro.php">
-												<img class="project"src="./img/index_03.png" alt="2" />
-											</a>
-											<h2>泡泡隆投资平台</h2>
-											<a href="">
-												<h3>发起人:孙总</h3>
-											</a>
-											<h4>最大限度服务投资者，为投资者打造最优</br>投资平台，为有梦想的项目发起者提供</br>展示自我的最佳平台</h4>
-											<div class="right_center">
-												<div class="row">
-													<div class="col-xs-6">
-														<span>已完成:</span>
-														<span class="percentage-text">75%</span>
-													</div>
-													<div class="col-xs-1">
-											<span>
-												<img class="place"src="./img/index_details1.png" alt="地点" />
-											</span>
-													</div>
-													<div class="col-xs-3">
-														<span>北京</span>
-													</div>
-													<div class="col-xs-2">
-													</div>
-												</div>
-												<div class="row">
-													<div class="progray">
-														<div class="progreen"></div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>20,000元</span>
-													</div>
-													<div class="col-xs-5">
-											<span>
-												10天
-											</span>
-
-													</div>
-
-												</div>
-												<div class="row">
-													<div class="col-xs-7">
-														<span>已筹集资金</span>
-													</div>
-													<div class="col-xs-5">
-											<span>
-												剩余天数
-											</span>
-
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
 								</div>
+								<div class="holder holder2" style="text-align: center;"></div>
 							</div>
 							<div class="tab-pane" id="tabpanel3">
-								<p>
-									第一部分内容.
-								</p>
+								<div class="row" id="jjpage3">
+									<?php foreach ($focus as $result) {?>
+										<div class="col-sm-4">
+											<div class="onebox">
+												<a href="./pro.php?projId=<?php echo $result->projID?>">
+													<img class="project"src=<?php echo $result->projPho?> alt="2" />
+												</a>
+												<h2><?php echo $result->projName?></h2>
+												<a  href="./others.php?userId=<?php echo $result->userID?>">
+													<h3>发起人:<?php echo $result->projUserName?></h3>
+												</a>
+												<h4><?php echo $result->projAbst?></h4>
+												<div class="right_center">
+													<div class="row">
+														<div class="col-xs-6">
+															<span>已完成:</span>
+															<span class="percentage-text">75%</span>
+														</div>
+														<div class="col-xs-1">
+											<span>
+												<img class="place"src="./img/index_details1.png" alt="地点" />
+											</span>
+														</div>
+														<div class="col-xs-3">
+															<span><?php echo $result->city?></span>
+														</div>
+														<div class="col-xs-2">
+														</div>
+													</div>
+													<div class="row">
+														<div class="progray">
+															<div class="progreen"></div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-xs-7">
+															<span><?php echo $result->planAmount?></span>
+														</div>
+														<div class="col-xs-5">
+											<span>
+												<?php echo $result->closeTime?>
+											</span>
+
+														</div>
+
+													</div>
+													<div class="row">
+														<div class="col-xs-7">
+															<span>已筹集资金</span>
+														</div>
+														<div class="col-xs-5">
+											<span>
+												剩余天数
+											</span>
+
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									<?php } ?>
+
+								</div>
+								<div class="holder holder3" style="text-align: center;"></div>
 							</div>
 							<div class="tab-pane" id="tabpanel4">
-								<p>
-									第一部分内容.
-								</p>
+								<div class="row" id="jjpage4">
+									<?php foreach ($focus as $result) {?>
+										<div class="col-sm-4">
+											<div class="onebox">
+												<a href="./pro.php?projId=<?php echo $result->projID?>">
+													<img class="project"src=<?php echo $result->projPho?> alt="2" />
+												</a>
+												<h2><?php echo $result->projName?></h2>
+												<a  href="./others.php?userId=<?php echo $result->userID?>">
+													<h3>发起人:<?php echo $result->projUserName?></h3>
+												</a>
+												<h4><?php echo $result->projAbst?></h4>
+												<div class="right_center">
+													<div class="row">
+														<div class="col-xs-6">
+															<span>已完成:</span>
+															<span class="percentage-text">75%</span>
+														</div>
+														<div class="col-xs-1">
+											<span>
+												<img class="place"src="./img/index_details1.png" alt="地点" />
+											</span>
+														</div>
+														<div class="col-xs-3">
+															<span><?php echo $result->city?></span>
+														</div>
+														<div class="col-xs-2">
+														</div>
+													</div>
+													<div class="row">
+														<div class="progray">
+															<div class="progreen"></div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-xs-7">
+															<span><?php echo $result->planAmount?></span>
+														</div>
+														<div class="col-xs-5">
+											<span>
+												<?php echo $result->closeTime?>
+											</span>
+
+														</div>
+
+													</div>
+													<div class="row">
+														<div class="col-xs-7">
+															<span>已筹集资金</span>
+														</div>
+														<div class="col-xs-5">
+											<span>
+												剩余天数
+											</span>
+
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									<?php } ?>
+
+								</div>
+								<div class="holder holder4" style="text-align: center;"></div>
 							</div>
 						</div>
 
@@ -504,7 +404,35 @@
 
 		</div>
 	</div>
+<script type="text/javascript">
+	$(function(){
+		$("div.holder1").jPages({
+			containerID : "jjpage1",
+			previous : "←",
+			next : "→",
+			perPage : 9
+		});
+		$("div.holder2").jPages({
+			containerID : "jjpage2",
+			previous : "←",
+			next : "→",
+			perPage : 9
+		});
+		$("div.holder3").jPages({
+			containerID : "jjpage3",
+			previous : "←",
+			next : "→",
+			perPage : 9
+		});
+		$("div.holder4").jPages({
+			containerID : "jjpage4",
+			previous : "←",
+			next : "→",
+			perPage : 9
+		});
 
+	});
+	</script>
 
 	</body>
 	</html>	

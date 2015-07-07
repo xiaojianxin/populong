@@ -102,6 +102,7 @@ body{
 #tabContentArea{
     background-color: #addab9;
 }
+
 .onebox{
     padding-left: 5%;
     padding-right: 5%;
@@ -110,12 +111,18 @@ body{
 }
 .onebox a img{
     margin-top: 20px;
+    max-width: 325px;
+    max-height: 320px;
+    min-width: 325px;
+    min-height: 320px;
     width: 100%;
+
 }
 .onebox h2{
     font-size: 20px;
     font-weight: bold;
-    line-height: 22px;
+    height: 22px;
+    overflow-y: hidden;
 }
 .onebox a{
     color: #666668;
@@ -128,6 +135,12 @@ body{
     font-size: 16px;
     color: #666668;
     margin-top: 10px;
+    line-height: 30px;
+    height: 90px;
+    overflow-y: hidden;
 }
 .progray{background: #c9c9c9;display: block;margin-left: 4%; float: left;margin-top: 8px;width: 88%;height: 10px;}
 .progreen{background: #6cc77f;width: 50%;height: 10px;}
+#jjpage1,#jjpage2,#jjpage3,#jjpage4{
+    min-height: 800px!important;
+}
