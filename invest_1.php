@@ -9,7 +9,10 @@
 	<link rel="stylesheet"  href="./css/footer.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/nav.css">	
 	<link rel="stylesheet" type="text/css" href="./css/invest.css">
+    <link href="./css/toastr.css" rel="stylesheet"/>
     <script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="./js/toastr.js"></script>
+
 </head>
 <body>
 	<?php require('./nav.php')?>
@@ -45,33 +48,33 @@ $result_arr = request_by_curl($url,$json);
 //var_dump($result_arr1);
 $result_arr = json_decode($result_arr,true);
 
-var_dump($result_arr);
+//var_dump($result_arr);
 
 //var_dump($result2);
 ?>
 		<div id="main" class='container'>
-				<div id="main_top">
-				<form action='./1.php' method='post'>
-                    <div class="main_top_top">
-                        <div class='title'>输入收货地址</div>
-                    </div>
-                    <div class="main_top_bottom row inputAddress">
-                        <input placeholder="输入地址" class="form-control" id="inputAddress"/>
-                        <div class="btn btn-success" id="saveAddress">保存地址</div>
-                    </div>
-					<div class="main_top_top">
-						<div class='title'>确认收货地址</div>
-					</div>
-					<div class="main_top_bottom row">
-						<a class="col-xs-1 first-row" href=""><img class="img" src="./img/invest_01.png" alt="" /></a>
-                        <div id="showAddress" class="col-xs-11">
-
-                        </div>
+		<div id="main_top">
 
 
-					</div>
-				
-				</div>
+            <div class="main_top_top">
+                <div class='title'>输入收货地址</div>
+            </div>
+            <div class="main_top_bottom row inputAddress">
+                <input placeholder="输入地址" class="form-control" id="inputAddress"/>
+                <div class="btn btn-success" id="saveAddress">保存地址</div>
+            </div>
+            <div class="main_top_top">
+                <div class='title'>确认收货地址</div>
+            </div>
+            <div class="main_top_bottom row">
+                <a class="col-xs-1 first-row" href=""><img class="img" src="./img/invest_01.png" alt="" /></a>
+                <div id="showAddress" class="col-xs-11">
+
+                </div>
+
+            </div>
+
+        </div>
 
             <div id="main_second_top">
                 <div class="main_top_top">
@@ -158,14 +161,15 @@ var_dump($result_arr);
 				<div id="main_foot">
 					<div class='row'>
 						<div class='col-xs-9'></div>
+                         <input id="token" value="<?php echo $_SESSION['token'];?>" style="display:none"/> 
+                         <input id="projectid" value=<?php echo $projId;?> style="display:none"/>   
 						<div class='col-xs-2 totel-money' >总金额:￥<span id="totalNum"><?php echo $investAmount;?></span></div>
 					</div>
 					
 					
-					<input type='submit' class='btn btn-danger confirm' value='确认付款'/>
+					<a  class='btn btn-danger confirm'>确认付款</a>
 				</div>
 				<div id="main_nail"></div>
-				</form>
 		</div>
 		
 	</div>
@@ -212,10 +216,13 @@ var_dump($result_arr);
             $("#showAddress").prepend(str);
             alert("增加成功");
         });
-        $("#payConfirm").click(function(){
+        $(".confirm").click(function(){
             var num=parseInt($("#totalNum").html());
+
             var address=$("#showAddress .first-row").text();
             var code;
+            var token = $("#token").val();
+            var projectid = $("#projectid").val();
             if(checkbox.check1&&checkbox.check2)
             {
                 code=3;
@@ -234,11 +241,18 @@ var_dump($result_arr);
             $.ajax({
                 async: true,
                 type: "POST",
-                url: "",
-                dataType: "json",
-                data: [{address:address,serviceCode:code,priceAmount:num}],
+                url: "./action/do_invest.php",
+                data:"projId="+projectid+"&rewardCode=1"+"&token="+token+"&investAmount="+num+"&serviceCode="+code+"&address="+address,
                 success: function(data){
-
+                    //alert(data);
+                    var dataobj = eval("("+data+")");
+                    if(dataobj.code==0){
+                    toastr.success("投资成功");
+                    setTimeout(function(){window.location.href="./pro.php?projId="+projectid;},1000);
+                }else {
+                    toastr.success("投资失败");
+                    setTimeout(function(){window.location.href="./pro.php?projId="+projectid;},1000);
+                }
                 },
                 error: function(xhr, stat, err) {
                 }

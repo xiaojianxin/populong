@@ -1,8 +1,10 @@
 <?PHP
 //session_start();
-$projID= $_POST["projId"];
+$projID = $_POST["projId"];
 $token = $_POST['token'];
-session_start();
+$newStatus = $_POST['newStatus'];
+$userID = $_POST['userID'];
+$projName = $_POST['projName'];
 function request_by_curl($remote_server, $json_string)
 {
     $ch = curl_init();
@@ -15,8 +17,11 @@ function request_by_curl($remote_server, $json_string)
 }
 
 $url = "123.57.74.122:55555/logic/admin";
+if($newStatus==1){
 $json = json_encode(array('method'=>'project_changeStatus','projID'=>$projID,'newStatus'=>"1",'token'=>$token));
-//var_dump($json);
+}else if($newStatus == 2){
+$json = json_encode(array('method'=>'send_systemMessage','projID'=>$projID,'userID'=>$userID,'projName'=>$projName,'messageType'=>"1",'token'=>$token));
+}
 $json = request_by_curl($url,$json);
 
 $result = json_decode($json,true);

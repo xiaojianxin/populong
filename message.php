@@ -2,7 +2,7 @@
     $ch = curl_init();
     $token = $_SESSION['token'];
     //var_dump($token);
-    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_message.php?token=".$token;
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_message.php?token=".$token."&status=0";
     //var_dump($_SESSION);
     curl_setopt($ch, CURLOPT_URL, $curl_url);
     curl_setopt($ch, CURLOPT_POST, 1);
@@ -129,6 +129,20 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="systemMsg">
+ <?php
+    $ch = curl_init();
+    $token = $_SESSION['token'];
+    //var_dump($token);
+    $curl_url = "http://123.57.74.122:8888/version_0.2/action/test_self_message.php?token=".$token."&status=1";
+    //var_dump($_SESSION);
+    curl_setopt($ch, CURLOPT_URL, $curl_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//不直接输出，返回到变量
+    $curl_result = curl_exec($ch);
+    $result = json_decode($curl_result);
+    curl_close($ch);
+    var_dump($result);
+?>  
                                     <div id="send-list">
                                         <div class="one-send">
                                             <div class="row">

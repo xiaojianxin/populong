@@ -1,12 +1,12 @@
 <?PHP
-$token = 0;
-$projectID = $_POST["ProjectID"];
-$ordID = $_POST["OrdID"];
-$investNum = $_POST["InvestNum"];
-$investAmount = 0;
+$token = $_POST['token'];
+$projectID = $_POST["projId"];
+//$ordID = $_POST["OrdID"];
+$investNum = 1;
+$investAmount = $_POST['investAmount'];
 $rewardCode = $_POST["rewardCode"];
-$address = $_POST["inputAddress"];
-$serviceCode = $_POST["inputServiceCode"];
+$address = $_POST["address"];
+$serviceCode = $_POST["serviceCode"];
 
 function request_by_curl($remote_server, $json_string)
 {
@@ -19,16 +19,15 @@ function request_by_curl($remote_server, $json_string)
         return $data;
 }
 
-$url = "123.57.74.122/logic/invest";
+$url = "123.57.74.122:9999/logic/invest";
 $json = json_encode(array('method'=>'invest',
         'token' => $token,
-        'projectID'=>$projName,
-        'ordID'=>$projType,
-		'investNum'=>$cityCode,
-		'investAmount'=>$fieldCode,
-		'rewardCode'=>$planAmount,
-		'address'=>$projAbst,
-		'serviceCode'=>$projIntro,
+        'projectID'=>$projectID,
+		'investNum'=>$investNum,
+		'investAmount'=>$investAmount,
+		'rewardCode'=>$rewardCode,
+		'address'=>$address,
+		'serviceCode'=>$serviceCode,
 		));
 		
 $json = request_by_curl($url,$json);
@@ -36,10 +35,12 @@ $result = json_decode($json,true);
 
 if(isset($result)&&$result['code'] == 0)
 {
-	$url = "../regist_2.html";  
-    echo "<script language='javascript' type='text/javascript'>";  
-    echo "window.location.href='$url'";  
-    echo "</script>";  
+    $url = "123.57.74.122:9999/logic/invest";
+    $json = json_encode(array('method'=>'succeed_invest',
+        'ordId'=>$result['ordId']
+        ));
+    $json = request_by_curl($url,$json);
+    print_r($json);
 	exit();
 }
 else

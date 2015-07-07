@@ -60,6 +60,8 @@
                               ?>  
 					
                         <input id="projectid" value=<?php echo $projectId;?> style="display:none"/>
+                        <input id="userid" value=<?php echo $project[0]->userID;?> style="display:none"/>
+                        <input id="projName" value=<?php echo $project[0]->projName;?> style="display:none"/>
                         <input id="token" value="<?php echo $_SESSION['admin_token'];?>" style="display:none"/>    
 					<div class='title'>1.项目信息</div>
 					<div class="content">
@@ -235,15 +237,21 @@
 						</div>	
 						<div class="content-detail row">
 							<div class='col-xs-2'>审核时间:</div>
-							<div class='col-xs-4'>2015.6.13</div>
-						</div>	
-						<div class="content-detail row">
-							<div class='col-xs-2'>通过审核:</div>
-							<div class='col-xs-5'>如果已经审核显示已审核，如果没有审核显示确认审核按钮</div>
+							<div class='col-xs-4'><?php echo date('Y-m-d',$project[0]->checkTime)?></div>
 						</div>	
 						<div class="content-detail row">
 							<div class='col-xs-2'>付费状态:</div>
-							<div class='col-xs-4'>未付费/付费**元</div>
+							<div class='col-xs-4'><?php if ($project[0]->projStatus==1) {
+								echo "未付费";
+								echo " </div></div>
+								<div class='content-detail row'>
+									<div class='col-xs-2'><a class='btn btn-success systemMsg'>提醒付费</a></div>
+		
+								</div>  ";
+								echo "</form></div></div>";
+							}else{
+								echo "已付费";
+							?></div>
 						</div>	
 						<div class="content-detail row">
 							<div class='col-xs-2'>付费时间:</div>
@@ -479,7 +487,7 @@
 						</div>	
 					</div>
 				</div>
-				<?php }?>
+				<?php }}?>
 			</div>
 			
 		</div>
@@ -491,7 +499,7 @@
 	$(".check").click(function(){
 		var projectId = $('#projectid').val();
 		var token  = $("#token").val();
-		alert(token);
+		//alert(token);
 		 $.ajax({
                   type:"POST",
                   url:"./action/do_change_status.php",
@@ -500,6 +508,30 @@
                    // alert(data);
                     var dataobj = eval("("+data+")");
                     if (dataobj.code==0) {
+                     window.location.reload();
+                    };
+                  },
+                  error:function(){
+                      alert("注册失败");
+                  }
+                });
+
+	});
+		$(".systemMsg").click(function(){
+		var projectId = $('#projectid').val();
+		var projName = $('#projName').val();
+		var userID = $('#userid').val();
+		var token  = $("#token").val();
+		//alert(token);
+		 $.ajax({
+                  type:"POST",
+                  url:"./action/do_change_status.php",
+                  data:"projId="+projectId+"&newStatus=2"+"&token="+token+"&userID="+userID+"&projName="+projName,
+                  success:function(data){
+                    //alert(data);
+                    var dataobj = eval("("+data+")");
+                    if (dataobj.code==0) {
+                     alert("发送成功");
                      window.location.reload();
                     };
                   },

@@ -52,8 +52,8 @@ session_start();
         $result = $result_arr->result;
         $isFocus=$result[0]->focus;
 
-        var_dump($result);
-        var_dump($isFocus);
+        //var_dump($result);
+        //var_dump($isFocus);
 
   ?>
    
