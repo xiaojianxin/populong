@@ -13,13 +13,13 @@ $token = '"'.$_GET['token'].'"';
 $status = $_GET['status'];
 
 if ($status == 1) {
-    $token = $_GET['token'];
+   $token = '"'.$_GET['token'].'"';
     $url = "123.57.74.122:55555/logic/message";
     $json = '{
     "method": "get_systemMessage",
     "token": '.$token.'
 }';
-echo $json;
+//echo $json;
 }elseif($status == 0){
     $url = "123.57.74.122:8088/logic/message";
     $json = '{

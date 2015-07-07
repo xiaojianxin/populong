@@ -403,7 +403,7 @@
                     url:"./action/do_pro_focus.php",
                     data:"&proId="+proID+"&token="+token,
                     success:function(data){
-                      alert(data);
+                      //alert(data);
                       var dataobj = eval("("+data+")");
                       if (dataobj.code==0) {
                         toastr.success("收藏成功");

@@ -141,19 +141,22 @@
     $curl_result = curl_exec($ch);
     $result = json_decode($curl_result);
     curl_close($ch);
-    var_dump($result);
+    $result = $result->result;
+    $result1 = $result->unReadMessage;
+    $result = $result->readMessage;
 ?>  
                                     <div id="send-list">
-                                        <div class="one-send">
+                                        <?php foreach ($result as $message) {?>
+                                           <div class="one-send">
                                             <div class="row">
                                                 <div class="col-xs-2">
                                                     <img src="./img/fan_08.png" class="img-circle">
                                                 </div>
                                                 <div class="col-xs-10">
                                                     <span>系统通知</span>
-                                                    <div class="comment-time">2015.02.16 11:30</div>
+                                                    <div class="comment-time"><?php echo date("Y-m-d",$message->createTime);?></div>
                                                     <div class="comment-content">
-                                                        此处为评论内容此处为评论内容
+                                                        <?php echo $message->content?>
                                                     </div>
                                                     <div class="comment-reply">
                                                         <span class="text-green">查看</span>
@@ -162,25 +165,30 @@
 
                                                 </div>
                                             </div>
-                                            <div class="one-send">
-                                                <div class="row">
-                                                    <div class="col-xs-2">
-                                                        <img src="./img/fan_09.png" class="img-circle">
+                                        </div>
+                                        <?php }?>
+                                          <?php foreach ($result1 as $message) {?>
+                                           <div class="one-send">
+                                            <div class="row">
+                                                <div class="col-xs-2">
+                                                    <img src="./img/fan_08.png" class="img-circle">
+                                                </div>
+                                                <div class="col-xs-10">
+                                                    <span>系统通知</span>
+                                                    <div class="comment-time"><?php echo date("Y-m-d",$message->createTime);?></div>
+                                                    <div class="comment-content">
+                                                        <?php echo $message->content?>
                                                     </div>
-                                                    <div class="col-xs-10">
-                                                      <span>系统通知</span>
+                                                    <div class="comment-reply">
+                                                        <span class="text-green">查看</span>
+                                                    </div>
 
-                                                        <div class="comment-time">2015.02.16 11:30</div>
-                                                        <div class="comment-content">
-                                                            此处为评论内容此处为评论内容
-                                                        </div>
-                                                        <div class="comment-reply">
-                                                            <span class="text-green">查看</span>
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
+                                        <?php }?>
+                                       
                                     </div>
                                 </div>
                         </div>
