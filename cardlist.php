@@ -11,6 +11,7 @@ function request_by_curl($remote_server, $json_string)
     return $data;
 }
 $token = '"'.$_SESSION['token'].'"';
+
 $url = "123.57.74.122:9999/logic/bankcard";
 $json = '{
     "method": "bankcard_query",
@@ -107,7 +108,7 @@ $result2 = $result_arr2['result'];
            <?php }?>
            <br/>
             <div class="col-xs-4">
-                <div class="onecard">
+                <div class="onecard addCardBox">
                     <div class="thumbnail">
                         <div class="bankpic" >
                             <a class="addcard"><span class="glyphicon glyphicon-plus"></span></a>
@@ -116,7 +117,7 @@ $result2 = $result_arr2['result'];
 
                             <div class="divider"></div>
                             <div class="actionBtn">
-                                <div style="height: 14px;"></div>
+                                <div style="height: 12px;"></div>
                                 <span><a class="addcard">新增至银行卡</a></span>
                                 <div style="height: 15px;"></div>
                             </div>

@@ -515,7 +515,11 @@ div .edit-info{
 .self-info{
     margin: 50px 10px 10px 10px;
 }
-
+#self-logo{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+}
 .green-tip img{
     width: 25%;
 
@@ -793,6 +797,12 @@ div .edit-info{
 #cardlist .listContent{
     margin-top: 20px;
 }
+#cardlist .listContent .bankpic{
+    height:30px;
+}
+#cardlist .listContent .detail{
+    height:50px;
+}
 #cardlist .listContent .bankpic img{
     width: 100%;
 }
@@ -817,12 +827,18 @@ div .edit-info{
     margin-left: 80px;
 
 }
+#cardlist .listContent .addCardBox .bankpic{
+    height:65px;
+}
 #cardlist .listContent .bankpic span{
     width: 100%;
     text-align: center;
     color: #999999;
     font-size: 52px;
-    margin-top: 23px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+
 
 }
 #deleteCardModal{

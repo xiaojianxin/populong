@@ -80,7 +80,7 @@
         </div>
         <div class="col-xs-4">
             <h1><?php ?></h1>
-            <h2><a href="others.php?<?php echo $result[0]->userID;?>">由<?php echo $result[0]->nickname;?>发起</a></h2>
+            <h2><a href="others.php?userId=<?php echo $result[0]->userID;?>">由<?php echo $result[0]->nickname;?>发起</a></h2>
             <p style="font-size:20px;line-height:30px;"><?php echo $result[0]->projAbst;?></p>
             <div style="height:20px;"></div>
             <div id="right_center">

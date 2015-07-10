@@ -36,7 +36,7 @@ $result = $result[0];
                        <form>
                         <div class="col-xs-3">
     
-                            <img  id="self-logo" src=<?php echo $result['headImg'];?> style="width: 100%;">
+                            <img  id="self-logo" src=<?php echo $result['headImg'];?> >
                              <div style="width:100px; margin: 0 auto;">
                                 <input type="file" name="file-pic" id="file_pic"/>
                                 <input type="text" name="headImg" id="self_imgurl" style="display:none"/>
